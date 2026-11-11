@@ -1,0 +1,16 @@
+{
+  "status": "PASS_FORMAL_CANCELLATIONS_AND_FULL_COEFFICIENT_BOUNDS",
+  "seconds": 2.0663626194000244,
+  "bounds": {
+    "c": 21,
+    "d": 132,
+    "e": 1025,
+    "f": 8824,
+    "u_kappa": 81,
+    "v_theta_kappa": 1260,
+    "w_theta2_kappa": 16324,
+    "r_kappa2": 2863,
+    "l_lambda": 344,
+    "m_theta_lambda": 6411
+  }
+}

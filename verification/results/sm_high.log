@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "gate_count": 5919,
+  "full_Schur_profiles": 8,
+  "full_Schur_contours": 411,
+  "whole_mothers": 9,
+  "exact_split_nodes": 11,
+  "complete_closed_leaves": 20,
+  "full_physical_contours": 20,
+  "phase_product_cap_rows": 9,
+  "failures": [],
+  "minimum_product_reserve": 0.2558946226484908,
+  "endpoint_squared_reserve": 0.01580082418282726
+}

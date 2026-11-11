@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "n0": 6251,
+  "precision_bits": 384,
+  "checks": 1033,
+  "full_inverse_contours": 55,
+  "complete_companion_rectangles": 1,
+  "whole_path_majorants": 9,
+  "seconds": 0.12372422218322754
+}

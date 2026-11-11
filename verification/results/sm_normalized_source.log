@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "scope": "Complete normalized T-source D25 rows and whole larger-tau D25 entrances; 8001 downstream D70/medium160; 6251 lawful q06mu02 entrances; no global6251 assertion",
+  "independent_method": "Exact Fraction source reconstruction, alternating Machin enclosure, whole-X Bernstein convex hull, full corresponding negative matrix term",
+  "checks": 78,
+  "whole_polynomial_cells": 2,
+  "matrix_gamma": "241/1000",
+  "matrix_negative_sine": "741/1000",
+  "rows": [
+    {
+      "label": "8001",
+      "degree_floor": 8001,
+      "rho_interval": [
+        "1/100",
+        "3/40"
+      ],
+      "Xsplit": "3/10",
+      "joint_all_y_M": "3",
+      "source_endpoints": [
+        "47532391161157/66760444160000",
+        "129896936552271/197119076864000"
+      ],
+      "source_K": "129896936552271/197119076864000",
+      "small_X_D": "43298978850757/1478393076480",
+      "large_X_h_squared": "43298978850757/49279769216",
+      "large_tau_matrix_upper": "16788092489/2223000",
+      "large_x_D": "610020000000000/6793005177007",
+      "outside_phase_D": "37168000/498183",
+      "low_middle_phase_D": "36500000/495167",
+      "medium_D": "164"
+    },
+    {
+      "label": "6251_new",
+      "degree_floor": 6251,
+      "rho_interval": [
+        "1/100",
+        "9/100"
+      ],
+      "Xsplit": "7/25",
+      "joint_all_y_M": "31/10",
+      "source_endpoints": [
+        "508099406608733/731115816000000",
+        "239012578698741/379195048000000"
+      ],
+      "source_K": "239012578698741/379195048000000",
+      "small_X_D": "26556953188749/1061746134400",
+      "large_X_h_squared": "239012578698741/376161487616",
+      "large_tau_matrix_upper": "640685569/102600",
+      "large_x_D": "476578125000000/6793005177007",
+      "outside_ratio3_D": "95315625/1964048",
+      "outside_coarse_phase": "2/3",
+      "outside_q06_D": "571893750/10786493",
+      "low_middle_ratio3_D": "375/8",
+      "low_middle_coarse_phase": "7/10",
+      "low_middle_q06_D": "93750000/1814501"
+    }
+  ],
+  "checker_sha256": "68b210c72b9f8f04143a24228a7423098e175e8c02ede2d23d85c8b23b95f660",
+  "seconds": 0.005492737996974029
+}

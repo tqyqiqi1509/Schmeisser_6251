@@ -1,0 +1,55 @@
+{"processed": 500, "unresolved": 0, "seconds": 0.18915724754333496}
+{"processed": 1000, "unresolved": 0, "seconds": 0.3497915267944336}
+{"processed": 1500, "unresolved": 0, "seconds": 0.5468332767486572}
+{"processed": 2000, "unresolved": 0, "seconds": 0.6913952827453613}
+{"processed": 2500, "unresolved": 0, "seconds": 0.9092779159545898}
+{"processed": 3000, "unresolved": 0, "seconds": 1.1079397201538086}
+{"processed": 3500, "unresolved": 0, "seconds": 1.2495598793029785}
+{"processed": 4000, "unresolved": 0, "seconds": 1.4142422676086426}
+{"processed": 4500, "unresolved": 0, "seconds": 1.5947914123535156}
+{"processed": 5000, "unresolved": 0, "seconds": 1.7474112510681152}
+{"processed": 5500, "unresolved": 0, "seconds": 1.9143826961517334}
+{"processed": 6000, "unresolved": 0, "seconds": 2.0839686393737793}
+{"processed": 6500, "unresolved": 0, "seconds": 2.2817020416259766}
+{"processed": 7000, "unresolved": 0, "seconds": 2.459580421447754}
+{"processed": 7500, "unresolved": 0, "seconds": 2.609973430633545}
+{"processed": 8000, "unresolved": 0, "seconds": 2.736656904220581}
+{"processed": 8500, "unresolved": 0, "seconds": 2.8674941062927246}
+{"processed": 9000, "unresolved": 0, "seconds": 3.0349366664886475}
+{"processed": 9500, "unresolved": 0, "seconds": 3.266528606414795}
+{
+  "status": "PASS",
+  "target_ratio": "9/4",
+  "entrance": 100,
+  "independent_methods": "Fraction partition, Acb analytic quadrature, direct Jprime/J obstruction",
+  "source_sha256": "0bd21386f733a8c70b94a2e4fa174080e7b7f551f6431c1d66d6c870a61bcff0",
+  "precision_bits": 144,
+  "quadrature_tolerance_bits": 96,
+  "tail_degree": 0,
+  "partition": [
+    {
+      "branch": 0,
+      "leaves": 5200,
+      "maximum_depth": 30,
+      "exact_binary_volume": "1"
+    },
+    {
+      "branch": 1,
+      "leaves": 4545,
+      "maximum_depth": 33,
+      "exact_binary_volume": "1"
+    }
+  ],
+  "counts": {
+    "matrix": 21,
+    "moment": 1507,
+    "direct": 8160,
+    "qdisk": 57
+  },
+  "failed_count": 0,
+  "diagnostics": {
+    "max_direct_upper": -0.016054570498970962,
+    "min_projection": 1.0357756311087496e-06
+  },
+  "seconds": 3.339845657348633
+}

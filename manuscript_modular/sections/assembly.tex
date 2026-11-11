@@ -1,0 +1,40 @@
+\section{Completion of the proof}\label{sec:assembly}
+
+Retain $N_0=6250$, $\rho_0=30501/500000$, and
+$A_0=\rho_0/100$ from Section~\ref{sec:small}.
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Suppose the theorem fails. By
+Lemma~\ref{pr:edge-reduction}, there is a strict supporting-edge hole
+$0<a<1$ and an actual simple rightmost zero $b=x+iy$ with
+$x\ge a$, $y\ge0$. Put $r=|b|$ and $\rho=\max(x,1-y)$.
+
+For $0<a\le A_0$, Proposition~\ref{sm:fine} excludes
+$\rho>\rho_0$, and Proposition~\ref{or:theorem} excludes
+$0<\rho\le\rho_0$. For $A_0\le a\le1/10$,
+Proposition~\ref{sm:low-middle} applies when $r\le47/50$,
+and Proposition~\ref{sm:high} applies when $r>47/50$ outside
+the origin box. The remaining origin box is already excluded.
+Propositions~\ref{bc:bridge} and~\ref{bc:compact} cover
+$1/10\le a\le39/40$, and Proposition~\ref{bc:boundary}
+covers $39/40\le a<1$. Thus all values of $a$ have been excluded.
+
+The parameter intervals are closed and the final contradictions strict.
+In particular, the high small-witness estimate includes $|b|=1$;
+the compact estimate includes the interval $[1/10,11/100]$; and the
+two additional small-witness source ranges cover their entire common
+boundaries with the origin range. Every estimate is uniform for
+$N\ge N_0$. This proves the theorem.
+\end{proof}
+
+\Needspace{8\baselineskip}
+The affine invariance of the argument gives the following formulation.
+\begin{corollary}\label{cor:disk}
+Let $p$ have degree at least $6251$ and suppose its zeros lie in a
+closed disk of radius $R\ge0$. Every point of $\conv Z(p)$ lies
+within distance $R$ of a critical point.
+\end{corollary}
+\begin{proof}
+For $R>0$, translate the center to zero and divide the variable by
+$R$, then apply Theorem~\ref{thm:main}. For $R=0$ all zeros and
+all critical points coincide.
+\end{proof}

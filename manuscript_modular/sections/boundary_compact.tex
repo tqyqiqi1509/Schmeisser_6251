@@ -1,0 +1,1837 @@
+\section{The boundary and the compact range}\label{bc:section}
+
+We prove in this section the assertion of the main theorem whenever the
+modulus of the proposed exceptional point is at least $1/10$.  Some of
+the moment estimates obtained along the way will also be useful in the
+remaining range.  Throughout the section, $P$ is monic of degree $n\ge6251$,
+$N=n-1$, and all its zeros $z_1,\ldots,z_n$ belong to $\overline\D$.
+Its critical points, with multiplicity, are denoted by
+$\xi_1,\ldots,\xi_N$.  We put
+\begin{equation}\label{bc:moments-definition}
+ \mu=\frac1n\sum_i z_i=\frac1N\sum_j\xi_j,\qquad
+ Q=\frac1N\sum_j|\xi_j|^2,\qquad
+ L(z)=\frac1N\sum_j\log|z-\xi_j|.
+\end{equation}
+The letter $Q$ in this section denotes a second moment; reciprocal
+energy will always be written $E_b$.
+
+Suppose, towards a contradiction, that a real point $0<a\leq1$ in the
+convex hull of the zeros satisfies
+\begin{equation}\label{bc:hole}
+ |a-\xi_j|>1\quad(1\leq j\leq N).
+\end{equation}
+Choose an actual zero $b=x+iy$ of largest real part, so $x\geq a$;
+reflection permits us to assume $y\geq0$.  Write
+\begin{equation}\label{bc:local-notation}
+ r=|b-a|,\quad d=\min_j|b-\xi_j|,\quad
+ S=\sum_j\frac1{b-\xi_j},\quad H=|S|,\quad
+ E_b=\sum_j\frac1{|b-\xi_j|^2}.
+\end{equation}
+Gauss--Lucas and \eqref{bc:hole} imply
+\begin{equation}\label{bc:entrance}
+ |\xi_j|\leq1,\quad \Re\xi_j<a/2,\quad
+ r^2\leq1-a^2<1,\quad d>1-r,\quad
+ \Re S>\frac a2E_b.
+\end{equation}
+In particular $b$ is simple.  We use the actual-zero energy inequality
+$E_b\geq N$ of Proposition~\ref{ar:energy}.  It excludes $r=0$ and also excludes a
+strict witness which is itself an original zero.  Consequently all
+applications below have $0<a<1$ and $r>0$.
+
+\subsection{A product inequality retaining the original zeros}
+
+The fiber arguments use the following fact for arbitrary equal-value
+fibers.
+
+\begin{lemma}[Equal-value perpendicular bisector]\label{bc:equal-fiber}
+If $P(v)=P(w)$ and $v\ne w$, the critical points of $P$ cannot all
+belong to either one of the two open half-planes bounded by the
+perpendicular bisector of $[v,w]$.
+\end{lemma}
+
+\begin{proof}
+We prove the needed half-plane polarization fact first.  Let $f$ be a
+nonzero polynomial of degree at most $m$ with no zero in
+$\{\Re z>0\}$.  For $\Re w>0$ put
+\[
+ T_w f(z)=f(z)+\frac{w-z}{m}f'(z).
+\]
+This polynomial has degree at most $m-1$ and is nonzero throughout
+$\{\Re z>0\}$.  To see the latter assertion, write the zeros of
+$f$ as $\zeta_1,\ldots,\zeta_d$, where $d\leq m$, and fix
+$z$ with $x=\Re z>0$.  Each $v_j=(z-\zeta_j)^{-1}$ satisfies
+$\Re v_j\geq x|v_j|^2$.  The disk
+$\{v:\Re v\geq x|v|^2\}$ is convex and contains zero; hence
+$v=m^{-1}\sum_{j=1}^d v_j$ is in that disk as well.  If $v=0$,
+then $T_w f(z)=f(z)\ne0$.  Otherwise $T_w f(z)=0$ would imply
+$w=z-1/v$, whose real part is at most zero, a contradiction.
+
+Let $F(\zeta_1,\ldots,\zeta_m)$ be symmetric and affine in each
+variable separately.  If $f(z)=F(z,\ldots,z)$ has no zero in the
+right half-plane, neither does $F$ when all its variables are in that
+half-plane.  Indeed, replacing one of the remaining equal variables
+$z$ by $w$ applies exactly the operation $T_w$, with $m$ replaced by
+the number of remaining variables.  Iteration proves the assertion.
+Reflection proves its left-half-plane version.
+
+An affine change of variable reduces the asserted bisector to the
+imaginary axis and the two equal-value points to $-1,1$.  Consider
+\[
+ F(\zeta_1,\ldots,\zeta_N)
+   =\int_{-1}^{1}\prod_{j=1}^N(t-\zeta_j)\,dt.
+\]
+Its diagonal is
+\[
+ F(z,\ldots,z)=\frac{(1-z)^{N+1}-(-1-z)^{N+1}}{N+1}.
+\]
+Every zero of this polynomial has $|1-z|=|-1-z|$, and hence is on
+the imaginary axis.  Half-plane polarization therefore makes $F$
+nonzero if all the critical points are strictly on the same side of
+that axis.  On the other hand, $F(\xi_1,\ldots,\xi_N)$ is a nonzero
+constant multiple of $P(1)-P(-1)=0$.  This contradiction proves the
+lemma.
+\end{proof}
+
+For $|\zeta|<1$ define
+\[
+ \mathcal B_P(\zeta)=
+ \prod_{i=1}^n\left|\frac{\zeta-z_i}{1-\overline{z_i}\zeta}\right|.
+\]
+Every factor is at most one.  The following lower bound for the product
+retains the reciprocal energy $E_b$ at the original zero $b$.
+
+\begin{lemma}[Adaptive product inequality]\label{bc:blaschke}
+Under \eqref{bc:hole}--\eqref{bc:local-notation}, put
+\begin{equation}\label{bc:adaptive-def}
+ u=\min(r^2,1/2),\qquad t=1-u,\qquad
+ \gamma=b-ta,\qquad C=ta\bigl(2x-(1+t)a\bigr).
+\end{equation}
+Then $|\gamma|<1$, $C\geq a^2u(1-u)>0$, and
+\begin{equation}\label{bc:blaschke-bound}
+ C\exp(CE_b/2)
+ <2(1+|b|)(1+|\gamma|)\mathcal B_P(\gamma)
+ \leq8\mathcal B_P(\gamma).
+\end{equation}
+In particular, if $n\geq6251$, then
+\begin{equation}\label{bc:Ccap}
+ C<C_*:=\frac1{388}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Set $k=1-|\gamma|^2$.  Since
+$|\gamma|^2=r^2+2ua(x-a)+u^2a^2>u$ and
+$|b|^2-|\gamma|^2=ta(2x-ta)>0$, we have $0<k<t<1$.
+Direct expansion gives, for every critical point,
+\begin{align}
+ |b-\xi|^2-|1-\overline\gamma\xi|^2
+ &=t\bigl(|\xi-a|^2-1\bigr)
+   +C+(t-k)(1-|\xi|^2)>C.             \label{bc:pointwise-product}
+\end{align}
+Also $|1-\overline\gamma\xi|^2-|\gamma-\xi|^2
+=k(1-|\xi|^2)\geq0$.
+
+Let $M=1+|b|$ and $\eta=C/(2M)$.  For every $z\in D(b,\eta)$,
+\[
+ |z-\xi|^2>(|b-\xi|-\eta)^2
+ \geq |b-\xi|^2-2M\eta+\eta^2>|\gamma-\xi|^2.
+\]
+Here $\eta<|b-\xi|/2$, by \eqref{bc:pointwise-product}, and
+$\eta<ta=|b-\gamma|$.  Lemma~\ref{bc:equal-fiber}
+therefore forbids two equal-value points, one in $D(b,\eta)$ and the
+other equal to $\gamma$.  In particular $P(\gamma)\ne0$.
+If $|P(\gamma)|<\eta|P'(b)|/n$, the logarithmic derivative of
+$P(z)-P(\gamma)$ at $b$ would give
+\[
+ \left|\sum_{P(\zeta)=P(\gamma)}\frac1{b-\zeta}\right|
+ =\frac{|P'(b)|}{|P(\gamma)|}>\frac n\eta.
+\]
+At least one of these $n$ zeros, counted with multiplicity, would be in
+$D(b,\eta)$, again a contradiction.  Hence
+\begin{equation}\label{bc:fiber-lower}
+ |P(\gamma)|\geq\frac{\eta}{n}|P'(b)|.
+\end{equation}
+
+Let $q=P'/n$, and introduce the reciprocal polynomials
+\[
+ P^*(z)=\prod_i(1-\overline{z_i}z),\qquad
+ q^*(z)=\prod_j(1-\overline{\xi_j}z).
+\]
+From \eqref{bc:pointwise-product} and $-\log(1-v)>v$ for $0<v<1$,
+\begin{equation}\label{bc:critical-product}
+ \frac{|P'(b)|}{n|q^*(\gamma)|}>
+ \exp\left(\frac C2\sum_j|b-\xi_j|^{-2}\right).
+\end{equation}
+The exact reversed derivative identity is
+\[
+ \frac{q^*(\gamma)}{P^*(\gamma)}
+ =\frac1n\sum_i\frac1{1-\overline{z_i}\gamma}.
+\]
+For $|w|\leq g<1$ one has $\Re(1-w)^{-1}\geq(1+g)^{-1}$,
+as follows by multiplying by $|1-w|^2$.  Thus the modulus of the last
+display is at least $(1+|\gamma|)^{-1}$.  Combining it with
+\eqref{bc:fiber-lower} and \eqref{bc:critical-product} proves
+\eqref{bc:blaschke-bound}.  Finally
+\[
+ \frac{6250}{776}>\log(8\cdot388)
+\]
+implies \eqref{bc:Ccap}, since $C\exp(NC/2)$ increases strictly in
+$C>0$ and in $N$.  This numerical comparison is certified by the
+positive exponential series, as described below.
+\end{proof}
+
+The normalization at the origin uses the following movement estimate.
+
+\begin{lemma}[Movement of an equal-value fiber]\label{bc:movement}
+Let $\omega=b/|b|$, let $a_0\leq a$, and suppose
+$2\Re(\overline\omega\xi_j)<d_0$ for all $j$.  If positive numbers
+$s,\delta$ satisfy
+\begin{equation}\label{bc:movement-gates}
+ a_0-s>\delta,\qquad
+ (a_0-s)(a_0+s-d_0)>\delta(4+\delta),
+\end{equation}
+then $|P(s\omega)|\geq\delta|P'(b)|/n$.
+\end{lemma}
+
+\begin{proof}
+Writing $v=|b|\geq a_0$, the squared-distance difference at $b$ is
+\[
+ |b-\xi|^2-|s\omega-\xi|^2
+ =(v-s)\bigl(v+s-2\Re(\overline\omega\xi)\bigr)
+ >(a_0-s)(a_0+s-d_0).
+\]
+Moving $b$ by at most $\delta$ decreases this difference by at most
+$\delta(4+\delta)$.  Thus every point of $D(b,\delta)$ is farther
+from every critical point than $s\omega$ is.  The first condition in
+\eqref{bc:movement-gates} puts $s\omega$ outside that disk.  The same
+fiber and logarithmic-derivative argument as in
+\eqref{bc:fiber-lower} proves the assertion.
+\end{proof}
+
+\subsection{Normalization, annuli, and moment estimates}
+
+\begin{proposition}[Three moment estimates]\label{bc:moment-proposition}
+Assume $n\geq6251$.  Under \eqref{bc:hole}, each row of
+Table~\ref{bc:moment-conclusions} implies $P(0)\ne0$.  With
+\begin{equation}\label{bc:B-and-error}
+ B=-\frac1n\log|P(0)|,\qquad
+ \mathcal E(r;a,N)=\frac{8r}{aN}
+       +\frac{r^2}{2(1-r)(1-2r)},
+\end{equation}
+its conclusions are
+\begin{align}
+ B&<\frac\ell n+\mathcal E(r;a,N),                 \label{bc:moment-B}\\
+ |\mu|&\leq\kappa B+n^{-2},                       \label{bc:moment-mean}\\
+ Q&<1-a^2+w\left(\frac\ell N+\mathcal E(r;a,N)\right)
+                   +2n^{-2}.                    \label{bc:moment-Q}
+\end{align}
+\begin{table}[ht]
+\centering
+\caption{The moment estimates.  The hypotheses use the actual $a,r$.}
+\label{bc:moment-conclusions}
+\begin{tabular}{@{}cccccc@{}}\toprule
+Row&$a\geq$&$r\leq$&$\ell$&$\kappa$&$w$\\\midrule
+M0&$.9$&$.057$&$4.42$&$2.5482$&$5.098$\\
+M1&$.93$&$.055$&$4.22$&$2.3817$&$4.765$\\
+M2&$.95$&$.054$&$4.11$&$2.3108$&$4.623$\\\bottomrule
+\end{tabular}
+\end{table}
+The same formulas hold with the parameters in the four boundary rows
+of the tables below, whenever their respective hypotheses hold.
+\end{proposition}
+
+We give the normalization argument with parameters; this also supplies
+the estimates needed to prove the boundary assertions.  A row specifies
+lower $a_0$, upper displacement $e<1/2$, a squared critical-distance
+bound $R_c^2<(1-e)^2$, and the constants listed in
+Tables~\ref{bc:preliminary-table}--\ref{bc:annulus-table}.
+The names B, A, G1, G2 stand, respectively, for the boundary range
+$a\geq.975$, and the small displacement ranges
+$(a,r)\in[.85,1)\times[0,.02]$,
+$[.96,1)\times[0,.04]$, and
+$[.965,1)\times[0,.045]$.
+For row B the displacement bound is a conclusion of
+Lemma~\ref{bc:blaschke}: indeed
+\[
+ (.975)^2(.053)^2\bigl(1-(.053)^2\bigr)>1/388,
+\]
+and $u(1-u)$ increases on $[0,1/2]$; hence $r<.053$.
+
+\begin{proof}[Proof of Proposition~\ref{bc:moment-proposition}]
+First,
+\[
+ |\omega-1|^2=\frac{2y^2}{|b|(|b|+x)}\leq r^2/a^2,
+ \qquad
+ 2\Re(\overline\omega\xi_j)<a+2r/a.
+\]
+All rows satisfy $2e<a_0^2$.  The function $a+2e/a$ therefore
+increases on $[a_0,1]$, and is at most $1+2e<d_0$ there.
+The two pairs $(s_1,\delta_1),(s_2,\delta_2)$ in the tables satisfy
+\eqref{bc:movement-gates}.  Lemma~\ref{bc:movement} applies to both.
+
+Put $k=N/n$, $A_n=\delta_1^{2/n}$, and
+$A_-=1-\alpha_0/n$.  The inequality
+$\alpha_0/2>\log(1/\delta_1)$ gives $A_n>A_->0$.
+Original-zero AM--GM at $s_1\omega$ gives
+\begin{equation}\label{bc:directional-mean}
+ 2s_1\Re(\overline\omega\mu)
+ \leq1+s_1^2-A_n e^{2kL(b)}.
+\end{equation}
+On $R_c\leq s\leq2$ the logarithmic chord
+\begin{equation}\label{bc:coarse-chord}
+ s^2\leq R_c^2+\frac{22}5\log(s/R_c)
+\end{equation}
+follows by convexity of $e^{2v}$ in $v=\log s$ and its endpoint
+inequality.  The latter follows already from
+$\log(1/R_c)\geq(1-R_c^2)/2$ and the displayed certificate below.
+Average \eqref{bc:coarse-chord} at $s=|b-\xi_j|$ and use
+\eqref{bc:directional-mean}.  For $v=|b|$ this yields
+\begin{equation}\label{bc:F-definition}
+ Q\leq F(L(b)):=
+ \frac v{s_1}(1+s_1^2-A_ne^{2kL(b)})+R_c^2-v^2
+     +\frac{22}5(L(b)-\log R_c).
+\end{equation}
+Let
+\[
+ T=\frac{1+s_1^2-A_-R_c^2}{s_1},\qquad
+ F_0=a_0T+R_c^2-a_0^2.
+\]
+The row comparisons $T<2a_0$ and
+$22/5-2a_0kA_-R_c^2/s_1<0$ show that $F$ decreases on the
+entire half-line $L(b)\geq\log R_c$.  Indeed $F''<0$, while
+$R_c^{2k}\geq R_c^2$; the quadratic $vT-v^2$ decreases for
+$v\geq a_0$.  The resulting chain is
+\begin{equation}\label{bc:coarse-correct-chain}
+ Q\leq F(L(b))\leq F(\log R_c)\leq F_0<q_c,
+ \qquad |\mu|<m_c,
+\end{equation}
+where the last inequality uses $q_c<m_c^2$.
+
+The same calculation at every $z\omega$, $0\leq z\leq s_2$, bounds
+the average squared critical distance by
+\[
+ z^2+\frac{v-z}{s_1}(1+s_1^2-A_ne^{2kL(b)})+R_c^2-v^2
+       +\frac{22}5(L(b)-\log R_c).
+\]
+Subtract $.9e^{2L(b)}$.  Its derivative in $L(b)$ is negative
+throughout the same half-line, because
+\[
+ 2R_c^2\left(kA_-\frac{a_0-s_2}{s_1}+.9\right)>22/5.
+\]
+At $L(b)=\log R_c$ it is at most
+$z^2-zT+F_0-.9R_c^2$.  This is a convex quadratic in $z$;
+the two endpoint values, at $0,s_2$, are negative.
+Critical-zero AM--GM consequently gives
+\begin{equation}\label{bc:primitive-decay}
+ |P'(z\omega)|<(.95)^N|P'(b)|\qquad(0\leq z\leq s_2).
+\end{equation}
+Since $e^{N/20}>200n$ and $s_2<100\delta_2$, integration and the
+second movement inequality give
+\begin{equation}\label{bc:normalization}
+ |P(0)|\geq\frac{\delta_2}{2n}|P'(b)|>0,
+ \qquad
+ L(b)\leq\frac\ell N-\frac nN B,
+\end{equation}
+where $e^\ell>2/\delta_2$.  The inequalities
+$R_c>1.001p$ and $(1.001)^N>2p/\delta_2$ also give
+$|P(0)|>p^n$.  In particular
+$0\leq B< -\log R_c+\ell/n<B_c$.
+
+For the annulus iteration, suppose $|\mu|\leq m$,
+$Q<q_c$, and
+\begin{equation}\label{bc:annulus-gates}
+ \rho^2+2\rho m+q_c<s_*^2,\qquad
+ \rho<s_*<p,\qquad n(s_*/p)^n<1.
+\end{equation}
+For every $|z|\leq\rho$, AM--GM gives
+$|P'(z)|<ns_*^{N}$.  Integrating on the segment from $0$ to $z$,
+\[
+ \frac{|P(z)-P(0)|}{|P(0)|}
+ <\frac\rho{s_*}n(s_*/p)^n<1.
+\]
+Thus every original zero has modulus greater than $\rho$.
+For $0<\rho\leq s\leq1$, the function
+$2\sinh t/t$, $t=-\log s$, increases with $t\geq0$.
+It follows that
+\[
+ s^{-1}-s\leq
+ \frac{\rho^{-1}-\rho}{-\log\rho}(-\log s).
+\]
+Since $-P'(0)/P(0)=\sum_i z_i^{-1}$, any
+$\kappa>(\rho^{-1}-\rho)/(-\log\rho)$ therefore gives
+\begin{equation}\label{bc:reciprocal-mean}
+ |\mu|\leq\kappa B+
+ \frac{|P'(0)|}{n|P(0)|}.
+\end{equation}
+The residual in this formula is bounded by
+\[
+ \frac{m_c^N}{p^n}=\frac{(m_c/p)^n}{m_c}<2d_s^n<n^{-2},
+\]
+using $m_c/p<d_s$ and $1/m_c<2$.
+Beginning with $m=m_c$,
+each successive triple $(\rho,\kappa,m')$ in
+Table~\ref{bc:annulus-table} satisfies \eqref{bc:annulus-gates}
+and $\kappa B_c+n^{-2}<m'$.  The last triple supplies
+\eqref{bc:moment-mean}.
+
+The geometric bounds \eqref{bc:entrance} and $E_b\geq N$ give
+\[
+ H>Na/2,\qquad E_b/H<2/a,\qquad
+ E_b/H^2<4/(Na_0^2),\qquad (Hd)^{-1}<2/[Na_0(1-e)].
+\]
+The last two bounds are respectively below $7/625$ and $1/270$.
+The Fine companion estimate of Proposition~\ref{lt:fine200} therefore gives
+\begin{equation}\label{bc:fine-phase}
+ |\Im S|<4E_b/H<8/a.
+\end{equation}
+For $w_0=b-a$, the complete logarithmic series at $b$ converges
+absolutely, because $r/d<r/(1-r)<1$.  Its linear term satisfies
+\[
+ -\Re(w_0S)=-(x-a)\Re S+y\Im S\leq r|\Im S|.
+\]
+The terms of order at least two have total absolute value, after
+averaging, at most
+$E_br^2/[2N(1-r/d)]$.  Using $E_b/N<(1-r)^{-2}$ proves
+\begin{equation}\label{bc:reverse-log}
+ L(a)\leq L(b)+\mathcal E(r;a,N).
+\end{equation}
+Since $L(a)>0$, \eqref{bc:normalization} proves
+\eqref{bc:moment-B}.
+
+Finally $s^2\leq1+w\log s$ on $1\leq s\leq2$, because
+$w\log2>3$ and the exponential is convex.  Apply this chord at
+$s=|a-\xi_j|$ and use
+\eqref{bc:normalization}, \eqref{bc:reciprocal-mean}, and
+\eqref{bc:reverse-log}.  We obtain
+\[
+ Q<1-a^2+w\left(\frac\ell N+\mathcal E(r;a,N)\right)
+      +2n^{-2}+(2a\kappa-wn/N)B.
+\]
+The coefficient of $B$ is negative, since $w>2\kappa$ and $a\leq1$.
+This proves \eqref{bc:moment-Q}.
+\end{proof}
+
+
+\begin{table}[ht]
+\centering\small
+\caption{Preliminary parameters.  In every row $s_1=.25$ and $s_2=.45$.}
+\label{bc:preliminary-table}
+\begin{tabular}{@{}crrrrrrrr@{}}\toprule
+Row&$a_0$&$e$&$R_c^2$&$d_0$&$\delta_1$&$\delta_2$&$\alpha_0$&$\ell$\\\midrule
+B & 0.975 & 0.053 & 0.896708 & 1.10611 & 0.01976 & 0.03838 & 7.86 & 3.97\\
+A & 0.85 & 0.02 & 0.960299 & 1.04011 & 0.00823 & 0.02383 & 9.61 & 4.44\\
+G1 & 0.96 & 0.04 & 0.921499 & 1.08011 & 0.02114 & 0.03857 & 7.73 & 3.96\\
+G2 & 0.965 & 0.045 & 0.911924 & 1.09011 & 0.02047 & 0.03836 & 7.79 & 3.97\\
+M0 & 0.9 & 0.057 & 0.889148 & 1.11411 & 0.00534 & 0.02433 & 10.48 & 4.42\\
+M1 & 0.93 & 0.055 & 0.892924 & 1.11011 & 0.01089 & 0.0297 & 9.05 & 4.22\\
+M2 & 0.95 & 0.054 & 0.894815 & 1.10811 & 0.01474 & 0.03346 & 8.45 & 4.11\\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[ht]
+\centering\small
+\caption{Coarse normalization and annulus parameters.}
+\label{bc:coarse-table}
+\begin{tabular}{@{}crrrrrrr@{}}\toprule
+Row&$q_c$&$m_c$&$p$&$s_*$&$B_c$&$d_s$&$w$\\\midrule
+B & 0.59717 & 0.77287 & 0.94595 & 0.94414 & 0.055158 & 0.81705 & 4.494\\
+A & 0.59041 & 0.76849 & 0.97891 & 0.9771 & 0.020976 & 0.78506 & 4.33\\
+G1 & 0.54582 & 0.7389 & 0.95893 & 0.95712 & 0.041521 & 0.77056 & 4.33\\
+G2 & 0.56641 & 0.75271 & 0.95394 & 0.95213 & 0.046745 & 0.78907 & 4.354\\
+M0 & 0.70869 & 0.84194 & 0.94195 & 0.94014 & 0.059463 & 0.89384 & 5.098\\
+M1 & 0.66376 & 0.81482 & 0.94395 & 0.94214 & 0.057312 & 0.86322 & 4.765\\
+M2 & 0.63422 & 0.79648 & 0.94495 & 0.94314 & 0.056237 & 0.8429 & 4.623\\
+\bottomrule\end{tabular}
+\end{table}
+\begin{longtable}{@{}clll@{}}
+\caption{Successive annulus triples $(\rho,\kappa,m')$.
+A dash means that only the resulting inequality $|\mu|\leq\kappa B+n^{-2}$ is retained.}
+\label{bc:annulus-table}\\
+\toprule Row&$\rho$&$\kappa$&$m'$\\\midrule\endfirsthead
+\toprule Row&$\rho$&$\kappa$&$m'$\\\midrule\endhead
+B & 0.169 & 3.2333 & 0.178344\\
+ & 0.39 & 2.3091 & 0.127367\\
+ & 0.427 & 2.2504 & 0.124129\\
+ & 0.43 & 2.2462 & 0.123897\\
+ & 0.43 & 2.2462 & --\\
+A & 0.206 & 2.9424 & 0.061721\\
+ & 0.543 & 2.1268 & 0.044613\\
+ & 0.558 & 2.1155 & 0.044376\\
+ & 0.558 & 2.1155 & --\\
+G1 & 0.216 & 2.8802 & 0.11959\\
+ & 0.498 & 2.1661 & 0.08994\\
+ & 0.523 & 2.1432 & 0.088989\\
+ & 0.523 & 2.1432 & --\\
+G2 & 0.197 & 3.0035 & 0.1404\\
+ & 0.457 & 2.2109 & 0.10335\\
+ & 0.486 & 2.1783 & 0.101826\\
+ & 0.488 & 2.1762 & 0.101728\\
+ & 0.488 & 2.1762 & --\\
+M0 & 0.096 & 4.4043 & 0.261894\\
+ & 0.229 & 2.8073 & 0.166932\\
+ & 0.281 & 2.5822 & 0.153547\\
+ & 0.29 & 2.5515 & 0.151721\\
+ & 0.291 & 2.5482 & --\\
+M1 & 0.125 & 3.7872 & 0.217054\\
+ & 0.301 & 2.5165 & 0.144227\\
+ & 0.348 & 2.3928 & 0.137138\\
+ & 0.353 & 2.3817 & 0.136502\\
+ & 0.353 & 2.3817 & --\\
+M2 & 0.144 & 3.5093 & 0.197354\\
+ & 0.343 & 2.4043 & 0.135212\\
+ & 0.385 & 2.318 & 0.130359\\
+ & 0.389 & 2.3108 & 0.129954\\
+ & 0.389 & 2.3108 & --\\
+\bottomrule\end{longtable}
+\begin{table}[ht]
+\centering\small
+\caption{Uniform bounds $Q<q_0$, $B<B_0$, $|\mu|<m_0$, and
+$|P(0)|>p_f^n$ furnished by the moment formulas at $n=6251$.}
+\label{bc:refined-table}
+\begin{tabular}{@{}crrrr@{}}\toprule
+Row&$q_0$&$B_0$&$m_0$&$p_f$\\\midrule
+B & 0.06001 & 0.0023642 & 0.005311 & 0.997625\\
+A & 0.28164 & 0.0009535 & 0.0020177 & 0.999036\\
+G1 & 0.08531 & 0.0015932 & 0.0034151 & 0.998396\\
+G2 & 0.07689 & 0.0018604 & 0.0040492 & 0.998129\\
+M0 & 0.20395 & 0.0027331 & 0.0069651 & 0.997256\\
+M1 & 0.14726 & 0.0025497 & 0.0060732 & 0.99744\\
+M2 & 0.10888 & 0.0024586 & 0.0056819 & 0.997531\\
+\bottomrule\end{tabular}
+\end{table}
+
+The numerical statements used in the preceding proof are finite rational
+comparisons, with logarithms bounded by convergent positive series.
+The remaining comparisons are as follows, with $n_0=6251$,
+$N_0=6250$, $k_0=N_0/n_0$, and $A_-=1-\alpha_0/n_0$:
+\begin{align}
+ &2e<a_0^2,\quad 1+2e<d_0,\quad R_c^2<(1-e)^2,
+       \quad\eqref{bc:movement-gates}\text{ for }j=1,2;
+                                                        \label{bc:pre-gates-1}\\
+ &R_c^2+\tfrac{22}5\bigl(\log2+(1-R_c^2)/2\bigr)>4,
+       \quad \alpha_0/2>\log(1/\delta_1),
+       \quad e^\ell>2/\delta_2;                         \label{bc:pre-gates-2}\\
+ &T<2a_0,\quad F_0<q_c<m_c^2,\quad
+       2a_0k_0A_-R_c^2/s_1>22/5;                       \label{bc:pre-gates-3}\\
+ &2R_c^2[k_0A_-(a_0-s_2)/s_1+.9]>22/5,
+       \quad z^2-zT+F_0<.9R_c^2\quad(z=0,s_2);         \label{bc:pre-gates-4}\\
+ &N_0/20>\log(200n_0),\quad s_2<100\delta_2,
+       \quad R_c>1.001p,
+       \quad N_0\log(1.001)>\log(2p/\delta_2);         \label{bc:pre-gates-5}\\
+ &-\log R_c+\ell/n_0<B_c,\quad 1/m_c<2,
+       \quad m_c/p<d_s,
+       \quad (1-d_s)n_0>\log(2n_0^2);                 \label{bc:pre-gates-6}\\
+ &-n_0\log(s_*/p)>\log n_0,\quad
+       -n_0\log(s_*/p)>1,\quad(1-d_s)n_0>2;           \label{bc:pre-gates-7}\\
+ &\rho^2+2\rho m+q_c<s_*^2,\quad \rho<s_*,\quad
+       \rho^{-1}-\rho<-\kappa\log\rho,
+       \quad \kappa B_c+n_0^{-2}<m';                 \label{bc:pre-gates-8}\\
+ &\frac4{N_0a_0^2}<\frac7{625},\quad
+       \frac2{N_0a_0(1-e)}<\frac1{270},\quad
+       w>2\kappa,\quad w\log2>3.                     \label{bc:pre-gates-9}
+\end{align}
+In \eqref{bc:pre-gates-8}, $m=m_c$ at the first stage and is the
+preceding $m'$ thereafter; the last inequality is omitted for a dash.
+The caps in Table~\ref{bc:refined-table} are checked by substituting
+$a=a_0,r=e,n=n_0$ in \eqref{bc:moment-B}--\eqref{bc:moment-Q}, and by
+$\kappa B_0+n_0^{-2}<m_0$, $1-B_0>p_f$.
+These conditions prove all the displayed estimates for every $n\geq n_0$:
+$k,A_-$ increase, the moment errors decrease, and
+$n(s_*/p)^n$ and $2n^2d_s^n$ decrease after their stated derivative
+bounds.
+
+\subsection{Support and the normal of a boundary edge}
+
+The following transfer is a finite identity between the original and
+critical empirical measures.  It retains the normalization difference
+between $n$ and $N$.
+
+\begin{lemma}[Moment support bound]\label{bc:poisson-support}
+Suppose $P(0)\ne0$, $B\leq B_0$, $Q\leq q<1$, and $|\mu|\leq m$.
+Let $0<h<1$ and put
+\[
+ \Lambda=\frac{(1-q)^2}{1+q+2m}.
+\]
+If
+\begin{equation}\label{bc:support-test}
+ (N\Lambda+1)(1-h)^2>2(1-h)+2nB_0,
+\end{equation}
+then the convex hull of the original zeros contains $\overline{D(0,h)}$
+in its interior.
+\end{lemma}
+
+\begin{proof}
+Rotate a proposed contrary support direction to the real axis, so that
+$\Re z_i\leq h$ for all $i$.  Define
+\[
+ C_o(z)=\prod_i(1-z_i z),\quad C_c(z)=\prod_j(1-\xi_jz),
+ \quad f(z)=\frac1n\sum_i\frac1{1-z_i z},\quad
+ g(z)=\frac1N\sum_j\frac1{1-\xi_jz}.
+\]
+The exact identities $C_c=C_o-zC_o'/n$ and $C_c/C_o=f$ give
+\begin{equation}\label{bc:poisson-identity}
+ N(g-f)=f-1-zf'/f.
+\end{equation}
+The support assumption, and Gauss--Lucas for the critical points,
+make every term well defined at $z=1$.  Also
+\[
+ |f'(1)|\leq\frac1n\sum_i|1-z_i|^{-2},\qquad
+ \Re f(1)\geq(1-h)\frac1n\sum_i|1-z_i|^{-2}.
+\]
+Consequently $f(1)\ne0$ and $|f'(1)/f(1)|\leq(1-h)^{-1}$.
+Set $p_o=2\Re f(1)-1$, $p_c=2\Re g(1)-1$.  Then
+\[
+ p_o=\frac1n\sum_i\frac{1-|z_i|^2}{|1-z_i|^2}
+ \leq\frac{2B_0}{(1-h)^2},\qquad
+ Np_c=np_o-1-2\Re(f'(1)/f(1)).
+\]
+Here we used $1-|z_i|^2\leq-2\log|z_i|$.
+For the other measure, Cauchy--Schwarz gives
+\[
+ p_c\left(\frac1N\sum_j|1-\xi_j|^2\right)
+ \geq\left(\frac1N\sum_j\sqrt{1-|\xi_j|^2}\right)^2
+ \geq(1-Q)^2.
+\]
+Its denominator equals $1+Q-2\Re\mu$, whence $p_c\geq\Lambda$.
+Combining these estimates contradicts \eqref{bc:support-test}.
+Since every direction was allowed, all support values exceed $h$.
+\end{proof}
+
+We use the inverse-log quantities of Lemma~\ref{lt:inverse-log}.
+Suppose, at the actual rightmost zero $b$,
+\begin{equation}\label{bc:field-hypotheses}
+ H>H_0>0,\quad E_b/H<V,\quad d^{-1}<M.
+\end{equation}
+For $R>0$ define
+\begin{align}
+ \lambda&=\frac{VR}{1-MR},&
+ e_R&=V\left(\frac{R^2}2+\frac{MR^3}{3(1-MR)}\right),
+ &\widehat r&=R-e_R,                                  \label{bc:inverse-def-1}\\
+ B_2&=\frac{V}{(1-MR)^2(1-\lambda)^3},&
+ p_-&=(1+\lambda)^{-1},&p_+&=(1-\lambda)^{-1}.
+                                                               \label{bc:inverse-def-2}
+\end{align}
+Choose $0<\nu<1$, $W>0$, and $e_W>e^{-W}$, and put
+\[
+ \epsilon=1.001B_2/H_0,\qquad g=1.001\nu B_2\widehat r.
+\]
+The sufficient comparisons are
+\begin{align}
+ &MR<1,\quad 0<\lambda<1,\quad \widehat r>0,
+       \quad W^2<(1-\nu^2)(H_0\widehat r)^2,
+                                                    \label{bc:inverse-gates-1}\\
+ &\epsilon(1+e_W)+ge_W<1-p_+e_W,
+                                                    \label{bc:inverse-gates-2}\\
+ &\epsilon(1+e_W)+ge_W^2<p_--e_W,
+       \qquad \epsilon+ge_W<p_-.                   \label{bc:inverse-gates-3}
+\end{align}
+They ensure that the analytic logarithm
+$\mathcal L(z)=\log(P'(z)/P'(b))$, fixed at $b$, is injective on
+$D(b,R)$ and has an inverse $\phi$ on $D(0,H\widehat r)$.
+Moreover
+\begin{equation}\label{bc:inverse-location}
+ |\phi(w)-b-w/S|<e_R,\qquad
+ \frac{SP(\phi(w))}{P'(b)}=\int_0^we^v A(v)\,dv,\quad A=S\phi',
+\end{equation}
+with $\Re A>p_-$, $|A|<p_+$ and $|A'|<B_2/H$.
+On every rectangle with vertical sides $\Re w=\pm W$ and odd
+multiples of $\pi$ as horizontal sides, contained in
+$|\Im w|\leq\nu H\widehat r$, the complete side estimates and
+the homotopy $(1-s)+sA$ give the same zero count as $e^w-1$.
+In particular the number of original zeros in $D(b,R)$ is greater than
+\begin{equation}\label{bc:inverse-count}
+ \nu H\widehat r/\pi-2>
+ \nu(7/22)H\widehat r-2,
+\end{equation}
+provided the last expression is positive.  The loss two includes the
+choice of the outermost odd heights.  When
+$\nu H_0\widehat r>4\pi$, the top adjacent strip and the bottom
+adjacent strip each contain one distinct simple original zero, with
+\begin{equation}\label{bc:high-strips}
+ |\Re w|<W,\qquad
+ \Im w_+>\nu H\widehat r-4\pi,\qquad
+ \Im w_-<-\nu H\widehat r+4\pi.
+\end{equation}
+These statements concern zeros of $P$ itself, through
+\eqref{bc:inverse-location}.
+
+\begin{lemma}[Localization of an edge normal]\label{bc:edge-normal}
+Suppose $a$ is on a supporting edge of the original hull, the hull
+contains a positive centered disk, and $|b-a|\leq e$.  Suppose
+\eqref{bc:field-hypotheses}--\eqref{bc:inverse-gates-3} hold,
+$\nu H_0\widehat r>4\pi$, and $|\Im S|<J_0$.
+Set $s=J_0/H_0<1$ and
+\begin{align}
+ E_0&=W/H_0+s\nu\widehat r+e_R,\nonumber\\
+ L_0&=(1-s^2)(\nu\widehat r-4\pi/H_0)-sW/H_0-e_R.
+                                                        \label{bc:normal-errors}
+\end{align}
+If $L_0>e$, the outward normal $(\cos\theta,\sin\theta)$ of this
+edge satisfies
+\begin{equation}\label{bc:normal-bound}
+ \cos\theta>0,\qquad |\tan\theta|<K:=\frac{E_0}{L_0-e}.
+\end{equation}
+In particular its distance from the origin is greater than
+$a/\sqrt{1+K^2}$.
+\end{lemma}
+
+\begin{proof}
+Write $\sigma=S/H$.  Since $\Re S>0$, one has
+$|\Im\sigma|<s$ and $\Re\sigma>1-s^2$.  The two zeros supplied
+by \eqref{bc:high-strips}, and $w/S=\overline\sigma w/H$, satisfy
+\[
+ \Re z_\pm>x-E_0,\qquad
+ \Im z_+>y+L_0,\qquad \Im z_-<y-L_0.
+\]
+These bounds follow by applying \eqref{bc:inverse-location} on the
+strips.
+The positive support disk gives $a\cos\theta>0$.  Every original
+zero obeys
+\[
+ \cos\theta(\Re z-a)+\sin\theta\Im z\leq0.
+\]
+Use $z_+$ when $\sin\theta\geq0$ and $z_-$ otherwise, and use
+$x-a\geq0$, $|y|\leq e$.  This gives
+$|\sin\theta|(L_0-e)<E_0\cos\theta$, proving the lemma.
+\end{proof}
+
+\begin{lemma}[Geometry of the whole edge and radial paths]
+\label{bc:edge-geometry}
+Suppose the edge through $a$ has distance at least $h>0$ from the
+origin and its normal satisfies \eqref{bc:normal-bound}.  Set
+\[
+ c=\frac{h-K\sqrt{1-h^2}}{\sqrt{1+K^2}}.
+\]
+Every point $z$ of the edge has $\cos(\arg z)\geq c$ and
+\begin{equation}\label{bc:whole-edge-gap}
+ |z-\xi_j|>1-K-\sqrt{1-h^2}.
+\end{equation}
+Furthermore, suppose $a\geq a_1$, $0<\gamma<1$, and $0<r_0<h$.
+If
+\begin{equation}\label{bc:four-corners}
+ 1-v^2+2t(vc-\gamma)-t^2(1-\gamma^2)>0
+ \quad(v=a_1,1;\ t=r_0,1),
+\end{equation}
+then the whole radial segment from $r_0u/|u|$ to each endpoint $u$
+of the edge satisfies $|z-\xi_j|>\gamma|z|$.
+\end{lemma}
+
+\begin{proof}
+If $h_e$ is the distance of the line and $\theta$ is its normal
+angle, every point of its unit-disk chord satisfies
+$|\arg z-\theta|\leq\arccos h_e\leq\arccos h$.
+Combining this with $|\tan\theta|<K$ gives the bound $c$.
+In normal and tangent coordinates the chord has tangent coordinate
+in $[-\sqrt{1-h_e^2},\sqrt{1-h_e^2}]$, while the tangent
+coordinate of $a$ has modulus $h_e|\tan\theta|$.  Therefore
+$|z-a|\leq\sqrt{1-h^2}+K$, which proves
+\eqref{bc:whole-edge-gap} by \eqref{bc:hole}.
+For $z=t e^{i\arg u}$, the difference
+\[
+ (1-\gamma t)^2-|a-z|^2
+ \geq1-a^2+2t(ac-\gamma)-t^2(1-\gamma^2)
+\]
+is bounded below by a polynomial concave separately in $a$ and $t$.
+Its minimum on $[a_1,1]\times[r_0,1]$ is therefore at a corner.
+Under \eqref{bc:four-corners}, $|a-z|<1-\gamma t$, and
+\eqref{bc:hole} gives the claimed radial gap.
+\end{proof}
+
+\subsection{A potential estimate with an error proportional to the moment}
+
+The following estimate retains a factor $Q$ in the interpolation error.
+
+\begin{lemma}[Endpoint potential estimate]\label{bc:endpoint-potential}
+Let $0<r_0<h$, and let $C_0,v_0,\beta,J,s_0,g,e_0$
+be positive parameters.
+Suppose an edge through a strict witness $a$ has distance at least $h$
+from the origin, and all its points have critical distance greater than
+$\gamma>0$.  Suppose, at its two endpoints $u$, the radial paths
+from $r_0u/|u|$ to $u$ have critical distance greater than
+$\gamma|z|$.  Assume
+\[
+ Q\leq q<1,\quad |\mu|\leq m<\min(h,r_0),\quad
+ |P(0)|>p_f^n,\qquad p_f>.99.
+\]
+If $n\geq1000$, the comparisons
+\eqref{bc:outer-gates}, \eqref{bc:endpoint-log-gates},
+\eqref{bc:inner-gates}, and \eqref{bc:hessian-test} hold, and
+$12+J/(1-Jq)+1/99<24$, then
+\begin{equation}\label{bc:potential-24}
+ -\log|P(0)|<24Q.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Put $v=Q-|\mu|^2=N^{-1}\sum_j|\xi_j-\mu|^2\geq0$.
+The exact centered resolvent identity is
+\begin{equation}\label{bc:centered-resolvent}
+ \frac1N\sum_j\frac1{z-\xi_j}-\frac1{z-\mu}
+ =\frac1N\sum_j
+ \frac{(\xi_j-\mu)^2}{(z-\mu)^2(z-\xi_j)}.
+\end{equation}
+On each outer radial path its modulus is at most $C_0v$ if
+\begin{equation}\label{bc:outer-gates}
+\begin{gathered}
+ \frac1{(r_0-m)^2\gamma r_0}<C_0,\qquad
+ 1-\frac{m}{r_0(r_0-m)}>v_0,\qquad
+ v_0\frac Nn-C_0q>\beta,\\
+ \frac{C_0}{\beta^2(h-m)}<J,\qquad Jq<1.
+\end{gathered}
+\end{equation}
+The second comparison bounds from below the inward logarithmic speed
+of the centered radius $|z-\mu|$.  Indeed, for $z=t\omega$,
+\[
+ \Re\frac\omega{t\omega-\mu}
+ \geq\frac1t-\frac{m}{t(t-m)}
+ \geq1-\frac{m}{r_0(r_0-m)}.
+\]
+Let $q_P=P'/n$, $C_u=q_P(u)/(u-\mu)^N$, and
+$w_u=r_0u/|u|$.  Integrate the logarithmic derivative in
+\eqref{bc:centered-resolvent} inward from $u$ a distance $s$.
+The centered monomial decays at least as $e^{-Nv_0s}$, and the
+logarithm of its ratio to $q_P$ has modulus at most
+$NC_0vs$.  Since $e^u-1\leq ue^u$ for $u\geq0$, the
+absolute difference integral is at most
+\[
+ |P'(u)|\int_0^\infty nC_0vs e^{-\beta ns}\,ds
+ =\frac{C_0v|P'(u)|}{\beta^2n}.
+\]
+Consequently
+\begin{equation}\label{bc:outer-primitive}
+\begin{gathered}
+ \int_{w_u}^uP'(z)\,dz
+ =C_u\bigl((u-\mu)^n-(w_u-\mu)^n\bigr)+E_{\rm out},\\
+ |E_{\rm out}|\leq Jv|C_u(u-\mu)^n|.
+\end{gathered}
+\end{equation}
+
+For the endpoint logarithm set $\zeta_j=(\xi_j-\mu)/(u-\mu)$.
+Their mean is zero.  The parameter comparisons we use are
+\begin{equation}\label{bc:endpoint-log-gates}
+\begin{gathered}
+ \frac{1+m}{h-m}<1.1,\quad
+ \log\frac{1+m}{\gamma}<1.2,\quad
+ \log\frac2{h-m}<1.2,\quad
+ \frac{4(1.2+1.1)}{(h-m)^2}<12.
+\end{gathered}
+\end{equation}
+They imply $|\zeta_j|<1.1$ and
+$\gamma/(1+m)<|1-\zeta_j|<2/(h-m)$.
+For $|\zeta|\leq1/2$, the complete logarithmic series gives
+$|\log|1-\zeta|+\Re\zeta|\leq|\zeta|^2$.
+For $|\zeta|>1/2$, the corresponding bound is
+$4(1.2+1.1)|\zeta|^2$.  Averaging, and using the zero mean,
+gives
+\begin{equation}\label{bc:centered-log}
+ |L(u)-\log|u-\mu||\leq12v.
+\end{equation}
+
+For the inner segment, write $\eta_j=\xi_j-\mu$ and, for fixed $z$,
+consider
+$f_z(t)=\prod_j(z-\mu-t\eta_j)$.  Its first derivative at $t=0$
+vanishes.  For every product missing two labels, AM--GM gives
+\[
+ \prod_{j\ne i,k}|z-\mu-t\eta_j|
+ \leq e\bigl(|z-\mu|^2+t^2v\bigr)^{(N-2)/2},
+\]
+because $(N/(N-2))^{(N-2)/2}\leq e$.  Also
+$\sum_{i\ne k}|\eta_i\eta_k|\leq N^2v$.
+Taylor's integral remainder therefore shows that
+\[
+ |q_P(z)-(z-\mu)^N|\leq2N^2vs_0^{N-2}
+ \qquad(|z|\leq r_0),
+\]
+provided $(r_0+m)^2+q<s_0^2$.  The same argument applied to
+$\prod_j(1-t\eta_j/(u-\mu))$ gives
+\[
+ |C_u|\leq e^{gn},\qquad
+ |C_u-1|\leq2N^2ve^{gn}
+\]
+under $q/[2(h-m)^2]<g$ and $e/[2(h-m)^2]<2$.
+If $(r_0+m)e^g<s_0$ and $e^gs_0^2<1$, it follows that
+\[
+ |q_P(z)-C_u(z-\mu)^N|\leq4N^2vs_0^{N-2}
+ \qquad(|z|\leq r_0).
+\]
+Combining its integral from $0$ to $w_u$ with
+\eqref{bc:outer-primitive} and $P(u)=0$ gives
+\begin{equation}\label{bc:endpoint-identity}
+\begin{gathered}
+ 0=P(0)+C_u(u-\mu)^n(1+\theta_u)+E_u,\quad
+ |\theta_u|\leq Jv,\\
+ |E_u|\leq4n^3vs_0^{n-3}+e^{gn}|\mu|^n.
+\end{gathered}
+\end{equation}
+The condition $m<.006$ gives $|\mu|^n\leq Q(.006)^{n-2}$.
+The inner conditions are
+\begin{align}
+ &(r_0+m)^2+q<s_0^2,\quad
+   q/[2(h-m)^2]<g,\quad e<4(h-m)^2,\nonumber\\
+ &(r_0+m)e^g<s_0,\quad e^gs_0^2<1,\quad
+   4/s_0^3<6,\quad s_0/.99<e_0,\quad m<.006,\nonumber\\
+ &e^g(.006)/.99<.01,\quad
+   6(1000)^3e_0^{1000}+10^6(.01)^{1000}<.01,\quad
+   e_0(1001/1000)^3<1.                            \label{bc:inner-gates}
+\end{align}
+They imply, for every $n\geq1000$,
+\begin{equation}\label{bc:Q-error}
+ |E_u/P(0)|\leq Q\bigl(6n^3e_0^n+10^6(.01)^n\bigr)\leq Q/100.
+\end{equation}
+Since $Jq<1$ and $|E_u/P(0)|<1$, we may take logarithms in
+\eqref{bc:endpoint-identity}.  Using
+$\log|C_u(u-\mu)^n|=NL(u)+\log|u-\mu|$, we obtain
+\[
+ n\left|L(u)-\frac1n\log|P(0)|\right|
+ \leq\left(12+\frac J{1-Jq}+\frac1{99}\right)Q\leq24Q.
+\]
+The inequalities are strict when $Q>0$.
+
+The assumed inequality \eqref{bc:hessian-test} implies $2h^2-1>0$.
+The edge has unit tangent $v_e=ie^{i\theta}$ and support coordinates
+$z=e^{i\theta}(h_e+it)$, with $h_e\geq h$ and
+$h_e^2+t^2=|z|^2\leq1$.  Hence $h_e^2-t^2\geq2h_e^2-1>0$, and
+\[
+ -\Re\frac{v_e^2}{z^2}
+ =\frac{h_e^2-t^2}{(h_e^2+t^2)^2}
+ \geq h_e^2-t^2\geq2h_e^2-1\geq2h^2-1.
+\]
+The identity
+\[
+ (z-\xi)^{-2}=z^{-2}+2\xi z^{-3}
+       +\frac{\xi^2(3z-2\xi)}{z^3(z-\xi)^2},
+ \qquad 3z-2\xi=z+2(z-\xi),
+\]
+therefore bounds the second derivative of $L$ along the whole edge
+from below by
+\begin{equation}\label{bc:hessian-test}
+ 2h^2-1-\frac{2m}{h^3}
+       -q\left(\frac1{h^2\gamma^2}+\frac2{h^3\gamma}\right)>0.
+\end{equation}
+Thus $L$ is convex on that edge.  Its two endpoint estimates imply
+$nL(a)\leq\log|P(0)|+24Q$.  Since $L(a)>0$, this is
+\eqref{bc:potential-24}.  The argument also covers $v=0$.
+\end{proof}
+
+\begin{lemma}[Annular cubic rigidity]\label{bc:cubic-rigidity}
+Suppose all original zeros satisfy $\rho\leq|z_i|\leq1$, where
+$0<\rho\leq1$, and all critical points belong to
+$\{z:|z|\leq1,\ |z-1|\geq1\}$.  Suppose $C\geq1$, $0<q<1$,
+$Q\leq q$, and $|P(0)|\geq e^{-CQ}$.  Then $Q=0$, and
+$P(z)=z^n+c$ with $|c|=1$, provided
+\begin{equation}\label{bc:rigidity-floor}
+ n\geq\left\lceil\max\left\{
+ \frac{256}{(1-q)^2},\ \frac{8Cq}{1-q},\
+ C\left(\frac8\rho+\frac{16}{\rho^2}+\frac6{\rho^3}\right)+11
+ \right\}\right\rceil.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For $z=x+iy$ and $s=|z|^2$ the identity
+\[
+ \Re(-z-z^2-z^3/4)-s/4
+ =(1+x)(3s/4-x-x^2)
+\]
+has nonnegative right side on the stated lens.  Indeed
+$-1\leq x\leq1/2$, $s\geq x^2$, and $s\geq2x$; use the first
+lower bound when $x\leq0$ and the second when $x\geq0$.
+Writing $t_k=N^{-1}\sum_j\xi_j^k$, we deduce
+\begin{equation}\label{bc:cubic-positive}
+ Q\leq4|t_1|+4|t_2|+|t_3|.
+\end{equation}
+
+Assume $Q>0$ and put $a_j=P^{(j)}(0)/P(0)$, $j=1,2,3$.
+Differentiate the product for $P'$ and apply AM--GM to every remaining
+subproduct.  Since $(N/(N-j+1))^{(N-j+1)/2}\leq e^{(j-1)/2}<3$,
+\[
+ |a_j|\leq3e^{Cq}n^3Q^{(n-3)/2}.
+\]
+Set $\delta=1-q$.  The first two conditions in
+\eqref{bc:rigidity-floor} imply
+\[
+ 3e^{Cq}n^4q^{(n-5)/2}<1.
+\]
+$\log n\leq\sqrt n$ and $\log q\leq-\delta$ give
+\begin{align*}
+ \log3+Cq+4\log n+\tfrac{n-5}2\log q
+ &\leq\log3+Cq-\delta n/4+5\delta/2\\
+ &\leq\log3-\delta n/8+5\delta/2\\
+ &\leq\log3-32/\delta+5\delta/2<0.
+\end{align*}
+It follows that $|a_j|\leq Q/n$.
+
+Let $R_k=\sum_i z_i^{-k}$ and $s_k=n^{-1}\sum_i z_i^k$.  The exact
+identities
+\[
+ R_1=-a_1,\quad R_2=a_1^2-a_2,\quad
+ R_3=-(a_3-3a_1a_2+2a_1^3)/2
+\]
+give $|R_k|\leq2Q/n$ for $k=1,2,3$.  For an original modulus
+$s\in[\rho,1]$, integrate the derivative of $e^{kt}-e^{-kt}$ from
+$0$ to $t=-\log s$ to obtain
+\[
+ |z_i^k-\overline{z_i^{-k}}|
+ =s^{-k}-s^k\leq2k\rho^{-k}(-\log s).
+\]
+Sum over all original zeros.  The radial budget
+$\sum_i-\log|z_i|\leq CQ$ implies
+\begin{equation}\label{bc:power-moment-small}
+ |s_k|\leq A_kQ/n,\qquad A_k=2kC\rho^{-k}+1,\quad k=1,2,3.
+\end{equation}
+Here $n\geq256$ justifies replacing the term $2/n$ by one.
+
+Newton's identities for $P$ and $P'/n$ give
+\[
+ t_1=s_1,\qquad
+ t_2=\frac{(n-2)s_2+s_1^2}{n-1},\qquad
+ t_3=\frac{(n-3)s_3+3s_1s_2-s_1^3}{n-1}.
+\]
+Using $|s_1|\leq1$, \eqref{bc:cubic-positive}, and
+\eqref{bc:power-moment-small}, we obtain
+\[
+ Q\leq\left(B_1+9+\frac{E_1}{n-1}\right)\frac Qn,
+\]
+where
+\[
+ B_1=C(8/\rho+16/\rho^2+6/\rho^3),\qquad
+ E_1=10C/\rho+12C/\rho^2+8.
+\]
+But $B_1+10-E_1=C(-2/\rho+4/\rho^2+6/\rho^3)+2>0$.
+Since $n\geq B_1+11$, the coefficient in parentheses is less than
+$B_1+10<n$, a contradiction.  Thus $Q=0$.
+Now $P'=nz^{n-1}$, and the product hypothesis and the unit-disk roots
+force the constant term of $P$ to have modulus one.
+\end{proof}
+
+\begin{proposition}[Boundary and small displacement ranges]\label{bc:boundary}
+For every $n\geq6251$, a hull point satisfying \eqref{bc:hole} is
+impossible in each of the following cases:
+\begin{equation}\label{bc:boundary-scopes}
+\begin{array}{c|c|c}
+ &a&r\\ \hline
+ \mathrm B&[.975,1]&\text{arbitrary}\\
+ \mathrm A&[.85,1]&[0,.02]\\
+ \mathrm {G1}&[.96,1]&[0,.04]\\
+ \mathrm {G2}&[.965,1]&[0,.045].
+\end{array}
+\end{equation}
+The latter three conclusions hold for any choice of actual rightmost
+zero satisfying the indicated displacement bound.
+\end{proposition}
+
+\begin{proof}
+We first treat a boundary witness $a<1$ which is not an original
+zero.  The normalization and moment proof above gives
+Table~\ref{bc:refined-table}.  Apply Lemma~\ref{bc:poisson-support}
+using the weak support radii in Table~\ref{bc:geometry-table}.
+For row A, repeat the support test and the actual-parameter moment
+inequality in the following order:
+\begin{equation}\label{bc:feedback}
+\begin{array}{c|c|c}
+ \text{lower }a&\text{new upper }Q&\text{next support radius}\\ \hline
+ .9305&.13831&.9454\\
+ .9454&.11036&.9478\\
+ .9478&.10582&.9481\\
+ .9481&.10525&\text{--}.
+\end{array}
+\end{equation}
+Each new moment bound is obtained from \eqref{bc:moment-Q} by
+increasing only the lower bound for its explicit $a^2$ term.
+The error $\mathcal E(.02;.85,N)$ is retained throughout, and the
+caps for $B,|\mu|$ remain unchanged.
+Put $a_1=.9481$, $q=.10525$ in row A;
+in the other three rows put $a_1=a_0$, $q=q_0$.
+
+At $b$ the finite resolvent expansion
+\[
+ \frac SN=\frac1b+\frac{\mu}{b^2}
+                  +\frac1N\sum_j\frac{\xi_j^2}{b^2(b-\xi_j)}
+\]
+gives
+\begin{equation}\label{bc:moment-field}
+ H>Nc_f,\quad E_b/H<V,\quad d^{-1}<M,\qquad
+ c_f=1-\frac m{a_1}-\frac q{a_1(1-e)},\quad
+ V=\frac1{c_f(1-e)^2},\quad M=\frac1{1-e}.
+\end{equation}
+The listed parameters give $c_f>0$.  Since
+$1-m/|b|-q/(|b|d)>c_f$ and $|b|\leq1$,
+\[
+ H\geq\frac N{|b|}\left(1-\frac m{|b|}-\frac q{|b|d}\right)>Nc_f.
+\]
+Use $H_0=N_0c_f$, $\nu=.99$, $W=4$ and the radii $R$ in
+Table~\ref{bc:geometry-table}.  All comparisons
+\eqref{bc:inverse-gates-1}--\eqref{bc:inverse-gates-3} hold, as does
+$\nu H_0\widehat r>4\pi$.  Equation \eqref{bc:fine-phase} supplies
+$J_0=8/a_0$, with the original $a_0$ also in row A.
+Lemma~\ref{bc:edge-normal} consequently gives $K$.
+
+For B, G1, and G2 the direct comparisons
+$a_0^2>h^2(1+K^2)$ show that this particular edge has distance
+greater than the listed $h$.  Row A uses its support radius $.9481$.
+All four rows satisfy
+$1-K-\sqrt{1-h^2}>\gamma$ and the four corner inequalities
+\eqref{bc:four-corners} with $r_0=.9$.
+Lemma~\ref{bc:edge-geometry} therefore supplies the gaps on the
+whole edge and the endpoint radial paths.
+
+The endpoint parameters in Table~\ref{bc:endpoint-table} are positive,
+and $r_0=.9<h$ in all four rows.
+All the hypotheses of Lemma~\ref{bc:endpoint-potential} hold.
+In particular the Hessian bounds and endpoint coefficients in
+Table~\ref{bc:boundary-margins} are strictly positive and strictly
+less than $24$, respectively.  We obtain
+$-\log|P(0)|<24Q$.
+The additional annulus radii $\rho_f$ in the table follow from
+\[
+ \rho_f^2+2\rho_fm+q<s_f^2,\qquad
+ \rho_f<s_f,\qquad
+ s_f/p_f<s_*/p,
+\]
+and the already proved whole-degree bound $n(s_*/p)^n<1$.
+Thus every original zero satisfies $|z_i|>\rho_f$.
+
+Every critical point belongs to the lens in
+Lemma~\ref{bc:cubic-rigidity}, since
+\[
+ |\xi-1|^2-|\xi-a|^2=(1-a)(1+a-2\Re\xi)>0.
+\]
+The three bounds in \eqref{bc:rigidity-floor}, with $C=24$,
+$\rho=\rho_f$, and the final $q$, are all less than $900$.
+Lemma~\ref{bc:cubic-rigidity} gives $Q=0$.  All critical points
+then equal zero, contradicting \eqref{bc:hole} for $a<1$.
+
+The weak support test already excludes a hull of dimension less than
+two.  A boundary vertex is an original zero and was excluded by
+the energy inequality; every other boundary point lies on a genuine
+edge as used above.  If $a=1$, strict convexity of $\overline\D$
+makes $1$ an original zero, again impossible.
+Finally, for an interior witness move outward on its real ray to the
+boundary point $A$.  Since $a\leq A\leq x$,
+\[
+ |A-\xi|^2-|a-\xi|^2=(A-a)(A+a-2\Re\xi)\geq0,\qquad
+ |b-A|\leq|b-a|.
+\]
+The strict hole and each applicable displacement hypothesis persist.
+The boundary result therefore proves all of \eqref{bc:boundary-scopes}.
+\end{proof}
+
+\begin{table}[ht]
+\centering\small
+\caption{Support and geometric parameters for the four exclusion rows.}
+\label{bc:geometry-table}
+\begin{tabular}{@{}crrrrrrr@{}}\toprule
+Row&weak $h$&final $h$&$R$&$\gamma$&$\rho_f$&$s_f$&final $q$\\\midrule
+B & 0.9239 & 0.95027 & 0.113 & 0.455 & 0.955 & 0.993 & 0.06001\\
+A & 0.9305 & 0.9481 & 0.061 & 0.583 & 0.934 & 0.993 & .10525\\
+G1 & 0.9351 & 0.94709 & 0.092 & 0.51 & 0.943 & 0.993 & 0.08531\\
+G2 & 0.9308 & 0.94828 & 0.1 & 0.49 & 0.947 & 0.993 & 0.07689\\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[ht]
+\centering\small
+\caption{Endpoint parameters, with $r_0=.9$ in every row.}
+\label{bc:endpoint-table}
+\begin{tabular}{@{}crrrrrrr@{}}\toprule
+Row&$C_0$&$v_0$&$\beta$&$J$&$s_0$&$g$&$e_0$\\\midrule
+B & 3.056 & 0.9932 & 0.8086 & 4.952 & 0.93797 & 0.03371 & 0.947455\\
+A & 2.369 & 0.9973 & 0.7468 & 4.495 & 0.95869 & 0.0589 & 0.968384\\
+G1 & 2.716 & 0.9955 & 0.7626 & 4.954 & 0.94956 & 0.048 & 0.959162\\
+G2 & 2.83 & 0.9947 & 0.7759 & 4.984 & 0.94572 & 0.04323 & 0.955283\\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[ht]
+\centering\small
+\caption{Outward numerical bounds for the boundary geometry.
+The comparisons themselves use rational intervals.}
+\label{bc:boundary-margins}
+\begin{tabular}{@{}crrr@{}}\toprule
+Row&upper bound for $K$&lower Hessian bound&upper endpoint coefficient\\\midrule
+B&.229122900&.165248328&19.055896748\\
+A&.092635534&.024898554&20.541111328\\
+G1&.164970033&.026449841&20.590324175\\
+G2&.187982215&.064807027&20.090774931\\\bottomrule
+\end{tabular}
+\end{table}
+
+The first support comparison and each feedback comparison
+check both \eqref{bc:support-test} at $n_0$ and its slope
+\[
+ \Lambda(1-h)^2-2B_0>0.
+\]
+The four inverse applications check
+\eqref{bc:inverse-gates-1}--\eqref{bc:inverse-gates-3} for both signs
+of the strip, as well as $s<1$, $\nu\widehat r-4\pi/H_0>0$,
+and $L_0>e$.  The geometric comparisons are $h>.9$,
+$1-K-\sqrt{1-h^2}>\gamma$, $c>0$, and the four instances of
+\eqref{bc:four-corners}.  The endpoint checks are exactly
+\eqref{bc:outer-gates}, \eqref{bc:endpoint-log-gates},
+\eqref{bc:inner-gates}, the stricter lower bound $.01$ in
+\eqref{bc:hessian-test}, and
+$12+J/(1-Jq)+1/99<24$.
+The final annulus and the three inequalities in
+\eqref{bc:rigidity-floor} are checked as in the proof.
+These tests, together with \eqref{bc:pre-gates-1}--\eqref{bc:pre-gates-9},
+form the boundary certificate.
+
+As $n$ increases, the fixed moment caps remain valid, while the field
+$Nc_f$ increases.  Thus the inverse corner inequality improves and
+$\epsilon$ decreases.  In \eqref{bc:normal-errors}, $E_0$ decreases
+and $L_0$ increases, so $K$ decreases.  The geometric inequalities
+therefore persist.  The outer rate $v_0N/n-C_0q$ increases, and the
+inner errors have the explicit decreasing consecutive-degree ratios
+in \eqref{bc:inner-gates}.  This proves the boundary conclusions on
+the whole infinite degree range, including all stated endpoints.
+
+\subsection{A direct entrance for the compact range}
+
+\begin{lemma}[Crescent entrance]\label{bc:crescent}
+Under \eqref{bc:hole}, if $a\geq.1$ and $n\geq6251$, then
+\begin{equation}\label{bc:crescent-D}
+ D:=Hd>\frac{5N}{14}\frac{c}{1-c+c^2}>117.17,
+ \qquad c=x/2.
+\end{equation}
+Thus Propositions~\ref{mf:D100} and \ref{lt:D70} apply.
+\end{lemma}
+
+\begin{proof}
+A closest point to $b=x+iy$, $x\geq a$, $y\geq0$, in the closed
+crescent $\{|\xi|\leq1,\ |\xi-a|\geq1\}$ is
+$a/2+i\sqrt{1-a^2/4}$.  Indeed a minimizer must be on one of its
+two circular boundary arcs.  On $|\xi|=1$, maximizing
+$\Re(\overline b\xi)$ over $\Re\xi\leq a/2$ gives the stated
+endpoint, because the direction of $b$ lies to its right.
+On $|\xi-a|=1$, the same argument maximizes
+$\Re((\overline b-a)(\xi-a))$ over
+$\Re(\xi-a)\leq-a/2$; $b-a$ has nonnegative real and imaginary
+parts, giving the same endpoint.  Since the strict hole excludes
+that endpoint,
+\[
+ d^2>1+x^2+y^2-ax-2y\sqrt{1-a^2/4}.
+\]
+The right side decreases in $a$ for $0<a\leq x\leq1$, since its
+derivative is $-x+ay/[2\sqrt{1-a^2/4}]<0$.
+Set $c=x/2$, $v=\sqrt{1-c^2}-y\geq0$, and
+$G=\sqrt{c^2+v^2}$.  Comparing at $a=x$ gives $d>G$.
+Also, if $p=1-|b|^2$, then
+\[
+ p=-3c^2+2v\sqrt{1-c^2}-v^2\leq2v-3c^2-v^2.
+\]
+The exact radial identity, obtained by summing
+$2\Re(b/(b-\xi))+(1-|b|^2)/|b-\xi|^2
+=1+(1-|\xi|^2)/|b-\xi|^2$, is
+\begin{equation}\label{bc:radial-identity}
+ N=2\Re(bS)+(1-|b|^2)E_b
+       -\sum_j\frac{1-|\xi_j|^2}{|b-\xi_j|^2}.
+\end{equation}
+Furthermore $\Re S>cE_b$, because $a\leq x$.
+Using $|b|\leq1-p/2$ in \eqref{bc:radial-identity}, we obtain
+\[
+ \frac NH\leq2+p(c^{-1}-1),\qquad
+ Hd>\frac{NcG}{2c+(1-c)p}.
+\]
+The second inequality is strict because $d>G$.
+By Cauchy--Schwarz and the identity
+$(3c^2+v^2)^2-8c^2(c^2+v^2)=(v^2-c^2)^2$,
+\begin{align*}
+ \frac{2c+(1-c)p}{G}
+ &\leq\frac{2c+2(1-c)v}{G}
+       -(1-c)\frac{3c^2+v^2}{G}\\
+ &\leq2\sqrt{2-2c+c^2}-2\sqrt2\,c(1-c).
+\end{align*}
+For $.05\leq c\leq1/2$, $\sqrt{2-2c+c^2}<7/5<\sqrt2$.
+This proves the first inequality in \eqref{bc:crescent-D}.
+The function $c/(1-c+c^2)$ increases on that interval.
+Its value at $c=.05$, with $N=6250$, proves the second.
+\end{proof}
+
+\begin{proposition}[The bridge interval]\label{bc:bridge}
+For every $n\geq6251$, no hull witness satisfies
+\eqref{bc:hole} with $.1\leq a\leq.11$.
+\end{proposition}
+
+\begin{proof}
+Lemma~\ref{bc:crescent} gives $D>100$.  Throughout the argument,
+$C$ and $\gamma$ are the quantities in \eqref{bc:adaptive-def}.
+The logarithmic form of Lemma~\ref{bc:blaschke} is
+\begin{equation}\label{bc:log-bridge}
+ -\log\mathcal B_P(\gamma)+CE_b/2<\log(8/C).
+\end{equation}
+
+\emph{The range $|b|\leq.2$.}
+Here $d>.8$ and Proposition~\ref{mf:D100} gives
+$E_bd/H<9/4$.  In particular
+$V=E_b/H<9/(4\cdot.8)$ and
+$H>N(.8)/(9/4)$, using $E_b\geq N$.
+Apply \eqref{bc:inverse-gates-1}--\eqref{bc:inverse-gates-3}
+with $R=.1$, $\nu=.99$, $W=6$, $e_W=1/400$,
+$M=1/.8$, and $H_0=N_0(.8)/(9/4)$.
+The image radius is $\widehat r=379/4480$, and the count
+\eqref{bc:inverse-count} is greater than $1831/32$ at the floor.
+Since $|\gamma|\leq|b|$, each counted zero has factor at most
+\[
+ \frac{R+.11}{1-(.2+R)(.2)}<\frac14.
+\]
+As $e<4$, its logarithmic weight exceeds one.
+The count divided by $n$ increases, and exceeds $1/120$ for all
+$n\geq6251$.
+
+The actual-zero variance inequality \eqref{ar:variance-unit}
+gives $d^2\leq1-(1-|b|^2)/n$, and therefore $d<1-.47/n$.
+Since $d+r>1$, we have $r>.4/n$.
+Since $a\geq.1$ and $u=\min(r^2,1/2)>(.4/n)^2$,
+the monotonicity of $u(1-u)$ on $[0,1/2]$ gives
+\[
+ C\geq a^2u(1-u)
+ >(.1)^2\left(\frac{.4}{n}\right)^2
+       \left(1-\left(\frac{.4}{n}\right)^2\right)
+ >\frac1{1000n^2}.
+\]
+Hence
+\[
+ \log(8/C)<10+2\log n<n/120
+       <-\log\mathcal B_P(\gamma),
+\]
+a contradiction to \eqref{bc:log-bridge}.
+For the middle inequality, at $n=6251$ one has
+$\log n<9$ and $n/120>28$; its difference increases since
+$1/120>2/n$.
+
+\emph{The range $.2<|b|\leq.8$.}
+Now $r>.09$, so
+$C>C_m=(.1)^2(.09)^2(1-(.09)^2)$.
+The field conclusion of Proposition~\ref{lt:D70}, with $D>100$
+from Lemma~\ref{bc:crescent}, gives
+\[
+ H>\frac{N-(1899/20)/(.2)}{2(1+.11)}.
+\]
+Use $d>.2$, $V=9/(4\cdot.2)$, $M=1/.2$,
+$R=.04$, and the same $\nu,W,e_W$.
+The image radius is $.0295$, the count at the floor exceeds
+$26254139/1184000$, and every counted factor is at most
+\[
+ \frac{.04+.11}{1-(.8+.04)(.8)}<.46.
+\]
+The comparison $e^{.75}<1/.46$ gives a product budget exceeding
+$16.63>12$, while $e^{12}>8/C_m$.
+This again contradicts \eqref{bc:log-bridge}; its count increases
+with $N$.
+
+\emph{The range $.8<|b|\leq.94$.}
+Here $r>.69$, so $u\geq.4761$, $1/2\leq t\leq.5239$, and
+\[
+ C>C_u=(.1)^2(.4761)(.5239)=24942879/10^{10}.
+\]
+Retain only the factor of the original zero $b$ itself.
+Its numerator is $ta\leq.057629$, while the real part of its
+denominator is
+$1-|b|^2+tax\geq1-.94^2+.5(.1)^2=.1214$.
+Thus that factor is at most $57629/121400<.475$, and its logarithmic
+weight exceeds $.74$.  Since
+\[
+ .74+6250C_u/2>8.08,\qquad e^{8.08}>8/C_u,
+\]
+the product factor and the energy term for the same $C$ contradict
+\eqref{bc:log-bridge}.
+
+\emph{The range $|b|>.94$.}
+Now $r>.83$, hence $u=t=1/2$.
+Put $a_*=.03$, $x_* =.1$, and $s=3a_*/4$.
+Concavity of $a(x-3a/4)$ on $[a_*,x]$, and $x>3a_*$, give
+\[
+ C=a(x-3a/4)\geq a_*(x-s).
+\]
+In fact the value at $a=x$ exceeds the value at $a=a_*$ because
+$(x-a_*)(x-3a_*)>0$.
+The comparison $e^{8.15}>8/[a_*(x_*-s)]$ and
+\eqref{bc:log-bridge} imply
+$E_b/N<k/(x-s)$, where $k=2(8.15)/(Na_*)$.
+Also $H^2\leq NE_b$ by Cauchy--Schwarz.
+The phase conclusion of Proposition~\ref{lt:D70} is
+$|\Im S|<(21/4)E_b/H$; the half-plane bound
+$E_b/H<2/x$ follows directly from $\Re S>(x/2)E_b$.
+Use these estimates in the exact identity \eqref{bc:radial-identity}.
+Writing $p_{\max}=1-.94^2$, we find the necessary inequality
+\begin{equation}\label{bc:high-necessary}
+ 1<2x\sqrt{\frac{k}{x-s}}
+       +\frac{p_{\max}k}{x-s}
+       +\frac{4(21/4)}{Nx}.
+\end{equation}
+Under $v=\sqrt{x-s}$ the right side is a positive linear combination
+of $v+s/v$, $v^{-2}$ and $(v^2+s)^{-1}$.
+Each is convex throughout the interval in question: for the last
+term this follows from $3v^2>s$.
+Its maximum is therefore at $x=x_*$ or $x=1$.
+At each of those endpoints, with $N=N_0$, the exact comparisons
+\[
+ R_x:=1-\frac{p_{\max}k}{x-s}-\frac{21}{Nx}>0,\qquad
+ R_x^2>\frac{4x^2k}{x-s}
+\]
+make the right side of \eqref{bc:high-necessary} less than one.
+Every term decreases with $N$, which proves the contradiction in
+the whole high-modulus range.  The four cases include their common
+endpoints and exhaust every possible $b$.
+\end{proof}
+
+\subsection{Nested original-zero counts in the middle range}
+
+\begin{proposition}[The compact range]\label{bc:compact}
+For every $n\geq6251$, no hull witness satisfies
+\eqref{bc:hole} with $.1\leq a\leq.975$.
+\end{proposition}
+
+\begin{proof}
+We prove the part $.11\leq a\leq.975$ by the closed cover in
+Table~\ref{bc:compact-cover}; Proposition~\ref{bc:bridge} supplies
+the remaining interval.  A row specifies $A\leq a\leq B$ and
+$r_-(n)\leq r\leq r_+$.
+All numbers in the tables are exact rationals.
+
+We first construct a lower bound $H(n)=\alpha(n-1)-\beta$ for $H$,
+together with constants $V,M$ as in \eqref{bc:field-hypotheses}.
+There are two constructions.
+
+For a trace row put
+\[
+ M=\frac1{1-r_+},\qquad c=\frac{A}{2(1+r_+)^2}.
+\]
+Lemma~\ref{bc:crescent} gives $D>100$.
+Since $1-|b|^2\leq2d$, \eqref{bc:radial-identity} and
+$E_bd/H<9/4$ give $H>2N/13$ and
+$D>2N(1-r_+)/13$.
+Set
+\begin{equation}\label{bc:Dfloor}
+ D_f=\frac{2N_0(1-r_+)}{13}-10^{-6}.
+\end{equation}
+For the six trace rows $D_f\geq201$.
+The Fine signed-moment inequality \eqref{lt:fine-curvature}, derived
+from Lemma~\ref{lt:signed-moment},
+on its domain $E_b/H^2\leq7/625$, $(Hd)^{-1}\leq1/200$,
+applies here: $E_b/H^2<(9/4)/201<7/625$.
+For its ratio consequence, set
+$v_j=[H(b-\xi_j)]^{-1}$, $q_b=E_b/H^2$,
+$\mu_b=(Hd)^{-1}$, and $y_b=E_bd/H=q_b/\mu_b$.
+Then
+\[
+ q_b-2\mu_b
+ \leq-\Re\sum_jv_j^2
+ <(9/4)q_b^2+13q_b\mu_b,
+\]
+because $0\leq\Re v_j\leq\mu_b$ and
+$\sum_j\Re v_j\leq1$.
+Consequently
+\begin{equation}\label{bc:ratio-quadratic}
+ (9/4)y_b^2-(D-13)y_b+2D>0.
+\end{equation}
+The quadratic is strictly decreasing on $[2,9/4]$ for $D\geq201$.
+The values $\kappa$ in Table~\ref{bc:trace-ratios} satisfy
+\begin{equation}\label{bc:kappa-gate}
+ 2<\kappa<9/4,\qquad
+ (9/4)\kappa^2-(D_f-13)\kappa+2D_f<0.
+\end{equation}
+As its value at $\kappa>2$ decreases with $D$, and $y_b<9/4$ is
+already known, \eqref{bc:ratio-quadratic} implies $y_b<\kappa$.
+We may therefore take
+\[
+ V=\min(2/A,\kappa/(1-r_+)),\qquad
+ H_{\rm init}=\max(N_0A/2,2N_0/13).
+\]
+The comparisons $V/H_{\rm init}<7/625$ and
+$M/H_{\rm init}<1/270$ justify the signed estimate
+\[
+ \Re\sum_j(b-\xi_j)^{-2}>-(9/4)V^2-13VM.
+\]
+Each real reciprocal coordinate
+$X_j=\Re(b-\xi_j)^{-1}$ belongs to $(c,M)$:
+\[
+ 2(a-\Re\xi)-a|a-\xi|^2
+ =a(1-|\xi|^2)+(1-a^2)(a-2\Re\xi)>0,
+\]
+and $|b-\xi|<(1+r_+)|a-\xi|$.
+Using $X_j^2\leq(c+M)X_j-cM$ and $E_b\geq N$ in
+$E_b=2\sum_jX_j^2-\Re\sum_j(b-\xi_j)^{-2}$ gives
+\begin{equation}\label{bc:trace-field}
+ H>\alpha N-\beta,\quad
+ \alpha=\frac{1+2cM}{2(c+M)},\qquad
+ \beta=\frac{(9/4)V^2+13VM}{2(c+M)}.
+\end{equation}
+
+For a moment row take $(\ell,w,\kappa)$ from M0, M1, or M2 as
+indicated in Table~\ref{bc:compact-cover}.  Define, at the fixed floor,
+\begin{align}
+ e_r&=\frac{8r_+}{AN_0}
+            +\frac{r_+^2}{2(1-r_+)(1-2r_+)},\nonumber\\
+ q_m&=1-A^2+w(\ell/N_0+e_r)+2/n_0^2,\qquad
+ m_m=\kappa(\ell/n_0+e_r)+1/n_0^2.                \label{bc:compact-moments}
+\end{align}
+These are upper bounds for $Q,|\mu|$ throughout the row
+and for every larger degree, by Proposition~\ref{bc:moment-proposition}.
+Set
+\begin{equation}\label{bc:compact-moment-field}
+ \alpha=1-\frac{m_m}A-\frac{q_m}{A(1-r_+)},\quad
+ \beta=0,\quad V=\frac1{\alpha(1-r_+)^2},\quad
+ M=\frac1{1-r_+}.
+\end{equation}
+The finite comparisons give $\alpha>0$; the resolvent estimate
+\eqref{bc:moment-field} gives $H>\alpha N$.
+
+For each row and each indicated integer $j$, use $R_j=j/1000$ and
+the parameters $\nu_j,W_j$ specified in
+Tables~\ref{bc:nu-table} and \ref{bc:W-table}.
+All intermediate integers between the displayed endpoints are included.
+Use \eqref{bc:inverse-def-1}--\eqref{bc:inverse-def-2} with this row's
+$V,M$, and set $H_0=\alpha N_0-\beta$.
+Every one of the comparisons
+\eqref{bc:inverse-gates-1}--\eqref{bc:inverse-gates-3} holds, together
+with $\nu_jH_0\widehat r_j>22/7$.
+Equation \eqref{bc:inverse-count} consequently gives, for the actual
+number $\mathcal N_j$ of original zeros in $D(b,R_j)$,
+\begin{equation}\label{bc:nested-count}
+ \mathcal N_j>k_j(n):=
+      \nu_j(7/22)\widehat r_j\bigl(\alpha(n-1)-\beta\bigr)-2>0.
+\end{equation}
+
+We estimate their Blaschke factors at $\gamma$ from
+\eqref{bc:adaptive-def}.  In every middle row
+$r^2\leq r_+^2<1/2$, so $t=1-r^2$.
+For a counted zero $z=b+v$, rightmostness gives $\Re v\leq0$.
+It follows that
+\[
+ |z-\gamma|^2=|v+ta|^2\leq R_j^2+B^2.
+\]
+Substitution of $C=ta[2x-(1+t)a]$ gives the denominator identity
+\begin{equation}\label{bc:correlated-denominator}
+ \Re(\overline b\gamma)
+ =\frac{C(1+r^2)}{2(1-r^2)}
+        +r^2+\frac{a^2r^2(1-r^2)}2.
+\end{equation}
+Also
+$\Re(\overline v\gamma)=(x-ta)\Re v+y\Im v\leq r_+R_j$;
+here $x-ta\geq0$.  Thus, with
+\begin{equation}\label{bc:Delta-def}
+ \Delta_j=
+ \frac{C_*(1+r_+^2)}{2(1-r_+^2)}
+       +(1+B^2/2)r_+^2+R_jr_+,
+\end{equation}
+we have $\Re(\overline z\gamma)<\Delta_j$.
+The row comparisons give $0<\Delta_j<1$ and hence
+\begin{equation}\label{bc:factor-bound}
+ \left|\frac{\gamma-z}{1-\overline z\gamma}\right|
+ \leq\frac{\sqrt{B^2+R_j^2}}{1-\Delta_j}\leq\eta_j<1.
+\end{equation}
+Here $\eta_j$ is the smallest multiple of $10^{-12}$ whose square is
+at least $(B^2+R_j^2)/(1-\Delta_j)^2$.
+
+Put $t_j=(1-\eta_j)/(1+\eta_j)$ and define the rational weights by
+\begin{equation}\label{bc:weights}
+ w_j=10^{-12}\left\lfloor10^{12}
+       \left(2\sum_{k=0}^{23}\frac{t_j^{2k+1}}{2k+1}\right)
+       \right\rfloor.
+\end{equation}
+All omitted terms of the logarithmic series are positive, so
+$0<w_j<-\log\eta_j$.
+For each row the $w_j$ decrease and the $k_j(n_0)$ increase with $j$.
+The physical disks are nested, so finite Abel summation gives
+\begin{align}
+ -\log\mathcal B_P(\gamma)
+ &>w_J\mathcal N_J+
+         \sum_{j<J}(w_j-w_{j+1})\mathcal N_j\nonumber\\
+ &>w_Jk_J(n)+
+         \sum_{j<J}(w_j-w_{j+1})k_j(n)
+   =\sum_jw_j\bigl(k_j(n)-k_{j-1}(n)\bigr)
+   =:\mathcal A(n),                               \label{bc:Abel}
+\end{align}
+where $k_0=0$ and the indices are understood in their successive
+order within a row.  The first inequality assigns to each counted
+zero the largest available weight.  The second uses nonnegative
+coefficients and lower bounds on nested disk counts.
+
+Set
+\[
+ C_-(n)=A^2r_-(n)^2(1-r_-(n)^2).
+\]
+Because $r^2<1/2$, $C\geq C_-(n)$.
+For a fixed radial lower endpoint retain the energy bonus
+$(n-1)C_-/2$ in \eqref{bc:log-bridge}; for a shrinking lower
+endpoint $r_-(n)=c/n$ discard that positive term.
+The targets $T_0$ in Table~\ref{bc:compact-margins} satisfy
+\begin{equation}\label{bc:compact-final-gates}
+ e^{T_0}>\frac8{C_-(n_0)},\qquad
+ \mathcal A(n_0)+\text{bonus}>T_0.
+\end{equation}
+Put $\lambda_j=\nu_j(7/22)\widehat r_j$ and
+\[
+ W_*=\sum_jw_j(\lambda_j-\lambda_{j-1}),\qquad\lambda_0=0.
+\]
+The exact telescoping identity is
+\[
+ \mathcal A(n)=W_*\bigl(\alpha(n-1)-\beta\bigr)-2w_{\rm first}.
+\]
+The comparisons verify that $\mathcal A(n)+\text{bonus}=A_*n-B_*$
+with $A_*,B_*>0$.
+For fixed $r_-$ the left side increases, while $\log(8/C_-)$ is
+constant, so \eqref{bc:compact-final-gates} contradicts
+\eqref{bc:log-bridge} for every $n\geq n_0$.
+For $r_-(n)=c/n$,
+$C_-(n)\geq C_-(n_0)(n_0/n)^2$, while $\mathcal A(n)/n$
+increases.  As $T_0>2$ in these four rows,
+\[
+ \log\frac8{C_-(n)}
+ <T_0+2\log(n/n_0)
+ \leq T_0(n/n_0)<\mathcal A(n),
+\]
+again a contradiction on the entire degree range.
+The field entrances and every inverse contour condition also improve
+with $n$, since $H(n)$ increases and the other contour constants are
+fixed.
+
+It remains to verify that the closed cells just excluded leave no
+gaps.  For each interval in $a$, its final far radius $r_f$ is listed
+below:
+\begin{equation}\label{bc:far-table}
+\begin{array}{c|rrrrrrrrrr}
+ A&.11&.2&.45&.75&.85&.9&.93&.95&.96&.965\\ \hline
+ r_f&.65&.27&.115&.069&.06&.057&.055&.054&.053&.053.
+\end{array}
+\end{equation}
+Each satisfies $r_f^2<1/2$ and
+$A^2r_f^2(1-r_f^2)>C_*$.  Lemma~\ref{bc:blaschke} therefore
+excludes every $r\geq r_f$, including $r^2\geq1/2$.
+For the four shrinking lower endpoints, let
+$\overline B=B+.001$.  If $r\leq c/n$, then $|b|<\overline B$,
+and \eqref{ar:variance-unit} gives
+\[
+ d^2<1-(1-\overline B^2)/n,\qquad
+ d<1-\frac{1-\overline B^2}{2n}<1-c/n.
+\]
+Here the four exact comparisons are $B+c/n_0<\overline B$ and
+$c<(1-\overline B^2)/2$.
+This contradicts $d+r>1$.
+For $a\geq.85$ the interval $r\leq.02$ is excluded by row A of
+Proposition~\ref{bc:boundary}.  For $a\geq.96,r\leq.04$, and
+$a\geq.965,r\leq.045$, use rows G1 and G2, respectively.
+All witness and radial endpoints are shared by closed exclusions.
+Together with Proposition~\ref{bc:bridge}, this proves
+Proposition~\ref{bc:compact}.
+\end{proof}
+
+\begin{table}[ht]
+\centering\small
+\caption{The thirteen closed middle cells.  Every integer in a displayed
+$j$ interval is used, with $R_j=j/1000$.}
+\label{bc:compact-cover}
+\begin{tabular}{@{}crrrrrrl@{}}\toprule
+Row&$A$&$B$&$r_-(n)$&$r_+$&$j$ interval&number&field\\\midrule
+Ia & 0.11 & 0.2 & $0.45/n$ & 0.1 & 5--266 & 262 & Trace\\
+Ib & 0.11 & 0.2 & 0.1 & 0.65 & 6--91 & 86 & Trace\\
+II & 0.2 & 0.45 & $0.35/n$ & 0.27 & 5--212 & 208 & Trace\\
+III & 0.45 & 0.75 & $0.2/n$ & 0.115 & 5--262 & 258 & Trace\\
+IV & 0.75 & 0.85 & $0.12/n$ & 0.069 & 5--278 & 274 & Trace\\
+V & 0.85 & 0.9 & 0.02 & 0.06 & 5--281 & 277 & Trace\\
+VI & 0.9 & 0.93 & 0.02 & 0.057 & 5--299 & 295 & M0\\
+VII & 0.93 & 0.95 & 0.02 & 0.055 & 5--244 & 240 & M1\\
+VIIIa1 & 0.95 & 0.96 & 0.02 & 0.025 & 5--248 & 244 & M2\\
+VIIIa2 & 0.95 & 0.96 & 0.025 & 0.035 & 5--236 & 232 & M2\\
+VIIIb & 0.95 & 0.96 & 0.035 & 0.054 & 5--211 & 207 & M2\\
+IXa & 0.96 & 0.965 & 0.04 & 0.053 & 5--193 & 189 & M2\\
+IXb & 0.965 & 0.975 & 0.045 & 0.053 & 5--150 & 146 & M2\\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[ht]
+\centering\small
+\caption{Trace-row ratio parameters.  In each row $D_f$ is given by
+\eqref{bc:Dfloor}, so that the same lower bound is used in
+\eqref{bc:kappa-gate}.}
+\label{bc:trace-ratios}
+\begin{tabular}{@{}crrrrrr@{}}\toprule
+Row&Ia&Ib&II&III&IV&V\\\midrule
+$\kappa$&2.04150406 & 2.11136288 & 2.0514852 & 2.04222636 & 2.04008696 & 2.0396935\\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[ht]
+\centering\small
+\caption{Targets and rational lower bounds for the final compact margins.}
+\label{bc:compact-margins}
+\begin{tabular}{@{}crr@{}}\toprule
+Row&$T_0$&$\mathcal A(n_0)+\mathrm{bonus}-T_0>$\\\midrule
+Ia & 25.574 & 193.4195\\
+Ib & 11.111 & 8.6177\\
+II & 24.88 & 44.1758\\
+III & 24.378 & 16.8682\\
+IV & 24.378 & 3.1044\\
+V & 10.23 & 7.9635\\
+VI & 10.116 & 5.4864\\
+VII & 10.051 & .5545\\
+VIIIa1 & 10.008 & .4089\\
+VIIIa2 & 9.562 & .7142\\
+VIIIb & 8.89 & 1.4735\\
+IXa & 8.602 & 1.6317\\
+IXb & 8.356 & .4620\\
+\bottomrule\end{tabular}
+\end{table}
+
+The next two tables specify every contour choice by intervals of
+integers.  The notation $[u,v]:k$ assigns the value $k$ to every
+$j=u,u+1,\ldots,v$; a single integer denotes a singleton interval.
+Assignments in a row are disjoint and cover exactly its $j$ interval
+in Table~\ref{bc:compact-cover}.
+
+\begin{longtable}{@{}lp{.84\textwidth}@{}}
+\caption{The exact values of $10^4\nu_j$.}\label{bc:nu-table}\\
+\toprule Row&Assignments\\\midrule\endfirsthead
+\toprule Row&Assignments\\\midrule\endhead
+Ia & $5:9975,\quad 6:9982,\quad 7:9987,\quad 8:9989,\quad 9:9991$\\
+ & $10:9993,\quad [11,12]:9994,\quad [13,14]:9995,\quad [15,17]:9996,\quad [18,24]:9997$\\
+ & $[25,257]:9998,\quad [258,264]:9997,\quad [265,266]:9996$\\
+Ib & $6:9891,\quad 7:9919,\quad 8:9937,\quad 9:9950,\quad 10:9959$\\
+ & $11:9965,\quad 12:9971,\quad 13:9975,\quad 14:9978,\quad 15:9980$\\
+ & $16:9982,\quad 17:9984,\quad 18:9986,\quad 19:9987,\quad 20:9988$\\
+ & $21:9989,\quad [22,23]:9990,\quad [24,25]:9991,\quad [26,27]:9992,\quad [28,30]:9993$\\
+ & $[31,34]:9994,\quad [35,40]:9995,\quad [41,48]:9996,\quad [49,52]:9990,\quad [53,57]:9991$\\
+ & $[58,64]:9992,\quad [65,68]:9993,\quad [69,70]:9986,\quad [71,75]:9987,\quad [76,78]:9988$\\
+ & $[79,81]:9980,\quad [82,84]:9981,\quad 85:9971,\quad [86,88]:9972,\quad [89,90]:9961$\\
+ & $91:9932$\\
+II & $5:9967,\quad 6:9976,\quad 7:9982,\quad 8:9986,\quad 9:9989$\\
+ & $10:9990,\quad 11:9992,\quad 12:9993,\quad [13,14]:9994,\quad [15,16]:9995$\\
+ & $[17,20]:9996,\quad [21,29]:9997,\quad [30,188]:9998,\quad [189,206]:9997,\quad [207,211]:9996$\\
+ & $212:9994$\\
+III & $5:9980,\quad 6:9986,\quad 7:9989,\quad 8:9991,\quad 9:9993$\\
+ & $10:9994,\quad [11,12]:9995,\quad [13,15]:9996,\quad [16,21]:9997,\quad [22,253]:9998$\\
+ & $[254,262]:9997$\\
+IV & $5:9984,\quad 6:9989,\quad 7:9991,\quad 8:9993,\quad 9:9994$\\
+ & $10:9995,\quad [11,13]:9996,\quad [14,19]:9997,\quad [20,276]:9998,\quad [277,278]:9997$\\
+V & $5:9985,\quad 6:9989,\quad 7:9992,\quad 8:9993,\quad 9:9994$\\
+ & $10:9995,\quad [11,13]:9996,\quad [14,18]:9997,\quad [19,279]:9998,\quad [280,281]:9997$\\
+VI & $5:9989,\quad 6:9992,\quad 7:9994,\quad 8:9995,\quad [9,10]:9996$\\
+ & $[11,15]:9997,\quad [16,299]:9998$\\
+VII & $5:9991,\quad 6:9993,\quad 7:9995,\quad [8,9]:9996,\quad [10,13]:9997$\\
+ & $[14,244]:9998$\\
+VIIIa1 & $5:9992,\quad 6:9994,\quad 7:9995,\quad [8,9]:9996,\quad [10,12]:9997$\\
+ & $[13,248]:9998$\\
+VIIIa2 & $5:9992,\quad 6:9994,\quad 7:9995,\quad [8,9]:9996,\quad [10,12]:9997$\\
+ & $[13,236]:9998$\\
+VIIIb & $5:9992,\quad 6:9994,\quad 7:9995,\quad [8,9]:9996,\quad [10,13]:9997$\\
+ & $[14,211]:9998$\\
+IXa & $5:9992,\quad 6:9994,\quad 7:9995,\quad 8:9996,\quad [9,12]:9997$\\
+ & $[13,193]:9998$\\
+IXb & $5:9992,\quad 6:9994,\quad 7:9995,\quad 8:9996,\quad [9,12]:9997$\\
+ & $[13,150]:9998$\\
+\bottomrule\end{longtable}
+
+\begin{longtable}{@{}lp{.84\textwidth}@{}}
+\caption{The exact values of $W_j$.}\label{bc:W-table}\\
+\toprule Row&Assignments\\\midrule\endfirsthead
+\toprule Row&Assignments\\\midrule\endhead
+Ia & $[5,129]:1,\quad [130,184]:2,\quad [185,212]:3,\quad [213,233]:4,\quad [234,248]:5$\\
+ & $[249,257]:6,\quad [258,264]:8,\quad [265,266]:10$\\
+Ib & $[6,48]:1,\quad [49,68]:2,\quad [69,78]:3,\quad [79,84]:4,\quad [85,88]:5$\\
+ & $[89,90]:6,\quad 91:8$\\
+II & $[5,104]:1,\quad [105,149]:2,\quad [150,171]:3,\quad [172,188]:4,\quad [189,199]:5$\\
+ & $[200,206]:6,\quad [207,211]:8,\quad 212:10$\\
+III & $[5,127]:1,\quad [128,181]:2,\quad [182,209]:3,\quad [210,229]:4,\quad [230,244]:5$\\
+ & $[245,253]:6,\quad [254,261]:8,\quad 262:10$\\
+IV & $[5,134]:1,\quad [135,191]:2,\quad [192,220]:3,\quad [221,242]:4,\quad [243,257]:5$\\
+ & $[258,268]:6,\quad [269,276]:8,\quad [277,278]:10$\\
+V & $[5,135]:1,\quad [136,193]:2,\quad [194,222]:3,\quad [223,244]:4,\quad [245,260]:5$\\
+ & $[261,270]:6,\quad [271,279]:8,\quad [280,281]:10$\\
+VI & $[5,181]:1,\quad [182,253]:2,\quad [254,289]:3,\quad [290,299]:4$\\
+VII & $[5,195]:1,\quad [196,244]:2$\\
+VIIIa1 & $[5,217]:1,\quad [218,248]:2$\\
+VIIIa2 & $[5,213]:1,\quad [214,236]:2$\\
+VIIIb & $[5,204]:1,\quad [205,211]:2$\\
+IXa & $[5,193]:1$\\
+IXb & $[5,150]:1$\\
+\bottomrule\end{longtable}
+
+\subsection{Finite arithmetic verification}
+\label{bc:arithmetic}
+
+For the boundary calculations, all rational expressions in
+Tables~\ref{bc:preliminary-table}--\ref{bc:endpoint-table} and
+\eqref{bc:feedback} are evaluated with interval endpoints in $\mathbb Q$.
+The following rules make the arithmetic finite and reproducible.
+For $0\leq x\leq4$, put $S_{96}(x)=\sum_{j=0}^{96}x^j/j!$.
+Then
+\[
+ S_{96}(x)<e^x<
+ S_{96}(x)+\frac{x^{97}}{97!}\frac1{1-x/98}
+ \quad(x>0);
+\]
+negative arguments are handled by reciprocal intervals.
+For logarithms, first multiply the argument by a power of two to
+place it in $[1,2)$.  If $t=(x-1)/(x+1)$ in that interval, then
+\[
+ 2\sum_{j=0}^{95}\frac{t^{2j+1}}{2j+1}
+ \leq\log x\leq
+ 2\sum_{j=0}^{95}\frac{t^{2j+1}}{2j+1}
+ +\frac{2t^{193}}{193(1-t^2)}.
+\]
+Apply the same rule to $\log2$ when undoing the power-of-two change.
+Square roots are enclosed between consecutive multiples of $10^{-56}$,
+using integer square roots after multiplying the radicand by $10^{112}$.
+For $\pi$, use
+\[
+ \pi=16\arctan(1/5)-4\arctan(1/239)
+\]
+with 100 alternating terms for each arctangent and the first omitted
+term as its remainder bound.  These rules suffice to verify every
+strict comparison in the boundary certificate.  Integer powers, even
+those with exponent 1000, are evaluated exactly.
+
+For the middle contours, only rational arithmetic, integer square
+roots, and positive exponential and logarithmic sums are needed.
+The choices for $e_W$ in \eqref{bc:inverse-gates-2}--\eqref{bc:inverse-gates-3}
+are as follows:
+\begin{center}\small
+\begin{tabular}{@{}rrrr@{}}\toprule
+$W$&$10^{12}e_W$&$W$&$10^{12}e_W$\\\midrule
+1&367879441172&5&6737947000\\
+2&135335283237&6&2478752177\\
+3&49787068368&8&335462628\\
+4&18315638889&10&45399930\\\bottomrule
+\end{tabular}
+\end{center}
+The positive sums $S_{100}(W)=\sum_{j=0}^{100}W^j/j!$ satisfy
+$S_{100}(W)>1/e_W$, and hence $e_W>e^{-W}$.
+Likewise $S_{100}(T_0)>8/C_-(n_0)$ certifies the first comparison
+in \eqref{bc:compact-final-gates}; all other terms in the final
+budget are rational.
+
+An explicit verification consists of the following finite steps.
+For each of the thirteen rows, form $V,M,\alpha,\beta$ from
+\eqref{bc:trace-field} or \eqref{bc:compact-moment-field} and verify
+all its preceding field conditions.  For each integer $j$ in its
+listed interval, read $\nu_j,W_j$ from the two assignment tables,
+form \eqref{bc:inverse-def-1}--\eqref{bc:inverse-def-2}, and verify
+\eqref{bc:inverse-gates-1}--\eqref{bc:inverse-gates-3},
+$\nu_jH_0\widehat r_j>22/7$, and $k_j(n_0)>0$.
+Next form \eqref{bc:Delta-def} and the outward radical
+\eqref{bc:factor-bound}; verify $0<\Delta_j<1$, $0<\eta_j<1$,
+and
+\[
+ (\eta_j-10^{-12})^2<
+ \frac{B^2+R_j^2}{(1-\Delta_j)^2}\leq\eta_j^2.
+\]
+Compute the weight by \eqref{bc:weights}, and check its positivity,
+its nonincrease with $j$, and the strict increase of $k_j(n_0)$.
+Finally verify the two equivalent forms of the Abel sum in
+\eqref{bc:Abel}, the positive slope and intercept loss $A_*,B_*$,
+and the strict margins in Table~\ref{bc:compact-margins}.
+There are exactly 2918 such contours, all specified by the printed
+tables.
+
+The two bridge contours use $(\nu,W,e_W)=(.99,6,1/400)$ with the
+parameters given in Proposition~\ref{bc:bridge}.  Their remaining
+checks are \eqref{bc:inverse-gates-1}--\eqref{bc:inverse-gates-3},
+the displayed factor and count bounds, and the scalar comparisons
+in its four cases.  Upper bounds for $e^x$ at
+$x=1,.75,.74$ follow from
+\[
+ e^x<\sum_{j=0}^{24}\frac{x^j}{j!}
+       +\frac{x^{25}}{25!}\frac1{1-x/26};
+\]
+all the other bridge exponential comparisons use $S_{100}$ from below.
+The high-modulus radical tests are the two positive-side squared
+comparisons following \eqref{bc:high-necessary}.
+Thus the entire compact argument reduces to the displayed finite
+integer and rational operations, followed by the explicit monotonicity
+arguments for $n\geq6251$.

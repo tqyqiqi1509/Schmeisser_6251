@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "coefficient": "6/5",
+  "scope": "entire complex theta disk |theta|<=1/20",
+  "arithmetic": "exact rational; no floating point acceptance",
+  "method": "three-variable tensor Bernstein, including full rational pi-squared interval",
+  "pi_enclosure": "Machin identity with alternating atan sums,20 and21 terms",
+  "global_B_lower": "142147/160000",
+  "closed_boxes": 3,
+  "total_controls": 4950,
+  "seconds": 2.323814868927002,
+  "checker_sha256": "06f94a8e5836e9c5c04db2759e57bc6324b780768528fa9e2a4c2b0abc939397",
+  "minima": [
+    [
+      0.2,
+      0.08418964661268517
+    ],
+    [
+      0.12109595898096527,
+      0.024378177260868383
+    ],
+    [
+      0.968808684920115,
+      2.6816893415179925
+    ]
+  ]
+}

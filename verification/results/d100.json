@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "target_ratio": "9/4",
+  "entrance": 100,
+  "independent_methods": "Fraction partition, Acb analytic quadrature, direct Jprime/J obstruction",
+  "source_sha256": "0bd21386f733a8c70b94a2e4fa174080e7b7f551f6431c1d66d6c870a61bcff0",
+  "precision_bits": 144,
+  "quadrature_tolerance_bits": 96,
+  "tail_degree": 0,
+  "partition": [
+    {
+      "branch": 0,
+      "leaves": 5200,
+      "maximum_depth": 30,
+      "exact_binary_volume": "1"
+    },
+    {
+      "branch": 1,
+      "leaves": 4545,
+      "maximum_depth": 33,
+      "exact_binary_volume": "1"
+    }
+  ],
+  "counts": {
+    "matrix": 21,
+    "moment": 1507,
+    "direct": 8160,
+    "qdisk": 57
+  },
+  "failed_count": 0,
+  "failures": [],
+  "diagnostics": {
+    "max_direct_upper": -0.016054570498970962,
+    "min_projection": 1.0357756311087496e-06
+  },
+  "seconds": 3.339845657348633
+}

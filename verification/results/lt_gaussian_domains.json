@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact rational tensor Bernstein with exact dyadic de Casteljau subdivision",
+  "domain": "6 <= p <= 44/7 and, for paths, 0 <= t <= 1",
+  "bounds": 20,
+  "closed_boxes": 24,
+  "coefficient_zero_identities": 5,
+  "rows": [
+    {
+      "name": "path_1",
+      "bound": "63/10",
+      "degrees": [
+        4,
+        4
+      ],
+      "positive_closed_boxes": 2,
+      "maximum_depth": 1,
+      "minimum_bernstein_coefficient": "881/4900"
+    },
+    {
+      "name": "path_2",
+      "bound": "45",
+      "degrees": [
+        6,
+        4
+      ],
+      "positive_closed_boxes": 2,
+      "maximum_depth": 1,
+      "minimum_bernstein_coefficient": "260153/2401"
+    },
+    {
+      "name": "path_3",
+      "bound": "400",
+      "degrees": [
+        8,
+        4
+      ],
+      "positive_closed_boxes": 2,
+      "maximum_depth": 1,
+      "minimum_bernstein_coefficient": "29024464880/1058841"
+    },
+    {
+      "name": "path_4",
+      "bound": "3400",
+      "degrees": [
+        10,
+        4
+      ],
+      "positive_closed_boxes": 2,
+      "maximum_depth": 1,
+      "minimum_bernstein_coefficient": "34899058878512/51883209"
+    },
+    {
+      "name": "path_5",
+      "bound": "86000",
+      "degrees": [
+        12,
+        4
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "282898482479926976/2542277241"
+    },
+    {
+      "name": "path_6",
+      "bound": "320000",
+      "degrees": [
+        14,
+        4
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "8414949934329445415936/6104007655641"
+    },
+    {
+      "name": "path_7",
+      "bound": "1700000",
+      "degrees": [
+        16,
+        4
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "119759279244480820435619264/2691867376137681"
+    },
+    {
+      "name": "path_8",
+      "bound": "9100000",
+      "degrees": [
+        18,
+        4
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "2814990458693446656538689280/2691867376137681"
+    },
+    {
+      "name": "path_9",
+      "bound": "39000000",
+      "degrees": [
+        20,
+        4
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "15014624586160498947817390016/2691867376137681"
+    },
+    {
+      "name": "residual_5",
+      "bound": "82000",
+      "degrees": [
+        12
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "13324630853458842416/63556931025"
+    },
+    {
+      "name": "residual_6",
+      "bound": "350000",
+      "degrees": [
+        14
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "548666069388873687681776/152600191391025"
+    },
+    {
+      "name": "residual_7",
+      "bound": "1900000",
+      "degrees": [
+        16
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "16236211611725937287086349744/67296684403442025"
+    },
+    {
+      "name": "residual_8",
+      "bound": "13000000",
+      "degrees": [
+        18
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "17600501401684266555418656880/2691867376137681"
+    },
+    {
+      "name": "residual_9",
+      "bound": "120000000",
+      "degrees": [
+        20
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "43661080246794891776787362270000/131901501430746369"
+    },
+    {
+      "name": "residual_10",
+      "bound": "3100000000",
+      "degrees": [
+        24
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "1179100635641630388697193372153958939056/4039483481316607550625"
+    },
+    {
+      "name": "residual_11",
+      "bound": "23000000000",
+      "degrees": [
+        26
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "39777931920867943115684962300160908559391664/1077644426515686081005625"
+    },
+    {
+      "name": "center_1",
+      "bound": "21",
+      "degrees": [
+        4
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "26953/2401"
+    },
+    {
+      "name": "center_2",
+      "bound": "133",
+      "degrees": [
+        6
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "41522969/117649"
+    },
+    {
+      "name": "center_3",
+      "bound": "1030",
+      "degrees": [
+        8
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "555817759220/51883209"
+    },
+    {
+      "name": "center_4",
+      "bound": "9000",
+      "degrees": [
+        10
+      ],
+      "positive_closed_boxes": 1,
+      "maximum_depth": 0,
+      "minimum_bernstein_coefficient": "163076769361456/51883209"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact rational",
+  "energy_degree_floor": 6251,
+  "variance_degree_floor": 2048,
+  "energy_intervals": [
+    {
+      "interval": [
+        "0",
+        "1/4"
+      ],
+      "rational_upper": "659/1000",
+      "display_only_upper": 0.6584021704363687
+    },
+    {
+      "interval": [
+        "1/4",
+        "3/8"
+      ],
+      "rational_upper": "99/250",
+      "display_only_upper": 0.3953178593061762
+    },
+    {
+      "interval": [
+        "3/8",
+        "1/2"
+      ],
+      "rational_upper": "173/500",
+      "display_only_upper": 0.3453335587721235
+    },
+    {
+      "interval": [
+        "1/2",
+        "5/8"
+      ],
+      "rational_upper": "24/125",
+      "display_only_upper": 0.191112462689419
+    },
+    {
+      "interval": [
+        "5/8",
+        "3/4"
+      ],
+      "rational_upper": "27/500",
+      "display_only_upper": 0.05356010067800914
+    },
+    {
+      "interval": [
+        "3/4",
+        "7/8"
+      ],
+      "rational_upper": "11/1000",
+      "display_only_upper": 0.010237436639269298
+    },
+    {
+      "interval": [
+        "7/8",
+        "19/20"
+      ],
+      "rational_upper": "3/500",
+      "display_only_upper": 0.005851643871317547
+    }
+  ]
+}

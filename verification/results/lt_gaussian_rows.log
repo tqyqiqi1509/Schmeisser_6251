@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "rows": 5,
+  "gates": 77,
+  "arithmetic": "exact rational"
+}

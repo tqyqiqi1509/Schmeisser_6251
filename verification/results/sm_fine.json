@@ -1,0 +1,2451 @@
+{
+  "status": "PASS",
+  "scope": "n>=6251,0<a<=rho0/100,outside max(Re b,1-Im b)<=rho0",
+  "checks": 473,
+  "complete_Schur_contours": 41,
+  "N0": "6250",
+  "A": "30501/50000000",
+  "d_floor": "6069699/100000000",
+  "Dfirst": "13007809375/100061002",
+  "Dafter100": "14220309375/100061002",
+  "Dfield": "14847496875/100061002",
+  "D0": "148",
+  "kappa": "11067/5000",
+  "weighted_Abel": "559468673004637180720164997512055147813163706746304321118495373/4462543667293518717604116347398603877832539392080000000000000000",
+  "c": "2589578539674927673321012284709125422363553154984130247829467611/98191668834166284973176526132312128397965837164420121600000000000",
+  "J": "4909582528220417018921430568144484661358745714699762717653150897622784000000000000000000000000000/64621010502495640110533886843084886919675799511571537620289974489745859839080489923029974509611",
+  "J_plus_half": "9883786066943329677953395023132054209637167228911096972926591769735313859839080489923029974509611/129242021004991280221067773686169773839351599023143075240579948979491719678160979846059949019222",
+  "M": "100",
+  "reserve": "3040416033555798344153382345484923174297992673403210551131403128213858107977017494682964927412589/129242021004991280221067773686169773839351599023143075240579948979491719678160979846059949019222",
+  "contours": [
+    {
+      "j": 5,
+      "nu": "2401/2500",
+      "W": 1,
+      "t": "1/40",
+      "lambda_upper": "3689/65000",
+      "f": "15161009/624000000",
+      "B": "1918280000000000/691411269069693",
+      "eps": "480049570000000/25582216955578641",
+      "g": "134419723682845601/2074233807209079000",
+      "pinv": "65000/68689",
+      "amplitude": "65000/61311"
+    },
+    {
+      "j": 6,
+      "nu": "9723/10000",
+      "W": 1,
+      "t": "3/100",
+      "lambda_upper": "33201/485000",
+      "f": "281139303/9700000000",
+      "B": "268374750000000000/92222267463635399",
+      "eps": "67160781187500000/3412223896154509763",
+      "g": "30282089379987067623/368889069854541596000",
+      "pinv": "485000/518201",
+      "amplitude": "485000/451799"
+    },
+    {
+      "j": 7,
+      "nu": "4897/5000",
+      "W": 1,
+      "t": "7/200",
+      "lambda_upper": "77469/965000",
+      "f": "2594808727/77200000000",
+      "B": "2135931000000000000/699118176464942291",
+      "eps": "534516732750000000/25867372529202864767",
+      "g": "140766541761674801973/1398236352929884582000",
+      "pinv": "965000/1042469",
+      "amplitude": "965000/887531"
+    },
+    {
+      "j": 8,
+      "nu": "9841/10000",
+      "W": 1,
+      "t": "1/25",
+      "lambda_upper": "3689/40000",
+      "f": "2863507/75000000",
+      "B": "461125000000000/143626931844693",
+      "eps": "10490593750000/483108770750331",
+      "g": "9459921410543513/78341962824378000",
+      "pinv": "40000/43689",
+      "amplitude": "40000/36311"
+    },
+    {
+      "j": 9,
+      "nu": "617/625",
+      "W": 1,
+      "t": "9/200",
+      "lambda_upper": "99603/955000",
+      "f": "3261403881/76400000000",
+      "B": "2113797000000000000/625897430104655773",
+      "eps": "528977699250000000/23158204913872263601",
+      "g": "22292241286699042659/156474357526163943250",
+      "pinv": "955000/1054603",
+      "amplitude": "955000/855397"
+    },
+    {
+      "j": 10,
+      "nu": "1979/2000",
+      "W": 1,
+      "t": "1/20",
+      "lambda_upper": "11067/95000",
+      "f": "3582349/76000000",
+      "B": "2102730000000000/591286874927237",
+      "eps": "526208182500000/21877614372307769",
+      "g": "78537608931738957/473029499941789600",
+      "pinv": "95000/106067",
+      "amplitude": "95000/83933"
+    },
+    {
+      "j": 11,
+      "nu": "1239/1250",
+      "W": 1,
+      "t": "11/200",
+      "lambda_upper": "5797/45000",
+      "f": "556441237/10800000000",
+      "B": "1581000000000000/421750831728989",
+      "eps": "56520750000000/2229254396281799",
+      "g": "17318728809423041/90375178227640500",
+      "pinv": "45000/50797",
+      "amplitude": "45000/39203"
+    },
+    {
+      "j": 12,
+      "nu": "397/400",
+      "W": 1,
+      "t": "3/50",
+      "lambda_upper": "33201/235000",
+      "f": "65619453/1175000000",
+      "B": "32509312500000000/8217827662885399",
+      "eps": "625804265625000/23389201809750751",
+      "g": "22199528357263719/101142494312435680",
+      "pinv": "235000/268201",
+      "amplitude": "235000/201799"
+    },
+    {
+      "j": 13,
+      "nu": "1987/2000",
+      "W": 1,
+      "t": "13/200",
+      "lambda_upper": "8463/55000",
+      "f": "264472949/4400000000",
+      "B": "7161000000000000/1713342038194601",
+      "eps": "1792040250000000/63393655413200237",
+      "g": "342447650575643613/1370673630555680800",
+      "pinv": "55000/63463",
+      "amplitude": "55000/46537"
+    },
+    {
+      "j": 14,
+      "nu": "9943/10000",
+      "W": 1,
+      "t": "7/100",
+      "lambda_upper": "833/5000",
+      "f": "19291517/300000000",
+      "B": "29750000000000/6729045268059",
+      "eps": "7444937500000/248974674918183",
+      "g": "737060545840619/2604791716668000",
+      "pinv": "5000/5833",
+      "amplitude": "5000/4167"
+    },
+    {
+      "j": 15,
+      "nu": "199/200",
+      "W": 1,
+      "t": "3/40",
+      "lambda_upper": "33201/185000",
+      "f": "40515483/592000000",
+      "B": "16379160000000000/3497894702735399",
+      "eps": "110780670000000/3497894702735399",
+      "g": "89317813807060839/279831576218831920",
+      "pinv": "185000/218201",
+      "amplitude": "185000/151799"
+    },
+    {
+      "j": 16,
+      "nu": "1991/2000",
+      "W": 1,
+      "t": "2/25",
+      "lambda_upper": "11067/57500",
+      "f": "2605703/35937500",
+      "B": "497150390625000/100110638664737",
+      "eps": "497647541015625/14816374522381076",
+      "g": "57472509460457091/160177021863579200",
+      "pinv": "57500/68567",
+      "amplitude": "57500/46433"
+    },
+    {
+      "j": 17,
+      "nu": "9959/10000",
+      "W": 1,
+      "t": "17/200",
+      "lambda_upper": "62713/305000",
+      "f": "5600451457/73200000000",
+      "B": "225029000000000000/42668914282601709",
+      "eps": "56313507250000000/1578749828456263233",
+      "g": "205959345157876517207/512026971391220508000",
+      "pinv": "305000/367713",
+      "amplitude": "305000/242287"
+    },
+    {
+      "j": 18,
+      "nu": "9963/10000",
+      "W": 1,
+      "t": "9/100",
+      "lambda_upper": "14229/65000",
+      "f": "104578083/1300000000",
+      "B": "5138250000000000/916104871248077",
+      "eps": "183692437500000/4842268605168407",
+      "g": "235558464299551107/523488497856044000",
+      "pinv": "65000/79229",
+      "amplitude": "65000/50771"
+    },
+    {
+      "j": 19,
+      "nu": "4983/5000",
+      "W": 1,
+      "t": "19/200",
+      "lambda_upper": "210273/905000",
+      "f": "6104265451/72400000000",
+      "B": "2003127000000000000/335306932897618583",
+      "eps": "45571139250000000/1127850592473807961",
+      "g": "2784857102576303391/5542263353679646000",
+      "pinv": "905000/1115273",
+      "amplitude": "905000/694727"
+    },
+    {
+      "j": 20,
+      "nu": "247/250",
+      "W": 2,
+      "t": "1/10",
+      "lambda_upper": "3689/15000",
+      "f": "793019/9000000",
+      "B": "9222500000000/1447114873231",
+      "eps": "2307930625000/53543250309547",
+      "g": "723308016908477/1302403385907900",
+      "pinv": "15000/18689",
+      "amplitude": "15000/11311"
+    },
+    {
+      "j": 21,
+      "nu": "989/1000",
+      "W": 2,
+      "t": "21/200",
+      "lambda_upper": "232407/895000",
+      "f": "6576054429/71600000000",
+      "B": "1980993000000000000/290897862659441857",
+      "eps": "495743498250000000/10763220918399348709",
+      "g": "72048621872947546827/116359145063776742800",
+      "pinv": "895000/1127407",
+      "amplitude": "895000/662593"
+    },
+    {
+      "j": 22,
+      "nu": "4949/5000",
+      "W": 2,
+      "t": "11/100",
+      "lambda_upper": "121737/445000",
+      "f": "849999359/8900000000",
+      "B": "246240750000000000/33780649623952447",
+      "eps": "61621747687500000/1249884036086240539",
+      "g": "46601515402498353297/67561299247904894000",
+      "pinv": "445000/566737",
+      "amplitude": "445000/323263"
+    },
+    {
+      "j": 23,
+      "nu": "1981/2000",
+      "W": 2,
+      "t": "23/200",
+      "lambda_upper": "84847/295000",
+      "f": "7015995463/70800000000",
+      "B": "217651000000000000/27843769953754731",
+      "eps": "54467162750000000/1030219488288925047",
+      "g": "51323528644404883867/66825047889011354400",
+      "pinv": "295000/379847",
+      "amplitude": "295000/210153"
+    },
+    {
+      "j": 24,
+      "nu": "9911/10000",
+      "W": 2,
+      "t": "3/25",
+      "lambda_upper": "33201/110000",
+      "f": "1763691/17187500",
+      "B": "3804281250000000/452967137510399",
+      "eps": "952021382812500/16759784087884763",
+      "g": "193643963104158567/226483568755199500",
+      "pinv": "110000/143201",
+      "amplitude": "110000/76799"
+    },
+    {
+      "j": 25,
+      "nu": "9917/10000",
+      "W": 2,
+      "t": "1/8",
+      "lambda_upper": "1581/5000",
+      "f": "67879/640000",
+      "B": "2529600000000/279766263413",
+      "eps": "6956400000/113751118091",
+      "g": "11706856743813/12297418172000",
+      "pinv": "5000/6581",
+      "amplitude": "5000/3419"
+    },
+    {
+      "j": 26,
+      "nu": "4961/5000",
+      "W": 2,
+      "t": "13/100",
+      "lambda_upper": "47957/145000",
+      "f": "952072433/8700000000",
+      "B": "26745250000000000/2741661897415521",
+      "eps": "6692998812500000/101441490204374277",
+      "g": "17441424414090533857/16449971384493126000",
+      "pinv": "145000/192957",
+      "amplitude": "145000/97043"
+    },
+    {
+      "j": 27,
+      "nu": "4963/5000",
+      "W": 2,
+      "t": "27/200",
+      "lambda_upper": "298809/865000",
+      "f": "7801041987/69200000000",
+      "B": "1914591000000000000/181505121939705871",
+      "eps": "479126397750000000/6715689511769117227",
+      "g": "428904771774329077227/363010243879411742000",
+      "pinv": "865000/1163809",
+      "amplitude": "865000/566191"
+    },
+    {
+      "j": 28,
+      "nu": "993/1000",
+      "W": 2,
+      "t": "7/50",
+      "lambda_upper": "77469/215000",
+      "f": "124651177/1075000000",
+      "B": "29742562500000000/2601368052692291",
+      "eps": "7443076265625000/96250617949614767",
+      "g": "1371227831801814987/1040547221076916400",
+      "pinv": "215000/292469",
+      "amplitude": "215000/137531"
+    },
+    {
+      "j": 29,
+      "nu": "4967/5000",
+      "W": 2,
+      "t": "29/200",
+      "lambda_upper": "106981/285000",
+      "f": "8146501621/68400000000",
+      "B": "70091000000000000/5641558180780859",
+      "eps": "17540272750000000/208737652688891783",
+      "g": "149419762223240832323/101548047254055462000",
+      "pinv": "285000/391981",
+      "amplitude": "285000/178019"
+    },
+    {
+      "j": 30,
+      "nu": "9937/10000",
+      "W": 2,
+      "t": "3/20",
+      "lambda_upper": "1953/5000",
+      "f": "488679/4000000",
+      "B": "6510000000000/480912741991",
+      "eps": "148102500000/1617615586697",
+      "g": "287674486933743/174877360724000",
+      "pinv": "5000/6953",
+      "amplitude": "5000/3047"
+    },
+    {
+      "j": 31,
+      "nu": "497/500",
+      "W": 2,
+      "t": "31/200",
+      "lambda_upper": "343077/845000",
+      "f": "8460821599/67600000000",
+      "B": "1870323000000000000/126447804004617467",
+      "eps": "468048330750000000/4678568748170846279",
+      "g": "46583585628738259101/25289560800923493400",
+      "pinv": "845000/1188077",
+      "amplitude": "845000/501923"
+    },
+    {
+      "j": 32,
+      "nu": "9943/10000",
+      "W": 2,
+      "t": "4/25",
+      "lambda_upper": "527/1250",
+      "f": "150083/1171875",
+      "B": "128662109375/7936594407",
+      "eps": "147189453125/1342418253984",
+      "g": "112459356547109/54422361648000",
+      "pinv": "1250/1777",
+      "amplitude": "1250/723"
+    },
+    {
+      "j": 33,
+      "nu": "1989/2000",
+      "W": 2,
+      "t": "33/200",
+      "lambda_upper": "365211/835000",
+      "f": "8744178993/66800000000",
+      "B": "1848189000000000000/103683233065216069",
+      "eps": "462509297250000000/3836279623412994553",
+      "g": "192671646880704150159/82946586452172855200",
+      "pinv": "835000/1200211",
+      "amplitude": "835000/469789"
+    },
+    {
+      "j": 34,
+      "nu": "9947/10000",
+      "W": 2,
+      "t": "17/100",
+      "lambda_upper": "188139/415000",
+      "f": "1109287757/8300000000",
+      "B": "229640250000000000/11675608561915381",
+      "eps": "57467472562500000/431997516790869097",
+      "g": "122236336446257926893/46702434247661524000",
+      "pinv": "415000/603139",
+      "amplitude": "415000/226861"
+    },
+    {
+      "j": 35,
+      "nu": "9949/10000",
+      "W": 2,
+      "t": "7/40",
+      "lambda_upper": "25823/55000",
+      "f": "71974007/528000000",
+      "B": "1623160000000000/74514906504699",
+      "eps": "406195790000000/2757051540673863",
+      "g": "2644221580527554027/894178878056388000",
+      "pinv": "55000/80823",
+      "amplitude": "55000/29177"
+    },
+    {
+      "j": 36,
+      "nu": "9951/10000",
+      "W": 2,
+      "t": "9/50",
+      "lambda_upper": "99603/205000",
+      "f": "142367931/1025000000",
+      "B": "28359187500000000/1170805484405773",
+      "eps": "7096886671875000/43319802923013601",
+      "g": "15694333870258570527/4683221937623092000",
+      "pinv": "205000/304603",
+      "amplitude": "205000/105397"
+    },
+    {
+      "j": 37,
+      "nu": "1979/2000",
+      "W": 3,
+      "t": "37/200",
+      "lambda_upper": "409479/815000",
+      "f": "9218714317/65200000000",
+      "B": "1803921000000000000/66686826017235761",
+      "eps": "451431230250000000/2467412562637723157",
+      "g": "202106433483161187981/53349460813788608800",
+      "pinv": "815000/1224479",
+      "amplitude": "815000/405521"
+    },
+    {
+      "j": 38,
+      "nu": "9899/10000",
+      "W": 3,
+      "t": "19/100",
+      "lambda_upper": "70091/135000",
+      "f": "1164784151/8100000000",
+      "B": "8300250000000000/273473189041429",
+      "eps": "159779812500000/778346768810221",
+      "g": "3275187420763185697/757310369653188000",
+      "pinv": "135000/205091",
+      "amplitude": "135000/64909"
+    },
+    {
+      "j": 39,
+      "nu": "4951/5000",
+      "W": 3,
+      "t": "39/200",
+      "lambda_upper": "61659/115000",
+      "f": "1344320913/9200000000",
+      "B": "36363000000000000/1062383947315747",
+      "eps": "1299977250000000/5615458007240377",
+      "g": "1504748047725179829/303538270661642000",
+      "pinv": "115000/176659",
+      "amplitude": "115000/53341"
+    },
+    {
+      "j": 40,
+      "nu": "1981/2000",
+      "W": 3,
+      "t": "1/5",
+      "lambda_upper": "11067/20000",
+      "f": "74177/500000",
+      "B": "27667500000000/712839902237",
+      "eps": "6923791875000/26375076382769",
+      "g": "1627862533976679/285135960894800",
+      "pinv": "20000/31067",
+      "amplitude": "20000/8933"
+    },
+    {
+      "j": 41,
+      "nu": "9907/10000",
+      "W": 3,
+      "t": "41/200",
+      "lambda_upper": "151249/265000",
+      "f": "9571524169/63600000000",
+      "B": "195517000000000000/4415571530711253",
+      "eps": "4448011750000000/14852376966937851",
+      "g": "31832687868534460817/4816987124412276000",
+      "pinv": "265000/416249",
+      "amplitude": "265000/113751"
+    },
+    {
+      "j": 42,
+      "nu": "123/125",
+      "W": 4,
+      "t": "21/100",
+      "lambda_upper": "232407/395000",
+      "f": "1205109129/7900000000",
+      "B": "218573250000000000/4298387185941857",
+      "eps": "54697955812500000/159040325879848709",
+      "g": "1642084399824958089/214919359297092850",
+      "pinv": "395000/627407",
+      "amplitude": "395000/162593"
+    },
+    {
+      "j": 43,
+      "nu": "2461/2500",
+      "W": 4,
+      "t": "43/200",
+      "lambda_upper": "475881/785000",
+      "f": "9702724723/62800000000",
+      "B": "1737519000000000000/29537728845932159",
+      "eps": "434814129750000000/1092895967299489883",
+      "g": "264526576461882035301/29537728845932159000",
+      "pinv": "785000/1260881",
+      "amplitude": "785000/309119"
+    },
+    {
+      "j": 44,
+      "nu": "4881/5000",
+      "W": 5,
+      "t": "11/50",
+      "lambda_upper": "40579/65000",
+      "f": "152454709/975000000",
+      "B": "2997312500000000/43692971911383",
+      "eps": "750077453125000/1616639960721171",
+      "g": "915948654402909127/87385943822766000",
+      "pinv": "65000/105579",
+      "amplitude": "65000/24421"
+    },
+    {
+      "j": 45,
+      "nu": "604/625",
+      "W": 6,
+      "t": "9/40",
+      "lambda_upper": "3213/5000",
+      "f": "2530071/16000000",
+      "B": "14280000000000/176903062493",
+      "eps": "3573570000000/6545413312241",
+      "g": "273049851868794/22112882811625",
+      "pinv": "5000/8213",
+      "amplitude": "5000/1787"
+    }
+  ],
+  "predicates": [
+    {
+      "name": "exact degree and witness seam",
+      "passed": true
+    },
+    {
+      "name": "full outside independent W8-to-D70 scalar join",
+      "passed": true
+    },
+    {
+      "name": "full outside large-x pure geometry D70",
+      "passed": true
+    },
+    {
+      "name": "D70 independently enters D100",
+      "passed": true
+    },
+    {
+      "name": "after independent D100 lawful medium140",
+      "passed": true
+    },
+    {
+      "name": "whole medium140 qmu rectangle",
+      "passed": true
+    },
+    {
+      "name": "complete actual D floor",
+      "passed": true
+    },
+    {
+      "name": "whole ratio bracket",
+      "passed": true
+    },
+    {
+      "name": "entire smaller-root quadratic",
+      "passed": true
+    },
+    {
+      "name": "whole exp(-W) 1",
+      "passed": true
+    },
+    {
+      "name": "whole exp(-W) 2",
+      "passed": true
+    },
+    {
+      "name": "whole exp(-W) 3",
+      "passed": true
+    },
+    {
+      "name": "whole exp(-W) 4",
+      "passed": true
+    },
+    {
+      "name": "whole exp(-W) 5",
+      "passed": true
+    },
+    {
+      "name": "whole exp(-W) 6",
+      "passed": true
+    },
+    {
+      "name": "whole exp(-W) 7",
+      "passed": true
+    },
+    {
+      "name": "whole exp(-W) 8",
+      "passed": true
+    },
+    {
+      "name": "whole exp(-W) 9",
+      "passed": true
+    },
+    {
+      "name": "whole exp(-W) 10",
+      "passed": true
+    },
+    {
+      "name": "5/critical free",
+      "passed": true
+    },
+    {
+      "name": "5/nu interval",
+      "passed": true
+    },
+    {
+      "name": "5/whole injection",
+      "passed": true
+    },
+    {
+      "name": "5/full image",
+      "passed": true
+    },
+    {
+      "name": "5/every corner",
+      "passed": true
+    },
+    {
+      "name": "5/entire left side",
+      "passed": true
+    },
+    {
+      "name": "5/entire right side",
+      "passed": true
+    },
+    {
+      "name": "5/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "5/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "5/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "5/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "6/critical free",
+      "passed": true
+    },
+    {
+      "name": "6/nu interval",
+      "passed": true
+    },
+    {
+      "name": "6/whole injection",
+      "passed": true
+    },
+    {
+      "name": "6/full image",
+      "passed": true
+    },
+    {
+      "name": "6/every corner",
+      "passed": true
+    },
+    {
+      "name": "6/entire left side",
+      "passed": true
+    },
+    {
+      "name": "6/entire right side",
+      "passed": true
+    },
+    {
+      "name": "6/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "6/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "6/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "6/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "7/critical free",
+      "passed": true
+    },
+    {
+      "name": "7/nu interval",
+      "passed": true
+    },
+    {
+      "name": "7/whole injection",
+      "passed": true
+    },
+    {
+      "name": "7/full image",
+      "passed": true
+    },
+    {
+      "name": "7/every corner",
+      "passed": true
+    },
+    {
+      "name": "7/entire left side",
+      "passed": true
+    },
+    {
+      "name": "7/entire right side",
+      "passed": true
+    },
+    {
+      "name": "7/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "7/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "7/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "7/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "8/critical free",
+      "passed": true
+    },
+    {
+      "name": "8/nu interval",
+      "passed": true
+    },
+    {
+      "name": "8/whole injection",
+      "passed": true
+    },
+    {
+      "name": "8/full image",
+      "passed": true
+    },
+    {
+      "name": "8/every corner",
+      "passed": true
+    },
+    {
+      "name": "8/entire left side",
+      "passed": true
+    },
+    {
+      "name": "8/entire right side",
+      "passed": true
+    },
+    {
+      "name": "8/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "8/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "8/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "8/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "9/critical free",
+      "passed": true
+    },
+    {
+      "name": "9/nu interval",
+      "passed": true
+    },
+    {
+      "name": "9/whole injection",
+      "passed": true
+    },
+    {
+      "name": "9/full image",
+      "passed": true
+    },
+    {
+      "name": "9/every corner",
+      "passed": true
+    },
+    {
+      "name": "9/entire left side",
+      "passed": true
+    },
+    {
+      "name": "9/entire right side",
+      "passed": true
+    },
+    {
+      "name": "9/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "9/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "9/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "9/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "10/critical free",
+      "passed": true
+    },
+    {
+      "name": "10/nu interval",
+      "passed": true
+    },
+    {
+      "name": "10/whole injection",
+      "passed": true
+    },
+    {
+      "name": "10/full image",
+      "passed": true
+    },
+    {
+      "name": "10/every corner",
+      "passed": true
+    },
+    {
+      "name": "10/entire left side",
+      "passed": true
+    },
+    {
+      "name": "10/entire right side",
+      "passed": true
+    },
+    {
+      "name": "10/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "10/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "10/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "10/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "11/critical free",
+      "passed": true
+    },
+    {
+      "name": "11/nu interval",
+      "passed": true
+    },
+    {
+      "name": "11/whole injection",
+      "passed": true
+    },
+    {
+      "name": "11/full image",
+      "passed": true
+    },
+    {
+      "name": "11/every corner",
+      "passed": true
+    },
+    {
+      "name": "11/entire left side",
+      "passed": true
+    },
+    {
+      "name": "11/entire right side",
+      "passed": true
+    },
+    {
+      "name": "11/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "11/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "11/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "11/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "12/critical free",
+      "passed": true
+    },
+    {
+      "name": "12/nu interval",
+      "passed": true
+    },
+    {
+      "name": "12/whole injection",
+      "passed": true
+    },
+    {
+      "name": "12/full image",
+      "passed": true
+    },
+    {
+      "name": "12/every corner",
+      "passed": true
+    },
+    {
+      "name": "12/entire left side",
+      "passed": true
+    },
+    {
+      "name": "12/entire right side",
+      "passed": true
+    },
+    {
+      "name": "12/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "12/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "12/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "12/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "13/critical free",
+      "passed": true
+    },
+    {
+      "name": "13/nu interval",
+      "passed": true
+    },
+    {
+      "name": "13/whole injection",
+      "passed": true
+    },
+    {
+      "name": "13/full image",
+      "passed": true
+    },
+    {
+      "name": "13/every corner",
+      "passed": true
+    },
+    {
+      "name": "13/entire left side",
+      "passed": true
+    },
+    {
+      "name": "13/entire right side",
+      "passed": true
+    },
+    {
+      "name": "13/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "13/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "13/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "13/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "14/critical free",
+      "passed": true
+    },
+    {
+      "name": "14/nu interval",
+      "passed": true
+    },
+    {
+      "name": "14/whole injection",
+      "passed": true
+    },
+    {
+      "name": "14/full image",
+      "passed": true
+    },
+    {
+      "name": "14/every corner",
+      "passed": true
+    },
+    {
+      "name": "14/entire left side",
+      "passed": true
+    },
+    {
+      "name": "14/entire right side",
+      "passed": true
+    },
+    {
+      "name": "14/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "14/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "14/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "14/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "15/critical free",
+      "passed": true
+    },
+    {
+      "name": "15/nu interval",
+      "passed": true
+    },
+    {
+      "name": "15/whole injection",
+      "passed": true
+    },
+    {
+      "name": "15/full image",
+      "passed": true
+    },
+    {
+      "name": "15/every corner",
+      "passed": true
+    },
+    {
+      "name": "15/entire left side",
+      "passed": true
+    },
+    {
+      "name": "15/entire right side",
+      "passed": true
+    },
+    {
+      "name": "15/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "15/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "15/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "15/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "16/critical free",
+      "passed": true
+    },
+    {
+      "name": "16/nu interval",
+      "passed": true
+    },
+    {
+      "name": "16/whole injection",
+      "passed": true
+    },
+    {
+      "name": "16/full image",
+      "passed": true
+    },
+    {
+      "name": "16/every corner",
+      "passed": true
+    },
+    {
+      "name": "16/entire left side",
+      "passed": true
+    },
+    {
+      "name": "16/entire right side",
+      "passed": true
+    },
+    {
+      "name": "16/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "16/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "16/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "16/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "17/critical free",
+      "passed": true
+    },
+    {
+      "name": "17/nu interval",
+      "passed": true
+    },
+    {
+      "name": "17/whole injection",
+      "passed": true
+    },
+    {
+      "name": "17/full image",
+      "passed": true
+    },
+    {
+      "name": "17/every corner",
+      "passed": true
+    },
+    {
+      "name": "17/entire left side",
+      "passed": true
+    },
+    {
+      "name": "17/entire right side",
+      "passed": true
+    },
+    {
+      "name": "17/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "17/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "17/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "17/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "18/critical free",
+      "passed": true
+    },
+    {
+      "name": "18/nu interval",
+      "passed": true
+    },
+    {
+      "name": "18/whole injection",
+      "passed": true
+    },
+    {
+      "name": "18/full image",
+      "passed": true
+    },
+    {
+      "name": "18/every corner",
+      "passed": true
+    },
+    {
+      "name": "18/entire left side",
+      "passed": true
+    },
+    {
+      "name": "18/entire right side",
+      "passed": true
+    },
+    {
+      "name": "18/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "18/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "18/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "18/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "19/critical free",
+      "passed": true
+    },
+    {
+      "name": "19/nu interval",
+      "passed": true
+    },
+    {
+      "name": "19/whole injection",
+      "passed": true
+    },
+    {
+      "name": "19/full image",
+      "passed": true
+    },
+    {
+      "name": "19/every corner",
+      "passed": true
+    },
+    {
+      "name": "19/entire left side",
+      "passed": true
+    },
+    {
+      "name": "19/entire right side",
+      "passed": true
+    },
+    {
+      "name": "19/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "19/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "19/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "19/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "20/critical free",
+      "passed": true
+    },
+    {
+      "name": "20/nu interval",
+      "passed": true
+    },
+    {
+      "name": "20/whole injection",
+      "passed": true
+    },
+    {
+      "name": "20/full image",
+      "passed": true
+    },
+    {
+      "name": "20/every corner",
+      "passed": true
+    },
+    {
+      "name": "20/entire left side",
+      "passed": true
+    },
+    {
+      "name": "20/entire right side",
+      "passed": true
+    },
+    {
+      "name": "20/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "20/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "20/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "20/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "21/critical free",
+      "passed": true
+    },
+    {
+      "name": "21/nu interval",
+      "passed": true
+    },
+    {
+      "name": "21/whole injection",
+      "passed": true
+    },
+    {
+      "name": "21/full image",
+      "passed": true
+    },
+    {
+      "name": "21/every corner",
+      "passed": true
+    },
+    {
+      "name": "21/entire left side",
+      "passed": true
+    },
+    {
+      "name": "21/entire right side",
+      "passed": true
+    },
+    {
+      "name": "21/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "21/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "21/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "21/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "22/critical free",
+      "passed": true
+    },
+    {
+      "name": "22/nu interval",
+      "passed": true
+    },
+    {
+      "name": "22/whole injection",
+      "passed": true
+    },
+    {
+      "name": "22/full image",
+      "passed": true
+    },
+    {
+      "name": "22/every corner",
+      "passed": true
+    },
+    {
+      "name": "22/entire left side",
+      "passed": true
+    },
+    {
+      "name": "22/entire right side",
+      "passed": true
+    },
+    {
+      "name": "22/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "22/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "22/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "22/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "23/critical free",
+      "passed": true
+    },
+    {
+      "name": "23/nu interval",
+      "passed": true
+    },
+    {
+      "name": "23/whole injection",
+      "passed": true
+    },
+    {
+      "name": "23/full image",
+      "passed": true
+    },
+    {
+      "name": "23/every corner",
+      "passed": true
+    },
+    {
+      "name": "23/entire left side",
+      "passed": true
+    },
+    {
+      "name": "23/entire right side",
+      "passed": true
+    },
+    {
+      "name": "23/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "23/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "23/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "23/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "24/critical free",
+      "passed": true
+    },
+    {
+      "name": "24/nu interval",
+      "passed": true
+    },
+    {
+      "name": "24/whole injection",
+      "passed": true
+    },
+    {
+      "name": "24/full image",
+      "passed": true
+    },
+    {
+      "name": "24/every corner",
+      "passed": true
+    },
+    {
+      "name": "24/entire left side",
+      "passed": true
+    },
+    {
+      "name": "24/entire right side",
+      "passed": true
+    },
+    {
+      "name": "24/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "24/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "24/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "24/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "25/critical free",
+      "passed": true
+    },
+    {
+      "name": "25/nu interval",
+      "passed": true
+    },
+    {
+      "name": "25/whole injection",
+      "passed": true
+    },
+    {
+      "name": "25/full image",
+      "passed": true
+    },
+    {
+      "name": "25/every corner",
+      "passed": true
+    },
+    {
+      "name": "25/entire left side",
+      "passed": true
+    },
+    {
+      "name": "25/entire right side",
+      "passed": true
+    },
+    {
+      "name": "25/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "25/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "25/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "25/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "26/critical free",
+      "passed": true
+    },
+    {
+      "name": "26/nu interval",
+      "passed": true
+    },
+    {
+      "name": "26/whole injection",
+      "passed": true
+    },
+    {
+      "name": "26/full image",
+      "passed": true
+    },
+    {
+      "name": "26/every corner",
+      "passed": true
+    },
+    {
+      "name": "26/entire left side",
+      "passed": true
+    },
+    {
+      "name": "26/entire right side",
+      "passed": true
+    },
+    {
+      "name": "26/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "26/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "26/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "26/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "27/critical free",
+      "passed": true
+    },
+    {
+      "name": "27/nu interval",
+      "passed": true
+    },
+    {
+      "name": "27/whole injection",
+      "passed": true
+    },
+    {
+      "name": "27/full image",
+      "passed": true
+    },
+    {
+      "name": "27/every corner",
+      "passed": true
+    },
+    {
+      "name": "27/entire left side",
+      "passed": true
+    },
+    {
+      "name": "27/entire right side",
+      "passed": true
+    },
+    {
+      "name": "27/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "27/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "27/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "27/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "28/critical free",
+      "passed": true
+    },
+    {
+      "name": "28/nu interval",
+      "passed": true
+    },
+    {
+      "name": "28/whole injection",
+      "passed": true
+    },
+    {
+      "name": "28/full image",
+      "passed": true
+    },
+    {
+      "name": "28/every corner",
+      "passed": true
+    },
+    {
+      "name": "28/entire left side",
+      "passed": true
+    },
+    {
+      "name": "28/entire right side",
+      "passed": true
+    },
+    {
+      "name": "28/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "28/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "28/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "28/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "29/critical free",
+      "passed": true
+    },
+    {
+      "name": "29/nu interval",
+      "passed": true
+    },
+    {
+      "name": "29/whole injection",
+      "passed": true
+    },
+    {
+      "name": "29/full image",
+      "passed": true
+    },
+    {
+      "name": "29/every corner",
+      "passed": true
+    },
+    {
+      "name": "29/entire left side",
+      "passed": true
+    },
+    {
+      "name": "29/entire right side",
+      "passed": true
+    },
+    {
+      "name": "29/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "29/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "29/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "29/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "30/critical free",
+      "passed": true
+    },
+    {
+      "name": "30/nu interval",
+      "passed": true
+    },
+    {
+      "name": "30/whole injection",
+      "passed": true
+    },
+    {
+      "name": "30/full image",
+      "passed": true
+    },
+    {
+      "name": "30/every corner",
+      "passed": true
+    },
+    {
+      "name": "30/entire left side",
+      "passed": true
+    },
+    {
+      "name": "30/entire right side",
+      "passed": true
+    },
+    {
+      "name": "30/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "30/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "30/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "30/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "31/critical free",
+      "passed": true
+    },
+    {
+      "name": "31/nu interval",
+      "passed": true
+    },
+    {
+      "name": "31/whole injection",
+      "passed": true
+    },
+    {
+      "name": "31/full image",
+      "passed": true
+    },
+    {
+      "name": "31/every corner",
+      "passed": true
+    },
+    {
+      "name": "31/entire left side",
+      "passed": true
+    },
+    {
+      "name": "31/entire right side",
+      "passed": true
+    },
+    {
+      "name": "31/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "31/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "31/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "31/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "32/critical free",
+      "passed": true
+    },
+    {
+      "name": "32/nu interval",
+      "passed": true
+    },
+    {
+      "name": "32/whole injection",
+      "passed": true
+    },
+    {
+      "name": "32/full image",
+      "passed": true
+    },
+    {
+      "name": "32/every corner",
+      "passed": true
+    },
+    {
+      "name": "32/entire left side",
+      "passed": true
+    },
+    {
+      "name": "32/entire right side",
+      "passed": true
+    },
+    {
+      "name": "32/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "32/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "32/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "32/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "33/critical free",
+      "passed": true
+    },
+    {
+      "name": "33/nu interval",
+      "passed": true
+    },
+    {
+      "name": "33/whole injection",
+      "passed": true
+    },
+    {
+      "name": "33/full image",
+      "passed": true
+    },
+    {
+      "name": "33/every corner",
+      "passed": true
+    },
+    {
+      "name": "33/entire left side",
+      "passed": true
+    },
+    {
+      "name": "33/entire right side",
+      "passed": true
+    },
+    {
+      "name": "33/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "33/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "33/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "33/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "34/critical free",
+      "passed": true
+    },
+    {
+      "name": "34/nu interval",
+      "passed": true
+    },
+    {
+      "name": "34/whole injection",
+      "passed": true
+    },
+    {
+      "name": "34/full image",
+      "passed": true
+    },
+    {
+      "name": "34/every corner",
+      "passed": true
+    },
+    {
+      "name": "34/entire left side",
+      "passed": true
+    },
+    {
+      "name": "34/entire right side",
+      "passed": true
+    },
+    {
+      "name": "34/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "34/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "34/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "34/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "35/critical free",
+      "passed": true
+    },
+    {
+      "name": "35/nu interval",
+      "passed": true
+    },
+    {
+      "name": "35/whole injection",
+      "passed": true
+    },
+    {
+      "name": "35/full image",
+      "passed": true
+    },
+    {
+      "name": "35/every corner",
+      "passed": true
+    },
+    {
+      "name": "35/entire left side",
+      "passed": true
+    },
+    {
+      "name": "35/entire right side",
+      "passed": true
+    },
+    {
+      "name": "35/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "35/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "35/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "35/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "36/critical free",
+      "passed": true
+    },
+    {
+      "name": "36/nu interval",
+      "passed": true
+    },
+    {
+      "name": "36/whole injection",
+      "passed": true
+    },
+    {
+      "name": "36/full image",
+      "passed": true
+    },
+    {
+      "name": "36/every corner",
+      "passed": true
+    },
+    {
+      "name": "36/entire left side",
+      "passed": true
+    },
+    {
+      "name": "36/entire right side",
+      "passed": true
+    },
+    {
+      "name": "36/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "36/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "36/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "36/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "37/critical free",
+      "passed": true
+    },
+    {
+      "name": "37/nu interval",
+      "passed": true
+    },
+    {
+      "name": "37/whole injection",
+      "passed": true
+    },
+    {
+      "name": "37/full image",
+      "passed": true
+    },
+    {
+      "name": "37/every corner",
+      "passed": true
+    },
+    {
+      "name": "37/entire left side",
+      "passed": true
+    },
+    {
+      "name": "37/entire right side",
+      "passed": true
+    },
+    {
+      "name": "37/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "37/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "37/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "37/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "38/critical free",
+      "passed": true
+    },
+    {
+      "name": "38/nu interval",
+      "passed": true
+    },
+    {
+      "name": "38/whole injection",
+      "passed": true
+    },
+    {
+      "name": "38/full image",
+      "passed": true
+    },
+    {
+      "name": "38/every corner",
+      "passed": true
+    },
+    {
+      "name": "38/entire left side",
+      "passed": true
+    },
+    {
+      "name": "38/entire right side",
+      "passed": true
+    },
+    {
+      "name": "38/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "38/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "38/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "38/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "39/critical free",
+      "passed": true
+    },
+    {
+      "name": "39/nu interval",
+      "passed": true
+    },
+    {
+      "name": "39/whole injection",
+      "passed": true
+    },
+    {
+      "name": "39/full image",
+      "passed": true
+    },
+    {
+      "name": "39/every corner",
+      "passed": true
+    },
+    {
+      "name": "39/entire left side",
+      "passed": true
+    },
+    {
+      "name": "39/entire right side",
+      "passed": true
+    },
+    {
+      "name": "39/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "39/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "39/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "39/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "40/critical free",
+      "passed": true
+    },
+    {
+      "name": "40/nu interval",
+      "passed": true
+    },
+    {
+      "name": "40/whole injection",
+      "passed": true
+    },
+    {
+      "name": "40/full image",
+      "passed": true
+    },
+    {
+      "name": "40/every corner",
+      "passed": true
+    },
+    {
+      "name": "40/entire left side",
+      "passed": true
+    },
+    {
+      "name": "40/entire right side",
+      "passed": true
+    },
+    {
+      "name": "40/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "40/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "40/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "40/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "41/critical free",
+      "passed": true
+    },
+    {
+      "name": "41/nu interval",
+      "passed": true
+    },
+    {
+      "name": "41/whole injection",
+      "passed": true
+    },
+    {
+      "name": "41/full image",
+      "passed": true
+    },
+    {
+      "name": "41/every corner",
+      "passed": true
+    },
+    {
+      "name": "41/entire left side",
+      "passed": true
+    },
+    {
+      "name": "41/entire right side",
+      "passed": true
+    },
+    {
+      "name": "41/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "41/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "41/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "41/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "42/critical free",
+      "passed": true
+    },
+    {
+      "name": "42/nu interval",
+      "passed": true
+    },
+    {
+      "name": "42/whole injection",
+      "passed": true
+    },
+    {
+      "name": "42/full image",
+      "passed": true
+    },
+    {
+      "name": "42/every corner",
+      "passed": true
+    },
+    {
+      "name": "42/entire left side",
+      "passed": true
+    },
+    {
+      "name": "42/entire right side",
+      "passed": true
+    },
+    {
+      "name": "42/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "42/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "42/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "42/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "43/critical free",
+      "passed": true
+    },
+    {
+      "name": "43/nu interval",
+      "passed": true
+    },
+    {
+      "name": "43/whole injection",
+      "passed": true
+    },
+    {
+      "name": "43/full image",
+      "passed": true
+    },
+    {
+      "name": "43/every corner",
+      "passed": true
+    },
+    {
+      "name": "43/entire left side",
+      "passed": true
+    },
+    {
+      "name": "43/entire right side",
+      "passed": true
+    },
+    {
+      "name": "43/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "43/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "43/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "43/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "44/critical free",
+      "passed": true
+    },
+    {
+      "name": "44/nu interval",
+      "passed": true
+    },
+    {
+      "name": "44/whole injection",
+      "passed": true
+    },
+    {
+      "name": "44/full image",
+      "passed": true
+    },
+    {
+      "name": "44/every corner",
+      "passed": true
+    },
+    {
+      "name": "44/entire left side",
+      "passed": true
+    },
+    {
+      "name": "44/entire right side",
+      "passed": true
+    },
+    {
+      "name": "44/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "44/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "44/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "44/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "45/critical free",
+      "passed": true
+    },
+    {
+      "name": "45/nu interval",
+      "passed": true
+    },
+    {
+      "name": "45/whole injection",
+      "passed": true
+    },
+    {
+      "name": "45/full image",
+      "passed": true
+    },
+    {
+      "name": "45/every corner",
+      "passed": true
+    },
+    {
+      "name": "45/entire left side",
+      "passed": true
+    },
+    {
+      "name": "45/entire right side",
+      "passed": true
+    },
+    {
+      "name": "45/both horizontal sides",
+      "passed": true
+    },
+    {
+      "name": "45/separate amplitude",
+      "passed": true
+    },
+    {
+      "name": "45/positive odd height",
+      "passed": true
+    },
+    {
+      "name": "45/complete Abel increment",
+      "passed": true
+    },
+    {
+      "name": "full transport denominators",
+      "passed": true
+    },
+    {
+      "name": "full Abel budget positive",
+      "passed": true
+    },
+    {
+      "name": "whole Fine100 Schur contradiction",
+      "passed": true
+    }
+  ],
+  "data_sha256": "dc0c362c1ffe3ac0ae389aa7d83c0cf32077155e5af671bcdf96eb869fdda2a4",
+  "source_sha256": "5a1b498dcd95b3f7c96d830873e2815113ac13e573fb2475cf2342f67c0ae49f"
+}

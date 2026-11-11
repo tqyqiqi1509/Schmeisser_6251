@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Whole normalized T=1 source cloud, rho in [.06,.078], y in [5/4,9/4], n>=6251, under independently legal D139/phase4/CF2637/32",
+  "degree_floor": 6251,
+  "checks": 9548,
+  "whole_polynomials": 90,
+  "closed_cells": 20,
+  "full_contours": 954,
+  "minimum_margin": "60694955672802402911028451509062602853833133388053598199/41608019353204210725980611336835609000000000000000000000000",
+  "checker_sha256": "da34799232ef001c0be432628218a15ad2c167e18f997ed02f4fc60b091281b6",
+  "proposal_sha256": "4604a68bba382a3b4f41f87a9958b8df4b9160b18f576703a19f90b758e73ce9"
+}

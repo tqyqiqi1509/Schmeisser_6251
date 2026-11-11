@@ -1,0 +1,1235 @@
+\section{Companion zeros and local fields}\label{sec:local-tools}
+
+Throughout this section $b$ is a simple actual zero, $S=p''(b)/p'(b)\ne0$,
+and $H,Q,d,D,q,\mu,\sigma$ have the meanings in
+\eqref{pr:field-notation} and \eqref{pr:normalized-moments}. Put
+\[
+ \alpha_j=\frac1{S(b-\xi_j)},\qquad
+ J(w)=\frac{S p(b+w/S)}{p'(b)},\qquad K=p''/p'.
+\]
+Thus $\sum\alpha_j=1$, $\sum|\alpha_j|^2=q$ and
+$\max|\alpha_j|=\mu$. In particular $q>0$. The exact identities are
+\begin{equation}\label{lt:finite-product}
+ J'(w)=\prod_j(1+\alpha_jw),\qquad
+ J(w)=\int_0^w\prod_j(1+\alpha_jv)\,dv.
+\end{equation}
+When a phase or curvature conclusion is asserted, $b$ is assumed
+rightmost among all original zeros. The constructed companions are
+zeros of $p$.
+
+\subsection{Logarithmic bounds and circles}
+
+For $m\ge2$ and $\mu|w|<1$, the logarithm vanishing at zero satisfies
+\begin{equation}\label{lt:log-tail}
+ \log J'(w)=\sum_{k=1}^{m-1}\frac{(-1)^{k+1}w^k}{k}
+                    \sum_j\alpha_j^k+E_m(w),\qquad
+ |E_m(w)|\le\frac{q\mu^{m-2}|w|^m}{m(1-\mu|w|)}.
+\end{equation}
+Indeed $\sum_j|\alpha_j|^k\le q\mu^{k-2}$ for $k\ge2$, so the
+entire remaining logarithmic series is bounded by a geometric series.
+Also, throughout $|w|\le Z<1/\mu$,
+\begin{equation}\label{lt:log-derivative}
+ \left|\frac{J''}{J'}(w)\right|
+ \le1+qZ+\frac{q\mu Z^2}{1-\mu Z}.
+\end{equation}
+This follows from
+$J''/J'=1-w\sum\alpha_j^2+w^2\sum\alpha_j^3/(1+\alpha_jw)$.
+
+\begin{lemma}\label{lt:circle}
+Suppose $J'$ is nonzero on $|w|\le Z_{\mathrm{out}}$,
+$|J''/J'|\le L$ there, and $|\zeta|+R<Z_{\mathrm{out}}$. If
+\[
+ \frac{|J(\zeta)|}{|J'(\zeta)|}
+       +\frac{e^{LR}-1-LR}{L}<R,
+\]
+then $|w-\zeta|<R$ contains exactly one zero of $J$, which is simple.
+\end{lemma}
+\begin{proof}
+Since $J''(0)/J'(0)=\sum_j\alpha_j=1$, the hypothesis gives $L\ge1$.
+On every segment $\zeta+tv$, $|v|\le R$, integration of the
+logarithmic derivative gives
+$|J'(\zeta+tv)/J'(\zeta)-1|\le e^{Lt|v|}-1$.
+A further integration gives
+\[
+ |J(\zeta+v)-J(\zeta)-vJ'(\zeta)|
+ \le |J'(\zeta)|\frac{e^{L|v|}-1-L|v|}{L}.
+\]
+On $|v|=R$, Rouch\'e's theorem compares
+$J(\zeta+v)$ with $vJ'(\zeta)$. The critical-free containing disk
+makes its unique zero simple.
+\end{proof}
+
+\subsection{Gaussian quartic centers}
+
+Put $\theta=-\sum\alpha_j^2=K'(b)/S^2$, so $|\theta|\le q$.
+For $s=\pm2\pi i$ define
+\begin{align}
+ \zeta_s={}&s+(s-s^2/2)\theta+(3s-2s^2+s^3/2)\theta^2\notag\\
+ &+(15s-21s^2/2+23s^3/6-5s^4/8)\theta^3\notag\\
+ &+(105s-72s^2+88s^3/3-22s^4/3+7s^5/8)\theta^4.
+ \label{lt:gaussian-center}
+\end{align}
+If $\zeta_s=\sum_{j=0}^4c_j(s)\theta^j$, write
+\[
+ t\zeta_s+\theta t^2\zeta_s^2/2
+       =st+\sum_{j=1}^9 A_j(s,t)\theta^j.
+\]
+Thus $A_j=tc_j+(t^2/2)\sum_{k+l=j-1}c_kc_l$, where a coefficient
+outside $0\le j\le4$ is zero. Define
+\[
+ E_0=1,\qquad E_j=\frac1j\sum_{k=1}^{\min(j,9)}kA_kE_{j-k},
+ \qquad I_0=0,\quad I_m=\frac{1-mI_{m-1}}s\quad(m\ge1).
+\]
+For a polynomial $f(t)=\sum f_mt^m$ set
+$\mathcal I_s f=\sum f_m I_m$. Since $e^s=1$,
+$\mathcal I_s f=\int_0^1e^{st}f(t)\,dt$ at the two indicated values
+of $s$. The coefficients of the Gaussian primitive at the center are
+\[
+ a_j(s)=\mathcal I_s\left(\sum_{k=0}^{\min(4,j)}c_kE_{j-k}\right).
+\]
+The recurrence gives $a_0=\cdots=a_4=0$ exactly. It can alternatively
+be used to determine $c_1,\ldots,c_4$ successively: the new center
+coefficient enters the corresponding residual with coefficient one.
+
+The following strict bounds hold for
+$6\le p\le44/7$, $0\le t\le1$, with $s=\pm ip$:
+\begin{center}\small
+\begin{tabular}{cl}
+\toprule
+polynomials & bounds in increasing order\\\midrule
+$c_1,\ldots,c_4$ & $21,133,1030,9000$\\
+$A_1,\ldots,A_9$ & $63/10,45,400,3400,86000,320000,$\\
+ & $1700000,9100000,39000000$\\
+$a_5,\ldots,a_{11}$ & $82000,350000,1900000,13000000,$\\
+ & $120000000,3100000000,23000000000$\\\bottomrule
+\end{tabular}
+\end{center}
+Here and below a bound for a complex polynomial means a bound for its
+modulus. To verify these inequalities, substitute $s=ip$ in the
+recurrences and subtract
+the squared modulus from the square of the proposed bound. Convert
+the resulting rational polynomial to tensor Bernstein form on
+$[6,44/7]\times[0,1]$, omitting the second variable when absent.
+If every control coefficient is positive, accept the box; otherwise
+bisect it and use the exact de Casteljau averages. At depth $d$ the
+path-variable axis is chosen unless $d\equiv2\pmod3$, when the
+$p$-axis is chosen. For one-variable polynomials bisect the $p$-axis.
+All twenty inequalities terminate with positive coefficients on a total
+of twenty-four closed boxes, at depth at most twenty. The recurrences
+and bounds specify the certificate;
+\cert{check_gaussian_domains_new.py} implements it with rational arithmetic.
+The coefficient identities $a_0=\cdots=a_4=0$ are checked by exact
+polynomial arithmetic. They apply to the primitive at $s=\pm2\pi i$,
+where $e^s=1$. The resulting residual polynomials are bounded on
+$6\le p\le44/7$.
+
+Set
+\begin{align*}
+ Z(q)&=63/10+21q+133q^2+1030q^3+9000q^4,\\
+ M(q)&=(63/10)q+45q^2+400q^3+3400q^4+86000q^5\\
+     &\quad+320000q^6+1700000q^7+9100000q^8+39000000q^9.
+\end{align*}
+Let $P_{11}$ be the degree-eleven Taylor polynomial of $Z(q)e^{M(q)}$,
+and let $B_5,\ldots,B_{11}$ denote the seven residual bounds in the
+table. For $J_\theta(w)=\int_0^we^{z+\theta z^2/2}\,dz$ we have
+\begin{equation}\label{lt:gaussian-remainder}
+ |J_\theta(\zeta_s)|
+ <\sum_{j=5}^{11}B_jq^j+Z(q)e^{M(q)}-P_{11}(q).
+\end{equation}
+Every coefficient in the last difference is nonnegative. Expand the
+exponential along the path, bound the retained coefficients by the table
+and every higher coefficient by $Z e^M$.
+For exact numerical bounds we use
+\begin{equation}\label{lt:exp-upper}
+ \mathcal E_{24}(x)=\sum_{k=0}^{24}\frac{x^k}{k!}
+       +\frac{x^{25}}{25!(1-x/26)}>e^x\qquad(0<x<26).
+\end{equation}
+The quotient of the right side of \eqref{lt:gaussian-remainder} by
+$q^5$ increases with $q$. Substituting \eqref{lt:exp-upper} proves
+the respective coefficients $132200,126000,86200,89000$ at
+$q=1/20,97/2000,7/625,9/556$.
+
+\begin{proposition}\label{lt:quartic}\label{lt:fine200}\label{lt:wideD100}
+Each row of the following table gives two distinct simple actual zeros,
+other than $b$, in the disks $|S(z-b)-\zeta_\pm|<R$.
+The disks lie in the indicated critical-free containing disk.
+\begin{center}\small
+\begin{tabular}{ccclc}
+\toprule
+row&$q_0$&$\mu_0$&$R(q,\mu)$&$Z_{\mathrm{out}}$\\\midrule
+coarse&$97/2000$&$1/270$&$300000q^5+1300q\mu$&$41/5$\\
+fine&$7/625$&$1/200$&$120000q^5+220q\mu$&$659/100$\\
+wide&$9/400$&$1/100$&$250000q^5+400q\mu$&$174/25$\\
+origin&$33/1000$&$8/625$&$3/10$&$15/2$\\
+medium&$9/556$&$1/139$&$120000q^5+225q\mu$&$168/25$\\\bottomrule
+\end{tabular}
+\end{center}
+Every row holds on $0<q\le q_0$, $0<\mu\le\mu_0$.
+At a rightmost zero the fine and medium rows give
+$|\Im S|<4Q/H$, and the wide row gives $|\Im S|<(23/5)Q/H$.
+\end{proposition}
+\begin{proof}
+For the first four rows use $J'=e^{w+\theta w^2/2+E_3(w)}$ and
+\eqref{lt:log-tail}. The following constants are exact:
+\begin{center}\small
+\begin{tabular}{c|rrrrrrr}
+\toprule
+row&$Z_0$&$M_0$&$E_0$&$B$&$P_0$&$L$&$\beta$\\\midrule
+coarse&$39/5$&$101/200$&$43/25$&$126000$&$550$&$143/100$&$27/100$\\
+fine&$657/100$&$2/25$&$109/100$&$86200$&$175$&$11/10$&$1/100$\\
+wide&$343/50$&$43/250$&$5/4$&$132200$&$250$&$59/50$&$3/50$\\
+origin&$719/100$&$7/25$&$71/50$&$132200$&$350$&$32/25$&$11/50$\\\bottomrule
+\end{tabular}
+\end{center}
+At each upper corner, set
+$r_3=q_0\mu_0 Z_0^3/[3(1-\mu_0Z_0)]$. The finite predicates are
+\begin{gather}
+ Z(q_0)<Z_0,\quad M(q_0)<M_0,\quad
+ \mathcal E_{24}(M_0+r_3)<E_0,\quad
+ \frac{Z_0^4E_0}{12(1-\mu_0Z_0)}<P_0,\label{lt:gaussian-gates1}\\
+ Z_0+R_0<Z_{\mathrm{out}}<1/\mu_0,\quad
+ 1+q_0Z_{\mathrm{out}}+
+ \frac{q_0\mu_0Z_{\mathrm{out}}^2}{1-\mu_0Z_{\mathrm{out}}}<L,\notag\\
+ \frac{\mathcal E_{24}(LR_0)-1-LR_0}{LR_0}<\beta,
+ \label{lt:gaussian-gates2}
+\end{gather}
+where $R_0=R(q_0,\mu_0)$. The center residual obeys
+\[
+ |J(\zeta_s)/J'(\zeta_s)|<E_0Bq^5+E_0P_0q\mu.
+\]
+Indeed the primitive discrepancy is bounded by integrating
+$q\mu Z_0^3t^3/[3(1-\mu_0Z_0)]$ for $0\le t\le1$; its integral
+contains the factor $1/12$, and $|J'(\zeta_s)|>1/E_0$.
+For the first three rows the two coefficient inequalities
+$E_0B<(1-\beta)[q^5]R$ and
+$E_0P_0<(1-\beta)[q\mu]R$ prove the circle criterion; the brackets
+denote coefficients of the indicated monomials in $R$.
+In the origin
+row their sum at the corner is less than $0.217280<(1-\beta)R_0$.
+Every majorant is increasing, so these predicates hold on the
+closed rectangle. Source exclusion and separation follow respectively
+from
+\[
+ 6-21q_0-133q_0^2-1030q_0^3-9000q_0^4>R_0,
+\]
+\[
+ 12(1-q_0-17q_0^2-137q_0^3-313q_0^4)>2R_0.
+\]
+All displayed predicates are rational after \eqref{lt:exp-upper} is
+substituted, and direct evaluation gives positive differences.
+
+For the medium row estimate the discrepancy relative to
+the endpoint derivative. Write
+$g(t)=t\zeta_s+\theta t^2\zeta_s^2/2$. The coefficient of $\theta$
+in $g(t)-g(1)-(t-1)s$ is
+$(t-1)s+(t^2-t)s^2/2$ and has modulus less than $63/10$.
+To see this, put $u=1-t$ and use $p^2=(2\pi)^2<40$ and
+\[
+ 1-u^2[1+10(1-u)^2]=(1-u)(10u^3-10u^2+u+1).
+\]
+The cubic on the right has Bernstein coefficients
+$(1,7/6,1/2,1/4)$ on $[0,1/2]$,
+$(1/4,1/8,5/48,11/32)$ on $[1/2,3/4]$, and
+$(11/32,7/12,13/12,2)$ on $[3/4,1]$.
+For the remaining coefficients use
+$(t-1)c_k+(t^2-1)\sum_{i+j=k-1}c_ic_j/2$.
+This gives the relative-path majorant
+\begin{align*}
+ M_r(q)={}&(63/10)q+(2653/10)q^2+(10442/5)q^3+18282q^4\\
+ &+(174349/2)q^5+325990q^6+1727450q^7
+       +9270000q^8+40500000q^9.
+\end{align*}
+At $q_0=9/556$, $\mu_0=1/139$, take
+\begin{gather*}
+ Z_0=6681/1000,\quad M_0=29/250,\quad M_{r,0}=183/1000,\\
+ E_0=57/50,\quad L=28/25,\quad\beta=3/200.
+\end{gather*}
+The bounds $Z(q_0)<Z_0$, $M(q_0)<M_0$, $M_r(q_0)<M_{r,0}$ and
+$e^{M_0+r_3}<E_0$ follow from the same rational predicates.
+Dividing the integral discrepancy by the actual $J'(\zeta_s)$ gives
+\begin{equation}\label{lt:relative-gaussian-error}
+ \left|\frac{J(\zeta_s)-J_\theta(\zeta_s)}{J'(\zeta_s)}\right|
+ <\frac{q\mu Z_0^4e^{M_{r,0}+2r_3}}{12(1-\mu_0Z_0)}
+ <215q\mu.
+\end{equation}
+The path remainder and endpoint denominator each contribute a factor
+$e^{r_3}$. The model contribution is less than
+$101460q^5$. Now $101460<(1-\beta)120000$ and
+$215<(1-\beta)225$. The other circle, separation and containment
+predicates in \eqref{lt:gaussian-gates2} hold with
+$Z_{\mathrm{out}}=168/25$.
+These estimates prove the medium row.
+
+At a rightmost $b$, both companions satisfy $\Re(w/\sigma)\le0$.
+Choose the sign of $s$ for which
+$\Re(s/\sigma)=2\pi|\Im\sigma|$. The triangle inequality gives
+\[
+ 2\pi|\Im\sigma|<q\left(21+133q+1030q^2+9000q^3+R/q\right).
+\]
+At the fine corner the bracket is less than $24$; at the wide corner
+it is less than $28.681<(157/25)(23/5)$; at the medium corner it is
+less than $4(157/25)$. Since $2\pi>157/25>6$, the phase bounds follow.
+\end{proof}
+
+\subsection{Signed curvature from the two companions}
+
+Write $p_0=2\pi$ for this subsection only, and define
+\begin{align*}
+ B(\theta)&=1+\theta+(3-p_0^2/2)\theta^2
+ +(15-23p_0^2/6)\theta^3
+ +(105-88p_0^2/3+7p_0^4/8)\theta^4,\\
+ T(\theta)&=\theta+4\theta^2+(21-5p_0^2/4)\theta^3
+ +(144-44p_0^2/3)\theta^4.
+\end{align*}
+Then $\zeta_\pm=(p_0^2/2)T\pm ip_0B$. If the actual roots lie
+in disks of radius $R$ about these centers, rightmostness gives
+\begin{equation}\label{lt:signed-projection}
+ \frac{p_0^2}2\Re(T/\sigma)+p_0|\Im(B/\sigma)|<R.
+\end{equation}
+For other centers, add to $R$ an upper bound for their displacements
+from \eqref{lt:gaussian-center}.
+
+\begin{lemma}\label{lt:signed-moment}
+For $r=|\theta|\le1/20$, put
+\[
+ v=r+17r^2+137r^3+313r^4,\quad m=1-v.
+\]
+\[
+ A_r=\frac{1+17r+137r^2+313r^3}{m},\quad
+ B_r=\frac{18+154r+450r^2+313r^3}{m}.
+\]
+\[
+ \mathcal C(r)=1+(2+100/199)rA_r^2+3rB_r
+        +(600/199)r^2A_r^2+4rA_r+29r+436r^2.
+\]
+The two companion disks imply
+\begin{equation}\label{lt:curvature-Cq}
+ \frac{\Re K'(b)}{H^2}<\mathcal C(q)q^2+\frac{2R}{p_0^2}
+ \qquad(q\le1/20).
+\end{equation}
+It also implies the sharper bound with $\mathcal C(q)$ replaced by
+$6/5$. For $q\le3/50$ the replacement $13/10$ is valid provided
+an independent circle estimate gives
+$|\Im\sigma|<8q$.
+\end{lemma}
+\begin{proof}
+Set $\tau=B/|B|=c+is$ and $\delta=\Im(B/\sigma)$.
+The coefficient bounds give $|B|\ge m$, $c>99/100$,
+$1-c\le(100/199)s^2$, $|s|\le rA_r$, and
+$|s-\Im\theta|\le r^2B_r$. For
+$f(\sigma)=\Re(\theta\sigma^2-T/\sigma)$,
+\[
+ |f(\sigma)-f(\tau)|
+ \le r(3+4r+29r^2+436r^3)|\sigma-\tau|.
+\]
+The exact chord identity is
+\[
+ \frac{|\sigma-\tau|^2}{\delta^2}
+   =\frac{2}{|B|^2(1+\Re(\sigma\overline\tau))}.
+\]
+On the right semicircle, $\Re(\sigma\overline\tau)\ge-|s|$.
+The endpoint comparison at $r=1/20$ gives
+$|\sigma-\tau|\le(9/5)|\delta|$ and
+\[
+ (9/5)r(3+4r+29r^2+436r^3)<7/22<2/p_0.
+\]
+The case $\delta=0$ follows by continuity: the antipodal point
+$-\tau$ has negative real part.
+
+Writing $\theta=x+iy$, expansion of $f(\tau)$ gives
+\begin{align*}
+ y^2-4x^2&+x(1-c)-2xs^2-y[(s-y)(2c+1)+2y(c-1)]\\
+ &+4(x^2-y^2)(1-c)-8xys
+ -(21-5p_0^2/4)\Re(\theta^3\overline\tau)
+ -(144-44p_0^2/3)\Re(\theta^4\overline\tau).
+\end{align*}
+Use the bounds above, $|xy|\le r^2/2$, and the coefficient bounds
+$|21-5p_0^2/4|<29$, $|144-44p_0^2/3|<436$.
+The result is $f(\tau)\le\mathcal C(r)r^2$.
+Every term in $\mathcal C$ increases, and
+$\mathcal C(97/2000)<9$, $\mathcal C(7/625)<11/5$.
+Combining this estimate with \eqref{lt:signed-projection} cancels
+$\delta$ and proves \eqref{lt:curvature-Cq}.
+
+For the two sharper constants there is a finite polynomial proof.
+Write $\theta=re^{i\phi}$, $u=\cos\phi$, and let $T_j(u)$ be the
+Chebyshev polynomials. If $B=\sum b_j\theta^j$ and
+$T=\sum d_j\theta^j$, define
+\begin{align*}
+ M&=\sum_{i,j}b_ib_jr^{i+j}T_{|i-j|}(u),\\
+ U&=\sum_{i,j}b_ib_jr^{i+j+1}T_{i+j+1}(u),\qquad
+ V=\sum_{i,j}d_ib_jr^{i+j}T_{|i-j|}(u),\\
+ P&=(U-V)/r^2,\qquad W=V(M-1)/r^2.
+\end{align*}
+The last two expressions are polynomials, including at $r=0$.
+For $(r_0,k)=(1/20,6/5)$ or $(3/50,13/10)$, let
+$m_0=1-r_0-17r_0^2-137r_0^3-313r_0^4$. The polynomials
+\begin{equation}\label{lt:signed-polynomials}
+ A=kM-P,\qquad (1+m_0)A+W
+\end{equation}
+are positive on $0\le r\le r_0$, $-1\le u\le1$ and
+\[
+ 3947841760435743/10^{14}\le p_0^2
+           \le3947841760435744/10^{14}.
+\]
+Indeed, tensor Bernstein conversion on the three closed $u$ intervals
+$[-1,0]$, $[0,1/2]$, $[1/2,1]$ gives 4950 positive rational
+coefficients for each $r_0$. The conversion is exactly
+$x^k=\sum_{j=k}^n\binom jk\binom nk^{-1}
+\binom njx^j(1-x)^{n-j}$ after affine substitution in each variable.
+These polynomials and the three boxes specify the certificate.
+Machin's formula and alternating arctangent sums of
+lengths twenty and twenty-one give the stated enclosure of $p_0^2$.
+Now
+\[
+ f(\tau)/r^2=\frac1M\left(P-\frac{W}{1+\sqrt M}\right).
+\]
+If $W\ge0$ use $A>0$; if $W<0$ use $1+\sqrt M\ge1+m_0$ and
+the second inequality in \eqref{lt:signed-polynomials}. Thus
+$f(\tau)\le kr^2$ on the whole disk, with $r=0$ supplied by continuity.
+
+At the larger cap $r\le q\le3/50$, the phase bound gives
+$\Re\sigma>7/8$. The coefficient bounds give
+$|B|>21/25$, $|\Im\tau|<1/5$, $\Re\tau>97/100$, hence
+$\Re(\sigma\overline\tau)>3011/4000$.
+The rational comparison
+$(21/25)^2(1+3011/4000)(4/3)^2>2$ gives
+$|\sigma-\tau|<(4/3)|\delta|$. At $r=3/50$,
+\[
+ (4/3)r(3+4r+29r^2+436r^3)=214911/781250<7/22<2/p_0.
+\]
+The same cancellation proves the second assertion on this larger domain.
+\end{proof}
+
+Two consequences needed by the field argument in Section~\ref{sec:matrix-fields}
+are
+\begin{align}
+ \Re K'(b)/H^2&<\mathcal C(q)q^2+(50000/3)q^5+(650/9)q\mu
+ &&\text{on the coarse row},\label{lt:coarse-curvature}\\
+ \Re K'(b)/H^2&<(9/4)q^2+13q\mu
+ &&\text{on the fine row}.\label{lt:fine-curvature}
+\end{align}
+These follow from the companion disks, since $p_0>6$ and
+$11/5+(120000/18)(7/625)^3<9/4$, $220/18<13$.
+On the medium row the sharper signed constant instead gives
+\begin{equation}\label{lt:medium-curvature}
+ \Re K'(b)/H^2<(5/4)q^2+(23/2)q\mu,
+\end{equation}
+because $2/p_0^2<1250/24649$,
+$6/5+(1250/24649)120000(9/556)^3<5/4$, and
+$(1250/24649)225<23/2$.
+
+\subsection{Centers retaining four moments}
+
+In addition to $\theta$ put $\kappa=\sum\alpha_j^3$ and
+$\lambda=-\sum\alpha_j^4$. Their bounds are
+$|\kappa|\le q\mu$, $|\lambda|\le q\mu^2$. Assign weights
+$1,2,3$ to $\theta,\kappa,\lambda$. For $s=\pm2\pi i$, the
+weight-four center is
+\begin{equation}\label{lt:four-center}
+ Z_4=\zeta_s+u\kappa+v\theta\kappa+w\theta^2\kappa
+                    +r\kappa^2+l\lambda+m\theta\lambda,
+\end{equation}
+where the four pure $\theta$ terms are those in
+\eqref{lt:gaussian-center}, and
+\begin{align*}
+ u&=-s^3/3+s^2-2s,&
+ v&=5s^4/6-13s^3/3+12s^2-20s,\\
+ w&=-7s^5/4+157s^4/12-51s^3+131s^2-210s,&
+ r&=s^5/3-13s^4/6+26s^3/3-22s^2+40s,\\
+ l&=-s^4/4+s^3-3s^2+6s,&
+ m&=3s^5/4-19s^4/4+18s^3-51s^2+90s.
+\end{align*}
+For higher weights define
+\[
+ J_4(z)=\int_0^ze^{w+\theta w^2/2+\kappa w^3/3+\lambda w^4/4}\,dw.
+\]
+Let $T_j(z)=\sum_{k=0}^j(-1)^{j-k}j!z^k/k!$. Its formal expansion is
+\[
+ J_4(z)=\sum_{a,b,c\ge0}
+ \frac{\theta^a\kappa^b\lambda^c}{2^a3^b4^c a!b!c!}
+ \{e^zT_{2a+3b+4c}(z)-T_{2a+3b+4c}(0)\}.
+\]
+Starting from $Z_0=s$, define recursively
+\begin{equation}\label{lt:center-recursion}
+ Z_j=Z_{j-1}-[\text{weight }j]J_4(Z_{j-1}),
+        \qquad 1\le j\le8,\qquad e^s=1.
+\end{equation}
+Here $[\text{weight }j]$ selects the homogeneous component of weight $j$.
+The new correction has derivative coefficient one, so this cancels
+all coefficients up to the indicated weight. The first four levels
+give exactly \eqref{lt:four-center}. The numbers of new terms in
+levels $1,\ldots,8$ are $1,2,3,4,5,7,8,10$. Thus
+\eqref{lt:center-recursion} uniquely specifies all forty nonconstant
+terms of $Z_8$ as rational polynomials in $s$.
+
+For $Z=Z_m(s)$, where $m=4$ or $8$ and $s=\pm2\pi i$, put
+\begin{align*}
+ A(t)&=t(Z-s)+\theta t^2 Z^2/2+\kappa t^3Z^3/3+\lambda t^4Z^4/4,\\
+ A_r(t)&=(t-1)(Z-s)+\theta(t^2-1)Z^2/2
+                  +\kappa(t^3-1)Z^3/3+\lambda(t^4-1)Z^4/4.
+\end{align*}
+These exponents give
+\[
+ J_4(Z)=Z\int_0^1e^{st+A(t)}\,dt,\qquad
+ \frac{J_4(Z)}{J_4'(Z)}
+ =Z\int_0^1e^{s(t-1)+A_r(t)}\,dt.
+\]
+For caps $q_0,\mu_0>0$ with $q\le q_0$, $\mu\le\mu_0$, use
+the scaled variables
+\[
+ (u_1,u_2,u_3)=
+ \left(\frac{\theta}{q_0},\frac{\kappa}{q_0\mu_0},
+                         \frac{\lambda}{q_0\mu_0^2}\right),
+ \qquad |u_1|,|u_2|,|u_3|\le1.
+\]
+For $\nu\in\mathbb Z_{\ge0}^3$, write
+$\mathbf u^\nu=u_1^{\nu_1}u_2^{\nu_2}u_3^{\nu_3}$ and
+$\mathrm{wt}(\nu)=\nu_1+2\nu_2+3\nu_3$; $\gamma\le\nu$ means
+coordinatewise comparison. For either exponent $A$ or $A_r$, let
+$A_\gamma(t)$ be its coefficient of $\mathbf u^\gamma$ after this
+substitution, and let $E_\nu(t)$ be the coefficient of $\mathbf u^\nu$
+in its exponential. Each $A_\gamma$ has degree at most four in $t$.
+The exponential coefficients satisfy
+\begin{equation}\label{lt:euler-recursion}
+ E_0=1,\qquad
+ E_\nu=\frac1{\mathrm{wt}(\nu)}
+       \sum_{0<\gamma\le\nu}\mathrm{wt}(\gamma)A_\gamma E_{\nu-\gamma},
+ \qquad \nu\ne0.
+\end{equation}
+The sum is over nonzero multi-indices $\gamma\le\nu$.
+This identity is obtained by applying the weighted Euler derivative to
+the chosen exponential. Since $e^s=1$, both integrals use the recurrence
+for $I_m$ above. The integrated coefficients through weight $m$ vanish
+exactly.
+For the absolute residual $J_4(Z)$ or the relative residual
+$J_4(Z)/J_4'(Z)$, let $F_*$ be the sum of the moduli of its
+coefficients in $\mathbf u$ with $m<\mathrm{wt}(\nu)\le M$,
+where $M=14$ for $m=4$ and $M=28$ for $m=8$.
+
+On every interval
+$[j/128,(j+1)/128]$ express each quartic coefficient in Bernstein
+form. Its values lie in the convex hull of its five complex control
+coefficients, so the largest control modulus bounds the entire
+interval. The same applies to its difference from the endpoint value.
+Alternatively the midpoint Taylor bound
+$\sum_{k=0}^4|f^{(k)}(m_t)|h^k/k!$, where
+$m_t=(2j+1)/256$ and $h=1/256$ are the midpoint and half-length,
+bounds that interval. The four-moment rows use the former method and the
+weight-eight rows use the latter. There are 253 path polynomials for
+$Z_4$ and 1409 for $Z_8$.
+
+For each exponent coefficient take the largest bound over the 128
+intervals. Let $a_j$ be the sum of these bounds in weight $j$,
+and $z_j$ the sum of the moduli of the coefficients of $Z$ in
+$\mathbf u$ in that weight, including $z_0=|s|$. Put
+$A_* (v)=\sum a_jv^j$ and $Z_*(v)=\sum z_jv^j$. The infinite tail
+after weight $M$ is bounded by
+\begin{equation}\label{lt:positive-weight-tail}
+ T_*=Z_*(1)e^{A_*(1)}-
+          \sum_{j=0}^M[v^j]\{Z_*(v)e^{A_*(v)}\}.
+\end{equation}
+The positive exponential coefficients are generated by
+$e_0=1$, $e_j=j^{-1}\sum_{k=1}^jka_ke_{j-k}$.
+All coefficients in the discarded tail are nonnegative. Thus
+\eqref{lt:positive-weight-tail} bounds every omitted weight, including
+every mixed parameter term. Its exponential is bounded upward by
+\eqref{lt:exp-upper}, or by an outward complex ball evaluation with
+an explicit remainder bound.
+
+To pass from the model to the actual finite product, put
+\[
+ r_5=\frac{q_0\mu_0^3Z_*(1)^5}{5(1-\mu_0Z_*(1))},
+       \qquad |Z|\le Z_*(1)<1/\mu_0.
+\]
+An absolute model residual $F_*+T_*$ has actual derivative-relative
+bound $(F_*+T_*)e^{M_c+r_5}$, where $M_c$ bounds the center exponent
+after $s$. A relative model residual instead has bound
+$(F_*+T_*)e^{r_5}$. In both cases the actual product discrepancy is
+bounded by
+\begin{equation}\label{lt:four-actual-tail}
+ \frac{q\mu^3Z_*(1)^6e^{M_r+2r_5}}{30(1-\mu_0Z_*(1))}.
+\end{equation}
+Here $M_r$ bounds the relative exponent along the path, and $1/30$
+includes the integral of $t^5$. The path remainder and endpoint
+denominator give the two $r_5$ terms.
+
+There are two scaling rules. If $q=tq_0$, $0<t\le1$, and
+$\mu\le\mu_0$, a monomial $\theta^a\kappa^b\lambda^c$ is bounded by
+$t^{a+b+c}$ times its corner majorant. The uncancelled $Z_4$ terms
+have total degree at least two; the tail above weight fourteen has
+total degree at least five.
+For $Z_8$ the corresponding degrees are at least three and ten.
+These statements follow from $\mathrm{wt}(a,b,c)\le3(a+b+c)$
+and the exact low-weight cancellation. They hold term by term in the
+multivariate majorant and hence for its infinite tail. When instead
+$q\le k/D$, $\mu=1/D$ and $D$ increases, the three parameters
+scale with weights $1,2,3$.
+
+\begin{proposition}\label{lt:q04mu04}\label{lt:q05mu02}\label{lt:W8}
+For each row and $0<q\le q_0$, $0<\mu\le\mu_0$, the disks
+$|S(z-b)-Z_m(s)|<R$, $s=\pm2\pi i$, are disjoint from each other
+and from $b$, and contain exactly one simple original zero each,
+denoted $z_\pm$ respectively.
+Put $w_\pm=S(z_\pm-b)$. Both disks lie in the critical-free
+disk $|S(z-b)|<Z_{\mathrm{out}}$. The final column gives
+$|\Im S|<kQ/H$ at a rightmost zero.
+\begin{center}\small
+\begin{tabular}{ccclcc}
+\toprule
+$m$&$q_0$&$\mu_0$&$R(q,\mu)$&$Z_{\mathrm{out}}$&$k$\\\midrule
+4&$1/20$&$1/50$&$9q$&$17/2$&$7$\\
+4&$1/25$&$1/25$&$(45/4)q$&$17/2$&$15/2$\\
+4&$3/70$&$1/70$&$34q^2+13400q\mu^3$&$17/2$&$21/4$\\
+8&$3/50$&$1/50$&$64q^2+95000q\mu^3$&$19/2$&$8$\\
+8&$273/5000$&$91/5000$&$22q^2+45000q\mu^3$&$9$&$33/5$\\\bottomrule
+\end{tabular}
+\end{center}
+The first row also gives $|w_\pm|<17/2$ and
+$|(w_++w_-)/2|<19/10$ for the same pair.
+On the subrectangle $q\le57/1000$, $\mu\le1/51$, the fourth row gives
+\begin{equation}\label{lt:Q057}
+ |w_\pm|<8917/1000,\qquad
+ |(w_++w_-)/2|<2109/1000,\qquad |\Im S|<(37/5)Q/H.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Use \eqref{lt:center-recursion}--\eqref{lt:four-actual-tail}. For the
+first two rows the exact caps of the center modulus are respectively
+$8.030851273687$ and $7.706829806638$. Upper bounds at
+the corners are as follows:
+\begin{center}\small
+\begin{tabular}{c|rrrrr}
+\toprule
+$(q_0,\mu_0)$&$F_*$&$T_*$&model/actual derivative&product error&circle error\\\midrule
+$(.05,.02)$&$.091297$&$.017192$&$.216053$&$.008556$&$.200791$\\
+$(.04,.04)$&$.079034$&$.012556$&$.169285$&$.049027$&$.200791$\\\bottomrule
+\end{tabular}
+\end{center}
+The sums in the last three columns are strictly less than $9/20$.
+The containing-disk bound is $L=31/20$ in both cases.
+The finite sum retains all weights five through fourteen; the
+infinite sum is exactly bounded by \eqref{lt:positive-weight-tail}.
+The path, derivative and circle inequalities follow from
+the deterministic recurrences and all 128 closed path intervals
+specified above. At smaller $q$, both actual residuals are at most
+$t=q/q_0$ times their corner values. Since
+$(e^{LR}-1-LR)/L$ is convex and vanishes at zero, the circle error
+is at most $t$ times its corner value. Thus the radii are $t(9/20)$
+throughout the parameter rectangles.
+
+For the third row the same construction at its own corner yields
+\begin{gather*}
+ Z_*(1)<7.629836,\quad |Z_4-s|<1.346650,\\
+ M_c<.478584,\quad M_r<.481296,\quad
+ F_*<.033415,\quad T_*<.000911.
+\end{gather*}
+Using the unrounded rational witnesses produced by the path conversion,
+the model contribution is less than $30.181q^2$ and the actual
+product contribution is less than $11961q\mu^3$.
+Both are below nine tenths of the corresponding radius coefficient.
+At the corner $R_0<.064124$, $Z_*(1)+R_0<17/2$,
+\eqref{lt:log-derivative} is less than $31/20$, and the nonlinear
+fraction is less than $.052<1/10$. The model terms and positive tail
+are bounded by $(q/q_0)^2$ times their corner values;
+\eqref{lt:four-actual-tail} retains its explicit $q\mu^3$.
+Thus the third row holds throughout its parameter rectangle.
+
+For the last two rows use the relative exponent $A_r$.
+The upper bounds, including all weights at least twenty-nine,
+are
+\begin{center}\small
+\begin{tabular}{c|rrrrrr}
+\toprule
+row&$F_*$&$T_*$&model error&product error&$L$&nonlinear fraction\\\midrule
+$q_0=.06$&$.136221$&$.012814$&$.150033$&$.028511$&$7/4$&$1/3$\\
+$q_0=.0546$&$.045190$&$.000674$&$.046017$&$.010525$&$17/10$&$1/5$\\\bottomrule
+\end{tabular}
+\end{center}
+In each row the model error divided by $q_0^2$ is less than
+$(1-\beta)$ times the $q^2$ radius coefficient, and the product
+error divided by $q_0\mu_0^3$ is less than $(1-\beta)$ times the
+other coefficient. The nonlinear fraction is less than
+$\beta$. Containment, source exclusion and separation hold at both
+corners and improve on the smaller rectangles. Lemma~\ref{lt:circle}
+therefore applies.
+
+The coefficient polynomials are generated by
+\eqref{lt:center-recursion}; their exponential coefficients are given
+by \eqref{lt:euler-recursion}; every path coefficient is bounded on
+the stated 128 intervals; and the infinite positive tail is
+\eqref{lt:positive-weight-tail}. The electronic appendix contains the
+exact rational coefficient lists and programs performing these
+operations at 352 or 448 bits with outward bounds. A proposed rational
+modulus bound is accepted only if it exceeds its whole interval bound.
+The vanishing identities are checked separately over $\mathbb Q[s]$.
+
+Every center correction has positive total parameter degree, and
+$R(q,\mu)\le(q/q_0)R_0$. If $\Gamma$ bounds $|Z_m-s|$ at
+the corner, rightmostness gives
+$2\pi|\Im\sigma|<(q/q_0)(\Gamma+R_0)$.
+The rational or outward strict gates
+$\Gamma+R_0<2\pi q_0k$ give exactly the last column of the table.
+Averaging the two centers cancels all odd powers of $s$. The sum of
+the absolute even coefficients at $(.05,.02)$, plus $9/20$, is
+less than $1.890068<19/10$. At $(.057,1/51)$ the corresponding
+evaluations give respectively
+$8.916593$, $2.108213$ and $7.352979$, proving
+\eqref{lt:Q057} for the pair $(z_+,z_-)$.
+\end{proof}
+
+\subsection{Curvature and the hole field}
+
+\begin{lemma}\label{lt:hole-field}
+Assume the unit-disk strict-hole geometry of
+Lemma~\ref{pr:edge-reduction}. Suppose $C_0\ge0$ and
+\[
+ Qd/H<k,\qquad |\Im S|<K_0Q/H,\qquad
+ \Re K'(b)<C_0/d^2.
+\]
+Then
+\begin{equation}\label{lt:general-hole-field}
+ H>\frac{N-(2C_0+2K_0k)/d}{2(1+a)}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put $p_b=1-|b|^2\ge0$, $\lambda_b=1-|b-a|^2>0$.
+For $v_j=(b-\xi_j)^{-1}$, the strict hole gives
+\[
+ \lambda_b|v_j|^2+2\Re((b-a)v_j)<1.
+\]
+This is an open disk whose greatest real coordinate is
+$m_R=(1-x+a)/\lambda_b$. Rightmostness gives $\Re v_j\ge0$,
+so
+\[
+ Q-2\sum(\Re v_j)^2=\Re K'(b)<C_0/d^2,\qquad
+ Q<2m_RH+C_0/d^2.
+\]
+Since $\lambda_b\ge p_b$, one has $p_bm_R\le1-x+a$.
+Also $p_b<2d$, because $d>1-|b|$ in the strict crescent.
+Apply \eqref{pr:radial-identity} and $0\le y\le1$ to obtain
+\[
+ N<2(x+p_bm_R)H+2K_0Q/H+p_bC_0/d^2
+   \le2(1+a)H+(2K_0k+2C_0)/d.
+\]
+This also covers $p_b=0$ without division by it.
+\end{proof}
+
+\begin{proposition}\label{lt:D70}
+If $D\ge70$, then
+\[
+ |\Im S|<(21/4)Q/H,\qquad Qd/H<Y_{70}(D)<8/3,
+\]
+\[
+ Y_{70}(D)=\frac{4D}{D-91/10+\sqrt{(D-91/10)^2-24D}}.
+\]
+In the strict-hole unit-disk geometry,
+\begin{equation}\label{lt:field70}
+ H>\frac{N-(596/5)/d}{2(1+a)}.
+\end{equation}
+If $D\ge100$, the stronger consequence is
+\begin{equation}\label{lt:field100}
+ H>\frac{N-(1899/20)/d}{2(1+a)}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+First apply Proposition~\ref{mf:D25}, giving $Qd/H<3$.
+This enters the third row of Proposition~\ref{lt:W8}.
+The six additional moment terms give
+$|Z_4-\zeta_s|<175q\mu$ on its parameter rectangle.
+This follows by taking the modulus of each displayed coefficient in
+\eqref{lt:four-center} at $s=2\pi i$; their total at the corner
+is less than $.107054<175(3/70)(1/70)$.
+The effective Gaussian radius is therefore
+\[
+ R_{\rm eff}=34q^2+(175+13400/4900)q\mu.
+\]
+Lemma~\ref{lt:signed-moment} with $6/5$ and the exact comparisons
+\[
+ 6/5+(1250/24649)34<3,\qquad
+ (1250/24649)(175+13400/4900)<91/10
+\]
+give $\Re K'(b)/H^2<3q^2+(91/10)q\mu$.
+On the other hand $\sum(\Re v_j)^2\le H/d$, so
+$\Re K'(b)/H^2\ge q-2\mu$.
+With $y_0=Qd/H$ this yields
+\[
+ 3y_0^2-(D-91/10)y_0+2D>0.
+\]
+At $D=70$ the polynomial is positive at $2$, negative at $3$,
+decreasing on $[2,3]$, and equals $-16/15$ at $8/3$.
+These signs persist for all $D\ge70$; the bound $y_0<3$ removes
+the upper quadratic branch. The smaller root is $Y_{70}(D)$.
+For $Y_{70}=2+v$ its inverse relation is
+$D=151/(5v)+211/10+3v$, decreasing on $0<v\le2/3$.
+This proves the assertion for all $D\ge70$.
+For the hole field use $k=8/3$, $K_0=21/4$ and
+$C_0=3k^2+(91/10)k=228/5$ in Lemma~\ref{lt:hole-field}.
+The resulting constant is $596/5$. For $D\ge100$,
+Proposition~\ref{mf:D100} gives $k=9/4$ instead.
+Then $C_0=2853/80$ and the constant is $1899/20$.
+\end{proof}
+
+\begin{proposition}\label{lt:medium139}
+If $D\ge139$, then
+\[
+ |\Im S|<4Q/H,\qquad
+ Qd/H<Y(D):=\frac{4D}{D-23/2+\sqrt{(D-23/2)^2-10D}}<9/4.
+\]
+In the unit-disk strict-hole geometry,
+\begin{equation}\label{lt:medium-field}
+ H>\frac{N-(2637/32)/d}{2(1+a)}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Proposition~\ref{mf:D100} first gives $Qd/H<9/4$, which
+enters the medium row of Proposition~\ref{lt:quartic}.
+Equation~\eqref{lt:medium-curvature} gives
+\[
+ (5/4)y_0^2-(D-23/2)y_0+2D>0,\qquad y_0=Qd/H.
+\]
+At $D=139$ this is positive at $2$, negative at $9/4$, and
+decreases on $[2,9/4]$; the signs persist on the degree-independent
+ray. The bound $y_0<9/4$ excludes the upper branch. The inverse relation
+at $Y=2+v$ is $D=28/v+33/2+(5/4)v$, decreasing for
+$0<v\le1/4$. Finally apply Lemma~\ref{lt:hole-field} with
+$k=9/4$, $K_0=4$ and $C_0=(5/4)k^2+(23/2)k$.
+Its constant is $2637/32$.
+\end{proof}
+
+\begin{proposition}\label{lt:W8-field}
+Suppose $Qd/H<3$ and $D\ge5000/91$. Then the second weight-eight
+row gives $|\Im S|<(33/5)Q/H$ and
+$\Re K'(b)<85/d^2$. In the strict-hole unit-disk geometry it follows
+that
+\begin{equation}\label{lt:field210}
+ H>\frac{N-210/d}{2(1+a)}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The assumed ratio and field enter $q\le273/5000$, $\mu\le91/5000$.
+The difference $Z_8-\zeta_s$ has coefficient-norm sum less
+than $.397022$ at this corner. Adding the radius gives a
+total effective Gaussian radius less than $.477420$.
+Every term of this center difference has weight at least two.
+As $D$ increases, with $t=(5000/91)/D$, its parameters lie in the
+corner polydisk scaled by $t,t^2,t^3$. Consequently the effective
+radius is at most $t^2$ times its corner bound.
+Since $33/5<8$, the phase hypothesis for the $13/10$ bound in
+Lemma~\ref{lt:signed-moment} holds. The coefficient sum in
+\eqref{lt:center-recursion} gives
+\[
+ D^2\Re K'(b)/H^2<84.718<85.
+\]
+This comparison uses all forty terms and the whole radius; the
+coefficient bound is a finite directed evaluation of those explicitly
+defined polynomials. Lemma~\ref{lt:hole-field} with $k=3$,
+$K_0=33/5$ and the sharper displayed coefficient gives a field
+constant less than $2(84.718)+6(33/5)<210$.
+\end{proof}
+
+\section{Inverse logarithmic counting and transport}\label{sec:inverse-tools}
+
+Use \eqref{pr:field-notation} and \eqref{pr:normalized-moments},
+with $b$ an actual simple zero and $S\ne0$.
+
+\subsection{Inverse rectangles}
+
+\begin{lemma}\label{lt:inverse-log}\label{lt:odd-pi}
+Suppose $Q/H<V$, $d\ge d_0>R>0$ and $H\ge H_0>0$. Put
+\begin{gather*}
+ \Lambda=\frac{VR}{1-R/d_0},\qquad
+ e_R=V\left(\frac{R^2}{2}+\frac{R^3}{3(d_0-R)}\right),\qquad
+ \widehat R=R-e_R,\\
+ B_R=\frac{V}{(1-R/d_0)^2(1-\Lambda)^3},\qquad
+ p_*=(1+\Lambda)^{-1},\qquad A_*=(1-\Lambda)^{-1}.
+\end{gather*}
+Assume $0<\Lambda<1$ and $\widehat R>0$. Let $0<\nu<1$, $W>0$,
+and choose positive $e,\epsilon,g$ such that
+\begin{gather}
+ e>e^{-W},\qquad B_R/H_0<\epsilon,\qquad
+ \nu B_R\widehat R<g,\qquad
+ W^2<(1-\nu^2)(H_0\widehat R)^2,\label{lt:inverse-corner}\\
+ \epsilon(1+e)+ge<1-A_*e,\quad
+ \epsilon(1+e)+ge^2<p_*-e,\quad
+ \epsilon+ge<p_*.\label{lt:inverse-sides}
+\end{gather}
+For any positive odd integer $\ell$ with
+$\ell\pi\le\nu H\widehat R$, the disk $|z-b|<R$ contains at
+least $\ell$ distinct simple original zeros. If
+$\nu H\widehat R\ge\pi$, its number of original zeros is
+strictly greater than
+\begin{equation}\label{lt:inverse-density}
+ \nu H\widehat R/\pi-2>\nu(7/22)H\widehat R-2.
+\end{equation}
+The source $b$ is included once in this count.
+\end{lemma}
+\begin{proof}
+Let $L(z)=\log(p'(z)/p'(b))$ on $|z-b|<d$, with $L(b)=0$.
+The finite logarithms give on $|z-b|\le R$
+\[
+ |L'(z)/S-1|<\Lambda,\qquad
+ |L(z)-S(z-b)|<He_R.
+\]
+For the second bound retain the quadratic term and bound the entire
+tail from order three by the displayed geometric series. The first
+bound integrated along each joining segment proves injectivity: the
+quotient $[L(z)-L(w)]/[S(z-w)]$ lies in $|u-1|<\Lambda$.
+Rouch\'e's theorem on $|z-b|=R$ shows that the image contains
+$|v|<H\widehat R$. Its analytic inverse $\phi$ satisfies
+$\phi(0)=b$. Put $A(v)=S\phi'(v)$. Differentiation gives
+\[
+ A(0)=1,\qquad \Re A>p_*,\qquad |A|<A_*,\qquad |A'|<B_R/H.
+\]
+The last assertion uses
+$|L''|\le Q/(1-R/d_0)^2$ and
+$A'=-S L''(\phi)/(L'(\phi))^3$.
+
+The whole rectangle $|\Re v|\le W$, $|\Im v|\le Y=\ell\pi$
+lies strictly inside the inverse disk by \eqref{lt:inverse-corner}.
+The actual primitive is
+\[
+ \frac{Sp(\phi(v))}{p'(b)}
+  =\int_0^ve^uA(u)\,du=e^vA(v)-1-E(v),\qquad
+ E(v)=\int_0^ve^uA'(u)\,du.
+\]
+Use the broken path $0,-W,-W+i\Im v,v$. For $v=x+iy$,
+\[
+ |E(v)|<\epsilon(1+e^x)+ge^{-W}.
+\]
+For $G=e^vA-1$, the left side has $|G|>1-A_*e^{-W}$,
+the right side has $e^{-W}|G|>p_*-e^{-W}$, and each horizontal
+side has $|G|>1+p_*e^x$, since $\ell$ is odd. Equations
+\eqref{lt:inverse-sides} give $|E|<|G|$ on all four sides,
+including every corner. Hence Rouch\'e compares the actual
+primitive with $G$.
+
+For the count, use the homotopy $A_t=1-t+tA$,
+$0\le t\le1$. Then $\Re A_t\ge p_*$ and $|A_t|\le A_*$.
+The same left and right estimates, and the strict negative real part
+on the odd-$\pi$ sides, keep $e^vA_t-1$ nonzero throughout the
+boundary. It has the same number of zeros as $e^v-1$, namely
+$\ell$. Injectivity of $\phi$ and the nonvanishing of $p'$ in
+the physical disk give distinct simple original zeros.
+Finally, the largest permitted odd integer is
+$1+2\lfloor(\nu H\widehat R/\pi-1)/2\rfloor$, which is
+strictly larger than $\nu H\widehat R/\pi-2$.
+\end{proof}
+
+\begin{lemma}\label{lt:quarter-pi}
+Use the notation and hypotheses of Lemma~\ref{lt:inverse-log},
+replacing the third inequality in \eqref{lt:inverse-sides} by
+\[
+ \epsilon+ge<\frac{p_*}{1+p_*+A_*}.
+\]
+For an integer $k\ge0$ with $Y=(2k+1/2)\pi\le\nu H\widehat R$,
+put $\mathcal R_Y=\{v:|\Re v|<W,\ |\Im v|<Y\}$.
+Then $\phi(\mathcal R_Y)\subset\{z:|z-b|<R\}$ contains $2k+1$
+simple original zeros. In particular, when
+$\nu H\widehat R/\pi\ge1/2$, the number of original zeros in
+$|z-b|<R$ is strictly greater than
+$\nu H\widehat R/\pi-3/2$.
+\end{lemma}
+\begin{proof}
+On these horizontal sides $e^{iy}=\pm i$. For $u=e^x>0$,
+\[
+ |e^vA(v)-1|\ge\max(1-A_*u,p_*u),\qquad
+ \frac{\max(1-A_*u,p_*u)}{1+u}\ge\frac{p_*}{1+p_*+A_*}.
+\]
+The two quotients meet at $u=1/(p_*+A_*)$. This gives the
+horizontal Rouch\'e comparison. On $y=\pm Y$, the amplitude homotopy
+satisfies
+\[
+ \Im(e^vA_t-1)=e^x\sin y\,\Re A_t,
+\]
+which is positive on the upper side and negative on the lower side.
+Here $\Re A_t>0$.
+The model $e^v-1$ has exactly
+$2k+1$ zeros. Choose the largest permitted $k$ to obtain the
+last bound.
+\end{proof}
+
+The same inverse lemmas allow a sharper logarithmic radius. For any
+integer $M\ge2$ one may replace $e_R$ by
+\begin{equation}\label{lt:higher-log-loss}
+ V\left(\sum_{k=2}^M\frac{R^k}{k d_0^{k-2}}
+       +\frac{R^{M+1}}{(M+1)d_0^{M-1}(1-R/d_0)}\right).
+\end{equation}
+This retains every logarithmic order beyond $M$; all the other
+constants and the full-boundary proof are unchanged. To use exact
+integer counts, it is sufficient to verify
+$\ell\pi_{\rm up}\le\nu H_0\widehat R$ for a rational upper
+bound $\pi_{\rm up}>\pi$. If the source root is inserted separately
+in a later weighted sum, use $\ell-1$ other roots, since $b$ was
+already counted. The one-sided and narrow-strip refinements needed
+near the origin are proved in Section~\ref{sec:origin}.
+
+\subsection{Schur coupling and positive cumulative sums}
+
+\begin{lemma}\label{lt:schur}
+There is a nonnegative matrix $(c_{ij})$, indexed by all original
+zeros and all critical points, with
+\[
+ \sum_jc_{ij}=1/n,\qquad \sum_ic_{ij}=1/N,\qquad
+ N\sum_ic_{ij}z_i=\xi_j.
+\]
+If $|z_i|\le1$, then
+$N\sum_ic_{ij}|z_i-\xi_j|^2\le1-|\xi_j|^2$.
+\end{lemma}
+\begin{proof}
+Let $T=\diag(z_i)$, $e=n^{-1/2}(1,\ldots,1)^T$ and compress
+$T$ to $e^\perp$. Its characteristic polynomial is $p'/n$ after
+making $p$ monic. Indeed its cofactor in the $e$ direction is
+$p(z)e^*(zI-T)^{-1}e=p'(z)/n$, first off the zeros and then
+identically. Lift a unitary Schur basis of the compression to an
+$n$ by $N$ matrix $U$. Its columns are orthonormal,
+$UU^*=I-ee^*$, and the diagonal entries of $U^*TU$ are
+$\xi_j$. Set $c_{ij}=|U_{ij}|^2/N$. All three identities follow.
+Expanding around the barycenter gives
+\[
+ N\sum_ic_{ij}|z_i-\xi_j|^2
+  =\sum_i|U_{ij}|^2|z_i|^2-|\xi_j|^2\le1-|\xi_j|^2.
+\]
+\end{proof}
+
+\begin{lemma}\label{lt:transport}
+Assume the unit-disk strict-hole geometry of
+Lemma~\ref{pr:edge-reduction}, with the chosen simple rightmost zero
+$b=x+iy$, $x\ge a$. For $0<a\le A<1$, define
+\[
+ \Gamma=\frac2{2-A^2},\quad u=\Gamma A,\quad
+ q_A=\frac{u}{1-u},\quad E_A=\frac{2\Gamma}{(1-u)^2},
+\]
+and assume $u<1/2$. For $\xi_j=r_j\omega_j$, $|\omega_j|=1$, put
+\[
+ g=\frac1N\sum_j\frac1{b-\omega_j},\quad k=\Re g,\quad h=H/N,
+ \quad \eta=\sum_{i,j}c_{ij}\frac{|z_i-\xi_j|^2}{|b-\xi_j|^2}.
+\]
+Then $k>0$, $h>(1-q_A)k$, and $\eta<E_Aak$.
+\end{lemma}
+\begin{proof}
+The hole gives $1-a<r_j\le1$, and with
+$t_j=a/2-\Re\omega_j$ it gives
+\[
+ (1-r_j)(1+r_j-a^2)<2ar_jt_j.
+\]
+In particular $t_j>0$. Since $2r/(1+r-a^2)$ increases on
+$0<r\le1$, $1-r_j<\Gamma at_j$. Also
+$t_j<x-\Re\omega_j\le|b-\omega_j|$. Hence
+\[
+ |b-r_j\omega_j|>(1-u)|b-\omega_j|,\qquad
+ \left|\frac1{b-r_j\omega_j}-\frac1{b-\omega_j}\right|
+ <q_A\Re\frac1{b-\omega_j}.
+\]
+Averaging gives $|S/N-g|<q_Ak$ and the field bound. The variance
+part of Lemma~\ref{lt:schur}, together with
+$1-r_j^2<2\Gamma at_j$, gives
+\[
+ \eta\le\frac1N\sum_j\frac{1-r_j^2}{|b-r_j\omega_j|^2}
+ <\frac{2\Gamma a}{(1-u)^2N}
+       \sum_j\frac{t_j}{|b-\omega_j|^2}\le E_Aak.
+\]
+\end{proof}
+
+\begin{lemma}\label{lt:abel}
+Suppose the number $L_j$ of original roots in nested disks
+$|z-b|<t_jd$, where $0<t_1<\cdots<t_m<1$, satisfies
+$L_j>s_jD-2$ with $0=s_0<s_1<\cdots<s_m$.
+If $D\ge D_0>0$, $N\ge N_0$, and
+\[
+ c=\frac{N_0}{N_0+1}
+ \left(\sum_{j=1}^m(1-t_j)^2(s_j-s_{j-1})-\frac2{D_0}\right)>0,
+\]
+then $\eta>chd$. Under Lemma~\ref{lt:transport},
+$d<E_Aa/[(1-q_A)c]$.
+\end{lemma}
+\begin{proof}
+Every root in the $j$th disk has
+$|z_i-\xi_k|>(1-t_j)|b-\xi_k|$ for every $k$.
+Its entire row in the coupling contributes more than
+$w_j/n$, where $w_j=(1-t_j)^2$. Positive summation of cumulative
+counts gives
+\[
+ n\eta>\sum_{j<m}(w_j-w_{j+1})L_j+w_mL_m
+ >D\sum_jw_j(s_j-s_{j-1})-2w_1.
+\]
+Use $w_1<1$, $N/(N+1)\ge N_0/(N_0+1)$, and $D\ge D_0$.
+Combining the result with $\eta<E_Aak<E_Aah/(1-q_A)$ proves
+the last assertion. The cumulative counts enter the Abel sum with
+nonnegative coefficients.
+\end{proof}
+
+For root-product weights, let $B_p=\prod_{i=1}^n f_i$, where
+$0\le f_i\le1$ for every original zero, and set $-\log0=+\infty$.
+If every root in the $j$th nested region has $f_i\le e^{-w_j}$,
+where $w_1\ge\cdots\ge w_m\ge0$, and its cumulative count is
+at least $K_j$, then
+\begin{equation}\label{lt:abel-product}
+ -\log B_p\ge w_mK_m+\sum_{j<m}(w_j-w_{j+1})K_j.
+\end{equation}
+This is the pointwise step-function lower estimate followed by
+summation over every root. If $K_j=s_jH_*-2$, the budget is
+$H_*\sum_jw_j(s_j-s_{j-1})-2w_1$.
+
+\subsection{Crescent geometry and half-disk factors}
+
+\begin{lemma}\label{lt:crescent}
+Under the strict-hole geometry with $0<a\le x$, $b=x+iy$,
+$y\ge0$, $|b|\le1$, put $t=\sqrt{1-a^2/4}$.
+Every critical point satisfies
+\begin{equation}\label{lt:crescent-gap}
+ |b-\xi|^2>(x-a/2)^2+(t-y)^2.
+\end{equation}
+Consequently $d>x-a/2$, $d>1-y$, $d>1-|b|$, and
+\begin{equation}\label{lt:quadrature-gap}
+ d^2>(1-|b|)^2+a^2/4.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $e=a/2+it$, write $\xi=e-u+iv$ and put $\lambda=y/t$.
+Then $u>0$ by \eqref{pr:critical-halfplane}, and $0\le\lambda<1$
+because $y\le\sqrt{1-x^2}\le\sqrt{1-a^2}<t$.
+The exact identity
+\[
+ |b-\xi|^2-|b-e|^2
+ =(1-\lambda)(|\xi-a|^2-1)
+       +[2(x-a)+a\lambda]u+\lambda(u^2+v^2)>0
+\]
+proves the crescent comparison. Its difference from
+$(1-y)^2$ is $x(x-a)+2y(1-t)\ge0$.
+For fixed $r=|b|$ and $a$, the expression
+$1+r^2-ax-2t\sqrt{r^2-x^2}$ increases for $a\le x<r$:
+its derivative is $-a+2tx/\sqrt{r^2-x^2}>0$.
+Continuity treats $x=r$. Thus its minimum occurs at $x=a$.
+Since $2r-5a^2/4>0$ and
+\[
+ (2r-5a^2/4)^2-4(1-a^2/4)(r^2-a^2)
+       =a^2(r-1)(r-4)+9a^4/16\ge0,
+\]
+squaring in the positive direction gives
+\eqref{lt:quadrature-gap}. This includes $r=1$.
+\end{proof}
+
+\begin{lemma}\label{lt:direct-D70}
+Under the preceding hypotheses put $c=x/2$. Then
+\[
+ D>\frac{Nc}{2\sqrt{2-2c+c^2}-2\sqrt2c(1-c)}.
+\]
+In particular, if $N\ge6250$ and $x\ge30501/500000$, then $D>70$.
+\end{lemma}
+\begin{proof}
+For fixed $b$, the squared right side of \eqref{lt:crescent-gap}
+decreases as $a$ increases to $x$, since its derivative is
+$-x+ay/(2\sqrt{1-a^2/4})<0$ for $0<a\le x\le1$.
+Put $t=\sqrt{1-c^2}$, $v=t-y\ge0$ and $G=\sqrt{c^2+v^2}$.
+Thus $d>G$ and $p_b=1-|b|^2=-3c^2+2tv-v^2\le2v-3c^2-v^2$.
+Since $\Re S>cQ$, the radial identity implies
+\[
+ D>\frac{NcG}{2|b|c+p_b}.
+\]
+The identities
+$c+(1-c)v\le\sqrt{1+(1-c)^2}G$ and
+$(3c^2+v^2)^2-8c^2G^2=(v^2-c^2)^2\ge0$,
+together with $|b|\le1-p_b/2$, give
+\begin{align*}
+ 2|b|c+p_b&\le2[c+(1-c)v]-(1-c)(3c^2+v^2)\\
+ &\le
+ [2\sqrt{2-2c+c^2}-2\sqrt2c(1-c)]G.
+\end{align*}
+The bracket is positive for $0<c\le1/2$.
+For $c\ge c_0=30501/1000000$, one has
+$2-2c+c^2<49/25<2$. Therefore the denominator is less than
+$(14/5)(1-c+c^2)$ and
+\[
+ D>\frac{5N}{14}\frac{c}{1-c+c^2}
+ \ge\frac{476578125000000}{6793005177007}>70.
+\]
+The rational function increases with $c$ because its derivative is
+$(1-c^2)/(1-c+c^2)^2>0$.
+\end{proof}
+
+\begin{lemma}\label{lt:same-gap-field}
+Assume all original zeros lie in $\overline\D$ and $a>0$ satisfies
+$|a-\xi_j|>1$ for every critical point. Let $b=x+iy$ be a simple
+rightmost zero with $x\ge a$, $y\ge0$, and $|b|\le1$, as in
+Lemma~\ref{lt:crescent}. Put $c=x-a/2$ and $p_b=1-|b|^2$.
+If $|\Im S|<K_0Q/H$ and $Nc>2K_0$, then
+\[
+ D>\frac{Nc^2-2K_0c}{2xc+p_b}.
+\]
+If $N\ge N_0$, $a\le a_U$, $x\ge x_0>a_U/2$, $p_b\le p_U$, and
+$N_0(x_0-a_U/2)>2K_0$, then the uniform bound is obtained by
+putting $N=N_0$, $c=x_0-a_U/2$, $x=x_0$, $p_b=p_U$.
+\end{lemma}
+\begin{proof}
+The half-plane inequality gives $d>c$, $Q/H<1/c$. Hence
+$N<(2x+p_b/c)H+2K_0/c$ and the first assertion follows.
+With $x,p_b$ fixed, the derivative numerator in $c$ is
+$2[Nxc^2+p_b(Nc-K_0)]>0$.
+After writing $c=x-a_U/2$, the derivative numerator in $x$ is
+$2[(Na_U/2+2K_0)c^2+p_b(Nc-K_0)]>0$.
+The quotient decreases with $p_b$ and increases with $N$.
+These signs also hold at $p_b=0$.
+\end{proof}
+
+\begin{lemma}\label{lt:half-disk-factor}
+Let $b=x+iy$ be an actual simple rightmost zero, with
+$x>0$, $y\ge0$, $0<B_L\le|b|\le B_U<1$,
+$x\le X$, and $\gamma=b-a/2$, $0<a\le a_U$.
+For a disk radius $R$ put
+\[
+ P=1-B_U^2,\qquad T=\frac{a_U}{2P},\qquad U=\frac RP,\qquad
+ L=1+2TX.
+\]
+Suppose $R^2<P$ and $0<f<1$ satisfy
+\begin{equation}\label{lt:half-disk-gate}
+ f^2-(1-f^2B_L^2)(T^2+U^2)>2Uf^2LB_U.
+\end{equation}
+Then every original zero $z$ with $|z-b|\le R$ obeys
+$|(\gamma-z)/(1-\overline z\gamma)|<f$.
+\end{lemma}
+\begin{proof}
+Write $\tau=a/2$, $p_b=1-|b|^2$, $z=b+v$,
+$L_\gamma=1-|\gamma|^2=p_b+2\tau x-\tau^2$ and
+$A_0=p_b+\tau\overline b$. Rightmostness gives $\Re v\le0$.
+The gate implies
+\begin{gather*}
+ T^2<\frac{f^2}{1-f^2B_L^2}<\frac1{1-B_L^2},\\
+ \tau^2\le P^2T^2<\frac{P^2}{1-B_L^2}\le P\le p_b.
+\end{gather*}
+Thus $L_\gamma>0$, $|\gamma|<1$, and $1-f^2|\gamma|^2>0$.
+Direct expansion gives
+\[
+ f^2|1-\overline z\gamma|^2-|\gamma-z|^2
+ =f^2|A_0|^2-\tau^2-(1-f^2|\gamma|^2)|v|^2-2\Re(Vv),
+\]
+where $V=f^2L_\gamma\overline b+\tau(1-f^2)$.
+Thus $\Re V>0$, $\Im V=-f^2L_\gamma y\le0$.
+On the half disk $|v|\le R$, $\Re v\le0$,
+$\Re(Vv)\le f^2L_\gamma yR$. The resulting lower bound is
+\begin{align*}
+ f^2p_b^2&-(1-f^2|b|^2)(\tau^2+R^2)
+ +2f^2\tau x(p_b-R^2)+f^2\tau^2R^2-2Rf^2L_\gamma y.
+\end{align*}
+The two terms containing $2f^2\tau x$ and $f^2\tau^2$ are nonnegative.
+After division by $p_b^2$, use $p_b\ge P>R^2$ and
+\[
+ \frac{L_\gamma}{p_b}
+ =1+\frac{2\tau x-\tau^2}{p_b}\le1+2TX=L.
+\]
+The resulting bound is at least
+$f^2-(1-f^2B_L^2)(T^2+U^2)-2Uf^2LB_U>0$.
+The positive difference also excludes a zero denominator.
+\end{proof}
+
+For $N\ge N_0$, if a field estimate has the form $H>(N-c)/F$,
+with $c\ge0$, $F>0$ and $(N_0-c)/F>H_*>0$, then
+\begin{equation}\label{lt:energy-ray}
+ \begin{gathered}
+ \frac HN>\frac{1-c/N}{F}\ge\frac{1-c/N_0}{F}
+             >\frac{H_*}{N_0},\\
+ Q\ge\frac{H^2}{N}>\frac{N}{N_0^2}H_*^2\ge\frac{H_*^2}{N_0}.
+ \end{gathered}
+\end{equation}
+The lower bound $(1-c/N)/F$ is nondecreasing in $N$, so these
+estimates apply on the whole ray $N\ge N_0$.

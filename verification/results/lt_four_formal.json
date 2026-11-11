@@ -1,0 +1,82 @@
+{
+  "status": "PASS_FORMAL_CANCELLATIONS_AND_FULL_COEFFICIENT_BOUNDS",
+  "warning": "Does not by itself prove actual companion roots; whole log tail and Rouche circle still required",
+  "model": "J(z)=integral_0^z exp(t+theta*t^2/2+kappa*t^3/3+lambda*t^4/4)dt",
+  "weights": {
+    "theta": 1,
+    "kappa": 2,
+    "lambda": 3
+  },
+  "assumption": "exp(s)=1, s=+-2*pi*i",
+  "vanishing_weighted_coefficients": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "coefficient_bounds": {
+    "c": {
+      "polynomial": "-s**2/2 + s",
+      "bound": 21,
+      "s_domain": "s=+-ip, 6<=p<=44/7",
+      "Bernstein_squared_upper": "1031888/2401"
+    },
+    "d": {
+      "polynomial": "s**3/2 - 2*s**2 + 3*s",
+      "bound": 132,
+      "s_domain": "s=+-ip, 6<=p<=44/7",
+      "Bernstein_squared_upper": "2039570192/117649"
+    },
+    "e": {
+      "polynomial": "-5*s**4/8 + 23*s**3/6 - 21*s**2/2 + 15*s",
+      "bound": 1025,
+      "s_domain": "s=+-ip, 6<=p<=44/7",
+      "Bernstein_squared_upper": "54487078668880/51883209"
+    },
+    "f": {
+      "polynomial": "7*s**5/8 - 22*s**4/3 + 88*s**3/3 - 72*s**2 + 105*s",
+      "bound": 8824,
+      "s_domain": "s=+-ip, 6<=p<=44/7",
+      "Bernstein_squared_upper": "4039463159638544/51883209"
+    },
+    "u_kappa": {
+      "polynomial": "-s**3/3 + s**2 - 2*s",
+      "bound": 81,
+      "s_domain": "s=+-ip, 6<=p<=44/7",
+      "Bernstein_squared_upper": "6872683840/1058841"
+    },
+    "v_theta_kappa": {
+      "polynomial": "5*s**4/6 - 13*s**3/3 + 12*s**2 - 20*s",
+      "bound": 1260,
+      "s_domain": "s=+-ip, 6<=p<=44/7",
+      "Bernstein_squared_upper": "82334427836672/51883209"
+    },
+    "w_theta2_kappa": {
+      "polynomial": "-7*s**5/4 + 157*s**4/12 - 51*s**3 + 131*s**2 - 210*s",
+      "bound": 16324,
+      "s_domain": "s=+-ip, 6<=p<=44/7",
+      "Bernstein_squared_upper": "13823794748306752/51883209"
+    },
+    "r_kappa2": {
+      "polynomial": "s**5/3 - 13*s**4/6 + 26*s**3/3 - 22*s**2 + 40*s",
+      "bound": 2863,
+      "s_domain": "s=+-ip, 6<=p<=44/7",
+      "Bernstein_squared_upper": "20826267122591744/2542277241"
+    },
+    "l_lambda": {
+      "polynomial": "-s**4/4 + s**3 - 3*s**2 + 6*s",
+      "bound": 344,
+      "s_domain": "s=+-ip, 6<=p<=44/7",
+      "Bernstein_squared_upper": "681436416320/5764801"
+    },
+    "m_theta_lambda": {
+      "polynomial": "3*s**5/4 - 19*s**4/4 + 18*s**3 - 51*s**2 + 90*s",
+      "bound": 6411,
+      "s_domain": "s=+-ip, 6<=p<=44/7",
+      "Bernstein_squared_upper": "11608261484835136/282475249"
+    }
+  },
+  "seconds": 2.0663626194000244,
+  "code_sha256": "a4ea360bac7927769d39cd5266758e7dda59f513b409224932845dce1244b548"
+}

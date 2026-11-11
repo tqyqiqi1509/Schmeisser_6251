@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact rational tensor Bernstein with exact dyadic de Casteljau subdivision",
+  "domain": "6 <= p <= 44/7 and, for paths, 0 <= t <= 1",
+  "bounds": 20,
+  "closed_boxes": 24,
+  "coefficient_zero_identities": 5
+}

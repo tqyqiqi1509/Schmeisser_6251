@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "degree_floor": 6251,
+  "scope": "entire witness interval .1<=a<=.11, every actual rightmost-root modulus",
+  "checks": 50,
+  "full_contours": 2,
+  "contours": [
+    {
+      "name": "Low",
+      "H": "20000/9",
+      "R": "1/10",
+      "rhat": "379/4480",
+      "count": "1831/32"
+    },
+    {
+      "name": "Middle",
+      "H": "577525/222",
+      "R": "1/25",
+      "rhat": "59/2000",
+      "count": "26254139/1184000"
+    }
+  ],
+  "upper_one_root_C": "24942879/10000000000",
+  "upper_one_root_factor": "57629/121400",
+  "checker_sha256": "b38ff8e046072657428097f3601c3be5e3c877a0b0f4fb3a05b85e0629b3ee86"
+}

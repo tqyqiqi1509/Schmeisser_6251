@@ -1,0 +1,60 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,mathtools,mathrsfs}
+\usepackage{array,booktabs,longtable,enumitem,microtype,needspace}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\diag}{diag}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\DeclareMathOperator{\Log}{Log}
+\newcommand{\C}{\mathbb C}
+\newcommand{\D}{\mathbb D}
+\newcommand{\E}{\mathbb E}
+\DeclareRobustCommand{\cert}[1]{\nolinkurl{#1}}
+\allowdisplaybreaks[1]
+\emergencystretch=2em
+\setlist[enumerate,1]{label=\textup{(\roman*)},leftmargin=*}
+\setcounter{tocdepth}{1}
+\title[Schmeisser's conjecture in degree at least 6251]{Schmeisser's conjecture for polynomials of degree at least 6251}
+\author{Qiyue Tang}
+\address{Zhili College, Tsinghua University, Beijing 100084, China}
+\email{tangqy24@mails.tsinghua.edu.cn}
+\date{November 11, 2026}
+\subjclass[2020]{Primary 30C15; Secondary 30C10, 26D10, 65G30}
+\keywords{Schmeisser's conjecture, critical points, zeros of polynomials, convex hull, interval arithmetic}
+\hypersetup{pdftitle={Schmeisser's conjecture for polynomials of degree at least 6251},pdfauthor={Qiyue Tang}}
+\begin{document}
+\begin{abstract}
+We prove Schmeisser's conjecture for polynomials of degree at least $6251$.
+\end{abstract}
+\maketitle
+\tableofcontents
+\input{sections/introduction}
+\input{sections/preliminaries}
+\input{sections/actual_roots}
+\input{sections/matrix_fields}
+\input{sections/local_tools}
+\input{sections/boundary_compact}
+\input{sections/origin}
+\input{sections/small}
+\input{sections/small_extensions}
+\input{sections/assembly}
+\input{sections/certificates}
+\input{sections/references}
+\end{document}

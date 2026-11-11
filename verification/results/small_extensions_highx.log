@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "T6251 high-X .69<=X<=1,.061002<=rho<=.062 bootstrap and terminal conditional on separate h95 cloud",
+  "degree_floor": 6251,
+  "checks": 33,
+  "polynomials": 3,
+  "source_K": "1793507148275409343/2882630131640625000",
+  "pair_lower": "656139928327902131/348235296808000000",
+  "terminal_upper": "7987439084460128125/4459027148252669232",
+  "terminal_margin": "9014845822117732608757183663183337/97049415152918630536485588216000000",
+  "sha256": "d33eacb042b9a05fb8ddf6664b10daea69a548f73f84bdc69ad0bb2c803033bc"
+}
+{
+  "status": "PASS",
+  "scope": "Complete T=1 higher strip .061002<=rho<=.062,.69<=X<=1 for all n>=6251",
+  "degree_floor": 6251,
+  "checks": 6721,
+  "whole_polynomials": 42,
+  "closed_cells": 10,
+  "complete_contours": 709,
+  "min_cloud_margin": "13853291552301618320657506165052277674134210136094121/22779677668469534660649889216249000000000000000000000000",
+  "paired_terminal_margin": "9014845822117732608757183663183337/97049415152918630536485588216000000",
+  "checker_sha256": "55455e1c0dba6f42f734cfcc1cec0579b7008c425adfae01ee47bfdc453431f7",
+  "bootstrap_sha256": "d33eacb042b9a05fb8ddf6664b10daea69a548f73f84bdc69ad0bb2c803033bc",
+  "proposal_sha256": "ec59c05164eedfbe2e858a50eb1c22411d0dbb3bf0b9ddd7747f66d76262e4b6"
+}

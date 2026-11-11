@@ -1,0 +1,92 @@
+{"phase": 1, "verified": 25, "seconds": 0.5}
+{"phase": 1, "verified": 50, "seconds": 0.89}
+{"phase": 1, "verified": 75, "seconds": 1.47}
+{"phase": -1, "verified": 25, "seconds": 1.97}
+{"phase": -1, "verified": 50, "seconds": 2.44}
+{"phase": -1, "verified": 75, "seconds": 2.85}
+{"phase": -1, "verified": 100, "seconds": 3.56}
+{"phase": -1, "verified": 125, "seconds": 4.66}
+{"phase": -1, "verified": 150, "seconds": 5.69}
+{"phase": -1, "verified": 175, "seconds": 6.74}
+{
+  "status": "PASS",
+  "method": "fresh same-agent exact Fraction replay with integer algebraic root choices and Horner exponential sums",
+  "checks": 86297,
+  "counts": {
+    "actual original-root quotient contradiction": 275,
+    "both complete connectors small": 275,
+    "centered disk fiber": 275,
+    "closed exclusion": 28,
+    "compact curvature domain": 1,
+    "compact entrance constants": 1,
+    "complete log radius": 3575,
+    "complete primitive positive lower bound": 275,
+    "complete vertical and horizontal damping": 275,
+    "connector coefficient signs": 275,
+    "convex variance whole-cell domain": 275,
+    "cover exact area": 2,
+    "cover extreme fibers": 2,
+    "cover nonempty": 2,
+    "cover rectangle domain": 303,
+    "curvature and Gaussian bounds": 275,
+    "endpoint ordinate enclosure": 275,
+    "entire Gaussian tail small": 275,
+    "entrance witness exact": 275,
+    "exponential rational ordering": 4950,
+    "exponential whole-tail domain": 4950,
+    "fiber full upper edge": 114,
+    "fiber gap absent": 1083,
+    "full contour radius and aspect": 275,
+    "input rectangle domain": 275,
+    "origin moment square roots": 275,
+    "partition interior disjoint": 26461,
+    "phase scalar bounds ordered": 275,
+    "pointwise saddle dual upper root": 275,
+    "positive Mills domain": 4950,
+    "positive curvature and mass roots": 275,
+    "positive recursive tail interval": 14850,
+    "positive witness": 275,
+    "rational log coefficient enclosure": 3575,
+    "rational log coefficient signs": 3575,
+    "retained disk and component domain": 275,
+    "saddle first mesh witness": 275,
+    "saddle moment positive denominators": 275,
+    "saddle witness exact": 275,
+    "shell complete paired error": 2750,
+    "shell entire positive integrals": 2750,
+    "shell entire series signs": 2750,
+    "shell real damping": 2750,
+    "slope roots directed": 275,
+    "whole connector ray monotonic": 275,
+    "whole quotient ray monotonic": 275
+  },
+  "failures": [],
+  "covers": [
+    {
+      "phase": 1,
+      "retained": 77,
+      "excluded": 14,
+      "open_slabs": 21,
+      "closed_fibers": 22,
+      "area": "7/40"
+    },
+    {
+      "phase": -1,
+      "retained": 198,
+      "excluded": 14,
+      "open_slabs": 35,
+      "closed_fibers": 36,
+      "area": "7/40"
+    }
+  ],
+  "source_sha256": {
+    "C11_A20_PHASE_1_DIRECT_QUADRATIC_METRIC_CELLS.csv": "ab5890051c46b13c1acae9629050b53a67ec0950f52810e0a03321f2aeb3c458",
+    "C11_A20_PHASE_1_DIRECT_QUADRATIC_METRIC_SKIPS.csv": "fd2eab10859050fbfbcdf02f77912ab7699f9e367d5feb20a25c233ef2e52f56",
+    "C11_A20_PHASE_-1_DIRECT_QUADRATIC_METRIC_CELLS.csv": "affbd1569e1b69ed27fc6fb10b1c759d7973ceaec0aa8c0e324c0587775bce8e",
+    "C11_A20_PHASE_-1_DIRECT_QUADRATIC_METRIC_SKIPS.csv": "fd2eab10859050fbfbcdf02f77912ab7699f9e367d5feb20a25c233ef2e52f56"
+  },
+  "elapsed_seconds": 7.617,
+  "retained_cells": 275,
+  "symmetric_shells": 2750,
+  "least_quotient_factor_lower": "220913/200000"
+}

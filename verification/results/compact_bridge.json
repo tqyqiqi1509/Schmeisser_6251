@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "degree_floor": 6251,
+  "scope": "entire witness interval .1<=a<=.11, every actual rightmost-root modulus",
+  "checks": 50,
+  "full_contours": 2,
+  "contours": [
+    {
+      "name": "Low",
+      "H": "20000/9",
+      "R": "1/10",
+      "rhat": "379/4480",
+      "count": "1831/32"
+    },
+    {
+      "name": "Middle",
+      "H": "577525/222",
+      "R": "1/25",
+      "rhat": "59/2000",
+      "count": "26254139/1184000"
+    }
+  ],
+  "upper_one_root_C": "24942879/10000000000",
+  "upper_one_root_factor": "57629/121400",
+  "predicates": [
+    {
+      "name": "independent_direct_D100",
+      "passed": true
+    },
+    {
+      "name": "phase_and_field_after_legal_D70",
+      "passed": true
+    },
+    {
+      "name": "whole_e6",
+      "passed": true
+    },
+    {
+      "name": "Low/critical",
+      "passed": true
+    },
+    {
+      "name": "Low/inverse",
+      "passed": true
+    },
+    {
+      "name": "Low/image",
+      "passed": true
+    },
+    {
+      "name": "Low/corner",
+      "passed": true
+    },
+    {
+      "name": "Low/left",
+      "passed": true
+    },
+    {
+      "name": "Low/right",
+      "passed": true
+    },
+    {
+      "name": "Low/horizontal",
+      "passed": true
+    },
+    {
+      "name": "Low/amplitude",
+      "passed": true
+    },
+    {
+      "name": "Low/height",
+      "passed": true
+    },
+    {
+      "name": "Low/count",
+      "passed": true
+    },
+    {
+      "name": "Low/adaptive_factor_denom",
+      "passed": true
+    },
+    {
+      "name": "Low_factor",
+      "passed": true
+    },
+    {
+      "name": "Low_log",
+      "passed": true
+    },
+    {
+      "name": "Low_count_per_degree",
+      "passed": true
+    },
+    {
+      "name": "Low_variance",
+      "passed": true
+    },
+    {
+      "name": "Low_same_C_all_n",
+      "passed": true
+    },
+    {
+      "name": "Low_entire_log_budget",
+      "passed": true
+    },
+    {
+      "name": "Low_entire_degree_ray",
+      "passed": true
+    },
+    {
+      "name": "Middle/critical",
+      "passed": true
+    },
+    {
+      "name": "Middle/inverse",
+      "passed": true
+    },
+    {
+      "name": "Middle/image",
+      "passed": true
+    },
+    {
+      "name": "Middle/corner",
+      "passed": true
+    },
+    {
+      "name": "Middle/left",
+      "passed": true
+    },
+    {
+      "name": "Middle/right",
+      "passed": true
+    },
+    {
+      "name": "Middle/horizontal",
+      "passed": true
+    },
+    {
+      "name": "Middle/amplitude",
+      "passed": true
+    },
+    {
+      "name": "Middle/height",
+      "passed": true
+    },
+    {
+      "name": "Middle/count",
+      "passed": true
+    },
+    {
+      "name": "Middle/adaptive_factor_denom",
+      "passed": true
+    },
+    {
+      "name": "Middle_factor",
+      "passed": true
+    },
+    {
+      "name": "Middle_log",
+      "passed": true
+    },
+    {
+      "name": "Middle_whole_C_target",
+      "passed": true
+    },
+    {
+      "name": "Middle_full_count",
+      "passed": true
+    },
+    {
+      "name": "Upper_whole_adaptive_range",
+      "passed": true
+    },
+    {
+      "name": "Upper_actual_root_denominator",
+      "passed": true
+    },
+    {
+      "name": "Upper_actual_root_factor",
+      "passed": true
+    },
+    {
+      "name": "Upper_actual_root_log",
+      "passed": true
+    },
+    {
+      "name": "Upper_same_C_target",
+      "passed": true
+    },
+    {
+      "name": "Upper_same_C_energy_and_root",
+      "passed": true
+    },
+    {
+      "name": "High_actual_half_shift",
+      "passed": true
+    },
+    {
+      "name": "High_concave_C_endpoint",
+      "passed": true
+    },
+    {
+      "name": "High_whole_log_budget",
+      "passed": true
+    },
+    {
+      "name": "High_whole_convexity",
+      "passed": true
+    },
+    {
+      "name": "High_positive_radical_1/10",
+      "passed": true
+    },
+    {
+      "name": "High_full_endpoint_1/10",
+      "passed": true
+    },
+    {
+      "name": "High_positive_radical_1",
+      "passed": true
+    },
+    {
+      "name": "High_full_endpoint_1",
+      "passed": true
+    }
+  ],
+  "checker_sha256": "b38ff8e046072657428097f3601c3be5e3c877a0b0f4fb3a05b85e0629b3ee86"
+}

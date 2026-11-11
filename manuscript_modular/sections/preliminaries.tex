@@ -1,0 +1,145 @@
+\section{Normalization and finite identities}\label{sec:preliminaries}
+
+Write $D(c,r)=\{z\in\C:|z-c|<r\}$ for the open disk, and
+$t_+=\max(t,0)$ for real $t$.
+For vectors, $\|\cdot\|$ is the Euclidean norm; for matrices it is
+the associated operator norm. We use $A^*$ for the conjugate transpose,
+$\|A\|_F^2=\sum_{i,j}|A_{ij}|^2$ for the squared Frobenius norm,
+and $A\ge0$ for a Hermitian positive semidefinite matrix.
+The symbols $I$ and $\mathbf1$ denote the identity matrix and the
+all-ones vector of the required size; $\tr$ and $\diag$ denote
+the trace and diagonal-matrix operations.
+
+Write $N=n-1$, and list the zeros of $p$ as $z_1,\ldots,z_n$ and
+the critical points as $\xi_1,\ldots,\xi_N$. A \emph{strict hole}
+is a point $a\in\conv Z(p)$ for which $|a-\xi_j|>1$ for every $j$.
+The negation of Theorem~\ref{thm:main} is precisely the existence of
+such a point. We may multiply $p$ by a nonzero constant whenever
+convenient.
+
+\begin{lemma}[Gauss--Lucas]\label{pr:gauss-lucas}
+Every critical point belongs to $\conv Z(p)$.
+\end{lemma}
+\begin{proof}
+If $w\notin\conv Z(p)$, a separating line and a rotation give
+$\Re(e^{-i\theta}(w-z_k))>0$ for every $k$. Thus every
+$e^{i\theta}/(w-z_k)$ has positive real part. Their sum is
+$e^{i\theta}p'(w)/p(w)$ and cannot vanish. A zero shared by $p$
+and $p'$ already lies in the zero hull.
+\end{proof}
+
+\begin{lemma}\label{pr:edge-reduction}
+Suppose $n\ge6251$ and all zeros lie in $\overline\D$. If a strict
+hole exists, after a rotation there is a strict hole $a$ with
+$0<a<1$ on an actual supporting edge of a two-dimensional zero hull.
+For every critical point,
+\begin{equation}\label{pr:critical-halfplane}
+ \Re\xi_j<a/2.
+\end{equation}
+There is an actual simple rightmost zero $b=x+iy$ with $x\ge a$.
+After conjugation we may take $y\ge0$.
+\end{lemma}
+\begin{proof}
+Gauss--Lucas implies $|\xi_j|\le1$, so zero cannot be a strict
+hole. Rotate a strict hole onto the positive real axis. Then
+\[
+ 2a\Re\xi_j<a^2+|\xi_j|^2-1\le a^2.
+\]
+Let $A$ be the last point of the zero hull on that ray. For
+$a\le A\le1$,
+\[
+ |A-\xi_j|^2-|a-\xi_j|^2
+ =(A-a)(A+a-2\Re\xi_j)\ge0.
+\]
+Thus the hole persists at $A$. If $A$ is an actual zero, it is either
+multiple, in which case it is critical, or simple. In the latter
+case Proposition~\ref{ar:energy} gives
+$\sum_j|A-\xi_j|^{-2}\ge N$, contrary to all the distances being
+greater than one.
+
+A hull consisting of one point has no hole. If the hull is a segment,
+Gauss--Lucas puts all critical points on it. The distance between any
+two consecutive distinct critical points is at most two, since the
+whole segment lies in the unit disk. Their closed unit intervals
+therefore have connected union. Each endpoint of the hull belongs
+to that union by the preceding actual-zero argument, so the whole
+segment is covered. In the remaining case $A$ lies on a supporting
+edge whose endpoints are actual zeros. Strict convexity of the unit
+disk excludes $A=1$. Rename $A$ as $a$ and repeat the displayed
+half-plane inequality at this point. A zero maximizing real part
+has real part at least $a$; it cannot be multiple by
+\eqref{pr:critical-halfplane}. Conjugation makes its imaginary part
+nonnegative.
+\end{proof}
+
+For an actual simple rightmost zero $b$, put
+\begin{equation}\label{pr:field-notation}
+ v_j=(b-\xi_j)^{-1},\quad S=\sum_jv_j=\frac{p''(b)}{p'(b)},
+ \quad H=|S|,\quad Q=\sum_j|v_j|^2,\quad
+ d=\min_j|b-\xi_j|.
+\end{equation}
+Rightmostness and Gauss--Lucas give $\Re v_j\ge0$ and
+$|v_j|\le1/d$. The equality $S=p''(b)/p'(b)$ counts the complete
+critical divisor. If the other original zeros are $u_1,\ldots,u_N$,
+factoring $p(z)=(z-b)g(z)$ gives the further identity
+\begin{equation}\label{pr:actual-root-identity}
+ S=2\sum_{k=1}^N\frac1{b-u_k}.
+\end{equation}
+
+\begin{lemma}\label{pr:radial}
+The data in \eqref{pr:field-notation} satisfy
+\begin{equation}\label{pr:radial-identity}
+ N=2\Re(bS)+(1-|b|^2)Q
+       -\sum_j\frac{1-|\xi_j|^2}{|b-\xi_j|^2}.
+\end{equation}
+If all zeros lie in $\overline\D$, $a>0$ is a strict hole, and
+$b=x+iy$ is rightmost with $x\ge a$,
+then $\Re S>0$ and
+\begin{equation}\label{pr:hole-reciprocal}
+ Q<\frac{2\Re S}{2x-a}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For each $\xi$ expand
+\[
+ 2\Re\frac b{b-\xi}
+ =1+\frac{|b|^2-|\xi|^2}{|b-\xi|^2}
+\]
+and sum. For the second assertion, Gauss--Lucas and the strict hole give
+$2a\Re\xi<a^2+|\xi|^2-1\le a^2$. Thus
+$\Re(b-\xi)^{-1}=(x-\Re\xi)/|b-\xi|^2
+ >(x-a/2)/|b-\xi|^2$. Summing proves the assertion.
+\end{proof}
+
+\begin{lemma}\label{pr:primitive}
+In the disk $|z|<d$, with the branch of each logarithm equal to zero
+at the origin,
+\[
+ \frac{p'(b+z)}{p'(b)}=\prod_{j=1}^N(1+zv_j),\qquad
+ p(b+z)=p'(b)\int_0^z\prod_{j=1}^N(1+tv_j)\,dt.
+\]
+For every integer $r\ge2$ and $|z|<d$,
+\begin{equation}\label{pr:complete-log-tail}
+ \left|\sum_j\Log(1+zv_j)
+ -\sum_{k=1}^{r-1}\frac{(-1)^{k+1}z^k}{k}\sum_jv_j^k\right|
+ \le\frac{Q|z|^r}{r d^{r-2}(1-|z|/d)}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The product is the factorization of $p'$; integration uses $p(b)=0$.
+The logarithms are analytic because $|zv_j|<1$. For $k\ge r$,
+$\sum_j|v_j|^k\le Qd^{2-k}$ and $1/k\le1/r$.
+Summing the entire remaining geometric series proves the bound.
+\end{proof}
+
+When $H>0$ it is useful to write
+\begin{equation}\label{pr:normalized-moments}
+ D=Hd,\qquad \mu=D^{-1},\qquad q=Q/H^2,\qquad
+ \sigma=S/H,\qquad w_j=v_j/H.
+\end{equation}
+Then $|\sigma|=1$, $\sum w_j=\sigma$,
+$\sum|w_j|^2=q$, and $\max|w_j|=\mu$. For $r>0$, the
+polynomial $p_r(z)=p(rz)$ at the corresponding zero $b/r$ has
+field data $d/r,rS,rH,r^2Q$. Thus $D,q,\mu,\sigma$ are invariant
+under positive real rescaling. Rescaled coordinates will be specified
+when used.

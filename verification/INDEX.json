@@ -1,0 +1,628 @@
+{
+  "degree_floor": 6251,
+  "description": "Fixed proof data and complete verification entry points",
+  "jobs": [
+    {
+      "id": "actual_roots",
+      "description": "Actual-zero energy and variance constants",
+      "script": "verify_actual_roots.py",
+      "receipt": null,
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "affine",
+      "description": "Affine reciprocal-field certificate, exact rational arithmetic",
+      "script": "affine/replay_affine_c11_a20.py",
+      "receipt": "affine/FRESH_AFFINE_REPLAY_RESULT.json",
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "affine_arb",
+      "description": "Independent full-log affine-field implementation",
+      "script": "affine/verify_affine_arb.py",
+      "receipt": "affine/INDEPENDENT_ARB_RESULT.json",
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "d270",
+      "description": "Quartic complete-circle constants and unbounded field bootstrap",
+      "script": "quartic/verify_d270.py",
+      "receipt": "quartic/D270_EXACT_CERTIFICATE.json",
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "all_true": true,
+        "count": 48
+      },
+      "default": true
+    },
+    {
+      "id": "d25",
+      "description": "Closed parameter cover for D25",
+      "script": "fields/tang_verify_D25_cubic_family_frozen.py",
+      "receipt": "fields/d25_receipt.json",
+      "cwd": "fields",
+      "args": [
+        "--source",
+        "tang_D25_cubic_family_cover.json",
+        "--output",
+        "d25_receipt.json",
+        "--workers",
+        "2"
+      ],
+      "expect": {
+        "status": "PASS",
+        "failed_count": 0
+      },
+      "default": true
+    },
+    {
+      "id": "d30",
+      "description": "Closed parameter cover for D30",
+      "script": "fields/tang_verify_cubic_family_cover_D30_frozen.py",
+      "receipt": "fields/d30_receipt.json",
+      "cwd": "fields",
+      "args": [
+        "--source",
+        "tang_cubic_family_D30_y3.json",
+        "--output",
+        "d30_receipt.json",
+        "--workers",
+        "2"
+      ],
+      "expect": {
+        "status": "PASS",
+        "failed_count": 0
+      },
+      "default": true
+    },
+    {
+      "id": "d100",
+      "description": "Closed parameter cover for D100",
+      "script": "fields/tang_independent_D100.py",
+      "receipt": "fields/d100_receipt.json",
+      "cwd": "fields",
+      "args": [
+        "--source",
+        "point_D100_y225.json",
+        "--output",
+        "d100_receipt.json",
+        "--workers",
+        "2"
+      ],
+      "expect": {
+        "status": "PASS",
+        "failed_count": 0
+      },
+      "default": true
+    },
+    {
+      "id": "d25_taylor",
+      "description": "Independent entire Taylor/Cauchy implementation",
+      "script": "fields/verify_D25_cubic_field_taylor.py",
+      "receipt": "fields/d25_taylor_receipt.json",
+      "cwd": "fields",
+      "args": [
+        "tang_D25_cubic_family_cover.json",
+        "--output",
+        "d25_taylor_receipt.json",
+        "--workers",
+        "2"
+      ],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "d30_taylor",
+      "description": "Independent entire Taylor/Cauchy implementation",
+      "script": "fields/verify_cubic_field_taylor.py",
+      "receipt": "fields/d30_taylor_receipt.json",
+      "cwd": "fields",
+      "args": [
+        "tang_cubic_family_D30_y3.json",
+        "--output",
+        "d30_taylor_receipt.json",
+        "--workers",
+        "2"
+      ],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "boundary",
+      "description": "Complete boundary verification",
+      "script": "source/agents/tang_boundary6251_seven_rational_independent.py",
+      "receipt": "source/agents/tang_boundary6251_seven_rational_independent_receipt.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "compact",
+      "description": "Complete compact verification",
+      "script": "source/agents/tang_Compact6251_independent.py",
+      "receipt": "source/agents/tang_Compact6251_independent_receipt.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "compact_rational",
+      "description": "Complete compact rational verification",
+      "script": "source/computations/degree6251/check_compact6251_exact.py",
+      "receipt": "source/computations/degree6251/check_compact6251_exact.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "compact_bridge",
+      "description": "Complete compact bridge verification",
+      "script": "source/computations/degree6251/check_bridge_exact.py",
+      "receipt": "source/computations/degree6251/check_bridge_exact.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "origin_base",
+      "description": "Complete origin base verification",
+      "script": "source/computations/origin6251/review_base6251_root.py",
+      "receipt": "source/computations/origin6251/ROOT_BASE010_6251_INDEPENDENT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "origin_t",
+      "description": "Complete origin t verification",
+      "script": "source/agents/tang_T6251_independent.py",
+      "receipt": "source/agents/tang_T6251_independent_receipt.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "origin_x",
+      "description": "Complete origin x verification",
+      "script": "source/agents/tang_X6251_independent.py",
+      "receipt": "source/agents/tang_X6251_independent_receipt.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "lt_gaussian_reconstruction",
+      "description": "Exact implicit Gaussian center and all residual coefficients through degree eleven",
+      "script": "source/history/Schmeisser_work/proofs/quartic_fresh_adversarial/rebuild_moment_coefficients.py",
+      "receipt": "source/history/Schmeisser_work/proofs/quartic_fresh_adversarial/INDEPENDENT_MOMENT_COEFFICIENTS.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "all_match": true
+      },
+      "default": true
+    },
+    {
+      "id": "lt_gaussian_domains",
+      "description": "All twenty Gaussian polynomial bounds on complete closed domains",
+      "script": "local_tools/check_gaussian_domains_new.py",
+      "receipt": "local_tools/GAUSSIAN_DOMAINS_NEW_EXACT.json",
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "status": "PASS",
+        "bounds": 20,
+        "closed_boxes": 24
+      },
+      "default": true
+    },
+    {
+      "id": "lt_gaussian_rows",
+      "description": "Every complete-circle gate for all five Gaussian companion rectangles",
+      "script": "local_tools/check_gaussian_rows.py",
+      "receipt": "local_tools/GAUSSIAN_ROWS_COMPLETE.json",
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "status": "PASS",
+        "rows": 5,
+        "gates": 77
+      },
+      "default": true
+    },
+    {
+      "id": "lt_four_formal",
+      "description": "Exact four-moment formal cancellations and full coefficient-domain bounds",
+      "script": "source/agents/tang_moment_companion_center.py",
+      "receipt": "source/agents/tang_moment_companion_center_receipt.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS_FORMAL_CANCELLATIONS_AND_FULL_COEFFICIENT_BOUNDS"
+      },
+      "default": true
+    },
+    {
+      "id": "lt_q05mu02",
+      "description": "Four-moment actual companion circles on q<=1/20 and mu<=1/50",
+      "script": "source/agents/tang_four_moment_independent.py",
+      "receipt": "source/agents/tang_four_moment_independent_receipt.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "lt_q04mu04",
+      "description": "Four-moment actual companion circles on q<=1/25 and mu<=1/25",
+      "script": "source/agents/tang_four_moment_general_independent.py",
+      "receipt": "source/agents/tang_four_moment_Q04_MU04_independent_receipt.json",
+      "cwd": "source",
+      "args": [
+        "--q",
+        ".04",
+        "--mu",
+        ".04",
+        "--radius",
+        ".45",
+        "--containing",
+        "8.5",
+        "--logder",
+        "1.55",
+        "--phase",
+        "7.5",
+        "--output",
+        "agents/tang_four_moment_Q04_MU04_independent_receipt.json"
+      ],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "lt_d70",
+      "description": "Entire D70 four-moment variable-radius circles",
+      "script": "source/agents/tang_D70_variable_radius_independent.py",
+      "receipt": "source/agents/tang_D70_variable_radius_independent_receipt.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "lt_w8_q06",
+      "description": "Exact weight-eight cancellations, full paths and actual circles for q06",
+      "script": "source/agents/small12501_general/review_tang_W8_actual_independent.py",
+      "receipt": "source/agents/small12501_general/INDEPENDENT_W8_Q06_ACTUAL_RECEIPT.json",
+      "cwd": "source",
+      "args": [
+        "--row",
+        "q06"
+      ],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "lt_w8_q0546",
+      "description": "Exact weight-eight cancellations, full paths and actual circles for q0546",
+      "script": "source/agents/small12501_general/review_tang_W8_actual_independent.py",
+      "receipt": "source/agents/small12501_general/INDEPENDENT_W8_Q0546_ACTUAL_RECEIPT.json",
+      "cwd": "source",
+      "args": [
+        "--row",
+        "q0546"
+      ],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "lt_signed_6_5",
+      "description": "Signed scalar inequality on the entire theta disk of radius 1/20",
+      "script": "source/computations/review_signed_theta_6_5_exact_root.py",
+      "receipt": "source/computations/ROOT_SIGNED_THETA_6_5_EXACT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS",
+        "coefficient": "6/5",
+        "total_controls": 4950
+      },
+      "default": true
+    },
+    {
+      "id": "lt_w8_signed",
+      "description": "Regenerate signed scalar 13/10, then verify the phase-conditioned actual W8 field",
+      "script": "local_tools/run_signed_bridge.py",
+      "receipt": "source/agents/small12501_general/INDEPENDENT_W8_SIGNED_FIELD210_RECEIPT.json",
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "lt_pair_bounds",
+      "description": "Complete same-pair root, mean and phase bounds in both claimed subrectangles",
+      "script": "local_tools/check_pair_consequences.py",
+      "receipt": "local_tools/PAIR_CONSEQUENCES_COMPLETE.json",
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "sm_normalized_source",
+      "description": "Companion-free normalized T source and whole large-tau D25 entrance",
+      "script": "source/agents/tang_normalized_T_source_independent.py",
+      "receipt": "source/agents/tang_normalized_T_source_independent_receipt.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true
+    },
+    {
+      "id": "sm_fine",
+      "description": "Forty-one full contours and the entire Fine6251 range",
+      "script": "source/agents/small12501_general/Small6251/check_fine6251_exact.py",
+      "receipt": "source/agents/small12501_general/Small6251/FINE6251_COMPLETE_EXACT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS",
+        "checks": 473,
+        "complete_Schur_contours": 41
+      },
+      "default": true
+    },
+    {
+      "id": "sm_low_middle",
+      "description": "All 1809 full contours and all 23 whole-product rows in Low/Middle6251",
+      "script": "source/agents/small12501_general/Small6251/check_lowmiddle6251_product_exact.py",
+      "receipt": "source/agents/small12501_general/Small6251/LOW_MIDDLE6251_PRODUCT_EXACT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS",
+        "checks": 36509,
+        "complete_physical_contours": 1809,
+        "whole_product_rows": 23
+      },
+      "default": true
+    },
+    {
+      "id": "sm_high",
+      "description": "Every High6251 cap, all 411 Schur contours, all 20 physical leaves and the closed endpoint",
+      "script": "source/agents/small12501_general/Small6251/check_high6251_exact.py",
+      "receipt": "source/agents/small12501_general/Small6251/HIGH6251_COMPLETE_EXACT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS",
+        "gate_count": 5919,
+        "full_Schur_contours": 411,
+        "complete_closed_leaves": 20
+      },
+      "default": true
+    },
+    {
+      "id": "lt_fine200",
+      "description": "Additional exact implementation of the full Fine200 rectangle",
+      "script": "source/agents/fine200_phase201_exact.py",
+      "receipt": "source/agents/fine200_phase201_exact_receipt.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "lt_wide100",
+      "description": "Additional exact implementation of the full wide D100 rectangle",
+      "script": "source/computations/certify_wide_fine_phase100.py",
+      "receipt": "source/computations/WIDE_FINE_PHASE100_EXACT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "lt_medium139",
+      "description": "Additional exact relative-path Medium139 implementation",
+      "script": "source/agents/small12501_general/check_medium139_relative_exact.py",
+      "receipt": "source/agents/small12501_general/MEDIUM139_RELATIVE_COMPLETE_EXACT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "lt_crescent",
+      "description": "Direct full-crescent D70 constants",
+      "script": "source/agents/small12501_general/check_direct_crescent_field_exact.py",
+      "receipt": "source/agents/small12501_general/DIRECT_CRESCENT_FIELD_EXACT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "sm_quadrature",
+      "description": "Exact crescent quadrature and the whole Low/Middle D139 entrance",
+      "script": "source/agents/small12501_general/check_crescent_quadrature6251_exact.py",
+      "receipt": "source/agents/small12501_general/CRESCENT_QUADRATURE6251_EXACT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "lt_same_gap",
+      "description": "Symbolic radial same-gap identity and whole-interval constants",
+      "script": "source/agents/small12501_general/check_phase_same_c_field_exact.py",
+      "receipt": "source/agents/small12501_general/PHASE_SAME_C_FIELD_EXACT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "lt_half_disk",
+      "description": "Symbolic whole-half-disk factor and full degree-ray identities",
+      "script": "source/agents/small12501_general/check_rightmost_half_disk_mobius_symbolic.py",
+      "receipt": "source/agents/small12501_general/RIGHTMOST_HALF_DISK_MOBIUS_SYMBOLIC_EXACT.json",
+      "cwd": "source",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": false
+    },
+    {
+      "id": "lt_w8_generate",
+      "description": "Optional independent exact generation of all forty nonconstant W8 center coefficients",
+      "script": "source/agents/tang_weighted_moment_center_general.py",
+      "receipt": "source/agents/W8_GENERATED.json",
+      "cwd": "source",
+      "args": [
+        "--weight",
+        "8",
+        "--output",
+        "agents/W8_GENERATED.json"
+      ],
+      "expect": {
+        "status": "PASS_EXACT_FORMAL_CANCELLATIONS",
+        "center_weight": 8,
+        "exact_remaining_coefficients": 0
+      },
+      "default": false
+    },
+    {
+      "id": "small_extensions_tmoment",
+      "script": "small_extensions/certify_Tmoment6251_complete.py",
+      "receipt": "small_extensions/TMOMENT6251_COMPLETE_EXACT.json",
+      "cwd": "small_extensions",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true,
+      "description": "Complete finite verification of small extensions tmoment"
+    },
+    {
+      "id": "small_extensions_highx",
+      "script": "small_extensions/certify_T6251_highX_complete.py",
+      "receipt": "small_extensions/T6251_HIGHX_COMPLETE_EXACT.json",
+      "cwd": "small_extensions",
+      "args": [],
+      "expect": {
+        "status": "PASS"
+      },
+      "default": true,
+      "description": "Complete finite verification of small extensions highx"
+    },
+    {
+      "id": "independent_foundations",
+      "description": "Independent targeted exact identities and interfaces: foundations",
+      "script": "independent_checks/foundations.py",
+      "receipt": "independent_checks/foundations.json",
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "status": "PASS",
+        "count": 45
+      },
+      "default": false
+    },
+    {
+      "id": "independent_origin_extensions",
+      "description": "Independent targeted exact identities and interfaces: origin extensions",
+      "script": "independent_checks/origin_extensions.py",
+      "receipt": "independent_checks/origin_extensions.json",
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "status": "PASS",
+        "checks": 143
+      },
+      "default": false
+    },
+    {
+      "id": "independent_small_global",
+      "description": "Independent targeted exact identities and interfaces: small global",
+      "script": "independent_checks/small_global.py",
+      "receipt": "independent_checks/small_global.json",
+      "cwd": ".",
+      "args": [],
+      "expect": {
+        "status": "PASS",
+        "checks": 26
+      },
+      "default": false
+    }
+  ]
+}

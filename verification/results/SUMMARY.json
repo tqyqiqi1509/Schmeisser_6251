@@ -1,0 +1,223 @@
+{
+  "status": "PASS",
+  "degree_floor": 6251,
+  "python": "3.12.14",
+  "packages": {
+    "python-flint": "0.9.0",
+    "sympy": "1.14.0"
+  },
+  "fixed_files_checked": 79,
+  "components_run": 30,
+  "components": [
+    {
+      "id": "actual_roots",
+      "status": "PASS",
+      "receipt": "actual_roots.json",
+      "log": "actual_roots.log",
+      "seconds": 186.292
+    },
+    {
+      "id": "affine",
+      "status": "PASS",
+      "receipt": "affine.json",
+      "log": "affine.log",
+      "seconds": 7.871
+    },
+    {
+      "id": "boundary",
+      "status": "PASS",
+      "receipt": "boundary.json",
+      "log": "boundary.log",
+      "seconds": 0.851
+    },
+    {
+      "id": "compact",
+      "status": "PASS",
+      "receipt": "compact.json",
+      "log": "compact.log",
+      "seconds": 5.513
+    },
+    {
+      "id": "compact_bridge",
+      "status": "PASS",
+      "receipt": "compact_bridge.json",
+      "log": "compact_bridge.log",
+      "seconds": 0.208
+    },
+    {
+      "id": "d100",
+      "status": "PASS",
+      "receipt": "d100.json",
+      "log": "d100.log",
+      "seconds": 3.712
+    },
+    {
+      "id": "d25",
+      "status": "PASS",
+      "receipt": "d25.json",
+      "log": "d25.log",
+      "seconds": 143.42
+    },
+    {
+      "id": "d270",
+      "status": "PASS",
+      "receipt": "d270.json",
+      "log": "d270.log",
+      "seconds": 0.086
+    },
+    {
+      "id": "d30",
+      "status": "PASS",
+      "receipt": "d30.json",
+      "log": "d30.log",
+      "seconds": 83.109
+    },
+    {
+      "id": "lt_d70",
+      "status": "PASS",
+      "receipt": "lt_d70.json",
+      "log": "lt_d70.log",
+      "seconds": 5.698
+    },
+    {
+      "id": "lt_four_formal",
+      "status": "PASS",
+      "receipt": "lt_four_formal.json",
+      "log": "lt_four_formal.log",
+      "seconds": 3.635
+    },
+    {
+      "id": "lt_gaussian_domains",
+      "status": "PASS",
+      "receipt": "lt_gaussian_domains.json",
+      "log": "lt_gaussian_domains.log",
+      "seconds": 2.125
+    },
+    {
+      "id": "lt_gaussian_reconstruction",
+      "status": "PASS",
+      "receipt": "lt_gaussian_reconstruction.json",
+      "log": "lt_gaussian_reconstruction.log",
+      "seconds": 1.17
+    },
+    {
+      "id": "lt_gaussian_rows",
+      "status": "PASS",
+      "receipt": "lt_gaussian_rows.json",
+      "log": "lt_gaussian_rows.log",
+      "seconds": 0.243
+    },
+    {
+      "id": "lt_pair_bounds",
+      "status": "PASS",
+      "receipt": "lt_pair_bounds.json",
+      "log": "lt_pair_bounds.log",
+      "seconds": 0.506
+    },
+    {
+      "id": "lt_q04mu04",
+      "status": "PASS",
+      "receipt": "lt_q04mu04.json",
+      "log": "lt_q04mu04.log",
+      "seconds": 11.683
+    },
+    {
+      "id": "lt_q05mu02",
+      "status": "PASS",
+      "receipt": "lt_q05mu02.json",
+      "log": "lt_q05mu02.log",
+      "seconds": 10.035
+    },
+    {
+      "id": "lt_signed_6_5",
+      "status": "PASS",
+      "receipt": "lt_signed_6_5.json",
+      "log": "lt_signed_6_5.log",
+      "seconds": 4.126
+    },
+    {
+      "id": "lt_w8_q0546",
+      "status": "PASS",
+      "receipt": "lt_w8_q0546.json",
+      "log": "lt_w8_q0546.log",
+      "seconds": 27.083
+    },
+    {
+      "id": "lt_w8_q06",
+      "status": "PASS",
+      "receipt": "lt_w8_q06.json",
+      "log": "lt_w8_q06.log",
+      "seconds": 17.102
+    },
+    {
+      "id": "lt_w8_signed",
+      "status": "PASS",
+      "receipt": "lt_w8_signed.json",
+      "log": "lt_w8_signed.log",
+      "seconds": 4.266
+    },
+    {
+      "id": "origin_base",
+      "status": "PASS",
+      "receipt": "origin_base.json",
+      "log": "origin_base.log",
+      "seconds": 1.371
+    },
+    {
+      "id": "origin_t",
+      "status": "PASS",
+      "receipt": "origin_t.json",
+      "log": "origin_t.log",
+      "seconds": 11.638
+    },
+    {
+      "id": "origin_x",
+      "status": "PASS",
+      "receipt": "origin_x.json",
+      "log": "origin_x.log",
+      "seconds": 15.199
+    },
+    {
+      "id": "sm_fine",
+      "status": "PASS",
+      "receipt": "sm_fine.json",
+      "log": "sm_fine.log",
+      "seconds": 0.319
+    },
+    {
+      "id": "sm_high",
+      "status": "PASS",
+      "receipt": "sm_high.json",
+      "log": "sm_high.log",
+      "seconds": 0.621
+    },
+    {
+      "id": "sm_low_middle",
+      "status": "PASS",
+      "receipt": "sm_low_middle.json",
+      "log": "sm_low_middle.log",
+      "seconds": 2.838
+    },
+    {
+      "id": "sm_normalized_source",
+      "status": "PASS",
+      "receipt": "sm_normalized_source.json",
+      "log": "sm_normalized_source.log",
+      "seconds": 0.268
+    },
+    {
+      "id": "small_extensions_highx",
+      "status": "PASS",
+      "receipt": "small_extensions_highx.json",
+      "log": "small_extensions_highx.log",
+      "seconds": 2.239
+    },
+    {
+      "id": "small_extensions_tmoment",
+      "status": "PASS",
+      "receipt": "small_extensions_tmoment.json",
+      "log": "small_extensions_tmoment.log",
+      "seconds": 1.179
+    }
+  ]
+}

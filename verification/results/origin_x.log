@@ -1,0 +1,59 @@
+{"file": "X6251_high_0.01_0.061002.json", "processed_cells": 61, "contours": 4176, "checks": 61164, "seconds": 5.835338646997116}
+{"file": "X6251_MOVING_low_0.01_0.013.json", "processed_cells": 97, "contours": 5799, "checks": 87404, "seconds": 7.831861321988981}
+{"file": "X6251_MOVING_low_0.013_0.017.json", "processed_cells": 135, "contours": 7500, "checks": 114828, "seconds": 10.080185548998998}
+{"file": "X6251_MOVING_low_0.017_0.023.json", "processed_cells": 176, "contours": 9409, "checks": 145404, "seconds": 11.276396665998618}
+{"file": "X6251_MOVING_low_0.023_0.033.json", "processed_cells": 214, "contours": 11092, "checks": 172909, "seconds": 12.397839238998131}
+{"file": "X6251_MOVING_low_0.033_0.045.json", "processed_cells": 255, "contours": 12947, "checks": 203845, "seconds": 13.241489672989701}
+{"file": "X6251_MOVING_low_0.045_0.061002.json", "processed_cells": 301, "contours": 14891, "checks": 236882, "seconds": 14.556300947995624}
+{
+  "status": "PASS",
+  "scope": "Complete X=1 higher strip .01<rho<=.061002, every n>=6251; no base/global assertion",
+  "degree_floor": 6251,
+  "checks": 236884,
+  "complete_contours": 14891,
+  "closed_cells": 301,
+  "by_kind": {
+    "depth_skip": 57,
+    "cloud": 196,
+    "field_skip": 48
+  },
+  "min_cloud_margin": "84739835370681964317289/240500000000000000000000000",
+  "entrance": [
+    {
+      "branch": "small_depth_moving",
+      "h_lower": "332739767888276526000789208617687573081/6069317179408851862799004500000000000",
+      "T": [
+        "0",
+        "1/8"
+      ]
+    },
+    {
+      "branch": "large_depth_Rayleigh",
+      "T": [
+        "1/8",
+        "1"
+      ],
+      "source_K": "1279084413230726/1580047607421875",
+      "M": "4/5",
+      "h2_lower": "639542206615363/202246093750",
+      "determinant": [
+        "879/2500",
+        "-25647113/43600000",
+        "1343048943/4866457600"
+      ]
+    }
+  ],
+  "rayleigh_reserve": "133926972240363/202246093750",
+  "proof_gate_digest": "828679530ab79e1d38fd0d8bfac841901eaafd5b2338efb78a96c5643db28d61",
+  "proposal_sha256": {
+    "X6251_high_0.01_0.061002.json": "eafad1e371827ff1904c13a2bfb6225aeb1f3308a97b3df77cc4eee5528d0455",
+    "X6251_MOVING_low_0.01_0.013.json": "87ee37327dc9b830bcd819627a5a4b0a324b846ea94f5bc862cf9e0802958d75",
+    "X6251_MOVING_low_0.013_0.017.json": "8320f67a38746443ba706b0e9dbfad390abd7fce88070cbc6071b039facd7092",
+    "X6251_MOVING_low_0.017_0.023.json": "4752100d29086e4f198f53d1932dfe398b2199f231e7d2e493fdaec84d052d14",
+    "X6251_MOVING_low_0.023_0.033.json": "926672282a4d0861f253e6542f352e5710d7a82e9f777d1a4dca506e66cd51e2",
+    "X6251_MOVING_low_0.033_0.045.json": "735e6676b9dff405eec343a38e3a2b2a3a5d885c0ec9e13256cd515543a3c90f",
+    "X6251_MOVING_low_0.045_0.061002.json": "6dc8df83e19ebfd0195ae0b647c067ffa0ace105c9ad1a44708d492a57bd9f58"
+  },
+  "checker_sha256": "7a7eee9e5f5b080e170eba43f279b8c9402f9cabc15539e6c2bed71dc29503d9",
+  "seconds": 14.558134447986959
+}

@@ -1,0 +1,1097 @@
+\section{Reciprocal matrices and local fields}\label{sec:matrix-fields}
+
+Throughout this section $b$ is an actual simple rightmost zero.
+The notation $d,S,H,Q$ is that of \eqref{pr:field-notation}.
+The estimates are independent of the degree.
+
+\subsection{A matrix envelope}
+
+\begin{proposition}\label{mf:envelope}
+Put $\eta=d\Re S$, $\tau=d\Im S$, and
+\[
+ \Delta=3\pi^2-8,\quad K_0=\frac{9\pi^2}{\Delta},\quad
+ A_0=2+\frac{24\pi}{\Delta},\quad
+ \gamma=\frac{40-3\pi^2}{2\Delta}.
+\]
+Then
+\begin{equation}\label{mf:exact-envelope}
+ Qd^2\le K_0+A_0\eta+\gamma\eta^2-\tau^2/2.
+\end{equation}
+In particular, in the normalization \eqref{pr:normalized-moments},
+writing $\sigma=c+is$,
+\begin{equation}\label{mf:coarse-envelope}
+ q<\frac{21}{5}\mu^2+\frac{11}{2}\mu c+\frac{c^2}{4}-\frac{s^2}{2}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Translate and scale to $b=0,d=1$. Write $v_j=-1/\xi_j$ and let
+$w_k=-1/u_k$, where the $u_k$ are all the other original zeros.
+Set $M=I+\mathbf1\mathbf1^*$ and
+$A=M^{1/2}\diag(w_k)M^{1/2}=K+iJ$, with $K,J$ Hermitian.
+Since $\Re w_k\ge0$, we have $K\ge0$. The rank-one determinant
+identity and differentiation of $p(z)=zp'(0)\prod_k(1+zw_k)$ give
+\[
+ \det(I+z\diag(w_k)M)=\frac{p'(z)}{p'(0)}
+                    =\prod_j(1+zv_j).
+\]
+Thus the eigenvalues of $A$, including multiplicities, are the $v_j$.
+
+For a Hermitian matrix $B$ define
+$\mathcal T(B)_{ij}=i\operatorname{sgn}(i-j)B_{ij}$, with zero
+diagonal. If $x$ is a unit vector and $b_k=|x_k|^2$, diagonal
+unitary conjugation removes the coordinate phases and gives
+\begin{equation}\label{mf:rankone-char}
+ \det(tI-\mathcal T(xx^*))
+ =\frac12\left\{\prod_k(t+ib_k)+\prod_k(t-ib_k)\right\}.
+\end{equation}
+Indeed $tI-\mathcal T(xx^*)$ is the midpoint of an upper and a
+lower triangular matrix with diagonals $t+ib_k$ and $t-ib_k$;
+their difference has rank one. The determinant is affine along
+a rank-one line. Zero coordinates follow by continuity.
+After omitting those coordinates, the positive roots in
+\eqref{mf:rankone-char} are the solutions of
+$\sum_k\arctan(b_k/t)=(2j-1)\pi/2$. The left side strictly
+decreases from $p\pi/2$ to zero, where $p$ is the number of
+nonzero coordinates. Since $\arctan u\le u$ and $\sum b_k=1$,
+the $j$th positive eigenvalue is at most
+$L_j=2/((2j-1)\pi)$. The spectrum is symmetric about zero.
+
+Let $\eta=\tr K$ and $k=\tr K^2$. The trace pairing
+$\tr(K\mathcal T(xx^*))=-x^*\mathcal T(K)x$, followed by
+diagonalization of either sign of $\mathcal T(xx^*)$, shows that
+for every $\lambda>0$,
+\begin{equation}\label{mf:schur-pair}
+ \|\mathcal T(K)\|
+ \le\lambda\eta+\sqrt{k}
+       \left(\sum_{j\ge1}(L_j-\lambda)_+^2\right)^{1/2}.
+\end{equation}
+Here the diagonal entries of the conjugated $K$ are nonnegative,
+sum to $\eta$, and have sum of squares at most $k$. This proves
+the inequality by Cauchy--Schwarz and includes the whole spectrum.
+
+In an upper triangular Schur basis for $A$,
+$J=\diag(\Im v_j)+\mathcal T(K)$, whence
+$\|J\|\le1+\|\mathcal T(K)\|$. Write $w_j=a_j+ib_j$ and
+$\beta=\sum b_j=(\Im S)/2$. Direct multiplication gives
+\[
+ k=3\sum a_j^2+\Bigl(\sum a_j\Bigr)^2,\quad
+ \tr J^2=3\sum b_j^2+\beta^2,\quad
+ \|Je\|^2=\frac{N+1}{N}\left(\sum b_j^2+\beta^2\right),
+ \qquad e=N^{-1/2}\mathbf1.
+\]
+In particular,
+\[
+ \tr J^2=\frac{3N}{N+1}\|Je\|^2-2\beta^2
+ \le3\|J\|^2-2\beta^2.
+\]
+In a Schur basis the off-diagonal squared contributions to
+$\tr K^2$ and $\tr J^2$ agree, so
+\[
+ \tr K^2-\tr J^2
+ =\sum_j\bigl((\Re v_j)^2-(\Im v_j)^2\bigr).
+\]
+Also $0\le\Re v_j\le1$, whence $\sum_j(\Re v_j)^2\le\eta$.
+Therefore
+\[
+ Q=2\sum_j(\Re v_j)^2-k+\tr J^2
+ \le2\eta+3(1+\|\mathcal T(K)\|)^2-k-2\beta^2.
+\]
+Take
+\[
+ \lambda=\frac{24\pi+(40-3\pi^2)\eta}
+                   {6\pi(3\pi+4\eta)},\qquad
+ a_\lambda^2=(2/\pi-\lambda)^2+(2/(3\pi)-\lambda)^2.
+\]
+For $\eta\ge0$, one has $L_3<\lambda<L_1$ and
+$3a_\lambda^2<1$. These follow by multiplying the positive
+denominators; the endpoint values of the fractional linear
+function $\lambda(\eta)$ suffice. Thus the sum in
+\eqref{mf:schur-pair} is at most $a_\lambda^2$, including when
+$\lambda>L_2$. Maximizing the resulting quadratic in $\sqrt k$
+gives
+\[
+ 3(1+\|\mathcal T(K)\|)^2-k
+ \le\frac{3(1+\lambda\eta)^2}{1-3a_\lambda^2}.
+\]
+Put
+\[
+ R_\eta=18\pi^2+48\pi\eta+(40-3\pi^2)\eta^2.
+\]
+Direct substitution gives
+\[
+ 1+\lambda\eta=\frac{R_\eta}{6\pi(3\pi+4\eta)},\qquad
+ 1-3a_\lambda^2
+ =\frac{\Delta R_\eta}{6\pi^2(3\pi+4\eta)^2}.
+\]
+Consequently
+\[
+ 2\eta+\frac{3(1+\lambda\eta)^2}{1-3a_\lambda^2}
+ =2\eta+\frac{R_\eta}{2\Delta}
+ =K_0+A_0\eta+\gamma\eta^2.
+\]
+This proves \eqref{mf:exact-envelope}. Finally $\pi>157/50$
+implies $K_0<21/5$, $A_0<11/2$, and $\gamma<1/4$.
+Divide by $(Hd)^2$ to obtain \eqref{mf:coarse-envelope}.
+\end{proof}
+
+\subsection{Logarithmic bounds and saddle moments}
+
+The next inequality controls the logarithm on a disk.
+
+\begin{lemma}\label{mf:log-metric}
+For $0<r<1$ put
+\[
+ h(r)=\frac{r-\log(1+r)}{r^2},\qquad
+ j(r)=\frac{-r-\log(1-r)}{r^2}.
+\]
+For every $z=x+iy$ with $|z|\le r$,
+\[
+ \log|1+z|\le x-h(r)x^2+j(r)y^2.
+\]
+\end{lemma}
+\begin{proof}
+The analytic identity
+$(z-\Log(1+z))/z^2=\int_0^1t/(1+tz)\,dt$ holds in $|z|<1$.
+For fixed $t$, the image of $|z|\le r$ under $t/(1+tz)$ lies in
+the disk with center $t/(1-t^2r^2)$ and radius
+$t^2r/(1-t^2r^2)$. The difference of squared radius and squared
+distance from the center is
+\[
+ \frac{t^4(r^2-x^2-y^2)}
+ {(1-t^2r^2)((1+tx)^2+t^2y^2)}\ge0.
+\]
+Integration therefore puts the preceding integral in the disk
+with center $c_r=-\log(1-r^2)/(2r^2)$ and radius
+$e_r=(\operatorname{atanh}r-r)/r^2$. Multiplication by $z^2$
+and taking real parts gives
+$\Re\Log(1+z)\le x-(c_r-e_r)x^2+(c_r+e_r)y^2$.
+The two coefficients are $h(r)$ and $j(r)$.
+\end{proof}
+
+\begin{lemma}\label{mf:saddle-dual}
+Let $\Re v_j\ge0$, $|v_j|\le1$, $\eta=\sum\Re v_j$, and
+$Q=\sum|v_j|^2>0$. Suppose $z_0=-X+iY$, $|z_0|=s<1$,
+$X\ge0$, and $\sum_jv_j/(1+z_0v_j)=0$. Then
+\[
+ \frac{\eta}{Q}\ge
+ \frac{X(1-s)^2}{(1+|Y|)^2-X^2}.
+\]
+\end{lemma}
+\begin{proof}
+Conjugate to make $Y\ge0$, and put
+$B=X/(1+2Y+s^2)$, $A=(1-2BX)/(1-s)^2$.
+For $v=a+ib$, $r=|v|\le1$, and $d_v=|1+z_0v|^2$, expansion gives
+\[
+ (Aa-Br^2)d_v-(a-Xr^2)
+ =a(Ad_v-1+2BXr^2)
+   +Br^2[2Y(1+b)+s^2(1-r^2)].
+\]
+The second summand is nonnegative. Also $d_v\ge(1-sr)^2$ and
+$2BX\le2s^2/(1+s^2)\le s<1$. The function
+$A(1-sr)^2+2BXr^2$ decreases on $[0,1]$ to its value one
+at $r=1$, since $As(1-s)-2BX=(s-2BX)/(1-s)\ge0$.
+Thus $\Re(v/(1+z_0v))\le Aa-B|v|^2$. Sum and use the saddle
+equation to obtain $\eta/Q\ge B/A$, the stated bound.
+\end{proof}
+
+\begin{lemma}\label{mf:saddle-variance}
+Let $\Re v_j\ge0$, $|v_j|\le1$, $Q=\sum|v_j|^2>0$, and
+$\sum_jv_j/(1+z_0v_j)=0$, with $\Re z_0\le0$.
+Write $u_j=v_j/(1+z_0v_j)$ and $Q_u=\sum|u_j|^2$.
+Suppose $|z_0|<s<1$, $-\Re z_0<X$, $|\Im z_0|<Y$,
+and $X<1-Y$. Here $s$ is an upper bound for the modulus.
+Put $U=(1-s)^{-1}$.
+Then
+\[
+ \frac1{1+2Y+s^2}\le\frac{Q_u}{Q}
+ \le q_m:=\min\left(U^2,\frac1{1-2X^2-2Y}\right)
+\]
+when the last denominator is positive, and
+\[
+ \frac{\sum(\Re u_j)^2}{Q_u}\le\beta
+ :=\min\left\{
+ X\left(\frac{1+X}{1-s^2}+XU^2\right),
+ \frac{X(1-Y+X)}{(1-Y)^2+X^2}\right\}.
+\]
+\end{lemma}
+\begin{proof}
+Write $z_0=x_0+iy_0$, $v_j=a_j+ib_j$, and
+$d_j=|1+z_0v_j|^2$. Then
+\[
+ \Re u_j=\frac{a_j+x_0|v_j|^2}{d_j},\quad
+ \Im u_j=\frac{b_j-y_0|v_j|^2}{d_j},\quad
+ |u_j|^2=\frac{|v_j|^2}{d_j}.
+\]
+Since $a_j\ge0$, $x_0\le0$, and $|v_j|\le1$,
+$d_j\le1+2Y+s^2$. The zero real sum gives
+$\sum a_j/d_j=-x_0Q_u$. In the exact identity
+\[
+ Q=Q_u+2x_0\sum a_j|u_j|^2
+       -2y_0\sum b_j|u_j|^2
+       +|z_0|^2\sum|v_j|^2|u_j|^2
+\]
+we have $0\le\sum a_j|u_j|^2\le-x_0Q_u$ and
+$|\sum b_j|u_j|^2|\le Q_u$. This proves the mass bounds.
+
+The inverse disk inequality
+$(1-|z_0|^2)|u_j|^2+2\Re(z_0u_j)\le1$ gives
+$\Re u_j\le(1+X)/(1-s^2)$, while
+$\Re u_j\ge-X|u_j|^2\ge-XU^2$.
+Split the zero real sum into its positive and negative terms.
+The total absolute negative part is at most $XQ_u$. Multiplying
+each part by its respective amplitude bound proves the first
+variance bound.
+
+For the second, write $z_0=-X_0+iY_0$. Give
+$r_j=1/\overline{v_j}$ weights $|u_j|^2/Q_u$, omitting a
+zero $v_j$ if necessary. Since
+$1/\overline{u_j}=r_j+\overline{z_0}$ and $\sum u_j=0$,
+their weighted mean is $X_0+iY_0$. Each $r_j$ has nonnegative
+real part and modulus at least one. Put $L=1-|Y_0|$ and
+$c=X_0/L<1$. The numbers
+$r'_j=(r_j-iY_0)/L=a_j'+ib_j'$ have $a_j'\ge0$,
+$a_j'^2+b_j'^2\ge1$, and weighted mean real part $c$.
+On this unbounded domain,
+\[
+ \frac{(a-c)^2}{(a-c)^2+b^2}\le\frac{a+c^2}{1+c^2}.
+\]
+For $a\ge1$ the right side is at least one. For $0\le a\le1$
+replace $b^2$ by $1-a^2$ and use
+\[
+ (a+c^2)(1-2ac+c^2)-(1+c^2)(a-c)^2
+ =a(1-a)(1+c)^2\ge0.
+\]
+The denominator cannot vanish. Taking weighted means proves
+$\sum(\Re u_j)^2/Q_u\le c(1+c)/(1+c^2)$.
+This function increases on $[0,1]$, with derivative
+$(1+2c-c^2)/(1+c^2)^2>0$. Substituting $c\le X/(1-Y)$
+proves the second bound.
+\end{proof}
+
+\subsection{An affine reciprocal-field estimate}
+
+\begin{proposition}\label{mf:affine}
+For every actual simple rightmost zero,
+\begin{equation}\label{mf:affine-bound}
+ Qd^2\le20+11Hd.
+\end{equation}
+Consequently $Qd^2\le13(1+Hd)$ whenever $Hd\ge7/2$.
+\end{proposition}
+
+\begin{proof}
+Normalize to $b=0,d=1$, and suppose $Q>20+11H$.
+Set $B=-\sum v_j^2$, $\eta=\Re S$.
+The matrix envelope implies $\eta>0$. Conjugate so that
+$\Im S\ge0$, and write
+\[
+ t=\frac{\Im S}{\eta},\quad
+ x=\frac{\Re B}{Q},\quad y=\frac{|\Im B|}{Q}.
+\]
+We have $B-Q=-2\sum(\Re v_j)v_j$, hence
+$|B-Q|\le2\eta$ and $|B|\le Q$. Also
+$H/Q<1/11$. The envelope gives
+$t^2<2\gamma<(7/10)^2$: if its quadratic coefficient were
+nonpositive, its constant and linear coefficients would already
+be smaller than $20+11H$. Thus
+\begin{equation}\label{mf:affine-domain}
+ (t,y)\in[0,7/10]\times[0,1/4],\quad
+ (x-1)^2+y^2<\frac4{121(1+t^2)},\quad x^2+y^2\le1.
+\end{equation}
+Write $B/Q=x+i\epsilon y$, with $\epsilon\in\{-1,1\}$.
+Both signs are used when $y=0$.
+
+Here and below directed rational rounding is denoted by
+$\lfloor u\rfloor_m=\lfloor mu\rfloor/m$ and
+$\lceil u\rceil_m=\lceil mu\rceil/m$. Write
+$\operatorname{sf}_m(u)=\lfloor\sqrt u\rfloor_m$ and
+$\operatorname{sc}_m(u)=\lceil\sqrt u\rceil_m$; these are computed
+by integer square roots. Unless indicated, square-root meshes
+have $m=10^6$. Use $p_0=6283/2000<\pi<22/7$ and put
+$k_U=9p_0^2/(3p_0^2-8)$,
+$a_U=2+24p_0/(3p_0^2-8)$,
+$g_U=(40-3p_0^2)/(2(3p_0^2-8))$.
+These are upper bounds for $K_0,A_0,\gamma$, since each decreases
+on the indicated interval for $\pi$.
+
+Each row of the certificate consists of six rationals
+$(t_l,t_h,y_l,y_h,\rho,k)$, with $\rho>0$, $k>0$, and the
+phase sign $\epsilon$.
+They specify a closed rectangle and a contour. The following
+construction gives every bound used to check that row.
+Put
+\[
+ d_l=\operatorname{sf}(1+t_l^2),\quad
+ d_h=\operatorname{sf}(1+t_h^2),\quad
+ e_0=\frac2{11d_l},\quad
+ g_0=g_U-t_l^2/2.
+\]
+If $y_l>e_0$ the cell is impossible. Otherwise define
+$r_0=1-\operatorname{sc}(e_0^2-y_l^2)$.
+If $r_0^2+y_l^2\ge1$ or $g_0\le0$ the cell is also impossible
+under \eqref{mf:affine-domain}. In a retained cell
+cap $y_h$ by
+$\widehat y_h=\min(y_h,e_0,\operatorname{sc}(1-r_0^2))$.
+The retained rows have $r_0>\widehat y_h\ge y_l$ and $g_0>0$.
+Let $h_0$ be the largest $1/100$ mesh point strictly below the
+positive root of
+\[
+ P(h)=k_U-20+(a_U-11d_l)h+g_0h^2.
+\]
+The checks $h_0>0$, $P(h_0)<0$, and $P(h_0+1/100)\ge0$
+imply $\eta>h_0$. Set
+\[
+ Q_0=20+11d_lh_0,\quad r_Q=\operatorname{sf}_{10^4}(Q_0),\quad
+ b_m=\operatorname{sf}(r_0^2+y_l^2).
+\]
+Choose the first $10^{-6}$ mesh point $a\in[1,2]$ with
+\begin{equation}\label{mf:saddle-rouche}
+ (ab_m-1)(11-a)>a^2.
+\end{equation}
+Put $s=a/11$, $U=(1-s)^{-1}$, $e=a^2/[b_m(11-a)]$.
+For $L=p''/p'$ the geometric series gives
+\[
+ L(z)=S+Bz+E(z),\qquad |E(z)|\le\frac{Q|z|^2}{1-|z|}.
+\]
+On $|z|=aH/Q<s$, \eqref{mf:saddle-rouche} gives
+$|Bz|>|S+E(z)|$. Rouch\'e's theorem gives an actual zero $z_0$
+of $p''$ with $|z_0|<aH/Q$ and
+\[
+ |z_0+S/B|<(H/Q)e,\qquad \Re z_0\le0.
+\]
+The latter assertion is Gauss--Lucas twice; $p'$ is nonzero
+in the whole disk $|z|<1$.
+
+For phase bounds set
+\[
+ q_U=1/d_l,\ c_U=t_h/d_h,\quad
+ q_L=1/\operatorname{sc}(1+t_h^2),\
+ c_L=t_l/\operatorname{sc}(1+t_l^2),
+\]
+\[
+ R_f=\frac{r_0}{r_0^2+y_l^2},\quad
+ Y_f=\frac{\widehat y_h}{r_0^2+\widehat y_h^2},\quad
+ R_L=\operatorname{sf}(1-\widehat y_h^2).
+\]
+On the unit-disk fiber, differentiation in $x>y$ gives
+$R_L\le x/(x^2+y^2)\le R_f$ and
+$y_l\le y/(x^2+y^2)\le Y_f$. For $\epsilon=1$ take
+\[
+ D_c=q_UR_f+c_UY_f+e,\qquad
+ I_c=\max(0,c_UR_f-q_Ly_l,q_UY_f-c_LR_L)+e;
+\]
+for $\epsilon=-1$ take
+\[
+ D_c=\max(0,q_UR_f-c_Ly_l)+e,\qquad
+ I_c=c_UR_f+q_UY_f+e.
+\]
+These follow by multiplying $S/B$ explicitly, and give
+$-\Re z_0<(H/Q)D_c$, $|\Im z_0|<(H/Q)I_c$.
+Initially put $X=\min(s,D_c/11)$, $Y=\min(s,I_c/11)$.
+Lemma~\ref{mf:saddle-dual} permits replacing $X$ by its minimum
+with
+\[
+ \frac{\operatorname{sc}((1-s)^4+4h_*^2(1+Y)^2)-(1-s)^2}
+      {2h_*},\qquad h_*=\frac1{11d_l}.
+\]
+Apply Lemma~\ref{mf:saddle-variance} and denote its upper
+mass and variance bounds by $q_m,\beta$. Each row checks
+$1-2X^2-2Y>0$, $X<1-Y$, and $\beta<1/2$.
+
+For $u_j=v_j/(1+z_0v_j)$ let $B_0=-\sum u_j^2$.
+The geometric series gives
+$|B_0-B|/Q<U^2-1=:p_*$. The mass and variance bounds give
+\[
+ \Re(B_0/Q)\ge\frac{1-2\beta}{1+2Y+s^2},\quad
+ |\Im(B_0/Q)|\le2q_m\sqrt{\beta(1-\beta)},\quad
+ |B_0/Q|\le q_m.
+\]
+Use the rational enclosures
+\[
+ R=\left\lfloor\max\left(r_0-p_*,
+             \frac{1-2\beta}{1+2Y+s^2}\right)\right\rfloor_{10^4},
+\]
+\[
+ I=\left\lceil\min(\widehat y_h+p_*,
+             2q_m\operatorname{sc}(\beta(1-\beta)))\right\rceil_{10^4},
+ \quad M=\lceil q_m\rceil_{10^4},\quad
+ G=\operatorname{sf}_{10^4}(2p_0/M).
+\]
+Thus $R>0$, and
+\[
+ \left|\int_{-\infty}^{\infty}e^{-B_0t^2/(2Q)}\,dt\right|
+ =\sqrt{\frac{2\pi}{|B_0/Q|}}\ge G.
+\]
+
+\smallskip
+\noindent\emph{The contour.}
+Define
+\[
+ \lambda=\left\lfloor\frac{\rho}{k/r_Q+D_c/11}\right\rfloor_{10^4},
+ \quad T_0=\lfloor\rho r_Q\rfloor_{10^4},\quad
+ \delta=\operatorname{sc}_{10^5}(\rho^2(1+\lambda^{-2})).
+\]
+Check $\lambda>1$, $T_0>0$, $U\delta<1$. Put
+\[
+ T=\max\{T_0,\lambda[k+(H/\sqrt Q)D_c]\},\qquad
+ D_c'=k-\sqrt Q\Re z_0.
+\]
+Then $0<D_c'<T/\lambda$ and $T/\sqrt Q<\rho$.
+Indeed $Q>r_Q^2$ and $H/Q<1/11$, so
+\begin{align*}
+ \frac{T}{\sqrt Q}
+ &=\max\left\{\frac{T_0}{\sqrt Q},
+       \lambda\left(\frac{k}{\sqrt Q}+\frac{H}{Q}D_c\right)\right\}\\
+ &<\max\left\{\frac{T_0}{r_Q},
+       \lambda\left(\frac{k}{r_Q}+\frac{D_c}{11}\right)\right\}
+ \le\rho.
+\end{align*}
+Take the vertical segment $z_0+it/\sqrt Q$, $-T\le t\le T$,
+and both horizontal segments joining its ends to $\Re z=k/\sqrt Q$.
+Relative to $z_0$ every point has modulus less than $\delta$.
+
+Use the directed logarithm coefficients
+\begin{equation}\label{mf:directed-log}
+ \underline h(r)=\left\lfloor\sum_{\ell=0}^{15}
+                      \frac{(-r)^\ell}{\ell+2}\right\rfloor_{10^6},
+ \qquad
+ \overline j(r)=\left\lceil\sum_{\ell=0}^{15}
+          \frac{r^\ell}{\ell+2}+\frac{r^{16}}{18(1-r)}
+                       \right\rceil_{10^6}.
+\end{equation}
+The alternating and geometric remainders prove
+$\underline h\le h$ and $\overline j\ge j$.
+Replace the two coefficients in Lemma~\ref{mf:log-metric}
+before expanding its quadratic form. At $r=U\rho$ and
+$r=U\delta$ write the respective pairs as $(h_v,j_v)$ and
+$(h_c,j_c)$. Set
+\[
+ q_l=\lfloor(1+2Y+s^2)^{-1}\rfloor_{10^6},\quad
+ A_v=\lfloor h_v-(h_v+j_v)\beta\rfloor_{10^6},
+\]
+\[
+ A_c=\lfloor h_c-(h_c+j_c)\beta\rfloor_{10^6},\quad
+ B_c=\lceil j_c-(h_c+j_c)\beta\rceil_{10^6}.
+\]
+Every row has $q_l,A_v>0$ and $B_c\ge0$.
+
+\smallskip
+\noindent\emph{The paired vertical integral.}
+For $|t|\le T$ put
+$f(t)=\sum_j\Log(1+iu_jt/\sqrt Q)$ and
+$g(t)=-B_0t^2/(2Q)$. For a symmetric shell
+$a_j\le|t|\le b_j$, put
+$\rho_j=\min(\rho,b_j/r_Q)$, taking $\rho_j=\rho$ if $b_j=\infty$,
+and $r_j=U\rho_j$. With $h_j=\underline h(r_j)$ and
+$j_j=\overline j(r_j)$, set
+\[
+ \alpha_j=\left\lfloor\min\{R/2,
+                q_l[h_j-(h_j+j_j)\beta]\}\right\rfloor_{10^5}>0.
+\]
+Both $\Re f(\pm t)$ and $\Re g(t)$ are at most $-\alpha_jt^2$.
+Writing the even and odd parts of $f-g$ as $E(t),O(t)$,
+the logarithmic series gives
+\[
+ |O(t)|\le\frac{q_mU|t|^3}{\sqrt Q}
+       \left(\frac13+\frac{r_j^2}{5(1-r_j^2)}\right),\quad
+ |E(t)|\le\frac{q_mU^2t^4}{Q}
+       \left(\frac14+\frac{r_j^2}{6(1-r_j^2)}\right).
+\]
+These bounds retain all odd orders at least five and all even
+orders at least six. For arbitrary complex $A,O$,
+\[
+ e^{A+O}+e^{A-O}-2e^A
+ =O^2\int_{-1}^1(1-|s|)e^{A+sO}\,ds.
+\]
+Apply this with $A=g+E$, and apply the first-difference integral
+to $e^{g+E}-e^g$. The real-part bounds hold along both line
+segments, so
+\[
+ |e^{f(t)}+e^{f(-t)}-2e^{g(t)}|
+ \le(|O(t)|^2+2|E(t)|)e^{-\alpha_jt^2}.
+\]
+Use the shell endpoints $0,1,2,3,4,5,6,8,10,12,\infty$.
+If $\Delta M_{k,j}$ is an upper bound for
+$\int_{a_j}^{b_j}t^ke^{-\alpha_jt^2}\,dt$, the
+paired error is at most
+\[
+ \mathcal E=\left\lceil\sum_j
+ \frac{q_m^2U^2c_{o,j}^2\Delta M_{6,j}
+          +2q_mU^2c_{e,j}\Delta M_{4,j}}{r_Q^2}
+                      \right\rceil_{10^4},
+\]
+where $c_{o,j}$ and $c_{e,j}$ are the parenthesized coefficients.
+Extending a shell past the actual endpoint $T$ only enlarges its
+positive error integral.
+
+Here the moments have a purely rational verification. For
+$M_k(a)=\int_a^\infty t^ke^{-\alpha t^2}\,dt$,
+\[
+ M_k(a)=\frac{a^{k-1}e^{-\alpha a^2}}{2\alpha}
+          +\frac{k-1}{2\alpha}M_{k-2}(a).
+\]
+For $a>0$,
+$ae^{-\alpha a^2}/(1+2\alpha a^2)\le M_0(a)
+ \le e^{-\alpha a^2}/(2\alpha a)$.
+Differentiating these proposed bounds and integrating to infinity
+proves the two signs. At zero,
+$M_4(0)=3\sqrt\pi/(8\alpha^{5/2})$ and
+$M_6(0)=15\sqrt\pi/(16\alpha^{7/2})$.
+Use directed square roots and $\pi<22/7$.
+For each finite endpoint $x=\alpha a^2<82$,
+\[
+ E_{40}(x)\le e^x\le E_{80}(x)
+               +\frac{x^{81}}{81!(1-x/82)},\qquad
+ E_m(x)=\sum_{\ell=0}^m\frac{x^\ell}{\ell!}.
+\]
+Taking reciprocals in the correct directions gives rational
+moment bounds; subtract a lower right tail from an upper left
+tail. The final infinite shell is included. The certificate
+checks every domain and positivity condition in this construction.
+
+\smallskip
+\noindent\emph{The two horizontal segments.}
+There are two valid bounds, either of which may be used on a row.
+For the translated bound, expansion of Lemma~\ref{mf:log-metric}
+at $w=(d+i\epsilon_c T)/\sqrt Q$, with
+$\epsilon_c\in\{-1,1\}$ and $0\le d\le T/\lambda$, gives
+\[
+ \Re\sum\Log(1+u_jw)
+ \le-q_l(A_c-B_c/\lambda^2)T^2
+           +(h_c+j_c)IT^2/\lambda.
+\]
+Indeed, if $\nu=\sum(\Re u_j)^2/Q_u\le\beta$, the quadratic
+part before substitution is
+\[
+ \frac{Q_u}{Q}\{-[h_c-(h_c+j_c)\nu]T^2
+                  +[j_c-(h_c+j_c)\nu]d^2\},
+\]
+which increases with $\nu$ since $T^2\ge d^2$.
+The mixed term has modulus at most $(h_c+j_c)IdT$.
+When $A_c-B_c/\lambda^2>0$, the downward-rounded damping is
+\[
+ \kappa_{\rm tr}=
+ \left\lfloor q_l(A_c-B_c/\lambda^2)
+                  -(h_c+j_c)I/\lambda\right\rfloor_{10^5}.
+\]
+
+For the original-coordinate bound put
+$l=1/\lambda$, $J=1+I_c/(\lambda D_c)$, and
+$r_o=\operatorname{sc}_{10^5}(\rho^2(l^2+J^2))$.
+If $J<2$ and $r_o<1$, take $h_o=\underline h(r_o)$,
+$j_o=\overline j(r_o)$, and
+$A_o=h_o-(h_o+j_o)/(11d_l)$.
+Writing $z=x_c+iy_c$, $V=\sum(\Re v_j)^2\le\eta$ and
+$W=\sum\Re v_j\Im v_j$, the exact expanded bound is
+\[
+ \log|p'(z)/p'(0)|
+ \le\eta x_c-(\Im S)y_c
+ +[j_oQ-(h_o+j_o)V]x_c^2
+ +[(h_o+j_o)V-h_oQ]y_c^2+2(h_o+j_o)Wx_cy_c.
+\]
+On both segments,
+$|x_c|\sqrt Q/T\le l$,
+$|y_c|\sqrt Q/T\in[2-J,J]$,
+$x_c\le k/\sqrt Q$, and $H/(\sqrt Q T)\le1/(\lambda D_c)$.
+As $2|W|\le\widehat y_hQ$, the normalized upper bound is
+\[
+ j_ol^2+\frac{q_Uk}{\lambda D_cT_0}
+ +\max_{2-J\le v\le J}(-A_ov^2+Lv),\qquad
+ L=(h_o+j_o)\widehat y_hl+\frac{c_U}{\lambda D_c}.
+\]
+When $A_o>0$, the maximum is attained at an endpoint or at
+$L/(2A_o)$ if that point belongs to the interval.
+For normalization at the saddle, its exact equation gives
+\[
+ \ell_0=\sum_j\left[\Log(1+z_0v_j)
+                      -\frac{z_0v_j}{1+z_0v_j}\right].
+\]
+The series has coefficient $(-1)^m(m-1)/m$ in degree
+$m\ge2$. Hence $|\ell_0|\le Q|z_0|^2f(s)$, where
+$f(s)=1/(1-s)-\sum_{j\ge0}s^j/(j+2)$.
+Use
+$f_s=\lceil1/(1-s)-\sum_{j=0}^{15}s^j/(j+2)\rceil_{10^6}$.
+Since $Q|z_0|^2/T^2\le a^2/(\lambda^2D_c^2)$, a second
+valid damping is
+\[
+ \kappa_{\rm or}=\left\lfloor
+ -\max_{[2-J,J]}(-A_ov^2+Lv)-j_ol^2
+ -\frac{q_Uk}{\lambda D_cT_0}
+ -\frac{f_sa^2}{\lambda^2D_c^2}\right\rfloor_{10^5}.
+\]
+Choose the larger valid positive damping $\kappa$.
+Every retained row has at least one.
+
+\smallskip
+\noindent\emph{The final finite predicates.}
+Put
+$F_0=\lfloor(G-\mathcal E-1/1000-1/100)/2\rfloor_{10^4}$
+and $J_0=\lceil1+I_c/(\lambda D_c)\rceil_{10^4}$.
+In addition to the conditions above, each row verifies
+\begin{gather}
+ F_0>0,\qquad
+ E_2(RT_0^2/2)>\frac{2000}{RT_0},\qquad
+ \kappa T_0^2>\frac12,\label{mf:affine-final-one}\\
+ E_{24}(\kappa T_0^2)>\frac{200T_0}{\lambda},\qquad
+ \kappa(k^2+J_0^2T_0^2)>J_0^2,\label{mf:affine-final-two}\\
+ E_{24}(\kappa T_0^2)>
+       \frac{11}{10}\frac{k^2+J_0^2T_0^2}{kF_0}.
+ \label{mf:affine-final-three}
+\end{gather}
+The two Gaussian tails are bounded by
+\[
+ 2\int_T^\infty e^{-Rt^2/2}\,dt
+ \le\frac{2e^{-RT^2/2}}{RT}<\frac1{1000}.
+\]
+The sum of the moduli of the two horizontal integrals, divided by
+$|p'(z_0)|/\sqrt Q$, is bounded by
+\[
+ \frac{2T}{\lambda}e^{-\kappa T^2}<\frac1{100}.
+\]
+The first bound decreases for $T>0$; the second decreases for
+$\kappa T^2>1/2$. Thus the finite comparisons at $T_0$ prove both
+bounds on the whole ray $T\ge T_0$.
+The endpoint primitive values therefore differ by more than
+$2F_0|p'(z_0)|/\sqrt Q$. At one endpoint
+$z_{\epsilon_c}=k/\sqrt Q+i(\Im z_0+\epsilon_c T/\sqrt Q)$,
+\[
+ |p(z_{\epsilon_c})|>F_0|p'(z_0)|/\sqrt Q,\quad
+ |p'(z_{\epsilon_c})|\le e^{-\kappa T^2}|p'(z_0)|,\quad
+ \sqrt Q|\Im z_{\epsilon_c}|\le J_0T.
+\]
+But every original zero lies in $\Re z\le0$, and zero itself
+is a simple zero. Therefore
+$\Re(p'/p)(z)\ge\Re(1/z)$ in $\Re z>0$, which would imply
+\[
+ \frac{k}{k^2+J_0^2T^2}<\frac{e^{-\kappa T^2}}{F_0}.
+\]
+The last two predicates make
+$(k^2+J_0^2T^2)e^{-\kappa T^2}$ decreasing for $T\ge T_0$
+and already smaller than $(10/11)kF_0$ at $T_0$.
+This is a contradiction.
+
+The finite input consists of the four tables
+\cert{C11_A20_PHASE_1_DIRECT_QUADRATIC_METRIC_CELLS.csv},
+\cert{C11_A20_PHASE_-1_DIRECT_QUADRATIC_METRIC_CELLS.csv},
+and their corresponding \cert{SKIPS.csv} tables.
+They contain respectively $77,198$ retained rectangles and
+$14,14$ excluded rectangles. On each sign they cover exactly
+$[0,7/10]\times[0,1/4]$. This is checked by sorting every
+rational vertical edge, merging the horizontal intervals on
+each intervening open slab, and repeating the check on each
+closed edge. All excluded rectangles satisfy the explicit
+exclusion above. The program
+\cert{affine/replay_affine_c11_a20.py} reconstructs every
+quantity from the six rational entries and verifies
+\eqref{mf:saddle-rouche}--\eqref{mf:affine-final-three}
+with rational arithmetic, including all $2750$ shells.
+This proves the required finite assertion and the proposition.
+The final consequence follows from $20+11D\le13(1+D)$
+for $D\ge7/2$.
+\end{proof}
+
+\subsection{Closing the unbounded field range}
+
+The two signed-curvature bounds from Proposition~\ref{lt:quartic}
+give the following estimate.
+
+\begin{proposition}\label{mf:D270}
+If $D=Hd\ge270$, then $Qd/H<9/4$.
+\end{proposition}
+\begin{proof}
+Put $y=Qd/H=qD$. Proposition~\ref{mf:affine} implies
+\[
+ y\le13(1+1/D)\le Y_0:=3523/270,\qquad
+ q\le13(D+1)/D^2\le3523/72900<97/2000.
+\]
+We also have $\mu=1/D\le1/270$.
+For $0\le r\le97/2000$ define
+\[
+ v(r)=r+17r^2+137r^3+313r^4,\quad m(r)=1-v(r),
+\]
+\[
+ A(r)=\frac{1+17r+137r^2+313r^3}{m(r)},\qquad
+ B(r)=\frac{18+154r+450r^2+313r^3}{m(r)},
+\]
+\[
+ C(r)=1+\left(2+\frac{100}{199}\right)rA(r)^2
+ +3rB(r)+\frac{600}{199}r^2A(r)^2
+ +4rA(r)+29r+436r^2.
+\]
+Let $K=p''/p'$. The coarse quartic row gives
+\[
+ \frac{\Re K'(b)}{H^2}
+ <C(q)q^2+\frac{50000}{3}q^5+\frac{650}{9}q\mu.
+\]
+On the other hand, rightmostness gives
+$\Re K'(b)=Q-2\sum(\Re v_j)^2\ge Q-2H/d$.
+Consequently
+\begin{equation}\label{mf:coarse-bootstrap}
+ 0<P_D(y):=y^2C(y/D)+\frac{50000}{3}\frac{y^5}{D^3}
+                       +\frac{650}{9}y-D(y-2).
+\end{equation}
+
+On the whole interval $0\le r\le97/2000$, $v(r)<1$.
+The convergent series $1/m=\sum_{k\ge0}v^k$ and all numerators
+above have nonnegative coefficients. Thus $C,C',C''\ge0$ there.
+For $3\le y\le Y_0$ and $D\ge270$,
+\[
+ \partial_y^2P_D
+ =2C+\frac{4y}{D}C'+\frac{y^2}{D^2}C''
+                      +\frac{1000000}{3}\frac{y^3}{D^3}>0,
+\]
+\[
+ \partial_DP_D=-\frac{y^3}{D^2}C'
+                    -50000\frac{y^5}{D^4}-(y-2)<0.
+\]
+All occurrences of $C$ and its derivatives have argument $y/D$.
+Direct rational substitution gives
+\[
+ P_{270}(3)=
+ -\frac{343077017913365252920829}{10130931628072339534650}<0,
+ \qquad P_{270}(Y_0)<-197.
+\]
+Convexity bounds $P_{270}$ above by its endpoint chord.
+Monotonicity in $D$ then contradicts
+\eqref{mf:coarse-bootstrap} if $y\ge3$.
+
+Now $y<3$, hence $q<1/90<7/625$.
+The fine quartic row gives
+$\Re K'(b)/H^2<(9/4)q^2+13q\mu$.
+It follows that
+$0<(9/4)y^2+13y-D(y-2)$.
+At $D=270$ this convex quadratic has endpoint values
+$-1719/64$ and $-843/4$ at $y=9/4$ and $y=3$.
+It decreases in $D$ for every $y>2$. Thus $y\ge9/4$ is
+impossible. All the rational endpoint inequalities, including
+the two companion rows, are checked in
+\cert{quartic/verify_d270.py}.
+\end{proof}
+
+\subsection{A direct finite-product obstruction}
+
+The following criterion applies to a closed four-dimensional parameter
+cell. It uses the original-root factorization in the right half-plane.
+
+\begin{lemma}\label{mf:cubic-moment}
+Suppose $\Re w_j\ge0$, $|w_j|\le\mu$, $\sum w_j=\sigma=e^{i\phi}$,
+and $\sum|w_j|^2=q$, with $0\le\phi\le\pi/2$.
+Put $T=-\sum w_j^2=q(1-\alpha+i\beta)$.
+Then
+\[
+ \alpha^2+\beta^2\le(2\mu\cos\phi/q)^2,\qquad
+ (1-\alpha)^2+\beta^2\le1.
+\]
+If $c=\cos\phi>0$, put $A=q\alpha/2$, $C=-q\beta/2$.
+For any upper bound $\mu_h\ge\mu$, the third moment
+$P_3=\sum w_j^3$ satisfies
+\begin{gather}
+ \frac{4A^2}{c}-3\mu_h^2c\le\Re P_3
+ \le\min\left(\mu_hA,\mu_h^2c-\frac{4C^2}{c}\right),
+ \label{mf:cubic-real}\\
+ \left|\Im P_3-\frac{3AC}{c}\right|
+ \le\frac32\left(\mu_h^2c-\frac{A^2+C^2}{c}\right)
+                         +\mu_h(q-A).
+ \label{mf:cubic-imag}
+\end{gather}
+\end{lemma}
+\begin{proof}
+Write $w_j=x_j+iy_j$. The identity
+$T-q=-2\sum x_jw_j$, weighted Cauchy--Schwarz, and
+$\sum x_j=c$ give $|T-q|\le2\mu c$; also $|T|\le q$.
+Here $A=\sum x_j^2$, $C=\sum x_jy_j$.
+Give the points $(x_j,y_j)$ probability weights $x_j/c$.
+Their mean is $(A,C)/c$, and the trace of their covariance
+matrix is at most $\mu_h^2-(A^2+C^2)/c^2$.
+Now
+$\Re P_3=4\sum x_j^3-3\sum x_j|w_j|^2$
+gives the lower bound, while
+$\Re P_3\le\sum x_j^3\le\mu_h A$ and
+$\Re P_3=\sum x_j|w_j|^2-4\sum x_jy_j^2$
+give the two upper bounds.
+Finally $\Im P_3=3\sum x_j^2y_j-\sum y_j^3$.
+The covariance bound controls the first sum about $AC/c$,
+and $|\sum y_j^3|\le\mu_h\sum y_j^2=\mu_h(q-A)$
+controls the second. Thus points with $x_j=0$ are included.
+\end{proof}
+
+\begin{lemma}\label{mf:point-obstruction}
+Let $b$ be an actual simple rightmost zero, assume $H=|S|>0$,
+and use \eqref{pr:normalized-moments}. Conjugate so that
+$\sigma=e^{i\phi}$ with $0\le\phi\le\pi/2$.
+Define the actual normalized primitive
+\[
+ J(w)=\frac{S\,p(b+w/S)}{p'(b)},\quad
+ \theta=\frac{-\sum_jw_j^2}{\sigma^2},\quad
+ \kappa=\frac{\sum_jw_j^3}{\sigma^3}.
+\]
+Suppose a closed parameter cell has bounds $q\le q_h$,
+$\mu\le\mu_h$, $\phi_l\le\phi\le\phi_h$.
+At a nonzero test point $w$, put $W=|w|$ and assume $\mu_hW<1$.
+For recorded exact coefficients $\theta_0,\kappa_0$, let
+$|\theta-\theta_0|\le h_2$, $|\kappa-\kappa_0|\le h_3$
+hold on the whole cell. Put
+\[
+ B(t)=\sum_{k=4}^8\frac{q_h\mu_h^{k-2}W^k}{k}t^k
+       +\frac{q_h\mu_h^7W^9}{9(1-\mu_hW)}t^9,
+\]
+\[
+ J_0=w\int_0^1e^{tw+\theta_0w^2t^2/2+\kappa_0w^3t^3/3}\,dt,
+ \qquad g_0=e^{w+\theta_0w^2/2+\kappa_0w^3/3},
+\]
+\[
+ E_J=W\int_0^1 e^{A_0t+B_0t^2+C_0t^3}
+     \left(e^{h_2W^2t^2/2+h_3W^3t^3/3+B(t)}-1\right)\,dt,
+\]
+\[
+ E_g=|g_0|\left(e^{h_2W^2/2+h_3W^3/3+B(1)}-1\right),
+ \quad
+ (A_0,B_0,C_0)=
+ \bigl(\Re w,\Re(\theta_0w^2/2),\Re(\kappa_0w^3/3)\bigr).
+\]
+Write $\phi_m=(\phi_l+\phi_h)/2$,
+$\eta_\phi=2\sin((\phi_h-\phi_l)/4)$, $r=|J_0|$, $g=|g_0|$,
+and
+\[
+ P_-=\Re(we^{-i\phi_m})-\eta_\phi W,\quad
+ C_+=\Re(e^{i\phi_m}g_0\overline{J_0})+\eta_\phi gr.
+\]
+If
+\begin{equation}\label{mf:point-predicates}
+ P_->0,\qquad r>E_J,\qquad
+ \frac{C_++gE_J}{r^2-E_J^2}
+       +\frac{E_g}{r-E_J}-\frac{P_-}{W^2}<0,
+\end{equation}
+no actual configuration belongs to that parameter cell.
+For a quadratic model, set $\kappa_0=h_3=0$ and begin the
+remainder sum at $k=3$; alternatively use
+$B(t)=q_h\mu_hW^3t^3/[3(1-\mu_hW)]$.
+\end{lemma}
+
+\begin{proof}
+For $\Re(w/\sigma)>0$, the original-root factorization
+and rightmostness imply
+\begin{equation}\label{mf:actual-positivity}
+ \Re\{\sigma(J'(w)/J(w)-1/w)\}\ge0.
+\end{equation}
+Indeed, after multiplication by $H$, the expression is
+$p'(z)/p(z)-1/(z-b)=\sum_{u\ne b}(z-u)^{-1}$ at
+$z=b+w/S$. Each summand has positive real part.
+The critical-point product gives
+$J'(w)=\exp(w+\theta w^2/2+\kappa w^3/3+R_4(w))$.
+Lemma~\ref{pr:primitive}, with each order through eight kept
+separately, gives $|R_4(tw)|\le B(t)$, including every order
+at least nine. Integrating the exponential
+perturbation proves $|J-J_0|\le E_J$, $|J'-g_0|\le E_g$.
+
+If $|Z-v|\le E<|v|$, inversion maps that disk exactly to
+\[
+ \left|\frac1Z-\frac{\overline v}{|v|^2-E^2}\right|
+ \le\frac{E}{|v|^2-E^2}.
+\]
+This follows by multiplying the inequality by
+$|Z|(|v|^2-E^2)$ and expanding squares.
+Apply it to $J$, use the derivative error and
+$|e^{i\phi}-e^{i\phi_m}|\le\eta_\phi$, and then subtract
+$\Re(\sigma/w)\ge P_-/W^2$.
+The resulting upper bound for \eqref{mf:actual-positivity}
+is exactly the last expression in \eqref{mf:point-predicates}.
+The denominators are positive because $r>E_J$.
+\end{proof}
+
+We specify the coefficient enclosures used in this criterion.
+For a cell in $(q,\phi,\alpha,\beta)$ take exact midpoints
+$q_m,\phi_m,\alpha_m,\beta_m$, set
+$C_m=1-\alpha_m+i\beta_m$,
+$d_q=(q_h-q_l)/2$, and
+$d_C=\sqrt{((\alpha_h-\alpha_l)/2)^2+
+                ((\beta_h-\beta_l)/2)^2}$.
+Then a valid quadratic radius is
+\[
+ h_2=d_q(|C_m|+d_C)+q_md_C
+       +2q_m|C_m|\sin((\phi_h-\phi_l)/2)
+       +|q_mC_me^{-2i\phi_m}-\theta_0|.
+\]
+Indeed,
+\begin{align*}
+ &q(1-\alpha+i\beta)e^{-2i\phi}-q_mC_me^{-2i\phi_m}\\
+ &\quad=(q-q_m)(1-\alpha+i\beta)e^{-2i\phi}
+       +q_m\bigl(\alpha_m-\alpha+i(\beta-\beta_m)\bigr)e^{-2i\phi}\\
+ &\qquad\quad+q_mC_m(e^{-2i\phi}-e^{-2i\phi_m}).
+\end{align*}
+Apply the triangle inequality and
+$|e^{-2i\phi}-e^{-2i\phi_m}|
+ \le2\sin((\phi_h-\phi_l)/2)$.
+For the cubic radius put $c_l=\cos\phi_h$, $c_h=\cos\phi_l$,
+$A_l=q_l\alpha_l/2$, $A_h=q_h\alpha_h/2$, and let $C_l,C_h$
+be the extrema of $-q\beta/2$ over its four endpoint pairs.
+Division is used only when $c_l>0$. Put
+$C_*^2=\operatorname{dist}(0,[C_l,C_h])^2$ and
+\[
+ R_l=4A_l^2/c_h-3\mu_h^2c_h,\qquad
+ R_h=\min(\mu_hA_h,\mu_h^2c_h-4C_*^2/c_h).
+\]
+Let $I_l^0,I_h^0$ be the minimum and maximum of $3AC/c$
+over the eight endpoint triples. Set
+\[
+ V_*=\max(0,\mu_h^2c_h-(A_l^2+C_*^2)/c_h),\qquad
+ R_I=\tfrac32V_*+\mu_h(q_h-A_l).
+\]
+Equations \eqref{mf:cubic-real}--\eqref{mf:cubic-imag} enclose
+$P_3$ in $[R_l,R_h]+i[I_l^0-R_I,I_h^0+R_I]$.
+Subdivide its entire imaginary interval into $m$ equal closed
+strips. For a strip with midpoint $P_m$ and midpoint-to-corner
+radius $R_m$, use
+\[
+ h_3=R_m+2|P_m|\sin(3(\phi_h-\phi_l)/4)
+                 +|P_me^{-3i\phi_m}-\kappa_0|.
+\]
+Every quantity is enclosed in the indicated outward direction.
+Every strip is retained, with its endpoints. The values
+$m=4,8$ suffice for the two cubic certificates below.
+
+There are three further exclusions for a closed parameter cell.
+Let $y_*$ be the threshold $3$ or $9/4$ in the contrary assumption
+$q/\mu\ge y_*$, and let $\mu_0$ be the entrance cap, so that
+$\mu\le\min(\mu_0,q/y_*)$.
+Assume $q_l>0$, $0\le\phi_l\le\phi_h\le\pi/2$ and
+$0\le\alpha_l\le\alpha_h<1$, and put
+$b_*^2=\operatorname{dist}(0,[\beta_l,\beta_h])^2$.
+On the branch $q\le y_*\mu_0$, use
+$R_{\mathrm{mom}}=2\cos\phi_l/y_*$ and $\mu_h=q_h/y_*$;
+on the branch $q\ge y_*\mu_0$, use
+$R_{\mathrm{mom}}=2\mu_0\cos\phi_l/q_l$ and $\mu_h=\mu_0$.
+The cell is excluded if any of
+\begin{equation}\label{mf:cell-exclusions}
+ \alpha_l^2+b_*^2>R_{\mathrm{mom}}^2,\qquad
+ (1-\alpha_h)^2+b_*^2>1,\qquad
+ q_l>\mathcal E(\mu_h,\phi_l)
+\end{equation}
+holds, where
+\[
+ \mathcal E(\mu,\phi)
+ =K_0\mu^2+A_0\mu\cos\phi
+       +\gamma\cos^2\phi-\tfrac12\sin^2\phi.
+\]
+Here $K_0,A_0,\gamma$ are the constants in Proposition~\ref{mf:envelope}.
+The first two tests use lower bounds for the squared distances in
+the two moment disks. For the third, \eqref{mf:exact-envelope} gives
+$q\le\mathcal E(\mu,\phi)$, while
+\[
+ \partial_\mu\mathcal E=2K_0\mu+A_0\cos\phi\ge0,\qquad
+ \partial_\phi\mathcal E
+ =-\sin\phi\{A_0\mu+(2\gamma+1)\cos\phi\}\le0.
+\]
+All three tests therefore exclude the whole cell; their strict
+inequalities are checked with outward enclosures.
+
+\begin{proposition}\label{mf:D30}
+If $D=Hd\ge30$, then $Qd/H<3$.
+\end{proposition}
+\begin{proof}
+Proposition~\ref{mf:D270} treats $D\ge270$. Suppose
+$30\le D\le270$ and $q/\mu\ge3$.
+Proposition~\ref{mf:affine}, in its consequence for $D\ge7/2$,
+and Lemma~\ref{mf:cubic-moment} put the contrary domain in
+\[
+ q\in[1/90,403/900],\quad
+ \mu\le\min(1/30,q/3),\quad
+ 0\le\phi\le\pi/2,\quad
+ 0\le\alpha\le2/3,\quad|\beta|\le2/3,
+\]
+with the two moment-disk inequalities and the exact matrix
+envelope. Divide the $q$ interval at $1/10$.
+The fixed dyadic trees in
+\cert{fields/tang_cubic_family_D30_y3.json}
+have $9613$ and $16784$ closed leaves. A leaf is excluded by
+\eqref{mf:cell-exclusions} or Lemma~\ref{mf:point-obstruction}.
+The certificate has $3237,239,390$ leaves of the first three
+types, $3423$ quadratic-model leaves, $8$ single cubic-model
+leaves, and $19100$ complete cubic-strip families.
+The latter have $79392$ members. Thus there are $82823$
+point obstructions in all.
+
+The verifier reconstructs each leaf from the exact dyadic
+path; both halves of every subdivision are closed. Bottom-up
+sibling coalescence reduces each tree to its root,
+rejecting duplicate leaves, missing siblings, ancestor conflicts,
+and inconsistent splitting coordinates. All inequalities and
+all the point predicates are checked on the entire leaves by
+\cert{fields/tang_verify_cubic_family_cover_D30_frozen.py}.
+The source file records the exact test points and coefficient
+centers. Stored finite decimals defining those centers are
+interpreted as their exact binary rational values; their
+mismatch from the mathematical centers is included in the
+radii above. The integrands are entire, with integration remainders
+bounded as in Section~\ref{sec:certificates}.
+The certificate excludes the stated closed domain.
+Together with $D\ge270$ this proves the proposition.
+\end{proof}
+
+\begin{proposition}\label{mf:D25}
+If $D=Hd\ge25$, then $Qd/H<3$.
+\end{proposition}
+\begin{proof}
+Only $25\le D\le30$ remains after Proposition~\ref{mf:D30}.
+Under the contrary ratio $q/\mu\ge3$, the affine estimate gives
+\[
+ 1/10\le q\le59/125,\quad \mu\le\min(1/25,q/3),\quad
+ 0\le\alpha\le2/3,\quad|\beta|\le2/3.
+\]
+In this range $\phi<\pi/4$. Indeed if $\phi\ge\pi/4$,
+\eqref{mf:coarse-envelope}, $\cos\phi<71/100$, and
+$q\ge3\mu$ give
+\[
+ 0<\frac{21}{5}\mu^2+\frac{181}{200}\mu-\frac18
+ \le-\frac{513}{6250}<0.
+\]
+Use the closed $\phi$ interval $[0,\pi/4]$ and divide
+the $q$ interval at $3/25$.
+The two dyadic trees in
+\cert{fields/tang_D25_cubic_family_cover.json}
+have $15303$ and $35311$ leaves. The exclusions consist of
+$4752$ moment-disk, $393$ quadratic-disk, and $219$ matrix
+leaves, using \eqref{mf:cell-exclusions}.
+There are $2246$ quadratic-model leaves, $15$ single
+cubic-model leaves, and $42989$ complete strip families;
+the families contain $184216$ members.
+Every one of the $186477$ point obstructions satisfies
+\eqref{mf:point-predicates}.
+The checker \cert{fields/tang_verify_D25_cubic_family_frozen.py}
+uses the preceding finite-product and covariance formulas and
+reconstructs the two closed trees.
+Thus it excludes this domain. Its common boundary
+with $D\ge30$ is included.
+\end{proof}
+
+\begin{proposition}\label{mf:D100}
+If $D=Hd\ge100$, then $Qd/H<9/4$.
+\end{proposition}
+\begin{proof}
+By Proposition~\ref{mf:D270}, it remains to consider
+$100\le D\le270$ and $q/\mu\ge9/4$.
+The contrary domain is contained in
+\[
+ q\in[1/120,1313/10000],\quad
+ \mu\le\min(1/100,4q/9),\quad
+ 0\le\phi\le\pi/2,\quad
+ 0\le\alpha\le8/9,\quad|\beta|\le8/9,
+\]
+with the same two moment disks and matrix envelope.
+Split the $q$ interval at $9/400$. The two trees in
+\cert{fields/point_D100_y225.json} have $5200$ and $4545$ leaves.
+There are $1507$ moment-disk exclusions, $57$ quadratic-disk
+exclusions, and $21$ matrix exclusions from
+\eqref{mf:cell-exclusions}. On each of the
+remaining $8160$ leaves the quadratic version of
+Lemma~\ref{mf:point-obstruction} applies, with
+$B(t)=q_h\mu_hW^3t^3/[3(1-\mu_hW)]$.
+The coefficient radius is the full-cell $h_2$ displayed above.
+The checker \cert{fields/tang_independent_D100.py} reconstructs
+both trees, all coefficient radii, and every strict
+point obstruction. It evaluates the equivalent entire integral
+$J_0/g_0=w\int_0^1e^{(t-1)w+(t^2-1)\theta_0w^2/2}\,dt$;
+this follows by dividing the defining integral by $g_0$.
+Thus every point of the contrary domain is excluded, which
+proves the proposition.
+\end{proof}

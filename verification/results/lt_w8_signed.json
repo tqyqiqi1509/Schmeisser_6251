@@ -1,0 +1,669 @@
+{
+  "status": "PASS",
+  "scope": "New whole q<=.06 phase8-conditioned signed chord; entire second W8 circle signed field210; all scalar n6251 bootstrap joins",
+  "precision_bits": 448,
+  "checks": 64,
+  "theta_v": "967803/6250000",
+  "theta_m": "5282197/6250000",
+  "dot_lower": "3011/4000",
+  "chord_constant": "4/3",
+  "Lipschitz_endpoint": "214911/781250",
+  "center_shift": "[0.3970219535640684050772742643791797837575288817748466443999648491336750949358545134023857914429792414916022762383131897106007863170355 +/- 7.19e-134]",
+  "effective_quartic_radius": "[0.4774196651400684050772742643791797837575288817748466443999648491336750949358545134023857914429792414916022762383131897106007863170355 +/- 7.21e-134]",
+  "curvature_at_cap": "[0.02806187078306013762645368083767808628114358783365426055799983370823700253163951007263368289129267947081186380240829525056012282831965 +/- 3.41e-135]",
+  "C0": "[84.7176391228720493492744862869160919005663199905031414020040867897506416243192551401813877891941778493293799130790220099025565400303 +/- 5.12e-131]",
+  "field_constant": "[209.0352782457440986985489725738321838011326399810062828040081735795012832486385102803627755783883556986587598261580440198051130800607 +/- 2.64e-131]",
+  "outside_phase8_D": "27771875/498183",
+  "low_middle_phase8_D": "27250000/495167",
+  "full_nonquartic_terms": [
+    {
+      "monomial": [
+        0,
+        1,
+        0
+      ],
+      "weight": 2,
+      "norm": "[0.07996170308891969891689956696488269583453549266810928188370616116787100087860528723162444679069720979208613377455499167568481550624227 +/- 5.30e-135]"
+    },
+    {
+      "monomial": [
+        0,
+        0,
+        1
+      ],
+      "weight": 3,
+      "norm": "[0.006207313682969007316145195760962805937776928842826866613683556159674200251538559732230690179039676337745156113128666903844849771717142 +/- 5.26e-136]"
+    },
+    {
+      "monomial": [
+        1,
+        1,
+        0
+      ],
+      "weight": 3,
+      "norm": "[0.06823728674070397005130831758810866000808393473877339799998972587685435039659132778725495650845886989479075917920686805632574993866384 +/- 3.25e-135]"
+    },
+    {
+      "monomial": [
+        0,
+        2,
+        0
+      ],
+      "weight": 4,
+      "norm": "[0.002820288710706982683067751765993863848664601275629457882327251952232163847260758391093356979876832237915025208539417567267609889537319 +/- 5.07e-136]"
+    },
+    {
+      "monomial": [
+        1,
+        0,
+        1
+      ],
+      "weight": 4,
+      "norm": "[0.006316564236898587356321385395481213469021265884709528237743286680623645161700530680286382159467432038773498696181940525639236231151311 +/- 2.45e-136]"
+    },
+    {
+      "monomial": [
+        2,
+        1,
+        0
+      ],
+      "weight": 4,
+      "norm": "[0.04825563395076947253862702864110997469684436181652640135119871724229666562023447806371014977474830854756609184248369677220481129537999 +/- 4.75e-135]"
+    },
+    {
+      "monomial": [
+        0,
+        1,
+        1
+      ],
+      "weight": 5,
+      "norm": "[0.0005042111291392481539349897729748305419228545720831627349638818246893741229080533594992008203517917459224899849138378784629454324269645 +/- 3.78e-137]"
+    },
+    {
+      "monomial": [
+        1,
+        2,
+        0
+      ],
+      "weight": 5,
+      "norm": "[0.004404347061091972292255797700031317323164858472319236316176232851417287941342725678079707083268811013111126089547925599273937063910165 +/- 6.17e-136]"
+    },
+    {
+      "monomial": [
+        2,
+        0,
+        1
+      ],
+      "weight": 5,
+      "norm": "[0.004945521917418151130960196340993098238480536502830022282278032838876586850132929238906916764167094768023140462203387795940981819735343 +/- 5.56e-136]"
+    },
+    {
+      "monomial": [
+        3,
+        1,
+        0
+      ],
+      "weight": 5,
+      "norm": "[0.03220078421521643092540477583159321330373104435116684694684092514715868584609970043100639120881975045876041125813820560835601356828617 +/- 5.23e-135]"
+    },
+    {
+      "monomial": [
+        5,
+        0,
+        0
+      ],
+      "weight": 5,
+      "norm": "[0.03906942750566027441570867851687538306750707038807722897184690751778326970652810033370440339566362244400817669628373208996716861165038 +/- 4.91e-135]"
+    },
+    {
+      "monomial": [
+        0,
+        0,
+        2
+      ],
+      "weight": 6,
+      "norm": "[2.195510455721285231688627436259881457173492820879649598965935568279519383882370301622752271818580428690700783173219153365192398952309e-5 +/- 1.57e-138]"
+    },
+    {
+      "monomial": [
+        0,
+        3,
+        0
+      ],
+      "weight": 6,
+      "norm": "[0.0001284787461979417259509746575986416717545260637463574250305429429508258207377387198883950627047524547421306963342139291084707535038356 +/- 2.28e-137]"
+    },
+    {
+      "monomial": [
+        1,
+        1,
+        1
+      ],
+      "weight": 6,
+      "norm": "[0.0008658019085984415375880144373170226025602997654813123344921182335706822830433302030512271518838171195298988719361570375308176082359031 +/- 5.84e-137]"
+    },
+    {
+      "monomial": [
+        2,
+        2,
+        0
+      ],
+      "weight": 6,
+      "norm": "[0.004702871719805254801635321061974209927496459484081243395175193031622182052117462990632060619072314494991998609105592236687813715924712 +/- 5.02e-136]"
+    },
+    {
+      "monomial": [
+        3,
+        0,
+        1
+      ],
+      "weight": 6,
+      "norm": "[0.003528310213187904548452786967465776780018498697428473063830525599816668794020925676392661548397030495878071451022779456087673876303165 +/- 5.87e-136]"
+    },
+    {
+      "monomial": [
+        4,
+        1,
+        0
+      ],
+      "weight": 6,
+      "norm": "[0.02096202280367322031721731745201683520647658743518503572060091393642430239489277758173363338142127527527123494360474373153202864480951 +/- 1.87e-135]"
+    },
+    {
+      "monomial": [
+        6,
+        0,
+        0
+      ],
+      "weight": 6,
+      "norm": "[0.02030582192942719843191099002479804568656367306935393900558742812990551338962421602668049784508796623354807245036470863561050150448579 +/- 5.88e-135]"
+    },
+    {
+      "monomial": [
+        0,
+        2,
+        1
+      ],
+      "weight": 7,
+      "norm": "[3.668004608632207775770018068254791934433269025530650997634438324317942438835707925476850900864827122356530320614970353109763229601408e-5 +/- 3.24e-138]"
+    },
+    {
+      "monomial": [
+        1,
+        0,
+        2
+      ],
+      "weight": 7,
+      "norm": "[4.116520020750668775047994770694378186990189722513978389410538627528045700122759058250098416975240898406065517472179781573460626375440e-5 +/- 5.04e-138]"
+    },
+    {
+      "monomial": [
+        1,
+        3,
+        0
+      ],
+      "weight": 7,
+      "norm": "[0.0002924546933881921699980440628671649672083035008978827567208993468266249506721070179134024142400455047940416290621222437386040984906703 +/- 8.06e-137]"
+    },
+    {
+      "monomial": [
+        2,
+        1,
+        1
+      ],
+      "weight": 7,
+      "norm": "[0.000987367690687576432138252132134867136006314884900433001975561003783883562720224421561469427747634424155121467224365127755257742520204 +/- 3.74e-136]"
+    },
+    {
+      "monomial": [
+        3,
+        2,
+        0
+      ],
+      "weight": 7,
+      "norm": "[0.004272459784339552212145537060628761622442631844582888220002996334433170725241538142693465086878265315036356830859032789204899073178785 +/- 8.11e-136]"
+    },
+    {
+      "monomial": [
+        4,
+        0,
+        1
+      ],
+      "weight": 7,
+      "norm": "[0.002408543723379192550487885020256648831181681359381133598012547811932521263932846555092634500703228105100528212152429743284880485483901 +/- 7.43e-136]"
+    },
+    {
+      "monomial": [
+        5,
+        1,
+        0
+      ],
+      "weight": 7,
+      "norm": "[0.01347715729614437238453378570769457500966165088639269076351440793945684542919963471528032362638366792408539009314976644186962897390473 +/- 5.55e-135]"
+    },
+    {
+      "monomial": [
+        7,
+        0,
+        0
+      ],
+      "weight": 7,
+      "norm": "[0.01086141122327818488753516653005524227373938665476498328696624230159816264089456323067215882681662017800691100918699702308112888930999 +/- 1.73e-135]"
+    },
+    {
+      "monomial": [
+        0,
+        1,
+        2
+      ],
+      "weight": 8,
+      "norm": "[3.39957545115748895651324114548234823533734204484974047159460460309732000229600230604332483927459413006120165599864303028235723767340e-6 +/- 2.20e-138]"
+    },
+    {
+      "monomial": [
+        0,
+        4,
+        0
+      ],
+      "weight": 8,
+      "norm": "[6.58922306555379590683286421454832212592779562636173027344242428183943565776197972682661608289610800338093370565825223519266212226290e-6 +/- 5.60e-138]"
+    },
+    {
+      "monomial": [
+        1,
+        2,
+        1
+      ],
+      "weight": 8,
+      "norm": "[8.89870516892826629287882871403043223016004877859734555500097471825596831279318062776938474714764611497225787202128140260944700704460e-5 +/- 2.06e-137]"
+    },
+    {
+      "monomial": [
+        2,
+        0,
+        2
+      ],
+      "weight": 8,
+      "norm": "[5.00258194444149670673614834777695588649793118267337639718376524577767078852836055775894009082996308885389502360911961498351795856641e-5 +/- 3.57e-137]"
+    },
+    {
+      "monomial": [
+        2,
+        3,
+        0
+      ],
+      "weight": 8,
+      "norm": "[0.000417622585441044389792658841308965554930042429898491721878455051441215142625699781602816364429753447695032953708460200596849442092784 +/- 5.30e-136]"
+    },
+    {
+      "monomial": [
+        3,
+        1,
+        1
+      ],
+      "weight": 8,
+      "norm": "[0.000941572154129633665348528872917415661859122909640999784720747839518485854964189611090017198666948049422231907945173001129393961540102 +/- 2.84e-136]"
+    },
+    {
+      "monomial": [
+        4,
+        2,
+        0
+      ],
+      "weight": 8,
+      "norm": "[0.00355223819801760278234720114245711881491574880824516123137832961851006928179562507111132602631100340280325299570403403589436536618084 +/- 4.03e-135]"
+    },
+    {
+      "monomial": [
+        5,
+        0,
+        1
+      ],
+      "weight": 8,
+      "norm": "[0.001604591617100720659881822730301100821359405610570693807786909214954402733556384033935263526755469983607362605067773796990810184083034 +/- 7.67e-136]"
+    },
+    {
+      "monomial": [
+        6,
+        1,
+        0
+      ],
+      "weight": 8,
+      "norm": "[0.00860524591240815231496031785107818920785596684917267669150466454289525259987798967689591910658109780672758698839781380564327525409292 +/- 4.86e-135]"
+    },
+    {
+      "monomial": [
+        8,
+        0,
+        0
+      ],
+      "weight": 8,
+      "norm": "[0.00593609710486897295203141326857195064445181755509765588990469344083052717109312725202026785914041871883880658777379140356437878262842 +/- 3.20e-135]"
+    }
+  ],
+  "predicates": [
+    {
+      "name": "full theta disk positive real B",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full tau imaginary bound",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole tau real bound",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "already legal phase8 gives full sigma imaginary bound",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole sigma real bound",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole phase-conditioned chord",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole phase-conditioned Lipschitz cancellation",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "true pi upper for complete cancellation",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole exact coefficient b2",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole exact coefficient b3",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole exact coefficient b4",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole exact coefficient D3",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole exact coefficient D4",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "independent root scalar input scope",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole second circle falls in new signed bridge",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "second actual phase implies phase8",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "weighted D scale has exact ratio3 cap",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [0, 1, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [0, 0, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [1, 1, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [0, 2, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [1, 0, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [2, 1, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [0, 1, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [1, 2, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [2, 0, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [3, 1, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [5, 0, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [0, 0, 2]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [0, 3, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [1, 1, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [2, 2, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [3, 0, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [4, 1, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [6, 0, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [0, 2, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [1, 0, 2]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [1, 3, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [2, 1, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [3, 2, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [4, 0, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [5, 1, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [7, 0, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [0, 1, 2]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [0, 4, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [1, 2, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [2, 0, 2]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [2, 3, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [3, 1, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [4, 2, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [5, 0, 1]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [6, 1, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full nonquartic term weight at least2 [8, 0, 0]",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full weighted D curvature85",
+      "passed": true,
+      "margin": "[0.2823608771279506507255137130839080994336800094968585979959132102493583756807448598186122108058221506706200869209779900974434599697 +/- 5.12e-131]"
+    },
+    {
+      "name": "full same finite-polynomial field210",
+      "passed": true,
+      "margin": "[0.9647217542559013014510274261678161988673600189937171959918264204987167513614897196372244216116443013412401738419559801948869199393 +/- 2.64e-131]"
+    },
+    {
+      "name": "first outside matrix phase floor48",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole outside matrix excludes imaginary2over3",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole outside q06 actual-circle entrance",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole low-middle matrix excludes imaginary.7",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "whole low-middle q06 actual-circle entrance",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full outside Q06-to-Q0546 join",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full low-middle Q06-to-Q0546 join",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full low-middle field210 enters D70",
+      "passed": true,
+      "margin": null
+    },
+    {
+      "name": "full outside field210 enters D70",
+      "passed": true,
+      "margin": null
+    }
+  ],
+  "center_sha256": "2a0f8a1d121649c20e1a12e0fb045a7b0914b8794d8a0a7ce93e51e697005fe2",
+  "signed_root_sha256": "c3891dc8a77ddbdf59200776290615e3e7f30e9e21a1dee7e335ee6a65d4035c",
+  "source_sha256": "c4440e68d184ab43ffbdd89460c2c21cb3eecddfd0bbcd76e34e5376eafed013"
+}

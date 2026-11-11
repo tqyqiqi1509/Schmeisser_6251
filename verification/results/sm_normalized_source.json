@@ -1,0 +1,510 @@
+{
+  "status": "PASS",
+  "scope": "Complete normalized T-source D25 rows and whole larger-tau D25 entrances; 8001 downstream D70/medium160; 6251 lawful q06mu02 entrances; no global6251 assertion",
+  "independent_method": "Exact Fraction source reconstruction, alternating Machin enclosure, whole-X Bernstein convex hull, full corresponding negative matrix term",
+  "checks": 78,
+  "whole_polynomial_cells": 2,
+  "matrix_gamma": "241/1000",
+  "matrix_negative_sine": "741/1000",
+  "rows": [
+    {
+      "label": "8001",
+      "degree_floor": 8001,
+      "rho_interval": [
+        "1/100",
+        "3/40"
+      ],
+      "Xsplit": "3/10",
+      "joint_all_y_M": "3",
+      "source_endpoints": [
+        "47532391161157/66760444160000",
+        "129896936552271/197119076864000"
+      ],
+      "source_K": "129896936552271/197119076864000",
+      "small_X_D": "43298978850757/1478393076480",
+      "large_X_h_squared": "43298978850757/49279769216",
+      "large_tau_matrix_upper": "16788092489/2223000",
+      "large_x_D": "610020000000000/6793005177007",
+      "outside_phase_D": "37168000/498183",
+      "low_middle_phase_D": "36500000/495167",
+      "medium_D": "164"
+    },
+    {
+      "label": "6251_new",
+      "degree_floor": 6251,
+      "rho_interval": [
+        "1/100",
+        "9/100"
+      ],
+      "Xsplit": "7/25",
+      "joint_all_y_M": "31/10",
+      "source_endpoints": [
+        "508099406608733/731115816000000",
+        "239012578698741/379195048000000"
+      ],
+      "source_K": "239012578698741/379195048000000",
+      "small_X_D": "26556953188749/1061746134400",
+      "large_X_h_squared": "239012578698741/376161487616",
+      "large_tau_matrix_upper": "640685569/102600",
+      "large_x_D": "476578125000000/6793005177007",
+      "outside_ratio3_D": "95315625/1964048",
+      "outside_coarse_phase": "2/3",
+      "outside_q06_D": "571893750/10786493",
+      "low_middle_ratio3_D": "375/8",
+      "low_middle_coarse_phase": "7/10",
+      "low_middle_q06_D": "93750000/1814501"
+    }
+  ],
+  "polynomial_certificates": [
+    {
+      "name": "8001 full all-real-y square",
+      "polynomial": [
+        "0",
+        "-4320",
+        "10079",
+        "18576",
+        "1504",
+        "-2304",
+        "-256"
+      ],
+      "pieces": [
+        {
+          "left": "3/10",
+          "right": "1",
+          "degree": 6,
+          "coefficients": [
+            "7441191/62500",
+            "570851/625",
+            "48529483/18750",
+            "13638223/2500",
+            "14683999/1500",
+            "472529/30",
+            "23279"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "6251_new full all-real-y square",
+      "polynomial": [
+        "0",
+        "-4464",
+        "10447",
+        "19344",
+        "1760",
+        "-2304",
+        "-256"
+      ],
+      "pieces": [
+        {
+          "left": "7/25",
+          "right": "1",
+          "degree": 6,
+          "coefficients": [
+            "120508031/244140625",
+            "1411226329/1953125",
+            "185744659/78125",
+            "416205433/78125",
+            "30945547/3125",
+            "407837/25",
+            "24527"
+          ]
+        }
+      ]
+    }
+  ],
+  "predicates": [
+    {
+      "name": "Machin exact pi lower",
+      "pass_": true,
+      "margin": "2464308090025573799462494504463835323861661425981282253524253302441623895355157862448755555988308628561201289195129793080300792036992487909670789229367057615084621/928669569164310091680384228827043636577735086230358598351421721588979656921580345271215771026064569553342112601962611384713762434437489901029039174318313598632812500000"
+    },
+    {
+      "name": "complete matrix constant K0",
+      "pass_": true,
+      "margin": "96525791058/1080438159215"
+    },
+    {
+      "name": "complete matrix constant A0",
+      "pass_": true,
+      "margin": "4650222901/432175263686"
+    },
+    {
+      "name": "sharper complete matrix gamma",
+      "pass_": true,
+      "margin": "120935195663/216087631843000"
+    },
+    {
+      "name": "same sine-square coefficient retained",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "full large critical-displacement discriminant",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "small-displacement derivative has no real root",
+      "pass_": true,
+      "margin": "5"
+    },
+    {
+      "name": "small-displacement derivative is negative",
+      "pass_": true,
+      "margin": "1/2"
+    },
+    {
+      "name": "small-displacement exact endpoint",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "small-displacement entire positive endpoint",
+      "pass_": true,
+      "margin": "1/64"
+    },
+    {
+      "name": "half critical numerator",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "8001 full polar denominator",
+      "pass_": true,
+      "margin": "12719/12800"
+    },
+    {
+      "name": "8001 inverse Cayley to right",
+      "pass_": true,
+      "margin": "12719/25600"
+    },
+    {
+      "name": "8001 normalized lower circle real",
+      "pass_": true,
+      "margin": "6391/6400"
+    },
+    {
+      "name": "8001 whole crescent gap gain",
+      "pass_": true,
+      "margin": "17/80"
+    },
+    {
+      "name": "8001 direct HB source positive",
+      "pass_": true,
+      "margin": "129896936552271/197119076864000"
+    },
+    {
+      "name": "8001 split in positive kappa branch",
+      "pass_": true,
+      "margin": "1/20"
+    },
+    {
+      "name": "8001 small-X direct D25 entrance",
+      "pass_": true,
+      "margin": "19017455816271/197119076864000"
+    },
+    {
+      "name": "8001 full all-real-y square full left endpoint",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "8001 full all-real-y square full right endpoint",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "8001 full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "7441191/62500"
+    },
+    {
+      "name": "8001 full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "570851/625"
+    },
+    {
+      "name": "8001 full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "48529483/18750"
+    },
+    {
+      "name": "8001 full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "13638223/2500"
+    },
+    {
+      "name": "8001 full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "14683999/1500"
+    },
+    {
+      "name": "8001 full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "472529/30"
+    },
+    {
+      "name": "8001 full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "23279"
+    },
+    {
+      "name": "8001 entire large-X direct D25 entrance",
+      "pass_": true,
+      "margin": "37497369272271/24639884608"
+    },
+    {
+      "name": "8001 larger-tau p strictly positive",
+      "pass_": true,
+      "margin": "35163438999/250000000000"
+    },
+    {
+      "name": "8001 entire larger-tau x below tau",
+      "pass_": true,
+      "margin": "6999/500000"
+    },
+    {
+      "name": "8001 entire larger-tau matrix D25",
+      "pass_": true,
+      "margin": "995907511/2223000"
+    },
+    {
+      "name": "8001 direct crescent rational sqrt majorant",
+      "pass_": true,
+      "margin": "20071688999/1000000000000"
+    },
+    {
+      "name": "8001 sqrt2 rational lower",
+      "pass_": true,
+      "margin": "1/25"
+    },
+    {
+      "name": "8001 large-x direct D70",
+      "pass_": true,
+      "margin": "134509637609510/6793005177007"
+    },
+    {
+      "name": "8001 lawful ratio3 D60",
+      "pass_": true,
+      "margin": "260070/122753"
+    },
+    {
+      "name": "8001 actual q rectangle endpoint",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "8001 actual mu rectangle endpoint",
+      "pass_": true,
+      "margin": "1/300"
+    },
+    {
+      "name": "8001 outside Origin same-phase D70",
+      "pass_": true,
+      "margin": "2295190/498183"
+    },
+    {
+      "name": "8001 low-middle normalization lower",
+      "pass_": true,
+      "margin": "1/20"
+    },
+    {
+      "name": "8001 whole inside-Origin corner",
+      "pass_": true,
+      "margin": "229811001/125000000000"
+    },
+    {
+      "name": "8001 corner quadratic monotonicity",
+      "pass_": true,
+      "margin": "219499/500000"
+    },
+    {
+      "name": "8001 low-middle strict radial D60 endpoint",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "8001 low-middle phase D70",
+      "pass_": true,
+      "margin": "1838310/495167"
+    },
+    {
+      "name": "8001 lawful D70-to-medium160",
+      "pass_": true,
+      "margin": "4"
+    },
+    {
+      "name": "6251_new full polar denominator",
+      "pass_": true,
+      "margin": "79271/80000"
+    },
+    {
+      "name": "6251_new inverse Cayley to right",
+      "pass_": true,
+      "margin": "79271/160000"
+    },
+    {
+      "name": "6251_new normalized lower circle real",
+      "pass_": true,
+      "margin": "39919/40000"
+    },
+    {
+      "name": "6251_new whole crescent gap gain",
+      "pass_": true,
+      "margin": "41/200"
+    },
+    {
+      "name": "6251_new direct HB source positive",
+      "pass_": true,
+      "margin": "239012578698741/379195048000000"
+    },
+    {
+      "name": "6251_new split in positive kappa branch",
+      "pass_": true,
+      "margin": "3/100"
+    },
+    {
+      "name": "6251_new small-X direct D25 entrance",
+      "pass_": true,
+      "margin": "119698458741/379195048000000"
+    },
+    {
+      "name": "6251_new full all-real-y square full left endpoint",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "6251_new full all-real-y square full right endpoint",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "6251_new full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "120508031/244140625"
+    },
+    {
+      "name": "6251_new full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "1411226329/1953125"
+    },
+    {
+      "name": "6251_new full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "185744659/78125"
+    },
+    {
+      "name": "6251_new full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "416205433/78125"
+    },
+    {
+      "name": "6251_new full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "30945547/3125"
+    },
+    {
+      "name": "6251_new full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "407837/25"
+    },
+    {
+      "name": "6251_new full all-real-y square whole Bernstein coefficient",
+      "pass_": true,
+      "margin": "24527"
+    },
+    {
+      "name": "6251_new entire large-X direct D25 entrance",
+      "pass_": true,
+      "margin": "3911648938741/60671207680"
+    },
+    {
+      "name": "6251_new larger-tau p strictly positive",
+      "pass_": true,
+      "margin": "42044688999/250000000000"
+    },
+    {
+      "name": "6251_new entire larger-tau x below tau",
+      "pass_": true,
+      "margin": "14499/500000"
+    },
+    {
+      "name": "6251_new entire larger-tau matrix D25",
+      "pass_": true,
+      "margin": "564431/102600"
+    },
+    {
+      "name": "6251_new direct crescent rational sqrt majorant",
+      "pass_": true,
+      "margin": "20071688999/1000000000000"
+    },
+    {
+      "name": "6251_new sqrt2 rational lower",
+      "pass_": true,
+      "margin": "1/25"
+    },
+    {
+      "name": "6251_new large-x direct D70",
+      "pass_": true,
+      "margin": "1067762609510/6793005177007"
+    },
+    {
+      "name": "6251 outside after lawful ratio3 exceeds48",
+      "pass_": true,
+      "margin": "1041321/1964048"
+    },
+    {
+      "name": "6251 coarse outside cosine bound",
+      "pass_": true,
+      "margin": "1/144"
+    },
+    {
+      "name": "6251 entire outside forbidden sine2over3",
+      "pass_": true,
+      "margin": "11/19200"
+    },
+    {
+      "name": "6251 outside legal q06mu02 D50",
+      "pass_": true,
+      "margin": "32569100/10786493"
+    },
+    {
+      "name": "6251 low-middle normalization lower",
+      "pass_": true,
+      "margin": "1/20"
+    },
+    {
+      "name": "6251 whole inside-Origin corner",
+      "pass_": true,
+      "margin": "229811001/125000000000"
+    },
+    {
+      "name": "6251 coarse low-middle cosine bound",
+      "pass_": true,
+      "margin": "49/40000"
+    },
+    {
+      "name": "6251 entire low-middle forbidden sine7over10",
+      "pass_": true,
+      "margin": "90713/2500000"
+    },
+    {
+      "name": "6251 low-middle legal q06mu02 D50",
+      "pass_": true,
+      "margin": "3024950/1814501"
+    },
+    {
+      "name": "6251 strict q06 rectangle endpoint",
+      "pass_": true,
+      "identity": true
+    },
+    {
+      "name": "6251 strict mu02 rectangle endpoint",
+      "pass_": true,
+      "identity": true
+    }
+  ],
+  "checker_sha256": "68b210c72b9f8f04143a24228a7423098e175e8c02ede2d23d85c8b23b95f660",
+  "seconds": 0.005492737996974029
+}

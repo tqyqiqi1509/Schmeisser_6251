@@ -1,0 +1,91 @@
+{"processed": 500, "unresolved": 0, "seconds": 0.7644779682159424}
+{"processed": 1000, "unresolved": 0, "seconds": 1.5510814189910889}
+{"processed": 1500, "unresolved": 0, "seconds": 2.258871555328369}
+{"processed": 2000, "unresolved": 0, "seconds": 3.1444344520568848}
+{"processed": 2500, "unresolved": 0, "seconds": 3.8551347255706787}
+{"processed": 3000, "unresolved": 0, "seconds": 5.6887047290802}
+{"processed": 3500, "unresolved": 0, "seconds": 7.2690675258636475}
+{"processed": 4000, "unresolved": 0, "seconds": 9.256967782974243}
+{"processed": 4500, "unresolved": 0, "seconds": 11.216557502746582}
+{"processed": 5000, "unresolved": 0, "seconds": 13.51200532913208}
+{"processed": 5500, "unresolved": 0, "seconds": 15.4190993309021}
+{"processed": 6000, "unresolved": 0, "seconds": 17.326865434646606}
+{"processed": 6500, "unresolved": 0, "seconds": 19.91943597793579}
+{"processed": 7000, "unresolved": 0, "seconds": 21.772443532943726}
+{"processed": 7500, "unresolved": 0, "seconds": 24.07973337173462}
+{"processed": 8000, "unresolved": 0, "seconds": 26.69669246673584}
+{"processed": 8500, "unresolved": 0, "seconds": 29.47741413116455}
+{"processed": 9000, "unresolved": 0, "seconds": 32.1243793964386}
+{"processed": 9500, "unresolved": 0, "seconds": 33.36032772064209}
+{"processed": 10000, "unresolved": 0, "seconds": 35.612226247787476}
+{"processed": 10500, "unresolved": 0, "seconds": 37.77023100852966}
+{"processed": 11000, "unresolved": 0, "seconds": 39.441575050354004}
+{"processed": 11500, "unresolved": 0, "seconds": 41.19550180435181}
+{"processed": 12000, "unresolved": 0, "seconds": 42.92455506324768}
+{"processed": 12500, "unresolved": 0, "seconds": 44.90031981468201}
+{"processed": 13000, "unresolved": 0, "seconds": 46.37671971321106}
+{"processed": 13500, "unresolved": 0, "seconds": 47.78442859649658}
+{"processed": 14000, "unresolved": 0, "seconds": 49.6126434803009}
+{"processed": 14500, "unresolved": 0, "seconds": 51.080413818359375}
+{"processed": 15000, "unresolved": 0, "seconds": 52.49605321884155}
+{"processed": 15500, "unresolved": 0, "seconds": 54.37474822998047}
+{"processed": 16000, "unresolved": 0, "seconds": 56.08854794502258}
+{"processed": 16500, "unresolved": 0, "seconds": 57.91921424865723}
+{"processed": 17000, "unresolved": 0, "seconds": 59.65647912025452}
+{"processed": 17500, "unresolved": 0, "seconds": 61.3895537853241}
+{"processed": 18000, "unresolved": 0, "seconds": 62.59552311897278}
+{"processed": 18500, "unresolved": 0, "seconds": 64.14897203445435}
+{"processed": 19000, "unresolved": 0, "seconds": 65.7216215133667}
+{"processed": 19500, "unresolved": 0, "seconds": 66.85958361625671}
+{"processed": 20000, "unresolved": 0, "seconds": 68.05744934082031}
+{"processed": 20500, "unresolved": 0, "seconds": 69.72296524047852}
+{"processed": 21000, "unresolved": 0, "seconds": 71.44437527656555}
+{"processed": 21500, "unresolved": 0, "seconds": 72.30028772354126}
+{"processed": 22000, "unresolved": 0, "seconds": 74.02653813362122}
+{"processed": 22500, "unresolved": 0, "seconds": 75.16457867622375}
+{"processed": 23000, "unresolved": 0, "seconds": 76.1479721069336}
+{"processed": 23500, "unresolved": 0, "seconds": 77.0183801651001}
+{"processed": 24000, "unresolved": 0, "seconds": 78.17754697799683}
+{"processed": 24500, "unresolved": 0, "seconds": 78.88862228393555}
+{"processed": 25000, "unresolved": 0, "seconds": 79.34812474250793}
+{"processed": 25500, "unresolved": 0, "seconds": 80.21653246879578}
+{"processed": 26000, "unresolved": 0, "seconds": 80.98556208610535}
+{
+  "status": "PASS",
+  "target_ratio": "3",
+  "entrance": 30,
+  "independent_methods": "Fraction partition, Acb analytic quadrature, direct Jprime/J with complete checked P3 strip families, independent cubic covariance rectangle, and full tail; no author code imported",
+  "source_sha256": "4fc2368104d287b2d5391ebba7d16ecc6aa3f053fed221d9afef47b2a6b7eb3f",
+  "precision_bits": 144,
+  "quadrature_tolerance_bits": 96,
+  "tail_degree": 8,
+  "partition": [
+    {
+      "branch": 0,
+      "leaves": 9613,
+      "maximum_depth": 21,
+      "exact_binary_volume": "1"
+    },
+    {
+      "branch": 1,
+      "leaves": 16784,
+      "maximum_depth": 21,
+      "exact_binary_volume": "1"
+    }
+  ],
+  "counts": {
+    "direct": 3423,
+    "cubic_family": 19100,
+    "moment": 3237,
+    "cubic_direct": 8,
+    "matrix": 390,
+    "qdisk": 239
+  },
+  "point_certificates": 82823,
+  "failed_count": 0,
+  "diagnostics": {
+    "max_direct_upper": -0.00010083470532883977,
+    "min_projection": 2.4836363664141214e-06
+  },
+  "seconds": 81.0306556224823
+}

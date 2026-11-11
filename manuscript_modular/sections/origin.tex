@@ -1,0 +1,1785 @@
+\section{The origin region}\label{sec:origin}
+
+In this section we exclude a rightmost zero close to the upper endpoint of
+the unit disk.  The estimates apply down to arbitrarily small positive
+scales.
+
+\begin{proposition}[Origin region]\label{or:theorem}
+Let $P$ have degree $n\ge6251$, with all its zeros in $\overline\D$.
+Suppose that $a>0$ and
+\[
+             |a-\xi|>1\qquad(P'(\xi)=0).
+\]
+Let $b=x+iy$ be a rightmost zero of $P$, where $x\ge a$ and $y\ge0$.
+Then
+\begin{equation}\label{or:scale-conclusion}
+       \max(x,1-y)>\rho_*:=\frac{30501}{500000}.
+\end{equation}
+All zeros and critical points in this statement, and in the sums below,
+are counted with their algebraic multiplicities.
+\end{proposition}
+
+\subsection{Normalization and radial identities}
+
+Suppose, to the contrary, that
+\[
+ \rho=\max(x,1-y)\le\rho_*,\qquad
+ F(u)=P(i+\rho u),\qquad
+ \beta=X-iT=\frac{b-i}{\rho},\qquad \alpha=\frac a\rho.
+\]
+Then
+\begin{equation}\label{or:normalization}
+ 0<\alpha\le X\le1,\qquad 0<T\le1,\qquad \max(X,T)=1.
+\end{equation}
+Here $T>0$: a point $x+iy\in\overline\D$ with $x>0$ cannot have
+$y=1$.  Every zero $u$ of $F$ satisfies
+\begin{equation}\label{or:original-domain}
+                  \Re u\le X,\qquad |i+\rho u|\le1.
+\end{equation}
+Gauss--Lucas and the strict hole give, for each critical point $v=r-it$,
+\begin{equation}\label{or:critical-domain}
+ \frac\rho2|v|^2\le t<\frac\rho2|v-\alpha|^2,
+                  \qquad r<\frac\alpha2.
+\end{equation}
+The root $\beta$ is simple, since its real part is strictly larger than
+that of every critical point.  Put
+\begin{equation}\label{or:notation}
+ \begin{gathered}
+ N=n-1,\quad N_0=6250,\quad n_0=6251,\quad c_\rho=\rho/2,\quad
+ I(u)=-\Im u-\frac\rho2|u|^2,\\
+ S=\frac{F''(\beta)}{F'(\beta)}=\sum_v\frac1{\beta-v},\quad
+ h=|S|,\quad Q=\sum_v\frac1{|\beta-v|^2},\quad
+ d=\min_v|\beta-v|,\\
+ y_0=\frac Qh,\quad q=\frac Q{h^2},\quad
+ \mu=\frac1{dh},\quad D=dh,\quad \tau=\frac{N\rho}{2}.
+ \end{gathered}
+\end{equation}
+We use $y_0$ for the moment ratio, to distinguish it from the physical
+coordinate $y$ of $b$.  The original and critical insets $I$ are
+nonnegative.  Moreover,
+\begin{equation}\label{or:horizontal}
+ \Re S>0,\quad h>0,\quad
+ Q<\frac{2\Re S}{X},\quad h^2\le NQ,\quad \frac hn<y_0.
+\end{equation}
+Indeed, $X-r>X/2$ in every summand of $\Re S$; the penultimate
+inequality is Cauchy--Schwarz.  Also, by
+\eqref{or:critical-domain},
+\begin{equation}\label{or:inset-critical}
+ I(v)<\rho\alpha(\alpha/2-r)\le\rho X(X/2-r).
+\end{equation}
+For the last comparison subtract the two quadratic expressions: their
+difference is $(X-\alpha)((X+\alpha)/2-r)\ge0$.
+
+For $b=i+\rho\beta$ and any $z\ne\beta$,
+\begin{equation}\label{or:radial-one}
+ \Re\frac b{\beta-z}
+       =\frac\rho2+\frac{I(z)-I(\beta)}{|\beta-z|^2}.
+\end{equation}
+Summing over the critical points, and writing
+$E_c=\sum_v I(v)/|\beta-v|^2$, gives
+\begin{equation}\label{or:radial}
+ \tau=\rho X\Re S-(1-\rho T)\Im S-E_c+I(\beta)Q.
+\end{equation}
+Since $E_c\ge0$, $|b|\le1$, and $I(\beta)<T$, it follows that
+\begin{equation}\label{or:radial-unphased}
+                         \tau<h(1+Ty_0).
+\end{equation}
+On the other hand \eqref{or:inset-critical} gives
+\[
+            E_c<\rho(X\Re S-X^2Q/2).
+\]
+Substitution into \eqref{or:radial}, retaining the term $-E_c$, yields
+\begin{equation}\label{or:radial-sharp}
+ T(1-\rho T/2)Q<\tau+(1-\rho T)\Im S.
+\end{equation}
+Thus, if $|\Im S|<J$,
+\begin{align}
+ \tau&<\rho h+J+Ty_0h,\label{or:radial-phase}\\
+ \left(\frac hn\right)^2
+ &<\left(\frac hN\right)^2
+ <\frac{\rho/2+J/N}{T(1-\rho T/2)}.\label{or:radial-ratio}
+\end{align}
+
+At zero inset we have the following bound.
+\begin{lemma}[A boundary source]\label{or:zero-inset}
+If $X=1$ and $I(\beta)=0$, then $h>N/2$.
+\end{lemma}
+\begin{proof}
+Now $|b|=1$.  At a simple zero the original-root factorization gives
+$S=2\sum_{u\ne\beta}(\beta-u)^{-1}$.  If $z=i+\rho u$ is another
+physical zero, then
+\[
+ 2\Re\frac b{b-z}-1=\frac{1-|z|^2}{|b-z|^2}\ge0.
+\]
+Consequently
+\[
+ \Re(bS)=2\rho\sum_{z\ne b}\Re\frac b{b-z}\ge N\rho.
+\]
+The critical-root version of \eqref{or:radial-one} says
+$\Re(bS)=N\rho/2+E_c$.  Hence
+\[
+ N\rho/2\le E_c<\rho(\Re S-Q/2),
+ \qquad h\ge\Re S>N/2+Q/2>N/2.
+\]
+\end{proof}
+
+\subsection{A finite Cayley--Hermite--Biehler inequality}
+
+The identities \eqref{or:horizontal}--\eqref{or:radial-ratio} and the
+next two source lemmas hold for every finite degree $n\ge2$,
+$0<\rho<1$, $0<\alpha\le X\le1$, and $0<T\le1$ satisfying
+\eqref{or:original-domain}--\eqref{or:critical-domain} at an actual
+simple rightmost zero.  They also apply at the larger scales in the
+next section.
+
+\begin{lemma}[Finite polar source estimate]\label{or:HB}
+For real $s$ suppose that
+\begin{equation}\label{or:Cayley-entrance}
+             \Re\frac{s}{1+ic_\rho s}>X.
+\end{equation}
+Define
+\begin{equation}\label{or:source-definitions}
+ \begin{gathered}
+ W(s)=\sum_{F(u)=0}\frac{I(u)}{|s-(1+ic_\rho s)u|^2},\qquad
+ C(s)=\sum_{F'(v)=0}\frac{I(v)}{|s-(1+ic_\rho s)v|^2},\\
+ E(s)=\sum_{F(u)=0}\frac{I(u)}{|s-u|^2},\qquad
+ \theta=\frac{n\rho}{2(1+c_\rho^2s^2)}.
+ \end{gathered}
+\end{equation}
+Then
+\begin{equation}\label{or:HB-inequality}
+         W\ge E,\qquad \theta W\le(C+\rho)(W+\theta).
+\end{equation}
+In particular, if an upper bound $k$ for $C+\rho$ satisfies $k<\theta$,
+then $W\le k/(1-k/\theta)$.
+\end{lemma}
+\begin{proof}
+The maps
+\[
+ w=\frac u{1-ic_\rho u},\qquad
+ u=\frac w{1+ic_\rho w},\qquad d_p(w)=1+ic_\rho w
+\]
+send the disk in \eqref{or:original-domain} to the closed lower
+half-plane, because
+\[
+       -\Im w=\frac{I(u)}{|1-ic_\rho u|^2}.
+\]
+Consider the finite polynomials
+\begin{equation}\label{or:polar-polynomials}
+ G(w)=d_p(w)^nF(w/d_p(w)),\qquad
+ J_p(w)=d_p(w)G'(w)-nic_\rho G(w)
+       =d_p(w)^{n-1}F'(w/d_p(w)).
+\end{equation}
+A root $u=-i/c_\rho$ makes its
+transformed linear factor constant.  It has $I(u)=0$ and contributes
+zero to the sums in \eqref{or:source-definitions}.  All other labels
+and multiplicities are preserved.  The coefficient $n$ in
+\eqref{or:polar-polynomials} is the original degree, even if $G$ has
+smaller degree.  Both $G$ and $J_p$ have their finite roots in the
+closed lower half-plane.
+
+By \eqref{or:Cayley-entrance}, $G(s)\ne0$.  Put
+\[
+ g=G'/G,\qquad a(w)=-nic_\rho/d_p(w),\qquad
+ H_s(w)=G'(w)+a(s)G(w).
+\]
+Direct subtraction in the Cayley map proves
+\[
+ -\Im g(s)=W,\quad -\Im(J_p'/J_p)(s)=C,\quad
+ -\Im a(s)=\theta,
+ \qquad |g(s)+a(s)|\ge W+\theta>0.
+\]
+In particular, $H_s(s)$ and $J_p(s)$ are nonzero.  Differentiating
+the polar identity before freezing $a$ gives
+\begin{equation}\label{or:frozen-polar}
+ \frac{H_s'}{H_s}(s)
+  =\frac{J_p'}{J_p}(s)-\frac{ic_\rho}{d_p(s)}
+                      -\frac{a'(s)}{g(s)+a(s)}.
+\end{equation}
+Here $|a'(s)|=c_\rho\theta$ and $|ic_\rho/d_p(s)|\le c_\rho$.
+The last two terms therefore each have modulus at most $c_\rho$,
+and
+\begin{equation}\label{or:frozen-upper}
+                   -\Im(H_s'/H_s)(s)\le C+\rho.
+\end{equation}
+
+The real-rootedness needed below follows from a finite argument.
+If a degree $m$ polynomial has all roots strictly below
+the real axis, a continuous argument of its value on the real axis
+decreases strictly through a total angle $m\pi$: its derivative is
+the negative sum of the positive Poisson kernels of the roots.
+After any fixed rotation, each crossing of an integer multiple of
+$\pi$ is a real zero of its imaginary part.  These crossings account
+for the degree of that imaginary part, which is $m$, or $m-1$ when
+its leading coefficient vanishes.  Hence that imaginary part is
+real-rooted.  Moving roots a small distance downward and taking a
+coefficient limit proves the assertion for roots on the boundary as
+well, allowing repeated roots and degree drop.  A nonzero coefficient
+limit of real-rooted polynomials is real-rooted, with roots allowed to
+escape to infinity.
+
+Rotate $G$ so that $H_s(s)>0$ is real, and write $G=U+iV$.  Let
+$p=\Re a(s)$ and
+\[
+                       B=V'+pV-\theta U=\Im H_s.
+\]
+At the selected point $s$,
+\[
+ B(s)=0,\qquad H_s(s)V(s)=(W+\theta)|G(s)|^2>0,\qquad
+ U'V-UV'=W|G|^2.
+\]
+In particular $V$ is not identically zero.  By the preceding argument
+it is real-rooted, so
+\[
+ V'^2-VV''\ge0.
+\]
+This last inequality follows directly by logarithmic differentiation
+away from the zeros, and by continuity at them.  The exact Wronskian
+identity
+\[
+ BV'-B'V=\theta(U'V-UV')+V'^2-VV''
+\]
+now gives
+\[
+ \theta W\le[-\Im(H_s'/H_s)(s)](W+\theta)
+             \le(C+\rho)(W+\theta).
+\]
+Finally, for $u=r-it$,
+\begin{equation}\label{or:denominator-expansion}
+ |s-(1+ic_\rho s)u|^2
+   =|s-u|^2-\rho s^2t+\frac{\rho^2s^2}{4}|u|^2
+   \le |s-u|^2,
+\end{equation}
+since $t\ge\rho|u|^2/2$.  Termwise comparison gives $W\ge E$.
+Rearranging with $k<\theta$ gives the solved form.
+\end{proof}
+
+We will also use the unsolved form.  If $W\ge b_0>0$, then
+\begin{equation}\label{or:parallel-source}
+                   C+\rho\ge\frac{\theta b_0}{\theta+b_0}.
+\end{equation}
+The function $uv/(u+v)$ is increasing in each positive argument.  Thus
+\eqref{or:parallel-source} remains useful without an upper bound on
+$h$ or a positive solved denominator.
+
+\subsection{The critical-label comparison}
+
+For $s\ge\alpha$, the critical domain yields the exact identity
+\begin{align}
+ &|s-(1+ic_\rho s)v|^2
+       -(1-\rho^2s^2/2)|s-v|^2\notag\\
+ &\quad=\rho s^2\left(\frac\rho2|v-\alpha|^2-t\right)
+ +\frac{\rho^2s^2}{2}(s-\alpha)(s+\alpha-2r)
+ +\frac{\rho^2s^2}{4}|v|^2>0.\label{or:quadratic-polar}
+\end{align}
+All three terms have their stated sign on the whole unbounded critical
+domain.  In particular, if $\rho\le r_+$ and $s\le s_+$, with
+$r_+^2s_+^2/2<1$, set
+\begin{equation}\label{or:polar-constants}
+ f=\frac1{1-r_+^2s_+^2/2},\qquad
+ D_p=1+(r_+s_+/2)^2.
+\end{equation}
+Then
+\[
+ C<f C_{\rm real},\qquad
+ C_{\rm real}=\sum_v\frac{I(v)}{|s-v|^2},\qquad
+ \theta\ge\frac{n\rho}{2D_p}.
+\]
+
+\begin{lemma}[A negative square-moment term]\label{or:critical-comparison}
+For $s=X+\delta$ with $\delta\ge0$, put
+\begin{equation}\label{or:kappa}
+ \kappa_X(T,\delta)=\frac{X^2}{2}
+ -\frac{X\max(0,T^2-X\delta-\delta^2)^2}
+             {4(T^2+\delta^2)(X/2+\delta)}.
+\end{equation}
+Then
+\begin{equation}\label{or:critical-comparison-formula}
+ C_{\rm real}<\rho\{X\Re S-\kappa_X(T,\delta)Q\}.
+\end{equation}
+For $X=1$, the coefficient decreases with $T$, and is nonnegative for
+$0<T\le1$, $\delta\ge0$.  For $T=1$ and
+$\delta\in\{3/10,1/2,71/100\}$ there is also the bound
+\begin{equation}\label{or:small-X-comparison}
+ C_{\rm real}<m\rho\Re S\quad(0<X\le m),\qquad
+                         m=(1-\delta)^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $A=X-r>X/2$, $B=A+\delta$, $b_0=X/2+\delta$, and
+$L=T^2+\delta^2$.  Use \eqref{or:inset-critical} and clear the
+positive denominators of one summand in
+\eqref{or:critical-comparison-formula}.  The coefficient available
+after division by $X$ is
+\[
+ \frac X2+(A-X/2)
+       \frac{2\delta A+\delta^2+2Tt-T^2}{(A+\delta)^2+t^2}.
+\]
+If the second numerator is nonnegative there is no loss.  Otherwise,
+with $z_0=2\delta A+\delta^2-T^2<0$,
+\[
+ \frac{z_0+2Tt}{B^2+t^2}-\frac{z_0}{B^2}
+       =\frac{2TtB^2-z_0t^2}{B^2(B^2+t^2)}\ge0.
+\]
+It suffices to take $t=0$.  The possible loss is
+\[
+ \frac{(B-b_0)(L-2\delta B)}{B^2}.
+\]
+As a function of $w=1/B\in[0,1/b_0]$ this is
+$(1-b_0w)(Lw-2\delta)$.  Its maximum is
+$\max(0,L-2\delta b_0)^2/(4Lb_0)$, by completing the square; when
+$L-2\delta b_0\le0$ its maximum is zero at $w=1/b_0$.
+This proves the stated coefficient.  For $X=1$ the subtracted term
+increases with $T^2$ on its active interval.  Its numerator is at
+most $T^4\le T^2\le(1+2\delta)(T^2+\delta^2)$, which also proves
+nonnegativity of $\kappa_1$.
+
+For \eqref{or:small-X-comparison}, put $T=1$.  The critical inset
+divided by $\rho$ is less than $XA-X^2/2$.  If $A\ge m$ and $X\le m$,
+this is at most $mA-m^2/2$.  The required comparison then reduces to
+a quadratic in $A$ whose discriminant is
+$[(1-\delta)^2-m][(1+\delta)^2+m]=0$; its remaining $t$ and $t^2$
+coefficients are nonnegative.  If $A\le m$, use
+$XA-X^2/2\le A^2/2$.  The constant term after clearing denominators is
+\[
+ P(A)=2m(A+\delta)^2-A(A^2+1).
+\]
+Its derivative is $-3A^2+4mA+4m\delta-1$.  In each of the three
+specified cases,
+$16m^2+12(4m\delta-1)<0$, so $P$ decreases on the real line.
+Furthermore $P(m)=m\delta^4>0$.  The other terms are nonnegative
+($2At$ and $(2m-A)t^2$ after the same division), proving the assertion.
+\end{proof}
+
+For a closed parameter cell suppose that
+$C_{\rm real}<\rho h A$, where $0<A\le\overline A$, and that
+$h\ge H$, $h/n\le U$.  With the constants in
+\eqref{or:polar-constants}, if
+\begin{equation}\label{or:HB-cell-denominator}
+              B=2D_p(f\overline A U+1/n_0)<1,
+\end{equation}
+then Lemma~\ref{or:HB} gives
+\begin{equation}\label{or:HB-cell}
+                  \frac Wh<\frac{r_+(f\overline A+1/H)}{1-B}.
+\end{equation}
+If a ceiling $h<H_+$ has previously been proved, we may instead use
+$B=2D_p(f\overline A H_++1)/n_0$.  A source lower bound $W\ge b_0$
+gives, without either ceiling,
+\begin{equation}\label{or:direct-K}
+ \rho h A>K(\rho),\qquad
+ K(\rho)=\frac1f\left\{\frac{n_0\rho b_0}
+                         {n_0\rho+2D_p b_0}-\rho\right\}.
+\end{equation}
+The expression in braces is concave in $\rho$, since its second
+derivative is $-4n_0^2D_pb_0^2/(n_0\rho+2D_pb_0)^3<0$.
+It increases with $n_0$ when the original degree is retained.  Thus
+the smaller endpoint value on a closed scale interval is a valid
+lower bound for the entire interval.  In each application $K>0$,
+so $A>0$ and $h>K/(\rho A)$.
+
+\subsection{Moving sources and a uniform crescent gap}
+
+When $X=1$ and $I=I(\beta)>0$, set
+\begin{equation}\label{or:moving-test}
+ D_0=1-c_\rho(T+I),\qquad s=\frac{1+I}{D_0}.
+\end{equation}
+The contribution of the actual zero $\beta$ is exactly
+\begin{equation}\label{or:moving-weight}
+ \frac{I}{|s-(1+ic_\rho s)\beta|^2}
+       =\frac{D_0}{2I}\ge\frac{(1-\rho)^2}{2T}.
+\end{equation}
+Indeed $D_0=|1-ic_\rho\beta|^2$, and expansion gives
+$D_0|s-(1+ic_\rho s)\beta|^2=2I^2$.
+Moreover $(1-\rho)^2\le D_0<1$, $1<s<2/(1-\rho)^2<3$, and
+\begin{align}
+ D_0^2(s-1-c_\rho^2s^2)
+ &=I\{1+2c_\rho(1-T)+c_\rho^2(T^2-4T-1)
+                      +2c_\rho^3(1+T^2)\}>0.\label{or:moving-domain}
+\end{align}
+The bracket is at least $1-4c_\rho^2$: after subtraction the
+remaining terms are
+$2c_\rho(1-T)+c_\rho^2(T-1)(T-3)+2c_\rho^3(1+T^2)$.
+Thus the test satisfies \eqref{or:Cayley-entrance}.
+
+On a cell $\rho\le r_+$, $T\le t_+$ put
+\begin{equation}\label{or:moving-field}
+ b_m=\frac{(1-r_+)^2}{2t_+},\quad
+ f_m=(1-9r_+^2/2)^{-1},\quad D_m=1+9r_+^2/4,\quad
+ H_m=\frac{n_0b_m/(n_0r_++2D_mb_m)-1}{f_m}.
+\end{equation}
+Since $C<f_m\rho h$, the unsolved inequality
+\eqref{or:parallel-source} proves $h>H_m$.  At zero inset it remains
+valid with $h\ge H_m$.
+At $X=1$ and $I(\beta)=0$,
+\[
+             T=\frac\rho2(1+T^2)\le\rho<1.
+\]
+To justify that endpoint, multiply every physical zero and the physical
+witness by $1-\epsilon$.  For a sufficiently small positive $\epsilon$
+all the finitely many strict holes persist, and $T'<1$ in the
+$X=1$ normalization, where
+\begin{equation}\label{or:homothety}
+ \rho'=(1-\epsilon)\rho,\quad
+ T'=T+\frac{\epsilon}{(1-\epsilon)\rho},\quad
+ \beta'-v'=\beta-v,\quad S'=S,\quad h'=h.
+\end{equation}
+The scaled source has positive inset.  Applying the formula with a
+depth endpoint tending down to $t_+$ and taking the rational limit
+gives $h\ge H_m$.
+
+We also need a distance bound which keeps the actual depth.  The lower
+intersection of the hole circle with $r=\alpha/2$ has depth
+\[
+             \eta=\frac{1-\sqrt{1-\rho^2\alpha^2/4}}{\rho}.
+\]
+The inequality
+\begin{equation}\label{or:height-gate}
+ \frac2{125}-\rho_*\left(\frac14+\frac1{15625}\right)>0
+\end{equation}
+gives $0\le\eta<\alpha^2/125$ by squaring two positive sides.
+To bound the distance on the critical crescent, write
+$u=r-\alpha\le-\alpha/2$ on the lower hole arc.  The scalar
+product with the vector $(X-\alpha,T-1/\rho)$ is
+\[
+ (X-\alpha)u+(1/\rho-T)\sqrt{\rho^{-2}-u^2}.
+\]
+Its derivative is positive for $u\le0$.  Hence the nearest permitted
+arc point has the largest real coordinate.  The upper arc and exterior
+radial segments cannot be nearer; if $T<\eta$, the horizontal
+separation alone suffices.  We obtain
+\begin{align}
+ X=1&:\quad d^2>\frac14+\max(T-1/125,0)^2,\label{or:gap-X}\\
+ T=1&:\quad d^2>G(X):=1+\frac{117}{500}X^2.\label{or:gap-T}
+\end{align}
+For the second line, the stronger lower bound is
+$(X-\alpha/2)^2+(1-\alpha^2/125)^2
+ \ge X^2/4+(1-X^2/125)^2
+ =G(X)+X^4/15625$.
+
+\subsection{From inverse contours to source moments}
+
+We use the inverse and symmetric contour estimates of
+Lemmas~\ref{lt:inverse-log} and~\ref{lt:quarter-pi},
+and prove two refinements for one-sided strips.
+
+Suppose $Q/h\le Y$, $1/d\le m$, and $h\ge H$.  For $0<mR<1$ put
+\begin{equation}\label{or:inverse-parameters}
+ \begin{gathered}
+ \lambda=\frac{YR}{1-mR},\qquad
+ e_R=Y\left\{\sum_{j=2}^{16}\frac{m^{j-2}R^j}{j}
+                  +\frac{m^{15}R^{17}}{17(1-mR)}\right\},\\
+ \widehat R=R-e_R,\qquad
+ B_R=\frac{Y}{(1-mR)^2(1-\lambda)^3}.
+ \end{gathered}
+\end{equation}
+The simpler upper bound
+$e_R=Y\{R^2/2+mR^3/[3(1-mR)]\}$ is also permissible and will be
+used for the base range.  These bound the complete logarithmic series
+of the actual critical product; the last displayed term includes
+every omitted order.  For example
+\[
+ \frac1S\log\frac{F'(\beta+z)}{F'(\beta)}=z+E_R(z),\qquad
+ |E_R(z)|\le e_R\quad(|z|\le R),
+\]
+and the derivative differs from $1$ by at most $\lambda$.
+If $\lambda<1$ and $\widehat R>0$, this logarithm is injective and
+its image contains the disk of radius $\widehat R$.
+In the unscaled coordinate
+$w=\log(F'(\beta+z)/F'(\beta))$, the inverse position
+$\phi(w)=\beta+z$ is defined on $|w|<h\widehat R$, with
+$\phi(0)=\beta$ and $F'(\phi(w))/F'(\beta)=e^w$.
+Set $A(w)=S\phi'(w)$.  The normalized primitive
+$SF(\phi(w))/F'(\beta)$ has derivative $e^w A(w)$, and
+\[
+        \Re A\ge(1+\lambda)^{-1},\quad
+        |A|\le(1-\lambda)^{-1},\quad |A'|\le B_R/h.
+\]
+
+Choose $0<\nu<1$, $W_0>0$, and rational bounds
+\begin{equation}\label{or:contour-gates}
+ \begin{gathered}
+ B_R/H<\epsilon_0,\quad \nu B_R\widehat R<g_0,\quad
+ 0<p_0\le(1+\lambda)^{-1}<1<(1-\lambda)^{-1}\le a_0,\\
+ e_0>e^{-W_0},\qquad
+ W_0^2<(1-\nu^2)(H\widehat R)^2,\\
+ \epsilon_0(1+e_0)+g_0e_0<1-a_0e_0,\qquad
+ \epsilon_0(1+e_0)+g_0e_0^2<p_0-e_0.
+ \end{gathered}
+\end{equation}
+For an odd-$\pi$ contour require
+\begin{equation}\label{or:odd-gate}
+      \epsilon_0+g_0e_0<p_0,\qquad \nu H\widehat R>\pi.
+\end{equation}
+For a quarter-period contour replace these requirements by
+\begin{equation}\label{or:quarter-gate}
+ \epsilon_0+g_0e_0<\frac{p_0}{1+p_0+a_0},\qquad
+                        \nu H\widehat R>\pi/2.
+\end{equation}
+These are conditions on the containing disk, all corners, both vertical
+sides, both horizontal sides, and the amplitude homotopy.  The resulting
+number $L_R$ of actual original roots in $|u-\beta|<R$ obeys
+\begin{equation}\label{or:counts}
+ \frac{L_R}{h}>\frac{\nu\widehat R}{\pi}-\frac{\ell_0}{h},
+ \qquad
+ \ell_0=2\ \hbox{in \eqref{or:odd-gate}},\quad
+ \ell_0=3/2\ \hbox{in \eqref{or:quarter-gate}}.
+\end{equation}
+The trimmed odd height is the largest odd multiple of $\pi$ not
+exceeding the available height, including equality.  The full side
+estimates already cover such an endpoint.  A one-sided odd-$\pi$ strip
+between the fractions $\gamma$ and $\nu$ of the available height,
+$0<\gamma<\nu$, gives
+\begin{equation}\label{or:one-sided-count}
+                    \frac{L_{\gamma,\nu}}h>
+           \frac{(\nu-\gamma)\widehat R}{2\pi}-\frac2h.
+\end{equation}
+
+\begin{lemma}[One-sided inverse strips]\label{or:one-sided}
+Under \eqref{or:contour-gates} and \eqref{or:odd-gate}, the upper
+strip $\gamma h\widehat R<\Im w<\nu h\widehat R$ and its reflected
+lower strip each have the count \eqref{or:one-sided-count}.
+They exclude the source $\beta$.  Writing
+$S/h=c_0+is_0$ with $c_0>0$, each upper-strip root lies above
+$\beta$ by more than
+\begin{equation}\label{or:strip-displacement}
+                c_0\gamma\widehat R-e_R-|s_0|W_0/h;
+\end{equation}
+each lower-strip root lies below it by more than the same quantity.
+\end{lemma}
+\begin{proof}
+Put $\mathcal J(w)=SF(\phi(w))/F'(\beta)$.
+The estimates preceding \eqref{or:contour-gates} give
+\[
+ A(0)=1,\quad \Re A\ge p_0,\quad |A|\le a_0,\quad
+ |A'|<\epsilon_0,\quad
+ \mathcal J(w)=\int_0^w e^zA(z)\,dz.
+\]
+All corners of the containing rectangle lie in the inverse disk.
+Integration by parts along the entire path
+$0\longrightarrow-W_0\longrightarrow-W_0+i\eta
+ \longrightarrow x+i\eta$ gives
+\[
+ \mathcal J(w)=e^wA(w)-1-\mathcal E(w),\qquad
+ |\mathcal E(w)|<\epsilon_0(1+e^x)+g_0e^{-W_0}.
+\]
+The vertical segment contributes at most
+$(B_R/h)|\eta|e^{-W_0}\le\nu B_R\widehat R e^{-W_0}$;
+this gives the $g_0e^{-W_0}$ term.
+On the left side the modulus of $e^wA(w)-1$ is at least
+$1-a_0e^{-W_0}$, and on the right side it is at least
+$p_0e^{W_0}-1$.  The two inequalities in the last line of
+\eqref{or:contour-gates} control these whole sides, respectively.
+On every horizontal line $\eta=(2k+1)\pi$ the modulus is at least
+$1+p_0e^x$.  It dominates the error, because
+\[
+ \epsilon_0(1+e^x)+g_0e^{-W_0}
+ \le(\epsilon_0+g_0e^{-W_0})(1+e^x)
+ <p_0(1+e^x)\le1+p_0e^x.
+\]
+Thus Rouch\'e applies on every subrectangle bounded by two such
+horizontal lines.  The homotopy
+$A_t=1+t(A-1)$ preserves $\Re A_t\ge p_0$ and $|A_t|\le a_0$,
+so $e^wA_t(w)-1$ stays nonzero on this boundary.
+The zero count is therefore exactly that of $e^w-1$.
+
+For the upper strip take the smallest odd multiple $L$ of $\pi$
+at least $\gamma h\widehat R$, and the largest odd multiple $U$
+at most $\nu h\widehat R$.  If $L<U$, the subrectangle contains
+exactly $(U-L)/(2\pi)$ roots, and
+\[
+ \frac{U-L}{2\pi}>
+            \frac{(\nu-\gamma)h\widehat R}{2\pi}-2.
+\]
+If the right side is negative, the claimed lower count is automatic;
+if it is nonnegative, the strip width is at least $4\pi$ and
+$L<U$ necessarily.  The same argument applies to $-U,-L$.
+The boundaries contain no zeros, including when an endpoint is exactly
+an odd multiple of $\pi$.  The inverse is injective and its image
+is critical-free, so all counted roots are distinct simple actual
+roots.  Since $\gamma>0$, neither strip contains $w=0$.
+Finally
+\[
+             |\phi(w)-\beta-w/S|\le e_R,
+ \qquad \Im(w/S)=\frac{c_0\Im w-s_0\Re w}{h},
+\]
+which proves \eqref{or:strip-displacement} and its lower-strip
+counterpart.
+\end{proof}
+
+\begin{lemma}[Real widths and an upper root]\label{or:narrow-strip}
+If $|\Im S|<J$, the roots counted in \eqref{or:counts} satisfy
+\begin{equation}\label{or:width}
+ |\Re(u-\beta)|\le\ell_R:=\min\left(R,
+         \frac{W_0}{H}+\frac{J\nu\widehat R}{H}+e_R\right).
+\end{equation}
+For a row satisfying \eqref{or:odd-gate}, a positive upper strip
+also supplies an actual root above $\beta$
+by more than
+\begin{equation}\label{or:depth}
+ \left(1-\frac{J^2}{H^2}\right)\nu\widehat R-e_R
+       -\frac{4\pi}{H}-\frac{JW_0}{H^2},
+\end{equation}
+whenever this expression is positive.  If it exceeds the depth $T$,
+the original disk condition is contradicted.
+\end{lemma}
+\begin{proof}
+In the counting rectangle $|\Re w|\le W_0$,
+$|\Im w|\le\nu h\widehat R$.  Since
+\[
+ \Re(w/S)=\frac{c_0\Re w+s_0\Im w}{h},\qquad
+ |s_0|<J/h,
+\]
+the inverse error bound gives \eqref{or:width}.
+For the upper root let $U$ be the largest odd multiple of $\pi$
+not exceeding $\nu h\widehat R$.
+The adjacent rectangle $U-2\pi<\Im w<U$ contains exactly one
+actual root by the complete boundary argument of
+Lemma~\ref{or:one-sided}.  When \eqref{or:depth} is positive,
+$\nu H\widehat R>4\pi$ and $J/H<1$, so that this rectangle has
+positive height above zero.  Its root has
+$\Im w>\nu h\widehat R-4\pi$.
+Using $c_0=\sqrt{1-s_0^2}\ge1-(J/H)^2$, $c_0\le1$, and $h\ge H$
+in the imaginary inverse displacement gives exactly
+\eqref{or:depth}.  Every original zero has nonpositive imaginary
+part in the normalized coordinates, which proves the last assertion.
+\end{proof}
+
+We now convert these counts into lower bounds for $E(s)$.  Suppose
+$T\in[t_-,t_+]$, $\rho\le r_+$, and $s=X+\delta$.  A counted region
+with radius $R$ and real width $\ell$ has $|\Re u|\le1$ in every
+application below.  For $X=1$ this follows from rightmostness and
+$\ell<2$; for $T=1$ it follows from $R<1$ and $0<X\le1$.
+Its whole-region lower weight is
+\begin{equation}\label{or:weight}
+ \omega(R,\ell;\delta,t_-,t_+,r_+)
+ =\max\left(0,\min_{t\in\{\max(0,t_--R),\,t_++R\}}
+ \frac{t-r_+(1+t^2)/2}{(\delta+\ell)^2+t^2}\right).
+\end{equation}
+The derivative numerator of the quotient, writing
+$A=(\delta+\ell)^2>0$, is
+$A-t^2+r_+(1-A)t$.  Its two roots have opposite signs, and its
+positive root is a maximum.  Thus the minimum on a nonnegative
+interval is at an endpoint.  If that minimum is negative we instead
+use $I(u)\ge0$.
+
+Take increasing radii $R_j$; replace their widths by running maxima
+so the regions are nested.  Let $s_j$ be any increasing rational lower
+bounds for $\nu_j\widehat R_j/\pi$, and replace the weights by the
+maximum of all later weights.  This gives valid
+$w_1\ge\cdots\ge w_k\ge0$ on the nested regions.  The source root
+has a separate lower weight $b_0$.  Subtracting that root once from
+each odd-$\pi$ count, and applying finite Abel summation, gives
+\begin{equation}\label{or:Abel-source}
+ \frac Eh>
+     \sum_{j=1}^k w_j(s_j-s_{j-1})+\frac{b_0-3w_1}{h},
+                         \qquad s_0=0.
+\end{equation}
+Indeed, if $M_j$ are the actual cumulative counts excluding $\beta$,
+then $M_j>hs_j-3$ and
+$\sum w\ge w_kM_k+\sum_{j<k}(w_j-w_{j+1})M_j$.
+The coefficients of the cumulative counts are nonnegative, so the bound
+remains valid when an initial $hs_j-3$ is negative.
+If $b_0-3w_1<0$, replace its denominator
+in \eqref{or:Abel-source} by $H$.  If it is nonnegative and $h<600$,
+replace it by $600$; if no upper field is known, discard the
+nonnegative term.  This accounts for both signs of the source
+compensation.
+For a one-sided strip the corresponding calculation is simpler:
+if its roots have weight at least $a>0$ and $\beta$ has weight at
+least $b_0$, then, since they are distinct from $\beta$,
+\begin{equation}\label{or:strip-source-compensation}
+ \frac Eh>
+ a\frac{(\nu-\gamma)\widehat R}{2\pi}+\frac{b_0-2a}{h}.
+\end{equation}
+Thus $b_0\ge2a$ makes the last term nonnegative.
+
+For quarter-period counts, one may instead use the cumulative lower
+bounds $k_j=\nu_j\widehat R_j/\pi-3/(2H)$ directly, when they and
+their successive increments are positive.  Then
+\begin{equation}\label{or:Abel-quarter}
+                    \frac Eh>\sum_jw_j(k_j-k_{j-1}),\qquad k_0=0.
+\end{equation}
+
+\subsection{The base range $0<\rho\le1/100$}
+
+All constants in this subsection use $r_b=1/100$.  Set
+\begin{equation}\label{or:base-polar}
+ f_m=\frac{1001}{1000},\qquad f_X=f_T=\frac{10001}{10000},
+                    D_b=1+9r_b^2/4.
+\end{equation}
+These dominate the quadratic polar factors for, respectively, the
+moving tests $s<3$, the fixed test $s=101/100$, and the fixed test
+$s=X+3/10\le13/10$.  The fixed inverse-Cayley conditions are
+$(r_b(101/100)/2)^2<1/100$ and
+$(r_b(13/10)/2)^2<3/10$.  Lemma~\ref{or:critical-comparison} gives
+$C_{\rm real}<\rho h$ for the $X$ tests, and
+$C_{\rm real}<\rho\max(X,49/100)h$ for the $T$ test.
+
+There are $55$ inverse rows in this range.  The columns in
+Table~\ref{or:base-contours} are
+\[
+ (Y,m,R,H,\nu,W_0,\epsilon_0,g_0,p_0,a_0,e_0).
+\]
+The simpler $e_R$ following \eqref{or:inverse-parameters} is used.
+\begin{table}[ht]
+\centering\scriptsize
+\caption{All inverse rows for the base range.  Each $j$-row occurs for
+every integer $6\le j\le30$.}\label{or:base-contours}
+\begin{tabular}{@{}lrrrrrrrrrrr@{}}
+\toprule
+row&$Y$&$m$&$R$&$H$&$\nu$&$W_0$&$\epsilon_0$&$g_0$&$p_0$&$a_0$&$e_0$\\
+\midrule
+$X_1$&2&2&$3/20$&600&$99/100$&4&$1/25$&3&$7/10$&$7/4$&$1/50$\\
+$X_D$&2&2&$13/100$&600&$99/100$&4&$1/25$&3&$7/10$&$7/4$&$1/50$\\
+$X_{450,j}$&2&2&$j/200$&450&$23/25$&$W_j$&$11/100$&$g_j$&$7/10$&$7/4$&$e_j$\\
+$X_{200,j}$&2&2&$j/200$&200&$9/10$&$W_j$&$11/100$&$g_j$&$7/10$&$7/4$&$e_j$\\
+$X_{78}$&2&2&$3/20$&78&$97/100$&$11/5$&$3/10$&3&$7/10$&$7/4$&$1/9$\\
+$T_{150}$&$25/11$&$100/99$&$3/20$&150&$9/10$&4&$1/6$&3&$7/10$&$7/4$&$1/50$\\
+$T_{103}$&$25/11$&$100/99$&$3/20$&103&$9/10$&4&$1/6$&3&$7/10$&$7/4$&$1/50$\\
+\bottomrule
+\end{tabular}
+\end{table}
+Here $(W_j,g_j,e_j)=(2,1/5,1/7)$ for $6\le j\le9$, and
+$(4,3,1/50)$ for $10\le j\le30$.  Only the two $j$-families use
+quarter-period contours; all other rows use odd-$\pi$ contours.
+Every row satisfies \eqref{or:contour-gates} and its appropriate
+horizontal and height condition.  These are rational inequalities
+apart from $e^{-W_0}$; the latter is bounded by the reciprocal of the
+positive Taylor sum through degree $48$.  Thus Table~\ref{or:base-contours}
+and the displayed formulae specify the finite verification.
+
+\subsubsection{The base case $X=1$: the first ceiling}
+
+Suppose $h\ge600$.  Then $d>1/2$ and $y_0<2$, so
+$q<2/600<7/625$ and $\mu<2/600<1/200$.
+Proposition~\ref{lt:fine200} therefore gives
+\begin{equation}\label{or:base-high-phase}
+ |\Im S|<4y_0<8,\qquad
+ |\Im(S/h)|<1/70,\qquad \Re(S/h)>999/1000.
+\end{equation}
+The upper one-sided strip of row $X_1$, with $\gamma=4/5$, has
+positive count, since
+\[
+ \frac{(99/100-4/5)\widehat R_1}{2(22/7)}-\frac2{600}>0.
+\]
+Its actual root lies above $\beta$ by more than
+$(4/5)(999/1000)\widehat R_1-e_{R_1}-4/(70\cdot600)>67/1000$.
+Thus $T>67/1000$.
+
+First let $67/1000\le T\le3/10$.  Equation~\eqref{or:radial-ratio},
+with $J=9$, gives $u=h/n<311/1000=:U$ for
+every $N\ge6250$.  At $s=101/100$,
+\[
+       \kappa_1(T,1/100)\ge\kappa=\frac{29591}{63600}>0.
+\]
+As $y_0>u$, put $a(u)=f_X(1-\kappa u)$ and
+$B(u)=2D_b(a(u)u+1/n_0)$.  On $0\le u\le U$ the factors
+$1-\kappa u$, $1-2\kappa u$, and $1-B(u)$ are positive.
+The derivative numerator of
+$(a(u)+1/600)/(1-B(u))$ is
+\[
+ -f_X\kappa(1-2D_b/n_0)
+ +2D_b\{f_X^2(1-\kappa u)^2+(f_X/600)(1-2\kappa u)\}.
+\]
+It has a positive lower bound obtained by replacing the first term
+by $-f_X\kappa$ and $u$ by $U$ in the remaining terms.
+Therefore the solved source estimate is valid throughout this
+interval and
+\begin{equation}\label{or:base-low-depth-upper}
+                  W/h<r_b\frac{a(U)+1/600}{1-B(U)}<1/50.
+\end{equation}
+
+Use the lower one-sided strip of $X_D$, with $\gamma=7/25$, and set
+\[
+ \begin{split}
+ \Delta&=\frac7{25}\frac{999}{1000}\widehat R_D-e_{R_D}
+          -\frac4{70\cdot600}-\frac{3481}{5000}r_b>0,\\
+ a_D(T)&=\frac{T+\Delta}{(T+157/1200)^2},\qquad
+ b_D(T)=\frac{T-r_b(1+T^2)/2}{T^2+1/10000}.
+ \end{split}
+\]
+These are full strip and source weights.  The strip depth estimate
+comes from \eqref{or:base-high-phase}; its roots have
+$|u|<\sqrt{1.09}+.13<59/50$ and
+$|s-u|<\sqrt{T^2+.0001}+.13\le T+157/1200$.
+The polynomial
+\[
+ [T-r_b(1+T^2)/2](T+157/1200)^2
+             -2(T+\Delta)(T^2+1/10000)
+\]
+has all its Bernstein coefficients positive on
+$[67/1000,3/10]$.  Hence $b_D(T)>2a_D(T)$ there.
+Adding $\beta$ to the strip count in \eqref{or:one-sided-count}
+compensates the loss $2/h$ and yields
+\[
+ \frac Eh>\frac{(99/100-7/25)\widehat R_D}{2(22/7)}a_D(T)>1/50.
+\]
+For the final comparison it suffices to check the two endpoints:
+the only positive stationary point of $a_D$ is a maximum.
+This contradicts \eqref{or:base-low-depth-upper}.
+
+If $3/10\le T\le1$, equation~\eqref{or:radial-ratio} gives
+$h/n<147/1000$.  Its source denominator is less than $3/10$, and
+\[
+ \frac Wh<
+ \frac{r_b(f_X+1/600)}{1-2D_b(f_X(147/1000)+1/n_0)}<2/125.
+\]
+The symmetric $X_1$ count has lower weight
+\[
+       \frac{T-3/20-5r_b/4}{(T+901/6000)^2}.
+\]
+Indeed $|u|<\sqrt2+3/20<\sqrt{5/2}$ and the displayed denominator
+bounds the complete disk.  Multiplication by
+$(99/100)(7/22)\widehat R_1-2/600$ gives a lower bound exceeding
+$1/50$ at both endpoints, and therefore on the whole interval, again
+by its single-maximum derivative.  Thus $h\ge600$ is impossible.
+
+\subsubsection{The base case $X=1$: the remaining fields}
+
+We now have $h<600$.  Lemma~\ref{or:zero-inset} excludes $I(\beta)=0$,
+since $N/2\ge3125$.
+Apply the moving-source estimate at this positive inset.
+The following table gives entire-domain denominator and depth bounds:
+\begin{equation}\label{or:base-moving-table}
+\begin{array}{c|c|c}
+ \text{known ceiling }h<H_+& (C+\rho)/\theta<B_+&T>t_+\\ \hline
+ 600&193/1000&13/200\\
+ 450&29/200&9/100\\
+ 200&13/200&21/100
+\end{array}
+\end{equation}
+For each row the two exact checks are
+\[
+ \frac{2D_b(H_+f_m+1)}{6251}<B_+,\qquad
+ \frac{(1-r_b)^2}{2t_+}>
+                   \frac{r_b(H_+f_m+1)}{1-B_+}.
+\]
+Thus they hold for every positive $\rho\le r_b$.
+
+Suppose first $h\ge450$ and use all $25$ rows $X_{450,j}$.
+For each radius, apply \eqref{or:weight} with $\ell=R$ and
+$\delta=1/100$ on each of the two closed depth intervals
+$[13/200,1/5]$ and $[1/5,1]$.  Use one of these depth intervals
+for the entire nested family.  The cumulative bounds
+\[
+ k_j=\nu_j(7/22)\widehat R_j-\frac{3}{2H}
+\]
+and their successive increments are positive, and the resulting
+weights decrease.  Formula~\eqref{or:Abel-quarter} applies.
+After excluding this field, repeat with $H=200$ and depth intervals
+$[9/100,1/5]$, $[1/5,1]$.  The exact inequalities, rounded outwards
+here to shorter rational numbers, are
+\begin{equation}\label{or:base-middle-table}
+\begin{array}{c|c|c|c}
+ H&[t_-,t_+]&E/h\text{ exceeds}&W/h\text{ is less than}\\ \hline
+ 450&[.065,.2]&.042&.0125\\
+ 450&[.2,1]&.029&.0125\\
+ 200&[.09,.2]&.041&.0118\\
+ 200&[.2,1]&.0245&.0118
+\end{array}
+\end{equation}
+The source upper in each row is exactly
+$r_b(f_X+1/H)/(1-B_+)$ with the previously established $B_+$.
+These comparisons prove successively $h<450$, $T>.09$, $h<200$,
+and $T>.21$.
+
+On $[.21,1]$ the source weight is at least
+\[
+                   b_X=\frac{9900}{10001}.
+\]
+To check the whole interval, the numerator difference after clearing
+the positive denominators factors as $(1-T)(AT-B)$, where
+$A=1-(r_b/2)(1-1/10000)$,
+$B=(r_b/2)(1-1/10000)+1/10000$, and $A(.21)>B>0$.
+Let
+$a_{78}=\omega(3/20,3/20;1/100,.21,1,r_b)$.
+If $h\ge78$, the row $X_{78}$ and source compensation give
+\[
+ \frac Eh>
+ a_{78}\frac{97}{100}\frac7{22}\widehat R_{78}
+            +\frac{\min(0,b_X-3a_{78})}{78}>.01176,
+ \qquad
+ \frac Wh<\frac{r_b(f_X+1/78)}{1-.065}<.01084.
+\]
+Thus $h<78$.  Finally,
+\[
+              W<\frac{r_b(78f_X+1)}{1-.065}<.846<b_X\le E,
+\]
+which excludes the entire base case $X=1$.
+
+\subsubsection{The base case $T=1$}
+
+A direct physical comparison gives $d>99/100$.  In fact, with
+$d_0=99/100$,
+\[
+ (1-d_0\rho)^2-|b-a|^2
+ \ge\rho\{2(1-d_0)-(2-d_0^2)\rho\}>0,
+\]
+and $|a-\xi|>1$ then implies $|b-\xi|>d_0\rho$.
+If $h\ge150$, this first gives $dh>100$, so
+Proposition~\ref{mf:D100} yields $y_0<25/11$.  The bounds
+$q<25/(11\cdot150)<9/400$ and
+$\mu<1/(.99\cdot150)<1/100$ permit Proposition~\ref{lt:wideD100},
+giving $|\Im S|<(23/5)y_0<11$.
+Equation~\eqref{or:radial-ratio} implies $h/n<21/250$.
+The row $T_{150}$ then gives
+\[
+ \frac Eh>.01599>.01211>
+ \frac{r_b(f_T+1/150)}{1-2D_b(f_T(21/250)+1/n_0)}>\frac Wh.
+\]
+Thus $h<150$, whence $(C+\rho)/\theta<1/20$.
+
+If $h\ge103$, the bound $103(.99)>100$ permits
+Proposition~\ref{mf:D100}.
+The row $T_{103}$ gives
+\[
+ \frac Eh>.01145>.01063>
+              \frac{r_b(f_T+1/103)}{.95}>\frac Wh.
+\]
+Hence $h<103$.  The source $\beta$ itself always has weight at least
+$b_T=99/109$.  For $X\le.77$, the uniform small-$X$ comparison
+gives
+\[
+            W<\frac{r_b(103f_T(.77)+1)}{.95}<.846<b_T,
+\]
+a contradiction.
+
+It remains to consider $X>.77$.  If $h\ge79$,
+\eqref{or:horizontal} and $d>.99$ give
+\begin{equation}\label{or:base-quartic-entry}
+             q<\frac2{.77\cdot79}<\frac{33}{1000},
+             \qquad \mu<\frac1{.99\cdot79}<\frac8{625}.
+\end{equation}
+The quartic construction of Proposition~\ref{lt:quartic} supplies two
+distinct simple actual roots at distance less than $15/(2h)$ from
+$\beta$.  For this construction, at $q_b=33/1000$, $\mu_b=8/625$,
+$\nu_b=q_b\mu_b$,
+use
+\[
+ (Z_0,M_0,E_0,P_0,Z_{\mathrm{out}},L_0,R_0,\eta_0)
+   =(719/100,7/25,71/50,350,15/2,32/25,3/10,11/50).
+\]
+The center and path majorants of that construction are bounded by
+\[
+ \begin{split}
+ Z(q)&=63/10+21q+133q^2+1030q^3+9000q^4,\\
+ M(q)&=(63/10)q+45q^2+400q^3+3400q^4+86000q^5\\
+     &\quad+320000q^6+1700000q^7+9100000q^8+39000000q^9.
+ \end{split}
+\]
+They satisfy $Z(q_b)<Z_0$, $M(q_b)<M_0$,
+$\mu_bZ_{\mathrm{out}}<1$, $Z_0+R_0<Z_{\mathrm{out}}$, and
+\begin{align}
+ \exp\left(M_0+\frac{\nu_bZ_0^3}{3(1-\mu_bZ_0)}\right)&<E_0,
+ &\frac{Z_0^4E_0}{12(1-\mu_bZ_0)}&<P_0,\notag\\
+ E_0(132200q_b^5+P_0\nu_b)&<(1-\eta_0)R_0,
+ &1+q_bZ_{\mathrm{out}}+
+ \frac{\nu_bZ_{\mathrm{out}}^2}{1-\mu_bZ_{\mathrm{out}}}&<L_0,
+ \label{or:quartic-gates}\\
+ \frac{e^{L_0R_0}-1-L_0R_0}{L_0}&<\eta_0R_0.&&\notag
+\end{align}
+The complete Gaussian residual is $132200q_b^5$, on its valid
+domain $q_b<1/20$; the integrated actual cubic logarithmic tail
+retains the factors $1/3$ and $1/4$ in
+\eqref{or:quartic-gates}.  The last two residual bounds give strict
+Rouch\'e inequalities on both entire circles.  Those circles avoid
+the source and are disjoint because
+\[
+ 6-21q_b-133q_b^2-1030q_b^3-9000q_b^4>R_0,
+ \quad
+ 12(1-q_b-17q_b^2-137q_b^3-313q_b^4)>2R_0.
+\]
+Rouch\'e's theorem therefore gives the two distinct simple zeros of $F$.
+
+Since $15/(2\cdot79)<19/200$, each companion has weight at least
+\[
+ \omega(19/200,19/200;3/10,1,1,r_b)
+                         =\frac{8672039}{10840400}.
+\]
+Adding the source once gives
+$E\ge b_T+2(8672039/10840400)>r_b(103f_T+1)/.95>W$.
+Thus $h<79$, and the remaining source comparison
+$W<r_b(79f_T+1)/.95<.843<b_T\le E$ is again impossible.
+This proves Proposition~\ref{or:theorem} for all $0<\rho\le1/100$.
+
+\subsection{The higher strip with $T=1$: entering the local estimates}
+
+Assume throughout this subsection that
+\begin{equation}\label{or:T-domain}
+           1/100\le\rho\le\rho_*,\quad T=1,\quad 0<X\le1.
+\end{equation}
+The closed lower endpoint overlaps the base range.  By
+\eqref{or:gap-T}, $d>\sqrt{G(X)}>1$.
+For a test $s=X+\delta$ write
+\[
+ \kappa_\delta(X)=\kappa_X(1,\delta),\qquad
+ A_\delta=X-\kappa_\delta(X)y_0,
+ \quad b_\delta(X)=\frac{1-\rho_*(1+X^2)/2}{1+\delta^2}.
+\]
+On the active interval $1-X\delta-\delta^2\ge0$ the coefficient factors as
+\begin{equation}\label{or:T-kappa-factor}
+ \kappa_\delta(X)=
+ \frac{X[X-(1-\delta)^2][X+(1+\delta)^2]}
+                 {2(1+\delta^2)(X+2\delta)};
+\end{equation}
+outside it $\kappa_\delta(X)=X^2/2$.  With
+$D_\delta(X)=1+\rho_*^2(X+\delta)^2/4$ and
+$f_\delta(X)=(1-\rho_*^2(X+\delta)^2/2)^{-1}$, define
+\begin{equation}\label{or:T-source-function}
+ K_\delta(r,X)=\frac1{f_\delta(X)}
+ \left\{\frac{n_0r b_\delta(X)}{n_0r+2D_\delta(X)b_\delta(X)}-r\right\}.
+\end{equation}
+Equation~\eqref{or:direct-K} gives
+$\rho hA_\delta>\min_{r\in\{1/100,\rho_*\}}K_\delta(r,X)$.
+All tests used here have $1/200\le\delta\le1$; the inverse-Cayley
+condition follows from $\rho_*^2<1/200$.
+
+For $\delta=1/2$, replacing the source and polar factors by their
+$X=1$ bounds gives
+\begin{equation}\label{or:Kh}
+ K_h=\min_{r\in\{1/100,\rho_*\}}K_{1/2}(r,1)>.6843,
+ \qquad \rho h A>K_h,
+\end{equation}
+where $A=1/4$ if $X\le1/4$, by
+\eqref{or:small-X-comparison}, and
+$A=X-\kappa_{1/2}(X)y_0$ otherwise.  Here
+\[
+              \kappa_{1/2}(X)=\frac{X(4X-1)(4X+9)}{40(X+1)}.
+\]
+If $X\le2/5$, \eqref{or:Kh} gives
+$D>h>K_h/((2/5)\rho_*)>25$.
+For $2/5\le X\le1$, the one-variable inequality
+\begin{equation}\label{or:T-first-square}
+            4(227/200)\kappa_{1/2}-(X+\kappa_{1/2})^2>0
+\end{equation}
+implies $A(1+y_0)<227/200$ by completion of the square in $y_0$.
+Multiplication of \eqref{or:Kh} and
+\eqref{or:radial-unphased} then gives
+$h^2>K_hN/[2(227/200)]>25^2$.
+Thus Proposition~\ref{mf:D25} is applicable in all cases, and
+\begin{equation}\label{or:T-ratio3}
+                  y_0<3/d<3/\sqrt{G(X)}\le3.
+\end{equation}
+
+The same moment ratio sharpens the joint bound to
+\begin{equation}\label{or:T-joint-gap}
+                  \frac{A(1+y_0)}{G(X)}\le\frac{21}{20}.
+\end{equation}
+Here are whole-interval certificates for this assertion.  For
+$X\le1/4$ use $(1/4)(1+3)=1$.  Put
+$Y(X)=3(1-11X^2/100)$.  Squaring positive sides gives
+$Y(X)>3/\sqrt{G(X)}$ on $0<X\le.49$; after removal of $X^2$ the
+required polynomial is strictly positive.  The ratio
+$\kappa_{1/2}(X)/X$ increases, and seven times its value at $.41$
+is less than one.  Hence on $[1/4,.41]$ the product
+$(X-\kappa_{1/2}y_0)(1+y_0)$ increases up to its allowed endpoint,
+and the certificate is
+\[
+ (21/20)G(X)-(X-\kappa_{1/2}Y(X))(1+Y(X))>0.
+\]
+On $[.41,1]$ completion of the square gives the certificate
+$4(21/20)G(X)\kappa_{1/2}-(X+\kappa_{1/2})^2>0$.
+Consequently
+\begin{equation}\label{or:T-D45}
+                 D^2>\frac{K_hN}{2(21/20)}>45^2.
+\end{equation}
+
+Write $S/h=c_0+is_0$, $c_0>0$, $c_0^2+s_0^2=1$.
+The universal envelope in Proposition~\ref{mf:envelope} is
+\begin{equation}\label{or:T-matrix}
+ q<\frac{21}{5}\mu^2+\frac{11}{2}\mu c_0
+                         +\frac{c_0^2}{4}-\frac{s_0^2}{2}.
+\end{equation}
+If $|s_0|\ge.7$, then $c_0<18/25$, and the right side is at most
+\[
+ \frac{21/5}{45^2}+\frac{(11/2)(18/25)}{45}
+                       +\frac{1-.7^2}{4}-\frac{.7^2}{2}<0.
+\]
+Thus $|\Im S|<.7h$.
+
+Now take $\delta=3/5$.  On $[0,1]$ the coefficient is always active.
+The rational functions
+$K_{3/5}(1/100,X)-K_{3/5}(\rho_*,X)$ and
+$K_{3/5}(\rho_*,X)$ are positive.  Write
+\[
+ K_{.6}(X)=K_{3/5}(\rho_*,X),\quad
+ A_{.6}=X-\kappa_{3/5}(X)y_0,\quad
+ R_{.6}(y_0)=.7+.3\rho_*+(199/200)y_0.
+\]
+Equation~\eqref{or:radial} gives $N\rho/2<hR_{.6}(y_0)$.
+Combining this with $\rho hA_{.6}>K_{.6}(X)$ gives
+\[
+ h^2>\frac{NK_{.6}(X)}{2A_{.6}R_{.6}(y_0)},\qquad
+ D^2>\frac{NK_{.6}(X)G(X)}{2A_{.6}R_{.6}(y_0)}.
+\]
+The two rectangle inequalities are
+\begin{align}
+ N_0K_{.6}(X)G(X)-2\cdot51^2 A_{.6}R_{.6}(y_0)&>0,
+       &&0\le X\le1, 0\le y_0\le3,\label{or:T-D51-poly}\\
+ N_0K_{.6}(X)-2\cdot45^2 A_{.6}R_{.6}(y_0)&>0,
+       &&0\le X\le1, 0\le y_0\le3.\label{or:T-h45-poly}
+\end{align}
+They prove $D>51$ and $h>45$.  An exact finite positivity procedure
+for these two rational quadratics and all the preceding one-variable
+certificates is given below.  If $|s_0|\ge2/3$, then $c_0<3/4$, and
+\[
+ \frac{21/5}{51^2}+\frac{(11/2)(3/4)}{51}
+                                  +\frac5{36}-\frac29<0.
+\]
+Therefore
+\begin{equation}\label{or:T-prephase}
+                      h>45,\quad D>51,\quad |\Im S|<(2/3)h.
+\end{equation}
+
+\subsubsection{Entry to the larger companion rectangle}
+
+Set $\delta=.71$ and $K(X)=K_\delta(\rho_*,X)$.
+The same endpoint comparison proves that $K(X)$ is the smaller
+scale endpoint; also $K(X)\ge K_*:=K(1)>0$.
+Using \eqref{or:T-prephase} in the exact radial identity gives
+\[
+ \frac{N\rho}{2}<hR,\qquad
+ R=\rho X+\frac23(1-\rho)
+                   +\left(1-\frac\rho2(1+X^2)\right)y_0.
+\]
+Consequently the same source gives
+\begin{equation}\label{or:T-q-square}
+ q^2<\frac{2y_0^2[X-\kappa_\delta(X)y_0]R}{NK(X)}.
+\end{equation}
+For $X\le.49$, $R$ decreases with $\rho$.  At $\rho=.01$ put
+$\beta_0=33/50+X/100$, $I_0=199/200-X^2/200$.
+If $r(X)=\kappa_\delta(X)/X$, the derivative in $y_0$ of
+$y_0^2(X-\kappa_\delta y_0)(\beta_0+I_0y_0)$, divided by $Xy_0$,
+is
+\[
+       2\beta_0+3(I_0-r\beta_0)y_0-4rI_0y_0^2.
+\]
+The ratio $r$ increases: after positive denominators are removed
+its derivative numerator is
+$\delta^4+6\delta^2+4\delta X+X^2+1>0$.
+Let $r_+$ be its value at $.49$, and take the endpoint extrema of
+$\beta_0,I_0$ on $[0,.49]$.  The last display is bounded below by
+\[
+ 2\beta_-+3(I_--r_+\beta_+)y_0-4r_+I_+y_0^2.
+\]
+This concave quadratic is positive at $0$ and $3$.  It follows that
+the permitted $y_0$ may be replaced by $Y(X)$ from above.  The entire
+interval is then certified by
+\begin{equation}\label{or:T-q-low-poly}
+ N_0K(X)-\frac{2}{(.057)^2}Y(X)^2
+       [X-\kappa_\delta(X)Y(X)](\beta_0+I_0Y(X))>0
+                   \quad(0\le X\le.49).
+\end{equation}
+For $X\ge.49$ the active interval has
+$\kappa_\delta(X)\ge(12/25)X^2$; its inactive value $X^2/2$ is
+stronger.  Completion of the square gives
+$y_0[X-\kappa_\delta(X)y_0]\le25/48$.
+Also \eqref{or:T-ratio3} gives $y_0<73/25$.
+Thus the right side of \eqref{or:T-q-square} is at most
+\[
+ \frac{2(25/48)(73/25)
+       \{2/3+\rho_*/3+(199/200)(73/25)\}}{N_0K_*}<(.057)^2.
+\]
+We have proved
+\begin{equation}\label{or:T-Q057-entry}
+                            q<57/1000,\qquad \mu<1/51.
+\end{equation}
+Proposition~\ref{lt:W8} applies in the form \eqref{lt:Q057}.
+Its two distinct actual roots
+$u_\pm$ have normalized positions $w_\pm=S(u_\pm-\beta)$ satisfying
+\begin{equation}\label{or:T-Q057-pair}
+ |w_\pm|<8917/1000,\quad
+ \left|\frac{w_++w_-}{2}\right|<2109/1000,\quad
+                         |\Im S|<(37/5)y_0.
+\end{equation}
+The mean estimate uses the even part of the two centers at the same
+moment parameters, as specified in that proposition.
+
+\subsection{The higher $T=1$ strip: two field ceilings}
+
+If $h\ge105$, then $D>100$ by \eqref{or:gap-T}.
+Propositions~\ref{mf:D100} and \ref{lt:wideD100} give
+\begin{equation}\label{or:T-first-phase}
+         y_0<9/4,\quad q<9/400,\quad \mu<1/100,\quad
+                         |\Im S|<(23/5)y_0.
+\end{equation}
+For a closed cell $\rho\in[p,r]$, $y_0\in[l,u]$, take
+$J=(23/5)u$ and a rational $H\ge105$ with either $H=105$ or
+\begin{equation}\label{or:T-field-H}
+                  H\le\frac{N_0p/2-J}{r+u}.
+\end{equation}
+Then $h\ge H$.  Put
+\begin{equation}\label{or:T-radial-cell}
+             B_r=\frac{r/2+J/N_0}{1-r/2}.
+\end{equation}
+A positive rational $U$ is a valid bound for $h/n$ if at least one
+of $U\ge u$, $U^2\ge B_r$, or $Ul\ge B_r$ holds; the last is
+used only for $l>0$.  These follow respectively from
+\eqref{or:horizontal}, \eqref{or:radial-ratio}, and
+\eqref{or:radial-sharp}.
+
+Retain the same-$X$ distance information.  A cap $0<X_+\le1$ is
+valid if $X_+=1$ or
+\begin{equation}\label{or:T-Xcap}
+                         l^2G(X_+)\ge(9/4)^2.
+\end{equation}
+For the chosen $\delta$, certify
+\begin{equation}\label{or:T-Abar}
+ \overline A-X+\kappa_\delta(X)v>0
+       \quad(0\le X\le X_+,\quad v\in\{l,u\}).
+\end{equation}
+Split the $X$ interval at $(1-\delta^2)/\delta$ to use the correct
+active or inactive formula.  Since the expression is affine in
+$v$, this verifies the whole $(X,y_0)$ cell.  The constants in
+\eqref{or:polar-constants} use $s_+=1+\delta$ and $r_+=r$.
+After checking \eqref{or:HB-cell-denominator},
+\eqref{or:HB-cell} is the source upper bound.
+
+For each contour use \eqref{or:inverse-parameters} with $Y=u$, $m=1$,
+and set
+\begin{equation}\label{or:automatic-contour}
+ \epsilon_0=\frac{1001B_R}{1000H},\quad
+ g_0=\frac{1001\nu B_R\widehat R}{1000},\quad
+ p_0=(1+\lambda)^{-1},\quad a_0=(1-\lambda)^{-1},\quad
+ e_0=\left(\sum_{j=0}^{80}\frac{W_0^j}{j!}\right)^{-1}.
+\end{equation}
+Verify \eqref{or:contour-gates} and \eqref{or:odd-gate}, using
+$\pi<22/7$.  Use \eqref{or:width}, rounded upwards, and the weights
+\eqref{or:weight} with $t_-=t_+=1$.  A valid source weight is
+$b_0=(1-r)/(1+\delta^2)$.  The source lower bound is
+\begin{equation}\label{or:T-cloud-lower}
+  \sum_jw_j(s_j-s_{j-1})+\frac{\min(0,b_0-3w_1)}H.
+\end{equation}
+The source upper is \eqref{or:HB-cell}.  Table~\ref{or:T-cover}
+specifies the two full covers; the rational choices of cells and
+contours are in the electronic appendix.  On every cell of the first
+cover, \eqref{or:T-cloud-lower} strictly exceeds that upper.  The
+coverage and arithmetic procedures are specified in
+\S\ref{or:finite-verification}.  This proves $h<105$.
+
+Suppose next that $90\le h<105$.  Since $D>90$,
+Proposition~\ref{lt:D70} gives, with $z=Qd/h$,
+\[
+ z<8/3,\quad |\Im S|<(21/4)y_0,\quad
+                   3z^2-(D-91/10)z+2D>0.
+\]
+At $D=90$ this quadratic is negative at both $z=8/3$ and $z=49/20$.
+These values decrease with $D$, since $2-z<0$.  The prior
+$z<8/3$ excludes the larger root branch, so
+\begin{equation}\label{or:T-ratio245}
+                           z<49/20,\qquad y_0<49/20.
+\end{equation}
+Use the nested-count procedure with $H\ge90$, $J=(21/4)u$ and
+$49/20$ in place of $9/4$ in \eqref{or:T-Xcap}.
+It excludes $26$ closed cells of the second cover.  The remaining
+nine cells use the already proved $h<105$ and the following pair
+estimate.
+
+\begin{lemma}[Two actual sources]\label{or:pair-source}
+Suppose $T=1$, $0<\rho\le r<1$, $R>0$, and $0<m<1$.
+Suppose two distinct actual zeros other than $\beta$ have
+displacements $v_\pm=u_\pm-\beta$ satisfying
+$|v_\pm|<R$, $|(v_++v_-)/2|<m$.  Suppose also that their individual
+insets belong to $[3/4,6/5]$.  For a test
+$s=X+\delta$ with $\delta>0$, put
+\[
+ I_\Sigma=2(1-r)(1-m)-rR^2,\qquad
+ D_\Sigma=2(1+\delta^2)+4\sqrt{1+\delta^2}\,m+2R^2.
+\]
+Assume $I_\Sigma>0$.  Then
+\begin{equation}\label{or:pair-lower}
+        E>\frac{1-r}{1+\delta^2}
+                    +\frac{(I_\Sigma/2+49/50)^2}{D_\Sigma}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Rightmostness gives $\Re v_\pm\le0$.  Expanding the inset,
+\[
+ I(\beta+v)=I(\beta)-(1-\rho)\Im v
+                             -\rho X\Re v-\frac\rho2|v|^2.
+\]
+Since $I(\beta)\ge1-\rho$ and $|v_++v_-|<2m$,
+\[
+ I(u_+)+I(u_-)
+ >2(1-\rho)(1-m)-\rho R^2
+ \ge2(1-r)(1-m)-rR^2=I_\Sigma>0.
+\]
+The second inequality uses $2(1-m)+R^2>0$.
+The squared distances satisfy
+\[
+ \begin{split}
+ |s-u_+|^2+|s-u_-|^2
+ &=2(1+\delta^2)
+   -2\Re\bigl((\delta+i)\overline{v_++v_-}\bigr)
+   +|v_+|^2+|v_-|^2\\
+ &<D_\Sigma.
+ \end{split}
+\]
+On $[3/4,6/5]$ one has $\sqrt t\ge t/2+49/100$.
+Indeed $t-(t/2+49/100)^2$ is concave and positive at both endpoints.
+Cauchy--Schwarz gives
+\[
+ \frac{I(u_+)}{|s-u_+|^2}+\frac{I(u_-)}{|s-u_-|^2}
+ \ge\frac{(\sqrt{I(u_+)}+\sqrt{I(u_-)})^2}
+              {|s-u_+|^2+|s-u_-|^2}
+ >\frac{(I_\Sigma/2+49/50)^2}{D_\Sigma}.
+\]
+Adding the contribution of $\beta$ proves \eqref{or:pair-lower}.
+\end{proof}
+
+By \eqref{or:T-ratio245}, the field $h\ge90$ gives
+$q<(49/20)/90<.05$, $\mu<1/90<.02$.
+Proposition~\ref{lt:q05mu02} therefore supplies
+\[
+                          R=17/180,\qquad m=19/900.
+\]
+Here $R>0$, $0<m<1$, and, for each of the nine cells,
+\[
+ I_\Sigma\ge2(1-\rho_*)(1-m)-\rho_*R^2
+             =\frac{367561059}{200000000}>0.
+\]
+The individual insets lie in $[3/4,6/5]$, since
+\begin{equation}\label{or:pair-inset-gates}
+          (1-r)(1-R)-rR^2/2>3/4,\qquad 1+R<6/5.
+\end{equation}
+For each pair cell verify \eqref{or:T-Abar} and
+$B_{105}=2D_p(105f\overline A+1)/n_0<1$.  Its source upper is
+\begin{equation}\label{or:T-pair-upper}
+                  W<\frac{r(105f\overline A+1)}{1-B_{105}}.
+\end{equation}
+The lower bound \eqref{or:pair-lower} exceeds
+\eqref{or:T-pair-upper} in all nine cells.  This proves $h<90$.
+
+\begin{table}[ht]
+\centering
+\caption{Closed covers for the higher $T=1$ strip.  Each cover uses
+the three scale slabs $[.01,.025]$, $[.025,.045]$, and
+$[.045,.061002]$.}\label{or:T-cover}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+field assumption&moment interval&closed cells&count cells&pair cells&contours\\
+\midrule
+$h\ge105$&$[0,9/4]$&28&28&0&1950\\
+$90\le h<105$&$[0,49/20]$&35&26&9&1881\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The higher $T=1$ strip: the terminal pairs}
+
+For $\delta=.71$ use $A=(1-\delta)^2$ when
+$X\le(1-\delta)^2$, and $A=X-\kappa_\delta(X)y_0$ otherwise.
+The source coefficient satisfies
+\begin{equation}\label{or:Ay-terminal}
+                             y_0 A\le11/20.
+\end{equation}
+Here is the whole-domain verification.  Put $m_0=(1-\delta)^2$.
+For $X\le m_0$, use $3m_0<11/20$.  On $[m_0,.35]$ six times
+the endpoint value of $\kappa_\delta/X$ is less than one, so
+$y_0(X-\kappa_\delta y_0)$ increases up to $y_0=3$; certify
+$11/20-3(X-3\kappa_\delta)>0$ on this full interval.
+Above $.35$, the active coefficient satisfies
+$\kappa_\delta\ge(5/11)X^2$, and the inactive coefficient is stronger.
+Completion of the square then gives \eqref{or:Ay-terminal}.
+
+If $|\Im S|<J_0y_0$, equation~\eqref{or:radial} implies
+\[
+                   \rho(N-2h)<2y_0(h+J_0).
+\]
+For $h_L\le h\le h_U<N_0/2$, we have $N-2h>0$, and hence
+\[
+ \rho hA<\frac{2y_0A\,h(h+J_0)}{N-2h}
+       \le\frac{2(11/20)h_U(h_U+J_0)}{N_0-2h_U}.
+\]
+Use $f=(1-\rho_*^2(1.71)^2/2)^{-1}$,
+$D_p=1+(\rho_*1.71/2)^2$, and
+$B_U=2D_p(fh_U+1)/n_0<1$.  The resulting finite source upper is
+\begin{equation}\label{or:T-terminal-upper}
+ W<\frac{f\,2(11/20)h_U(h_U+J_0)/(N_0-2h_U)+\rho_*}{1-B_U}.
+\end{equation}
+The following two intervals cover $45<h<90$, including their seam:
+\begin{equation}\label{or:T-terminal-table}
+\begin{array}{c|c|c|c|c}
+ \text{field interval}&\text{companion estimate}&Z&M&J_0\\ \hline
+ (45,70]&\eqref{lt:Q057}&8917/1000&2109/1000&37/5\\
+ {}[70,90)&\ref{lt:q05mu02}&17/2&19/10&7
+\end{array}
+\end{equation}
+The second row applies because $q<3/70<.05$ and $\mu<1/70<.02$;
+the first applies by \eqref{or:T-Q057-entry}.
+In each row put $R=Z/h_L$, $m=M/h_L$.
+In both rows $R>0$, $0<m<1$, and the inset gates
+\eqref{or:pair-inset-gates} hold with $r=\rho_*$.
+The corresponding values of $I_\Sigma$ are
+\[
+ I_\Sigma=
+ \begin{cases}
+  \dfrac{201103346909179}{112500000000000}>0,&(45,70],\\[3pt]
+  \dfrac{715839963}{392000000}>0,&[70,90).
+ \end{cases}
+\]
+Lemma~\ref{or:pair-source}, using
+$\sqrt{1+.71^2}<123/100$, gives the lower
+\begin{equation}\label{or:T-terminal-lower}
+ \frac{1-\rho_*}{1+.71^2}+
+ \frac{\{(1-\rho_*)(1-m)-\rho_*R^2/2+49/50\}^2}
+ {2(1+.71^2)+4(123/100)m+2R^2}.
+\end{equation}
+It exceeds \eqref{or:T-terminal-upper} by more than $.6165$ in the
+first row and more than $.0527$ in the second.  These rational
+comparisons hold throughout the stated field intervals.
+They contradict $W\ge E$ and exclude
+\eqref{or:T-domain}.
+
+\subsection{The higher strip with $X=1$: a lower field bound}
+
+Assume now
+\begin{equation}\label{or:X-domain}
+             1/100\le\rho\le\rho_*,\quad X=1,\quad0<T\le1.
+\end{equation}
+In this case $d>1/2$, $0<y_0<2$, and
+$y_0<2\Re(S/h)$ by \eqref{or:horizontal}.  We first prove
+\begin{equation}\label{or:X-h50}
+                                   h>50.
+\end{equation}
+
+If $T\le1/8$, apply \eqref{or:moving-field} with
+$r_+=\rho_*$, $t_+=1/8$.  The exact expression $H_m$ exceeds $54$,
+so $h>50$ at positive inset.  At zero inset,
+$\rho=2T/(1+T^2)$ and
+$\rho_*<2(1/8)/(1+(1/8)^2)$ imply $T<1/8$ strictly.
+The finite homothety \eqref{or:homothety} can therefore be chosen
+with $T'<1/8$.  It gives the same strict bound for the unchanged $h$.
+
+Suppose $1/8\le T\le1$ and, for contradiction, $h\le50$.
+The unphased radial identity gives
+$N\rho/2<h(1+Ty_0)<50(1+2T)$, hence
+\[
+                           \rho<300/N\le R_*=6/125.
+\]
+Use $\delta=3/10$ and the polar constants
+\[
+ f=(1-R_*^2(1.3)^2/2)^{-1},\quad D_p=1+(R_*1.3/2)^2,
+                 B_{50}=2D_p(50f+1)/n_0<1.
+\]
+The source has the whole-interval lower weight
+\[
+ b_0=\min_{t\in\{1/8,1\}}
+                 \frac{t-R_*(1+t^2)/2}{t^2+.09}>0.
+\]
+Write $S/h=c_0+is_0$, $c_0>0$, and set
+$k=\kappa_1(1,.3)=13719/34880$.  The critical comparison gives
+$C<f\rho h(c_0-ky_0)$, and $c_0-ky_0>0$ follows from $C\ge0$
+and its strictness.  Under $h\le50$, the denominator $1-B_{50}$
+is positive, so the source inequality gives
+\begin{equation}\label{or:X-Rayleigh-source}
+ \rho h(c_0-ky_0)>K:=\frac{(1-B_{50})b_0-R_*}{f}
+                 =\frac{1279084413230726}{1580047607421875}>0.
+\end{equation}
+
+Put $v_0=y_0/c_0\in(0,2)$, so $c_0-ky_0=c_0(1-kv_0)$.
+Equation~\eqref{or:radial}, using $I(\beta)\le T\le1$, gives
+\[
+ \frac{N\rho}{2}<h\{c_0(R_*+v_0)+\sqrt{1-c_0^2}\}.
+\]
+Multiply by \eqref{or:X-Rayleigh-source}.
+The product in the denominator is the Rayleigh form, at the unit
+vector $(c_0,\sqrt{1-c_0^2})$, of
+\[
+             (1-kv_0)
+             \begin{pmatrix}R_*+v_0&1/2\\1/2&0\end{pmatrix}.
+\]
+Its largest eigenvalue is less than $M=4/5$ for every
+$0\le v_0\le2$.  Indeed the determinant of $M$ times the identity
+minus this matrix is $a_2v_0^2+a_1v_0+a_0$, where
+\[
+ a_2=Mk-k^2/4>0,\quad
+ a_1=-M(1-kR_*)+k/2,\quad a_0=M^2-MR_*-1/4,
+ \qquad 4a_2a_0-a_1^2>0.
+\]
+This quadratic is positive on the whole real line; the other principal
+minor is $M>0$.  Also $1-2k>0$.  Thus
+\[
+ h^2>\frac{KN_0}{2M}
+      =\frac{639542206615363}{202246093750}>2500,
+\]
+contradicting $h\le50$.  This proves \eqref{or:X-h50}.
+Consequently $q<2/h<.04$ and $\mu<2/h<.04$.
+Proposition~\ref{lt:q04mu04} gives
+\begin{equation}\label{or:X-low-phase}
+                              |\Im S|<(15/2)y_0.
+\end{equation}
+The homogeneous version includes all positive $q$ in this rectangle:
+the radius is $(45/4)q$, and the center bound
+$Z=7.706829806638$ satisfies $Z+.45<(13/5)\pi$.
+
+\subsection{The higher $X=1$ strip: field bounds on closed cells}
+
+For a cell
+\begin{equation}\label{or:X-cell}
+       \rho\in[p,r],\qquad y_0\in[l,u],\qquad T\in[t_-,t_+],
+\end{equation}
+use a phase bound $J=\gamma u$, with $\gamma=4$ on a
+high-field branch and $\gamma=15/2$ on the low-field branch.
+For a test $\delta$, put
+\[
+ k=\kappa_1(t_+,\delta),\quad \overline A=1-kl,
+ b_0=\omega(0,0;\delta,t_-,t_+,r),
+\]
+and use \eqref{or:polar-constants} with $s_+=1+\delta$.
+Where $b_0>0$ the direct source gives
+\begin{equation}\label{or:X-K}
+ \rho h(1-ky_0)>K,\qquad
+ K=\frac1f\min_{z\in\{p,r\}}
+          \left\{\frac{n_0z b_0}{n_0z+2D_pb_0}-z\right\}>0.
+\end{equation}
+The cell conditions include positivity of $\overline A$, the polar
+denominator, and $K$.  Set
+\[
+ G_0=\max_{l\le y_0\le u}(1-ky_0)(1+t_+y_0),\qquad
+ G_1=\max_{l\le y_0\le u}y_0(1-ky_0).
+\]
+Each is a concave quadratic maximum, evaluated at both endpoints
+and its vertex when the vertex belongs to the closed interval.
+Equations~\eqref{or:X-K} and \eqref{or:radial-unphased} imply
+\begin{equation}\label{or:X-source-fields}
+             h>\frac{K}{r\overline A},\qquad
+             h^2>\frac{KN_0}{2G_0}.
+\end{equation}
+For the low-field phase \eqref{or:X-low-phase}, the exact radial
+identity also gives
+$\rho(N-2h)<2y_0(Th+15/2)$.
+Multiplying by the same positive factor $h(1-ky_0)$ gives
+\[
+          K(N-2h)<2y_0(1-ky_0)h(Th+15/2),\qquad h<N/2.
+\]
+Thus a rational $H<N_0/2$ is a valid strict lower field if
+\begin{equation}\label{or:X-phase-field}
+                   K(N_0-2H)\ge2G_1H(t_+H+15/2).
+\end{equation}
+Indeed a contrary $h\le H$ makes its left side no smaller, and its
+right side no larger, than those in \eqref{or:X-phase-field}.
+
+Besides these source bounds, every cell has the lower field bounds
+\begin{equation}\label{or:X-radial-fields}
+ \frac{N_0p}{2(1+t_+u)},\qquad
+ \frac{N_0p/2-J}{r+t_+u},\qquad H_m
+\end{equation}
+from \eqref{or:radial-unphased}, \eqref{or:radial-phase}, and
+\eqref{or:moving-field}.  At zero inset the last is non-strict,
+which suffices for a choice $H\le H_m$.  The moving test supplies
+$H_m$; the final moment calculation includes $\beta$ once.
+
+For every inverse row choose a rational $m>0$ satisfying
+\begin{equation}\label{or:X-m-cell}
+              m^2\{1/4+\max(t_--1/125,0)^2\}\ge1.
+\end{equation}
+By \eqref{or:gap-X} this bounds $1/d$ on the whole cell.  Use
+$Y=u+10^{-9}$ in \eqref{or:inverse-parameters}, and use
+\eqref{or:automatic-contour}.  The rational enlargement of $u$
+ensures the required strict derivative inequalities also at a closed
+moment endpoint.  All rows satisfy \eqref{or:contour-gates} and
+\eqref{or:odd-gate}.  Widths, slopes and depths are computed by
+\eqref{or:width}, \eqref{or:counts}, and \eqref{or:depth}.
+The physical nesting conditions are $R_j<R_{j+1}<2$ and increasing
+slopes; running maxima of the widths remain at most the corresponding
+radii.  The regions therefore have $|\Re u|\le1$ as required by
+\eqref{or:weight}.
+
+If a depth lower bound exceeds $t_+$, the cell is impossible.  This
+positive depth condition forces the height budget above $4\pi$,
+so Lemma~\ref{or:narrow-strip} supplies such a root.
+Otherwise compute the nested source lower in \eqref{or:Abel-source}.
+For an unbounded high-field cell use the correction
+$\min(0,b_0-3w_1)/H$; for a low-field cell use
+\begin{equation}\label{or:X-signed-correction}
+ \begin{cases}
+  (b_0-3w_1)/H,&b_0-3w_1<0,\\
+  (b_0-3w_1)/600,&b_0-3w_1\ge0.
+ \end{cases}
+\end{equation}
+The latter form is used only after the ceiling $h<600$ is proved.
+
+\subsubsection{The high-field cover}
+
+Suppose $h\ge600$.  The bounds $q<2/600<7/625$ and
+$\mu<2/600<1/200$ permit
+Proposition~\ref{lt:fine200}, giving $|\Im S|<4y_0$.
+On each cell take $J=4u$ and $H$ below at least one of $600$ and
+the three lower fields in \eqref{or:X-radial-fields}.
+For $t_->0$ put
+\begin{equation}\label{or:X-high-radial}
+       B_r=\frac{r/2+J/N_0}{t_-(1-rt_-/2)}.
+\end{equation}
+A positive $U$ bounds $h/n$ if $U\ge u$, $U^2\ge B_r$, or
+$Ul\ge B_r$ for $l>0$.  Apply \eqref{or:HB-cell} with
+$\overline A=1-\kappa_1(t_+,\delta)l$.  The high cover has
+$61$ closed cells covering $[0,2]\times[0,1]$ in $(y_0,T)$ for
+the entire scale interval $[.01,.061002]$.  Each cell has either
+an actual-root depth contradiction, or a strict source lower bound
+greater than \eqref{or:HB-cell}.  Cells with $t_-=0$ use the
+depth alternative.  It follows that $h<600$.
+
+\subsubsection{The low-field cover}
+
+Use \eqref{or:X-h50} and \eqref{or:X-low-phase}.
+The six closed scale slabs are
+\begin{equation}\label{or:X-slabs}
+ [.01,.013],\ [.013,.017],\ [.017,.023],\ [.023,.033],\
+ [.033,.045],\ [.045,.061002].
+\end{equation}
+On each cell take $J=(15/2)u$ and choose $H>J$ below at least one
+of: $50$; a bound in \eqref{or:X-radial-fields}; a bound in
+\eqref{or:X-source-fields}; or a value certified by
+\eqref{or:X-phase-field}.  All source tests used for these choices
+satisfy $1/200\le\delta\le3/4$ and
+$(r(1+\delta)/2)^2<\delta$.
+If $H\ge600$, the cell contradicts the preceding ceiling.
+Otherwise it has either a depth contradiction or a nested
+moment contradiction.  For the latter the upper denominator is
+\begin{equation}\label{or:X-low-denominator}
+                   B=\frac{2D_p(600f\overline A+1)}{n_0}<1.
+\end{equation}
+Thus every low-field source upper uses the bound $h<600$.
+
+The six slabs have respectively $36,38,41,38,41,46$ closed cells.
+Together with the $61$ high cells this makes $301$ cells.  Their
+three contradiction types are $196$ moment comparisons, $57$ actual
+root depth comparisons, and $48$ field comparisons.  There are
+$14891$ complete inverse contours.  With the rational rounding
+conventions below, the smallest moment reserve is
+\begin{equation}\label{or:X-reserve}
+       \frac{84739835370681964317289}
+            {240500000000000000000000000}>.0003523485.
+\end{equation}
+Every external endpoint and every internal depth, moment, and scale
+seam belongs to the closed cover.  This excludes \eqref{or:X-domain}.
+
+\subsection{Finite verification and the entire degree ray}
+\label{or:finite-verification}
+
+We finish by specifying the finite verification behind the interval
+comparisons above.  The electronic appendix contains the exact
+rational parameter files and executable verifiers.  The files specify
+cells, tests, radii and trims; the following procedure recomputes
+their bounds.
+
+\begin{enumerate}
+\item Every integer, fraction and finite decimal is read as an exact
+  rational number.  The base rows are precisely
+  Table~\ref{or:base-contours}.  The higher $T$ rows are the two files
+  \cert{T6251_H105_PROPOSAL.json} and
+  \cert{T6251_H90_PROPOSAL.json}; each record specifies
+  $(p,r,l,u,H,\delta,\overline A,U,X_+,J)$ and either the list
+  $(R,\nu,W_0)$ or the pair alternative.  The higher $X$ rows are
+  \cert{X6251_high_0.01_0.061002.json} and the six
+  \cert{X6251_MOVING_low_} files indexed by the consecutive endpoints
+  of \eqref{or:X-slabs}.  Each record specifies $(l,u,t_-,t_+,H)$,
+  its contradiction type, its source tests, and its contour choices
+  $(R,\nu,W_0,m)$.
+\item First verify the declared parameter domains, the inverse-Cayley
+  condition, every local entrance, and the asserted lower
+  field using the formulae preceding the relevant cover.  For $T$
+  cells verify \eqref{or:T-Xcap}, \eqref{or:T-Abar}, and the
+  radial upper.  For $X$ cells verify \eqref{or:X-m-cell} and every
+  source positivity and quadratic maximum used for its field.
+\item For every contour recompute $\lambda,e_R,\widehat R,B_R$,
+  then all of \eqref{or:contour-gates} and the appropriate horizontal
+  and height inequalities.  In the higher strips use
+  \eqref{or:automatic-contour}.  The displayed Taylor reciprocal is
+  strictly greater than $e^{-W_0}$.  Exponential upper bounds in the
+  quartic gates use, for $0\le x<32$,
+  \[
+    e^x\le\sum_{j=0}^{30}\frac{x^j}{j!}
+           +\frac{x^{31}}{31!(1-x/32)}.
+  \]
+  The geometric tail proves the inequality for every omitted order.
+\item In the higher covers, round slopes and weights down, and real
+  widths up, to the rational lattice $10^{-12}\mathbb Z$.
+  Use $7/22<1/\pi$ for slopes and $\pi<22/7$ for depth losses.
+  For every $X$ row also verify $Hs_j>1$ after rounding its slope.
+  Square roots needed for radial uppers or pair denominators are
+  rounded up to $10^{-16}\mathbb Z$, checking the squared enclosure
+  by integer arithmetic.  Take running maxima of the widths and
+  future maxima of the weights, verify their nesting, and compute
+  the Abel sums exactly with the signed correction
+  \eqref{or:X-signed-correction} when appropriate.  The $X$ source
+  upper is rounded up to $10^{-12}\mathbb Z$ before subtraction.
+\item Each cell using nested counts must have $0<B<1$ and a positive
+  lower-minus-upper reserve.  Each depth cell must have its rounded lower depth strictly
+  greater than $t_+$.  Each low-field exclusion must have $H\ge600$.
+  Each pair cell must satisfy $0<r<1$, $R>0$, $0<m<1$, $\delta>0$, $I_\Sigma>0$,
+  both inset gates, both endpoint chord inequalities, its squared
+  radical enclosure, and the strict
+  comparison \eqref{or:pair-lower}--\eqref{or:T-pair-upper}.
+\item Covering is checked as an assertion about closed rectangles.
+  For each $X$ file, sort all depth endpoints.  At every endpoint
+  and one point in each intervening open interval, collect the
+  $[l,u]$ intervals of all cells whose closed depth interval contains
+  the point.  Their sorted union must cover $[0,2]$ without a gap.
+  Membership is constant between adjacent depth endpoints, so this
+  proves coverage of the whole rectangle.  Check exact adjacency
+  and the exterior endpoints of the six scale slabs.  For each
+  $T$ cover, sort all moment endpoints and check that the active
+  scale intervals cover $[.01,.061002]$ on every intervening open
+  fiber; the closed cells include their endpoint fibers as well.
+\end{enumerate}
+
+Here is a finite positivity method for all rational functions used in
+the $T$ entrances, source coefficients and terminal bound.  Reduce the
+function to a polynomial numerator and denominator over $\mathbb Q$.
+Verify nonzero endpoint values, use the Euclidean signed-remainder
+sequence (Sturm's rule) to show that neither has a root in the closed
+interval, and check that their signs agree at one endpoint.  At an
+explicit vanishing factor such as $X^2$ or $1-X$, remove that factor
+symbolically and check its endpoint separately.  This proves every
+one-variable positivity statement in
+\eqref{or:T-first-square}--\eqref{or:T-q-low-poly},
+\eqref{or:T-Abar}, and \eqref{or:Ay-terminal} on its specified
+interval.  The base source-compensation polynomial is instead
+expanded in the Bernstein basis of its specified interval; all its
+coefficients are positive.  To make this test explicit, if
+$P(a+(b-a)t)=\sum_{j=0}^d c_jt^j$, its Bernstein coefficients are
+\[
+                   b_k=\sum_{j=0}^k c_j
+                                   \frac{\binom{k}{j}}{\binom{d}{j}}.
+\]
+Nonnegative basis functions whose sum is one then prove positivity
+throughout $[a,b]$.
+
+For the two rectangle inequalities
+\eqref{or:T-D51-poly}--\eqref{or:T-h45-poly}, collect the exact
+coefficients as $a(X)y_0^2+b(X)y_0+c(X)$.  Subdivide the closed
+$X$ interval dyadically.  On each leaf the same one-variable procedure
+verifies the positive values at $y_0=0,3$ and one of the following
+sufficient conditions: $b>0$; $6a+b<0$; $a<0$; or $a>0$ and
+$4ac-b^2>0$.  The first condition suffices because if $a\ge0$ the
+quadratic is increasing, whereas if $a<0$ its two positive endpoint
+values suffice by concavity.  The second has the analogous decreasing
+or concave justification.  The third and fourth follow from concavity
+and completion of the square, respectively.
+The coefficients $a,b$ have a factor $X$; checking their quotients
+and $c(0)>0$ handles the entire $X=0$ edge.  Both children of each
+subdivision are retained.  The resulting sorted leaves have exact
+adjacent endpoints $0$ and $1$, proving the entire rectangle.
+This proves the two coupled source and matrix inequalities over their
+full rectangles.
+
+These procedures verify the $55$ base contours and all base
+inequalities; the higher $T$ procedure verifies $63$ closed cells,
+$3831$ contours and $9$ pair cells; the higher $X$ procedure verifies
+the $301$ closed cells and reserve \eqref{or:X-reserve}.
+The least higher-$T$ reserve among cells using nested counts exceeds
+$.0001411$.
+
+Finally every argument extends from $N_0=6250$ to the entire ray
+$N\ge N_0$.  All local companion, inverse-log and crescent estimates
+are independent of the degree.  The direct source in
+\eqref{or:direct-K} increases with $n$; radial lower fields increase
+with $N$; the terms $J/N$ and $1/n$ in upper bounds decrease.
+The coupled inequality \eqref{or:X-phase-field} strengthens with
+$N$, and the two terminal uppers decrease with $N$.
+The fixed ceilings and closed parameter covers therefore
+work for every $n\ge6251$.  The base range and the two higher strips
+exhaust \eqref{or:normalization}, proving
+Proposition~\ref{or:theorem}.

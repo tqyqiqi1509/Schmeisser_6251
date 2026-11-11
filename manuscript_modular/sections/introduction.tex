@@ -1,0 +1,161 @@
+\section{Introduction}\label{sec:introduction}
+
+Let $p$ be a complex polynomial of degree $n\ge2$, and let $Z(p)$
+denote its zeros, counted with algebraic multiplicity. The Gauss--Lucas
+theorem places the critical points $Z(p')$ in the convex hull
+$\conv Z(p)$. Schmeisser's conjecture asserts that, when
+$Z(p)\subseteq\overline\D=\{z\in\C:|z|\le1\}$, the closed unit disks
+centered at the critical points cover this entire convex hull.
+We prove the following degree range.
+
+\begin{theorem}\label{thm:main}
+Let $p$ be a complex polynomial of degree $n\ge6251$, all of whose
+zeros lie in $\overline\D$. Then
+\[
+ \conv Z(p)\subseteq
+ \bigcup_{\xi\in Z(p')}\{z\in\C:|z-\xi|\le1\}.
+\]
+\end{theorem}
+
+The radius is sharp in every degree: for $p(z)=z^n-1$, the only
+critical point is zero, while every zero has modulus one.
+
+\subsection{The conjecture and its early development}
+
+Sendov's conjecture concerns the same distance bound at each zero of
+$p$. Sendov proposed it in 1958; Hayman's 1967 collection included it
+as Problem~4.5 under Ilieff's name, through whom the problem had been
+communicated \cite{Hayman1967,Schmeisser1971,Schmeisser2003}.
+Rubinstein \cite{Rubinstein1968} proved the assertion at zeros on the
+unit circle and for polynomials of degrees three and four.
+Meir and Sharma \cite{MeirSharma1969} subsequently treated degree five.
+
+A stronger localization already appeared in Schmeisser's early work.
+For degrees at most four, he proved that for every zero $a$ there is
+a critical point $\xi$ satisfying
+\begin{equation}\label{in:early-localization}
+             |\xi-a/2|\le1-|a|/2
+\end{equation}
+\cite{Schmeisser1969}. Gacs extended this localization to degree five
+\cite{Gacs1971}. It implies the convex-hull covering directly.
+Indeed, if $w=\sum_i t_i z_i$, with $t_i\ge0$ and $\sum_i t_i=1$,
+then
+\[
+ \sum_i t_i\Re(w\overline{z_i})=|w|^2.
+\]
+Choose a zero $a$ for which $\Re(w\overline a)\ge|w|^2$. Then
+\[
+ |w-a/2|^2=|w|^2-\Re(w\overline a)+|a|^2/4
+ \le|a|^2/4.
+\]
+Together with \eqref{in:early-localization}, this gives $|w-\xi|\le1$.
+
+Schmeisser also established geometric and algebraic special cases.
+His 1969 paper treats hulls whose vertices lie on the unit circle;
+interior zeros are allowed \cite{Schmeisser1969}. His 1971 paper
+develops coefficient estimates and proves Sendov's conjecture for
+trinomials and for monic polynomials with real nonpositive
+nonleading coefficients \cite{Schmeisser1971}. In Section~3 of
+\cite{Schmeisser1977}, he formulated the convex-hull conjecture and
+observed that the earlier proofs give this stronger conclusion in
+degrees at most five, for hulls with all vertices on the unit circle,
+and for trinomials. The same paper proves the assertion for triangular
+hulls of arbitrary degree. Problem~4.30 of Hayman and Lingham
+\cite{HaymanLingham} records the convex-hull question and its special
+cases $p(0)=0$ and monic polynomials with real nonpositive
+nonleading coefficients.
+
+\subsection{Subsequent distance estimates}
+
+For Sendov's conjecture, Brown and Xiang \cite{BrownXiang1999}
+proved the result in degrees at most eight, and in arbitrary degree
+when there are at most eight distinct zeros. The large-degree
+approach began with D\'egot's theorem \cite{Degot}: for every fixed
+$a\in(0,1)$ there is a degree bound depending on $a$ such that
+a polynomial with $p(a)=0$ and all zeros in $\overline\D$ has
+a critical point within distance one of $a$. Chalebgwa
+\cite{Chalebgwa} made this dependence explicit, obtaining uniform
+bounds when $a$ ranges over a compact subinterval of $(0,1)$.
+Tao \cite{Tao2022} proved a single absolute, unspecified degree
+threshold valid for all zeros. His argument treats separately
+sequences of distinguished zeros whose moduli tend to zero,
+to an interior point of $(0,1)$, or to one. An explicit absolute
+bound $n\ge10^{200000}$ was subsequently given by Zhang
+\cite{ZhangExplicit}. Mazur's all-degree argument and Tao's
+exposition concern the distance from each actual zero to the
+critical points \cite{Mazur,Tao2026}; the convex-hull assertion
+appears as Conjecture~18 in \cite{Tao2026}.
+
+A related line of work studies the centroid
+\[
+ G=\frac1n\sum_{z\in Z(p)}z
+   =\frac1{n-1}\sum_{\xi\in Z(p')}\xi.
+\]
+Paw{\l}owski \cite{Pawlowski} proved, for zeros in $\overline\D$,
+\[
+ \min_{\xi\in Z(p')}|G-\xi|
+ \le\frac{2n^{1/(n-1)}}{n^{2/(n-1)}+1}<1.
+\]
+Zhang improved this bound to $\sqrt{(n-2)/(n-1)}$
+\cite{ZhangCentroid}. For $Z(p)\subseteq\overline\D$, his later paper
+\cite{ZhangHull} gives
+\[
+ \min_{\xi\in Z(p')}|a-\xi|\le\sqrt{1-|a|^2}
+       \qquad(a\in\conv Z(p')).
+\]
+The domain in this estimate is the critical-point hull.
+For example, its radius follows from a convex representation
+$a=\sum_j t_j\xi_j$:
+\[
+ \sum_j t_j|\xi_j-a|^2
+ =\sum_j t_j|\xi_j|^2-|a|^2\le1-|a|^2.
+\]
+Schmeisser's question concerns the larger set $\conv Z(p)$.
+
+Two recent estimates at an actual zero are useful here.
+For zeros in $\overline\D$, Zhang \cite{ZhangQuadratic} proved the
+quadratic Tang--Zhang inequality
+\[
+ \sum_{\xi\in Z(p')}\frac1{|a-\xi|^2}\ge n-1
+       \qquad(a\in Z(p)),
+\]
+with an infinite summand at a common zero of $p$ and $p'$.
+For arbitrary complex polynomials, Bouthat and Fallat
+\cite{BouthatFallat}, and Zhang
+\cite{ZhangVariance}, proved Borcea's quadratic variance bound
+\[
+ \min_{\xi\in Z(p')}|a-\xi|\le\sigma_2(p)
+       \qquad(a\in Z(p)),\qquad
+ \sigma_2(p)^2=\frac1n\sum_{z\in Z(p)}|z-G|^2.
+\]
+Section~\ref{sec:actual-roots} proves these estimates for
+$n\ge6251$ and $n\ge2048$, respectively.
+
+\subsection{The explicit degree bound}
+
+An earlier argument established Schmeisser's conjecture for all
+sufficiently large degrees \cite{TangQualitative}.
+Theorem~\ref{thm:main} gives the explicit threshold $6251$.
+Its proof consists of finite polynomial identities, analytic
+inequalities uniform for $n\ge6251$, and a finite collection of
+rational and interval verifications.
+
+A point missed by all the critical-point unit disks can be moved
+along a ray to a supporting edge of the zero hull. At a rightmost
+zero $b$ we study the reciprocal critical points $(b-\xi)^{-1}$.
+A matrix representation bounds their first two moments. A saddle
+estimate and local primitive estimates sharpen these bounds and
+produce nearby zeros of the original polynomial. Near the origin,
+a finite Cayley--Hermite--Biehler identity supplies a source estimate;
+the radial identity couples it to the same polynomial's moments.
+In the other regions, equal-value fibers, product estimates and
+positive sums of root counts yield a contradiction.
+Section~\ref{sec:assembly} combines the parameter ranges.
+
+The paper gives the analytic estimates, the complete remainders,
+the parameter domains and the finite verification criteria.
+The electronic appendix supplies the rational data and verification
+programs. All zeros and critical points in sums and products are
+counted with multiplicity. Terminating decimals denote exact rational
+numbers. Each certified strict inequality holds on the indicated
+closed parameter cell, including its boundary.

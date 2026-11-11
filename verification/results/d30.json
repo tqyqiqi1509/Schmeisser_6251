@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "target_ratio": "3",
+  "entrance": 30,
+  "independent_methods": "Fraction partition, Acb analytic quadrature, direct Jprime/J with complete checked P3 strip families, independent cubic covariance rectangle, and full tail; no author code imported",
+  "source_sha256": "4fc2368104d287b2d5391ebba7d16ecc6aa3f053fed221d9afef47b2a6b7eb3f",
+  "precision_bits": 144,
+  "quadrature_tolerance_bits": 96,
+  "tail_degree": 8,
+  "partition": [
+    {
+      "branch": 0,
+      "leaves": 9613,
+      "maximum_depth": 21,
+      "exact_binary_volume": "1"
+    },
+    {
+      "branch": 1,
+      "leaves": 16784,
+      "maximum_depth": 21,
+      "exact_binary_volume": "1"
+    }
+  ],
+  "counts": {
+    "direct": 3423,
+    "cubic_family": 19100,
+    "moment": 3237,
+    "cubic_direct": 8,
+    "matrix": 390,
+    "qdisk": 239
+  },
+  "point_certificates": 82823,
+  "failed_count": 0,
+  "failures": [],
+  "diagnostics": {
+    "max_direct_upper": -0.00010083470532883977,
+    "min_projection": 2.4836363664141214e-06
+  },
+  "seconds": 81.0306556224823
+}

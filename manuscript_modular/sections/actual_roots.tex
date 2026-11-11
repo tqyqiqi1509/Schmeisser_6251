@@ -1,0 +1,547 @@
+\section{Estimates at an actual zero}\label{sec:actual-roots}
+
+We prove the quadratic Tang--Zhang inequality \cite{ZhangQuadratic}
+and the quadratic variance bound \cite{BouthatFallat,ZhangVariance}
+in the degree ranges used below. Both estimates concern an actual
+zero of the polynomial.
+
+\subsection{The reciprocal-square estimate}
+
+\begin{proposition}\label{ar:energy}
+Let $p$ have degree $n\ge6251$, with all its zeros in $\overline\D$.
+For each simple zero $a$ of $p$, one has
+\[
+ E_a:=\sum_{p'(\xi)=0}\frac1{|a-\xi|^2}\ge N.
+\]
+The inequality is strict if $|a|<1$.  At a multiple zero we interpret
+the corresponding energy as $+\infty$.
+\end{proposition}
+
+\begin{proof}
+Multiply by a constant to make $p$ monic.
+Rotation reduces the interior case to $0<a<1$. Write
+\[
+ p(z)=(z-a)\prod_{j=1}^N(z-z_j),\quad
+ q_j=(a-\xi_j)^{-1},\quad
+ \mu=\frac1N\sum_jq_j=x+iy,
+\]
+\[
+ s=\frac1N\sum_j|q_j|^2,\qquad v=s-|\mu|^2.
+\]
+Suppose $s\le1$. Thus $|\mu|\le1$ and $0\le v\le1-|\mu|^2$.
+Put
+\[
+ F(t)=\prod_j(1-atq_j),\qquad J=\prod_j z_jq_j,
+ \qquad \delta=1-a^2.
+\]
+Integration of $p'$ from $a$ to $0$, followed by its factorization,
+gives
+\begin{equation}\label{ar:communication-origin}
+ (N+1)\int_0^1F(t)\,dt=(-1)^NJ,\qquad |J|\le s^{N/2}\le1.
+\end{equation}
+Integration from $a$ to $1/a$ gives a second identity:
+\begin{equation}\label{ar:communication-polar}
+ \prod_j\frac{1-az_j}{a-z_j}
+ =\int_0^1\prod_j\bigl(a+\delta t q_j\bigr)\,dt.
+\end{equation}
+The denominators are nonzero because $a$ is simple. Since
+\[
+ |1-az_j|^2-|a-z_j|^2=\delta(1-|z_j|^2)\ge0,
+\]
+the arithmetic--geometric mean inequality yields
+\begin{equation}\label{ar:polar}
+ 1\le\int_0^1\bigl(a^2+2a\delta xt+\delta^2st^2\bigr)^{N/2}\,dt.
+\end{equation}
+Define
+\[
+ \beta_s(t)=1-2axt+a^2st^2,\quad
+ \beta(t)=1-2axt+a^2t^2,\quad
+ \alpha=\frac{N\delta}{2}.
+\]
+For $0<t<1$, the integrand in \eqref{ar:polar} is strictly smaller than
+\(
+ \exp\{\alpha[-1+(2-\beta(1))t]\}.
+\)
+It follows first that $\beta(1)<1$, and hence $x>a/2$.  Writing
+$g=1-\beta(1)>0$ and evaluating the exponential integral gives
+\begin{equation}\label{ar:gap-equation}
+ e^{\alpha g}-e^{-\alpha}>\alpha(1+g).
+\end{equation}
+Consequently
+\begin{equation}\label{ar:polar-gaps}
+ 0<\beta(1)<\frac{\alpha}{1+\alpha},\qquad
+ g>\frac{\log\alpha}{\alpha}\quad(\alpha\ge1).
+\end{equation}
+For the first bound, put $z=\alpha/(1+\alpha)$. Since
+$z<\log(1+\alpha)$,
+\[
+ e^z-1-z<\frac{z^2e^z}{2}<\frac{\alpha^2}{2(1+\alpha)}.
+\]
+On the other hand, integrating
+$1-e^{-t}>t/(1+t)\ge t/(1+\alpha)$ gives
+$\alpha-1+e^{-\alpha}>\alpha^2/[2(1+\alpha)]$.
+Thus \eqref{ar:gap-equation} excludes $\alpha g\le z$.
+The second bound follows directly from $e^{\alpha g}>\alpha$.
+
+There is also a useful estimate retaining $s$. Put
+\[
+ \rho=\delta s-1+2ax,\qquad \Lambda=\frac{(N+2)\delta}{2}.
+\]
+The quadratic in \eqref{ar:polar} is bounded above by its chord
+$a^2+\delta(1+\rho)t$.  Necessarily $\rho>0$; otherwise its integral
+is strictly less than one. Integration of this chord to the power $N/2$
+and $\log(1+u)\le u$ give, for $\Lambda>1$,
+\begin{equation}\label{ar:rho}
+ \rho\ge\frac{\log\Lambda}{\Lambda},\quad
+ \beta_s(1)=s-\rho\le1-\rho,\quad
+ x^2\ge\rho.
+\end{equation}
+Indeed $e^{\Lambda\rho}\ge a^{N+2}+\Lambda(1+\rho)>\Lambda$,
+and $\rho\le2ax-a^2=x^2-(x-a)^2$.
+
+\smallskip
+\noindent\emph{Two integration estimates.}
+For nonnegative $b_j$, the arithmetic--geometric mean inequality implies
+\[
+ \prod_{k\ne j}b_k
+ \le c_N\left(\frac1N\sum_kb_k^2\right)^{(N-1)/2},
+ \qquad c_N=\left(\frac N{N-1}\right)^{(N-1)/2}<\frac53.
+\]
+The exact differentiation formula
+\[
+ F'=-Na\mu F-a^2t\sum_jq_j^2\prod_{k\ne j}(1-atq_k)
+\]
+therefore yields
+\begin{equation}\label{ar:direct-budget}
+ 1\le |F(1)|+\frac N{N+1}a+|R|,
+ \quad
+ |R|\le\frac53Na^2\int_0^1t\beta_s(t)^{(N-1)/2}\,dt,
+ \quad |F(1)|\le\beta_s(1)^{N/2}.
+\end{equation}
+
+For a second estimate, set $w_j=q_j-\mu$, $D(t)=1-at\mu$, and
+$G_\theta(t)=\prod_j[D(t)-at\theta w_j]$.  Since $\sum_jw_j=0$,
+\[
+ D\partial_\theta G_\theta
+ =-a^2t^2\theta\sum_jw_j^2\prod_{k\ne j}(D-at\theta w_k).
+\]
+Moreover $D\ne0$, and the mean squared modulus of the factors is at
+most $\beta_s(t)$. Integration in $\theta$ gives
+\[
+ |F-D^N|\le\frac{5Na^2t^2v}{6|D|}\beta_s(t)^{(N-1)/2}.
+\]
+Integrate once more, use \eqref{ar:communication-origin}, and use
+$|D|\ge1-axt$. With $r=|\mu|$, the result is
+\begin{equation}\label{ar:centered-budget}
+ 1\le ar+C r(1-r^2)+E,
+ \quad
+ C=\frac56a^3N(N+1)\int_0^1
+       \frac{t^2\beta(t)^{(N-1)/2}}{1-axt}\,dt,
+ \quad E=\beta(1)^{(N+1)/2}.
+\end{equation}
+If $2C<a$, then $ar+Cr(1-r^2)\le a$, since
+\[
+ a-ar-Cr(1-r^2)=(1-r)[a-Cr(1+r)]\ge0.
+\]
+
+\smallskip
+\noindent\emph{The range $a^2\ge9/10$.}
+Let $\nu=(N-3)/2$. Here $\alpha\le N/20$.
+For $0<\alpha\le3$, \eqref{ar:polar-gaps} gives
+$\nu g>(N-3)/8>4\log N$.
+For $3\le\alpha\le N/20$, it gives
+\[
+ \nu g>10(1-3/N)\log(N/20)>4\log N.
+\]
+The last inequalities hold already at $N=700$ and persist because the
+derivatives of the differences are
+\[
+ \frac18-\frac4N>0,\qquad
+ \frac{6-30/N}{N}+\frac{30\log(N/20)}{N^2}>0.
+\]
+Also $9N/160>4\log N$. Thus
+\[
+ \beta(1)^\nu<N^{-4},\qquad (133/160)^\nu<N^{-4}.
+\]
+On $0\le t\le1/4$,
+$\beta(t)\le e^{-3a^2t/4}$ and $1-axt\ge3/4$.
+Extending the positive integral to infinity gives
+\[
+ C_{[0,1/4]}
+ \le\frac{10240}{243}\frac{N(N+1)}{(N-1)^3a^3}<\frac{60}{N}.
+\]
+For $1/4\le t\le1$, convexity bounds $\beta(t)$ by
+$\max(133/160,\beta(1))$, and $\beta(t)\le2(1-axt)$.
+Consequently
+\[
+ C_{[1/4,1]}<\frac{10}{3}N(N+1)N^{-4}<\frac7{N^2},
+ \qquad C<\frac{61}{N}<\frac a2.
+\]
+If $\alpha\ge1$, then $E/\delta<1/(2N^3)<1/4$.
+If $0<\alpha\le1$, the bound
+$\beta(1)<\min(\alpha,1/2)$ gives
+\[
+ \frac E\delta<\frac N2
+ \frac{\min(\alpha,1/2)^{(N+1)/2}}\alpha
+ \le N2^{-(N+1)/2}<\frac14.
+\]
+For the middle inequality, the quotient increases with $\alpha$
+on $(0,1/2]$ and decreases on $[1/2,1]$.
+The latter inequality holds for every integer $N\ge16$ by its endpoint
+and the ratio test. Equation \eqref{ar:centered-budget} would now give
+$1\le a+E<a+(1-a^2)/4<1$.
+
+\smallskip
+\noindent\emph{The range $0<a\le\sqrt{9/10}$.}
+Now $\delta\ge1/10$. Split the integral in
+\eqref{ar:direct-budget} at the minimum of $\beta_s$, clipping this
+point to $[0,1]$. On its decreasing part
+$\beta_s(t)\le e^{-axt}$, while on its increasing part
+$\beta_s(t)\le1-\rho$. Using \eqref{ar:rho} gives
+\begin{align}
+ |R|_{\rm dec}&\le D_N(a):=
+ \min\left(\frac{28}{Na^2},\frac{7\Lambda}{N\log\Lambda}\right),
+ \label{ar:D}\\
+ |R|_{\rm inc}&\le U_N(a):=
+ \frac53a^2N\Lambda^{-(N-1)/((N+2)\delta)},\qquad
+ |F(1)|\le V_N(a):=\Lambda^{-N/((N+2)\delta)}.
+ \label{ar:UV}
+\end{align}
+The first alternative in $D_N$ is omitted at $a=0$.
+Both alternatives in $D_N$ decrease with $N$.  The exponent defining
+$V_N$ has positive derivative
+\[
+ \frac{N+2\log\Lambda}{(N+2)^2\delta}.
+\]
+For $a>0$, the logarithmic derivative of $U_N$ is
+\[
+ \frac{(N+2)^2\delta-N(N-1)-3N\log\Lambda}
+ {N(N+2)^2\delta}<0,
+\]
+because $\delta\le1$, $\log\Lambda>2$, and its numerator is at most
+$5N+4-3N\log\Lambda<4-N$.
+It therefore suffices to bound $D_N+U_N+V_N$ at $N_0=6250$.
+
+Here are explicit bounds on seven closed intervals, each intersected
+with $[0,\sqrt{9/10}]$; the right column is a strict upper bound
+for the sum on that whole intersection.
+\begin{center}
+\begin{tabular}{ccr}
+\toprule
+$l$&$h$&upper bound\\\midrule
+$0$&$1/4$&$659/1000$\\
+$1/4$&$3/8$&$396/1000$\\
+$3/8$&$1/2$&$346/1000$\\
+$1/2$&$5/8$&$192/1000$\\
+$5/8$&$3/4$&$54/1000$\\
+$3/4$&$7/8$&$11/1000$\\
+$7/8$&$19/20$&$6/1000$\\\bottomrule
+\end{tabular}
+\end{center}
+For a row $[l,h]$, put
+\[
+ \delta_- =\max(1/10,1-h^2),\quad \delta_+=1-l^2,
+ \quad L_\pm=(N_0+2)\delta_\pm/2.
+\]
+The three whole-interval upper bounds are
+\[
+ \min\left(\frac{28}{N_0l^2},\frac{7L_+}{N_0\log L_+}\right),\quad
+ \frac53h^2N_0\exp\left(-\frac{N_0-1}{N_0+2}
+                          \frac{\log L_-}{\delta_+}\right),\quad
+ \exp\left(-\frac{N_0}{N_0+2}\frac{\log L_-}{\delta_+}\right).
+\]
+At $l=0$ omit the first alternative.  Their sum is below the displayed
+rational upper bound in each row. These seven inequalities are checked
+by the rational logarithm and exponential formulas in
+Section~\ref{sec:certificates}; the complete checker is
+\cert{verify_actual_roots.py}.  Every upper bound is smaller than
+$1-h$, and $(19/20)^2>9/10$. Thus
+$D_N+U_N+V_N<1-a$, contradicting \eqref{ar:direct-budget}.
+
+At $a=0$, factorization gives
+$\prod_j|q_j|=n/\prod_j|z_j|\ge n$, hence $s>1$.
+At $a=1$, the identity
+\[
+ \sum_j\frac1{1-\xi_j}=2\sum_j\frac1{1-z_j}
+\]
+has real part at least $N$, since each summand on the right has real
+part at least $1/2$. Cauchy--Schwarz gives $E_a\ge N$.
+Rotation treats all boundary zeros and proves the proposition.
+\end{proof}
+
+\subsection{A variance bound}
+
+\begin{proposition}\label{ar:variance}
+Let $p$ have degree $n\ge2048$ and zeros $z_1,\ldots,z_n$, with
+\[
+ \bar z=\frac1n\sum_i z_i,\qquad
+ \sigma_2(p)^2=\frac1n\sum_i|z_i-\bar z|^2.
+\]
+Define $d(a)=\min_{p'(\xi)=0}|a-\xi|$.
+For every zero $a$, one has $d(a)\le\sigma_2(p)$.
+In particular, if all zeros lie in $\overline\D$, then
+\begin{equation}\label{ar:variance-unit}
+ d(a)^2\le1-\frac{1-|a|^2}{n}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The cases $\sigma_2(p)=0$ and a multiple zero are immediate.
+Translation, scaling, rotation, and multiplication by a nonzero
+constant reduce a contrary example to a monic polynomial with
+\[
+ \sum_i z_i=0,\quad \sum_i|z_i|^2=n,\quad z_1=a\ge0,
+ \quad |a-\xi_j|>1\quad(1\le j\le N).
+\]
+Let $D=\diag(z_i)$, $e=n^{-1/2}(1,\ldots,1)^T$, and let $U$ be an
+isometry onto $e^\perp$. The characteristic polynomial of $U^*DU$ is
+$p'/n$: its determinant is the $e$-cofactor of $zI-D$, namely
+$p(z)e^*(zI-D)^{-1}e=p'(z)/n$. The identity extends across the zeros
+by polynomial continuation. Schur triangularization and the Frobenius
+norm therefore give
+\[
+ \sum_j|\xi_j|^2\le\|U^*DU\|_F^2
+ =\sum_i|z_i|^2-2\|De\|^2+|e^*De|^2=n-2.
+\]
+The critical centroid is zero, since
+$N^{-1}\sum_j\xi_j=n^{-1}\sum_i z_i=0$. Thus, writing
+$\kappa=N^{-1}\sum_j|\xi_j|^2$, we have
+$\kappa\le(N-1)/N<1$, and $a>0$.
+The original centroid also implies $a^2\le N$.
+
+Set
+\[
+ q_j=(a-\xi_j)^{-1},\quad \mu=\E q,\quad
+ s=\E|q|^2<1,\quad v=s-|\mu|^2,\quad
+ \Pi=\prod_j|q_j|,\quad h=1-\sqrt{1-s}.
+\]
+Here $\E$ denotes the average over all $N$ critical labels. Since
+$\E(q^{-1})=a$, $\E|q|^{-2}=a^2+\kappa$, and $\E\xi=0$,
+\begin{equation}\label{ar:variance-covariance}
+ |1-a\mu|^2\le\kappa v.
+\end{equation}
+Indeed $a\mu-1=\E[\xi(q-\mu)]$.  Applying weighted Cauchy--Schwarz
+to $q^{-1}-\bar q=(1-|q|^2)/q$ also gives
+\begin{equation}\label{ar:variance-weighted}
+ |a-\mu|^2\le(1-s)(a^2+\kappa-1)
+ \le(1-s)(a^2-1/N).
+\end{equation}
+Consequently $\Re\mu\ge ah$ and
+$|\mu|\le a(1+\sqrt{1-s})$.
+
+The product factorizations and the arithmetic--geometric mean
+inequality give
+\[
+ \Pi\le s^{N/2},\quad
+ |p(0)|\le a[(n-a^2)/N]^{N/2}\le\min(1,\sqrt e\,a),
+\]
+\[
+ |p'(a)|=n/\Pi,\qquad
+ \sum_{i\ne1}|a-z_i|^2=n(1+a^2).
+\]
+In particular,
+\[
+ \frac n{s^{N/2}}\le\frac n\Pi=|p'(a)|
+ \le\left(\frac{n(1+a^2)}N\right)^{N/2}.
+\]
+It follows that
+\begin{equation}\label{ar:variance-moment-range}
+ 1\le\frac Nn n^{2/N}\le(1+a^2)s
+ \le2(1+\sqrt{1-s}),
+ \qquad
+ a^2>\frac{2\log n-1}{n}.
+\end{equation}
+For the upper bound use $ah\le|\mu|\le\sqrt s$ and
+$s/h=1+\sqrt{1-s}$. Since $s<1$ and $e^u\ge1+u$,
+\[
+ 1+a^2>\frac Nn n^{2/N}
+ \ge\frac{N+2\log n}{n}
+ =1+\frac{2\log n-1}{n}.
+\]
+In particular $M=Na^2>14$ for $n\ge2048$.
+
+Put
+\[
+ F(t)=\prod_j(1-atq_j),\quad
+ \beta(t)=1-2a\Re\mu\,t+a^2st^2,\quad
+ \gamma(t)=s\bigl(a^2(1-t)^2+\kappa\bigr).
+\]
+On the entire unit interval,
+\begin{equation}\label{ar:variance-beta}
+ \beta(t)\le1-a^2h^2t,
+ \qquad \beta(t)\le1-a^2st(1-t).
+\end{equation}
+Integration from $a$ to $0$ and the differentiation identity used above
+give
+\begin{equation}\label{ar:variance-direct}
+ 1\le|F(1)|+\frac Nn|\mu|\Pi|p(0)|+|R|,
+\end{equation}
+where $c_N=(N/(N-1))^{(N-1)/2}<5/3$ and
+\begin{align}
+ |F(1)|&\le\min(\beta(1),\kappa s)^{N/2},\notag\\
+ |R|&\le c_NNa^2s\int_0^1t\min(\beta(t),\gamma(t))^{(N-1)/2}\,dt.
+ \label{ar:variance-remainder}
+\end{align}
+The $\gamma$ bound follows by rewriting the $j$th differentiated term
+as
+\[
+ q_j^2\prod_{k\ne j}(1-atq_k)
+ =q_j\Bigl(\prod_kq_k\Bigr)
+       \prod_{k\ne j}(a(1-t)-\xi_k)
+\]
+and using the critical centroid and second moment before applying the
+arithmetic--geometric mean inequality.
+
+We also need the centered identity. Write $D(t)=1-at\mu$ and
+$\omega_j=a(\mu-q_j)$. Then $\sum\omega_j=0$ and
+$\sum|\omega_j|^2=Na^2v$. Comparing $F$ to $D^N$ gives
+\begin{equation}\label{ar:variance-centered}
+ 1\le |\mu|\Pi|p(0)|+|D(1)|^n+E_c,
+ \qquad E_c=na|\mu|\int_0^1|F(t)-D(t)^N|\,dt.
+\end{equation}
+The interpolation $\prod_j(D+t\theta\omega_j)$ gives both bounds
+\begin{align}
+ |F-D^N|&\le\frac{c_NNa^2t^2v}{2|D|}\beta^{(N-1)/2}
+                  &&(D\ne0),\label{ar:center-first}\\
+ |F-D^N|&\le\frac{c_{N,2}N(N-1)a^2t^2v}{2}\beta^{(N-2)/2},
+ \quad c_{N,2}=\left(\frac N{N-2}\right)^{(N-2)/2}<3.
+ \label{ar:center-second}
+\end{align}
+For the second estimate differentiate twice in $\theta$, use
+$\sum_{j\ne k}|\omega_j\omega_k|\le N(N-1)a^2v$, and integrate
+the Taylor remainder with weight $1-\theta$. Thus it remains valid
+when $D=0$.
+
+We divide the parameter range into three cases. The numerical endpoint
+bounds and their degree monotonicities are checked at the end of the proof.
+
+\smallskip
+\noindent\emph{Case 1: $s\le3/4$.}
+Equation \eqref{ar:variance-moment-range} gives $a^2s\ge1/4$.
+On $[0,3/4]$, \eqref{ar:variance-beta} gives
+$\beta(t)\le e^{-a^2st/4}$, so
+\[
+ |R|_{[0,3/4]}\le\frac{64c_NN}{(N-1)^2a^2s}
+ <\frac{432}{N}<\frac14.
+\]
+On $[3/4,1]$,
+$\gamma(t)\le15s/16+2(1+\sqrt{1-s})/16\le57/64$.
+Since $a^2s\le4$,
+\[
+ |R|_{[3/4,1]}\le\frac53N(57/64)^{(N-1)/2}
+ <\frac1{16}.
+\]
+Each of the other two terms in \eqref{ar:variance-direct} is less than
+$(3/4)^{N/2}<1/16$. Their sum is less than $7/16$, a contradiction.
+
+\smallskip
+\noindent\emph{Case 2: $a\le1/4$.}
+Now $s\ge16/17$, $h>3/4$, and $|\mu|\le5a/4$.
+The product term in \eqref{ar:variance-direct} is at most
+$25a^2/12\le25/192$. On $[0,1/2]$ use
+$\beta(t)\le1-a^2t$; on $[1/2,1]$ use convexity and
+$\beta\le1-a^2/2$. These give
+\[
+ |R|_{[0,1/2]}<\frac{27}{4M}<\frac{27}{56},
+ \qquad
+ |R|_{[1/2,1]}\le\frac58M e^{-(N-1)M/(4N)}<\frac{35}{128}.
+\]
+Also $|F(1)|\le e^{-9M/32}<1/48$. Thus the right side of
+\eqref{ar:variance-direct} is at most
+\[
+ \frac{25}{192}+\frac{27}{56}+\frac{35}{128}+\frac1{48}
+ =\frac{2437}{2688}<1.
+\]
+
+\smallskip
+\noindent\emph{Case 3: $s>3/4$ and $a>1/4$.}
+We have $h>1/2$, $a<2$, and $|\mu|<3a/2$.
+Suppose first that $v>0$. From
+\eqref{ar:variance-covariance}, $\beta(1)=|D(1)|^2+a^2v$, and
+\eqref{ar:variance-beta},
+\[
+ |D(1)|^n\le v\beta(1)^{(n-2)/2}<v/32.
+\]
+For $1/4<a\le1/2$, we have $h\ge1-a$ and
+$a^2h^3\ge27/1024$. On $[0,1/4]$ use
+$|D|\ge7/8$ and $\beta\le e^{-3a^2ht/2}$ in
+\eqref{ar:center-first}, obtaining
+\[
+ E_{c,[0,1/4]}/v
+ \le\frac{512c_NnN(|\mu|/a)}{189(N-1)^3a^2h^3}
+ <\frac{300}{N}<\frac14.
+\]
+At the two endpoints of $[1/4,1]$,
+\[
+ \beta(1/4)\le1-a^2(7/16-a/2)\le1-5/256,
+ \qquad
+ \beta(1)\le1-a^2(1-a)^2\le1-9/256.
+\]
+The two losses increase on $[1/4,1/2]$. Convexity gives
+$\beta\le1-5/256$ on $[1/4,1]$, where $|D|\ge1/2$.
+In \eqref{ar:center-first} the coefficient after multiplication by
+$na|\mu|$ is at most
+$c_NnNa^3|\mu|\le5nN/32<3n^2/16$. Hence
+\[
+ E_{c,[1/4,1]}/v\le\frac3{16}n^2e^{-5(n-2)/512}<\frac1{32}.
+\]
+For $a>1/2$, instead use $a^2h^3>1/32$, $|D|>1/2$ on
+$[0,1/4]$, and $|\mu|/a<3/2$. This gives
+\[
+ E_{c,[0,1/4]}/v
+ \le\frac{128c_NnN(|\mu|/a)}{27(N-1)^3a^2h^3}
+ <\frac{400}{N}<\frac14.
+\]
+For $a>1/2$, the endpoint bounds are
+\[
+ \beta(1/4)\le1-3a^2h/8<1-3/64,\qquad
+ \beta(1)\le1-a^2h^2<1-1/16.
+\]
+Convexity gives $\beta<1-3/64$ on $[1/4,1]$.
+Since $a<2$, $|\mu|<1$, and $c_{N,2}<3$, the coefficient in
+\eqref{ar:center-second} after multiplication by $na|\mu|$ is
+less than $12nN(N-1)<12n^3$. Thus
+\[
+ E_{c,[1/4,1]}/v\le12n^3e^{-3(n-3)/128}<\frac1{32}.
+\]
+In either subcase $|D(1)|^n+E_c<5v/16$, whereas
+\[
+ |\mu|\Pi|p(0)|\le\sqrt{s-v}\le\sqrt{1-v}\le1-v/2.
+\]
+This contradicts \eqref{ar:variance-centered}.
+If $v=0$, all $q_j=\mu$, and $a\mu=1$, $D(1)=0$, $F=D^N$.
+The same identity becomes $1\le|\mu|^{N+1}<1$.
+
+Here are elementary checks for the constants used in the three cases.
+The inequality $\log2>56/81$ follows from the first two terms of
+the positive atanh series. The expression
+$(1-1/n)(2\log n-1)$ increases and exceeds $14$ at $n=2048$.
+The bounds $e<25/9$ and $e>5/2$ follow from the exponential series.
+For $N\ge2047$,
+\[
+ \frac{N^2}{(N-1)^2}<\frac{101}{100},\qquad
+ \frac{(N+1)N^2}{(N-1)^3}<\frac{101}{100},
+\]
+and both ratios decrease. The two centered coefficients are bounded by
+\[
+ \frac{512}{189}\frac53\frac32\frac{101}{100}\frac{1024}{27}
+ =\frac{6619136}{25515}<300,
+ \qquad
+ \frac{128}{27}\frac53\frac32\frac{101}{100}\,32
+ =\frac{51712}{135}<400.
+\]
+Positive exponential sums through degrees $7$ and $12$ give
+$e^{7161/2047}>32$ and $e^{63/16}>48$.
+The remaining endpoint estimates follow from
+$2^{17}>32\cdot2048$,
+$(5/2)^{19}>6\cdot2048^2$, and
+$2^{47}>384\cdot2048^3$.
+Each function $n^ke^{-c(n-j)}$ used above decreases on $n\ge2048$,
+as its logarithmic derivative is $k/n-c<0$ there.
+Finally, in the unit-disk case,
+\[
+ \sigma_2(p)^2=\frac1n\sum_i|z_i|^2-|\bar z|^2
+ \le\frac{n-1+|a|^2}{n},
+\]
+which proves \eqref{ar:variance-unit}.
+\end{proof}

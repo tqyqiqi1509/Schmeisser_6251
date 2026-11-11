@@ -1,0 +1,717 @@
+\section{Small positive witnesses}\label{sec:small}
+
+Throughout this section $N\ge N_0=6250$, and
+\[
+ \rho_0=\frac{30501}{500000},\qquad A_0=\frac{\rho_0}{100}.
+\]
+We work in the strict-hole configuration of
+Lemma~\ref{pr:edge-reduction}, with $0<a\le1/10$ and an actual
+simple rightmost zero $b=x+iy$, $x\ge a$, $y\ge0$.
+Put $r=|b|$, $p_b=1-r^2$, $\tau=1-y$.
+Use $d,S,H,Q$ as in \eqref{pr:field-notation}, and
+$D,q,\mu$ as in \eqref{pr:normalized-moments}.
+
+\subsection{The first field bound}
+
+\begin{lemma}\label{sm:normalized-D25}
+Let $F(u)=p(i+\rho u)$ be a normalized strict-hole configuration
+with an actual simple rightmost zero $\beta=X-i$, where
+$\alpha=a/\rho$, $0<\alpha\le X\le1$,
+$1/100\le\rho\le9/100$, and $n\ge6251$.
+Let $v_j$ list all zeros of $F'$, counted with multiplicity.
+Write $h=|F''(\beta)/F'(\beta)|$ and
+$d_u=\min_j|\beta-v_j|$. Then $d_u>1$ and $D=d_uh>25$.
+\end{lemma}
+\begin{proof}
+Put
+\[
+ R=9/100,\qquad Q_u=\sum_j|\beta-v_j|^{-2},\qquad Y=Q_u/h.
+\]
+The critical domain is
+$r_j<\alpha/2$ and
+$\rho|v_j|^2/2\le t_j<\rho|v_j-\alpha|^2/2$ for
+$v_j=r_j-it_j$. Lemma~\ref{lt:crescent}, scaled back to these
+coordinates, gives
+\[
+ d_u^2>(X-\alpha/2)^2+(1-\eta)^2,\qquad
+ \eta=\frac{\rho\alpha^2}{4(1+\sqrt{1-\rho^2\alpha^2/4})}
+       \le R\alpha^2/4.
+\]
+Since $0\le\eta\le R\alpha^2/4<1$, it follows that
+\[
+ d_u^2>G(\alpha):=(X-\alpha/2)^2+(1-R\alpha^2/4)^2.
+\]
+This polynomial decreases with $\alpha$ on $0\le\alpha\le X$:
+its derivative is
+$-X+(1/2-R)\alpha+(R^2/4)\alpha^3<0$.
+Hence $d_u^2>1+(1/4-R/2)X^2+(R^2/16)X^4>1$.
+
+Apply the finite polar estimate in Lemma~\ref{or:HB} at
+$s=X+1/2$. The inverse Cayley test is strictly to the right of
+the original zeros, since $(R(1+1/2)/2)^2<1/2$.
+The source root contributes at least
+$b_0=4(1-R)/5$. By the full critical comparison
+\eqref{or:critical-comparison-formula} and
+\eqref{or:small-X-comparison},
+\[
+ C_{\rm real}<\rho h\mathcal A(X,Y),\qquad
+ \mathcal A(X,Y)=
+ \begin{cases}1/4,&0<X\le1/4,\\
+ X-\kappa(X)Y,&1/4\le X\le1,
+ \end{cases}
+\]
+\[
+ \kappa(X)=\frac{X(4X-1)(4X+9)}{40(X+1)}.
+\]
+Use $f=[1-(9/8)R^2]^{-1}$ and $D_p=1+(3R/4)^2$ in
+\eqref{or:parallel-source}. The function $uv/(u+v)$ is increasing
+in both variables, so
+\begin{equation}\label{sm:normalized-source}
+ \rho h\mathcal A(X,Y)>K_0,\qquad
+ K_0=\min_{\rho\in\{1/100,R\}}
+ \frac1f\left(\frac{6251\rho b_0}{6251\rho+2D_pb_0}-\rho\right)
+ =\frac{239012578698741}{379195048000000}>0.
+\end{equation}
+The expression minimized here is concave in $\rho$
+and increases with the degree, as shown by differentiating it in
+\eqref{or:direct-K}. Thus the bound holds throughout the scale interval
+for every $n\ge6251$. The unphased radial inequality is
+$N\rho/2<h(1+Y)$.
+
+If $X\le7/25$, then $\mathcal A\le7/25$, whence
+$h>K_0/[R(7/25)]>25$.
+If $X\ge7/25$, completion of the square gives
+$\mathcal A(X,Y)(1+Y)<31/10$ for every real $Y$.
+For an exact proof, put $N_k=X(4X-1)(4X+9)$ and $D_k=40(X+1)$.
+The degree-six polynomial
+\[
+ (62/5)N_kD_k-(XD_k+N_k)^2
+\]
+has the following positive Bernstein coefficients on $[7/25,1]$:
+\[
+ \frac{120508031}{244140625},\quad
+ \frac{1411226329}{1953125},\quad
+ \frac{185744659}{78125},\quad
+ \frac{416205433}{78125},\quad
+ \frac{30945547}{3125},\quad
+ \frac{407837}{25},\quad24527.
+\]
+Multiplying the two inequalities for the same $X,Y$ therefore gives
+$h^2>K_0N/(2(31/10))>625$. Since $d_u>1$, both branches give
+$D>25$.
+\end{proof}
+
+\begin{lemma}\label{sm:first-D25}
+The implication $D>25$ holds on each of the two regions
+\[
+ \max(x,1-y)>\rho_0,\qquad |b|\le47/50.
+\]
+Both regions also satisfy $D>70$.
+\end{lemma}
+\begin{proof}
+If $x\ge\rho_0$, Lemma~\ref{lt:direct-D70} gives $D>70$.
+We treat $x\le\rho_0$.
+
+Return to physical coordinates. Lemma~\ref{lt:crescent} gives
+$d>\tau$. If $1/100\le\tau\le9/100$ and $x\le\tau$, the
+preceding lemma applies with $\rho=\tau$, $X=x/\tau$,
+$\alpha=a/\tau$; its $D$ is exactly the physical $D$.
+For $\tau\ge9/100$, use the matrix envelope in
+Proposition~\ref{mf:envelope}. Writing $c=\Re S/H$,
+$s=|\Im S|/H$, the rational bound $\pi>333/106$ gives
+$\gamma<241/1000$, and its constants satisfy
+\[
+ Qd^2<21/5+(11/2)Dc+(241/1000)D^2c^2-D^2s^2/2.
+\]
+Retaining the corresponding negative coefficient $741/1000$ and
+completing the square in the radial identity yields
+\[
+ N<\frac{2Dx}{d}+\frac{p_b}{d^2}
+       \left(21/5+(11/2)D+(241/1000)D^2\right)
+       +\frac{y^2}{(741/1000)p_b}.
+\]
+On the whole $x\le\rho_0$, $\tau\ge R=9/100$ range,
+\[
+ x/d<\rho_0/R,\qquad p_b/d^2<(2-R)/R,\qquad
+ y^2/p_b\le(1-R)/(2R).
+\]
+For the last bound, $x<\tau$ gives $p_b>2\tau(1-\tau)$;
+the case $y=0$ is immediate. Under $D\le25$ the preceding upper
+bound for $N$ is $640685569/102600<6250$, a contradiction.
+
+Outside the origin box, the remaining small-$x$ range has
+$\tau>\rho_0>x$. For $r\le47/50$ one has $\tau\ge.06$.
+If $.06\le\tau\le\rho_0$, then
+\[
+ (.94)^2<\rho_0^2+(1-\rho_0)^2,\qquad
+ x^2\le(.94)^2-(1-\tau)^2<\tau^2,
+\]
+because $\tau^2+(1-\tau)^2$ decreases on this interval.
+Thus every case enters either the normalized source or the
+large-$\tau$ matrix argument. This proves $D>25$ on both regions.
+
+Proposition~\ref{mf:D25} therefore gives $Qd/H<3$.
+Outside the origin box and with $x\le\rho_0$, the radial identity
+first gives $D>6250/(2/\rho_0+96)>48$. The matrix envelope excludes
+$|s|\ge2/3$, since $c<3/4$, $c^2\le5/9$ would give
+\[
+ \frac{21/5}{48^2}+\frac{(11/2)(3/4)}{48}
+       +\frac{241}{1000}\frac59-\frac29<0.
+\]
+The phase-sensitive radial bound then gives
+\[
+ D>\frac{6250\rho_0}{2\rho_0+(4/3)(1-\rho_0)+3(2-\rho_0)}>53.
+\]
+On $r\le.94$ the initial bound is $D>6250(.06)/8=46.875$.
+The matrix envelope excludes $|s|\ge.7$, using $c<.715$ and
+$c^2\le.51$. Consequently
+\[
+ D>\frac{6250(.06)}{2\rho_0+1.4(.94)+3(1.94)}>51.
+\]
+Both regions satisfy $q<.06$ and $\mu<.02$, so the first
+weight-eight row of Proposition~\ref{lt:W8} applies.
+Its phase bound $|\Im S|<8Q/H$ and the radial identity give respectively
+\[
+ D>\frac{6250-48/\rho_0}{98}
+   =\frac{27771875}{498183},\qquad
+ D>\frac{6250-48/.06}{2\rho_0/.06+97}
+   =\frac{27250000}{495167}.
+\]
+Both exceed $5000/91$, so Proposition~\ref{lt:W8-field} applies.
+Its field bound with constant $210$ gives
+\[
+ D>\frac{6250\rho_0-210}{11/5}=\frac{13701}{176}>70
+\]
+outside the origin box, and $D>[6250(.06)-210]/(11/5)=75>70$
+on $r\le.94$. The geometric estimate covers the large-$x$ branch.
+Every numerical comparison increases with $N$, so the full degree
+ray is included.
+\end{proof}
+
+\subsection{Witnesses below $A_0$}
+
+\begin{proposition}\label{sm:fine}
+There is no strict hole with $0<a\le A_0$ and
+$\max(x,1-y)>\rho_0$.
+\end{proposition}
+\begin{proof}
+The crescent gives
+\[
+ d>\rho_0-a/2\ge d_0:=\rho_0-A_0/2.
+\]
+Lemma~\ref{sm:first-D25} first gives $D>70$.
+Then \eqref{lt:field70}, followed in order by
+Proposition~\ref{mf:D100}, \eqref{lt:field100}, and
+Proposition~\ref{lt:medium139}, gives the strict successive bounds
+\[
+ D>\frac{6250d_0-596/5}{2(1+A_0)}>100,\qquad
+ D>\frac{6250d_0-1899/20}{2(1+A_0)}>140,
+\]
+\[
+ D>\frac{6250d_0-2637/32}{2(1+A_0)}>148.
+\]
+The last step uses $140>139$.
+With $\kappa=11067/5000$, the exact inequality
+\[
+ (5/4)\kappa^2-(148-23/2)\kappa+296<0,\qquad 2<\kappa<9/4,
+\]
+and the smaller quadratic branch in Proposition~\ref{lt:medium139}
+give $Qd/H<\kappa$.
+
+For $R=td$ define
+\[
+ \Lambda=\frac{\kappa t}{1-t},\quad
+ f=t-\kappa\left(t^2/2+t^3/[3(1-t)]\right),\quad
+ B=\frac{\kappa(1-t)}{[1-(1+\kappa)t]^3}.
+\]
+Thus $H\widehat R=Df$, and the inverse lemma applies with
+$\epsilon=(1001/1000)B/148$,
+$g=(1001/1000)\nu Bf$, $p_*=(1+\Lambda)^{-1}$ and
+$A_*=(1-\Lambda)^{-1}$.
+The exact data \cert{FINE6251_INTEGER_DATA.json} give forty-one
+triples $(j,m,W)$, with $t=j/200$ and $\nu=m/10000$.
+For every row the finite predicates are
+\begin{gather}
+ 0<t,\nu,\Lambda<1,\quad f>0,\quad
+ W^2<(1-\nu^2)(148f)^2,\quad\nu(148)f>22/7,\notag\\
+ \epsilon(1+e)+ge<1-A_*e,\quad
+ \epsilon(1+e)+ge^2<p_*-e,\quad\epsilon+ge<p_*.
+ \label{sm:profile-gates}
+\end{gather}
+Here, for $W=1,\ldots,10$, the rational bounds $e>e^{-W}$ are
+\[
+ 1/2, 1/7, 1/20, 1/50, 1/140, 1/400,
+ 1/1000, 1/2900, 1/8000, 1/22000.
+\]
+Their validity follows from the positive exponential sum through
+degree one hundred. The data also have increasing $t$ and increasing
+$\nu f$. Equations~\eqref{sm:profile-gates} are exactly the full
+inverse, corner, four-side and homotopy conditions of
+Lemma~\ref{lt:inverse-log}; the resulting cumulative count is
+$L_j>\nu_j(7/22)Df_j-2$.
+
+Put $\nu_0f_0=0$ and
+\[
+ c=\frac{6250}{6251}\left\{
+ \frac7{22}\sum_j(1-t_j)^2(\nu_jf_j-\nu_{j-1}f_{j-1})-\frac2{148}
+ \right\}>0.
+\]
+Lemmas~\ref{lt:transport} and \ref{lt:abel}, with $A=A_0$, give
+$d<Ja$, where $J=E_{A_0}/[(1-q_{A_0})c]$.
+Exact substitution of the forty-one rows gives
+$J+1/2<77<100$.
+Thus $d<Ja<100a-a/2\le\rho_0-a/2$, contrary to the crescent
+lower bound. The finite loss $2/148$ was charged once through
+positive cumulative summation. The factor $N/(N+1)$ was bounded
+below by $6250/6251$, so the proof holds for every $N\ge6250$.
+\end{proof}
+
+\subsection{The low and middle modulus ranges}
+
+\begin{proposition}\label{sm:low-middle}
+There is no strict hole with $A_0\le a\le1/10$ and $|b|\le47/50$.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{sm:first-D25} gives $D>70$. Since $d>.06$,
+\eqref{lt:field70} gives $D>[6250(.06)-596/5]/(11/5)>100$.
+Thus Proposition~\ref{mf:D100} and \eqref{lt:field100} apply.
+The simultaneous crescent bound
+$d^2>(.06)^2+a^2/4$ gives $D>139$: after positive squaring the
+required inequality
+\[
+ 6250\sqrt{(.06)^2+a^2/4}>1899/20+278(1+a)
+\]
+is exactly
+\[
+ 9688341a^2-(1036801/5)a+613319/400>0.
+\]
+Its minimum over the entire real line is
+$65688734375/155013456>0$.
+Consequently Proposition~\ref{lt:medium139} supplies
+\begin{equation}\label{sm:middle-input}
+ Qd/H<9/4,\qquad |\Im S|<4Q/H,\qquad
+ H>\frac{N-C_F/d}{2(1+a)},\qquad C_F=2637/32.
+\end{equation}
+
+Put $r_a=|b-a|$. If $r_a=0$, Proposition~\ref{ar:energy}
+contradicts the strict hole. Otherwise use the adaptive
+shift from Lemma~\ref{bc:blaschke}:
+\[
+ u=\min(r_a^2,1/2),\quad t=1-u,\quad
+ \gamma=b-ta,\quad C=ta[2x-(1+t)a]\ge a^2u(1-u)>0.
+\]
+It gives
+\begin{equation}\label{sm:product}
+ -\log B_p(\gamma)+CQ/2<\log(8/C),\qquad
+ B_p(\gamma)=\prod_{p(z_i)=0}
+              \left|\frac{\gamma-z_i}{1-\overline{z_i}\gamma}\right|.
+\end{equation}
+A zero product gives a contradiction. Every unselected factor
+is at most one.
+
+\smallskip\noindent\emph{The range $r\le.11$.}
+Take $d_*=.89$, $V=(9/4)/.89$ and $H_*=6250(.89)/(9/4)$,
+using Proposition~\ref{ar:energy} and the prior ratio.
+The complete inverse row $R=.1$, $W=8$, $\nu=.99$ satisfies
+\eqref{lt:inverse-corner}--\eqref{lt:inverse-sides}. Its count
+$K=\nu(7/22)H_*\widehat R-2$ obeys $K/6251>1/100$.
+The count lower bound has the form $cN-2$, so its quotient by $n=N+1$
+increases. Every counted root has adaptive factor at most
+\[
+ \frac{R+.1}{1-(.11+R)(.11)}<1/4<e^{-1}.
+\]
+Hence $-\log B_p>n/100$. Proposition~\ref{ar:variance} gives
+\[
+ d\le\sqrt{1-(1-.11^2)/n}<1-.49/n.
+\]
+If $r_a\le.4/n$, the strict hole instead gives
+$d>1-r_a\ge1-.4/n$. Thus $r_a>.4/n$, and monotonicity of
+$u(1-u)$ on $[0,1/2]$ gives
+\[
+ C>A_0^2(.4/n)^2[1-(.4/n)^2]>1/(20000000n^2).
+\]
+The last scalar inequality holds at $n=6251$ and strengthens as $n$
+increases. Positive exponential sums give $e^{20}>8(20000000)$
+and $e^{10}>6251$. Equation~\eqref{sm:product} would imply
+$n/100<20+2\log n$, which fails at $6251$ and thereafter, since
+the derivative of the difference is $1/100-2/n>0$.
+
+\smallskip\noindent\emph{The range $.11<r\le.82$.}
+Use
+\[
+ d_*=.18,\quad V=(9/4)/.18,\quad
+ H_*=[6250-C_F/.18]/2.2,\quad R=11/250,\quad\nu=.99,\quad W=6.
+\]
+The full inverse predicates hold. If $z=b+v$ is counted,
+$\Re v\le0$ by rightmostness. Therefore
+$|\gamma-z|^2=|v+ta|^2\le R^2+.01$ and the denominator is
+at least $1-(.82+R)(.82)>0$. The exact squared comparison bounds
+the factor by $3/8$. Since $e^{.98}<8/3$, the count gives
+$-\log B_p>.98K>21.5$.
+Also $r_a>.11-a$ and
+\[
+ C>a^2(.11-a)^2[1-(.11-a)^2]>4\cdot10^{-9}.
+\]
+Indeed the concave function $a(.11-a)$ exceeds $1/15000$ at
+both endpoints of $[A_0,.1]$, and the remaining factor exceeds
+$.9$. The exact positive sum $e^{21.5}>8/(4\cdot10^{-9})$
+contradicts \eqref{sm:product}.
+
+\smallskip\noindent\emph{The range $.82\le r\le.94$.}
+Here $r_a^2\ge(.82-.1)^2>1/2$, so the shift is
+$\gamma=b-a/2$ and $C=ax-3a^2/4\ge a^2/4$.
+We use twenty-three product rows, specified by rational inputs in
+\cert{LOW_MIDDLE6251_PRODUCT_PROPOSAL.json}.
+For each row $B_L\le r\le B_U$, $a_L\le a\le a_U$, $x\le X$,
+choose the displayed $d_*,V,H_*$ from that data, and nested
+physical radii $R_j$. Each full contour uses
+\[
+ \Lambda_j=\frac{VR_j}{1-R_j/d_*},\quad
+ \widehat R_j=R_j-V\left(\frac{R_j^2}{2}
+                         +\frac{R_j^3}{3(d_*-R_j)}\right),\quad
+ B_j=\frac{V}{(1-R_j/d_*)^2(1-\Lambda_j)^3},
+\]
+with $\epsilon_j=(1001/1000)B_j/H_*$ and
+$g_j=(1001/1000)\nu_jB_j\widehat R_j$.
+All predicates \eqref{lt:inverse-corner}--\eqref{lt:inverse-sides}
+are checked at $H_*$, together with
+$\nu_jH_*\widehat R_j>22/7$.
+Lemma~\ref{lt:half-disk-factor} supplies a whole-disk factor $f_j<1$.
+The weights $w_j<-\log f_j$ are rational lower bounds from the
+positive atanh series after dyadic scaling into $[1/2,1)$.
+They decrease with radius. All count slopes increase, and positive
+Abel summation \eqref{lt:abel-product} gives the budget
+\[
+ \mathcal B=H_*\sum_jw_j(s_j-s_{j-1})-2w_1,\qquad
+ s_j=\nu_j(7/22)\widehat R_j,\quad s_0=0.
+\]
+For a positive whole-row lower bound $C_{\min}$ and a rational
+target $T_*$, the final predicates are
+\begin{equation}\label{sm:middle-budget}
+ e^{T_*}>8/C_{\min},\qquad
+ \mathcal B+6250C_{\min}/2>T_*.
+\end{equation}
+The energy term follows from Proposition~\ref{ar:energy} and
+$C\ge C_{\min}$. Exponential bounds are finite positive sums or
+\eqref{lt:exp-upper}; radical enclosures are accepted by exact squares.
+
+For $.82\le r\le.925$ take $d_*=.075$, $V=(9/4)/d_*$,
+$H_*<[6250-C_F/d_*]/[2(1+a_U)]$, $X=.925$,
+$C_{\min}=a_L^2/4$. The seven closed witness intervals have endpoints
+\[
+ A_0, .003, .01, .02, .04, .06, .08, .1.
+\]
+The respective strict reserves in \eqref{sm:middle-budget} exceed
+$3.03,4.54,4.41,1.91,1.45,1.79,2.99$.
+
+For $.925\le r\le.94$, $x\ge\rho_0$, take $X=.94$ and choose
+$d_*$ below at least one of
+\[
+ .06,\quad \rho_0-a_U/2,\quad \sqrt{(.06)^2+a_L^2/4}.
+\]
+Each displayed quantity is a crescent lower bound for $d$. Choose
+$V\ge\min((9/4)/d_*,1/(\rho_0-a_U/2))$ and
+$H_*<[6250-C_F/d_*]/[2(1+a_U)]$.
+The lower bound $C_{\min}$ is the exact minimum of
+$a\max(a,\rho_0)-3a^2/4$ on the full row. Below $\rho_0$
+the function is concave; above it the function is $a^2/4$ and
+increases. The eleven intervals have endpoints
+\[
+ A_0, .003, .01, .02, .03, .04, .05, .06, .07, .08, .09, .1.
+\]
+All eleven strict reserves exceed $.067$.
+
+It remains to consider $.925\le r\le.94$, $x\le\rho_0$.
+Put $Y=\tau Q/H$. If $Y\le5/4$, the phase and radial identity give
+\begin{equation}\label{sm:low-moment-field}
+ H>\frac{N-8(5/4)/.06}{2\rho_0+(2-.06)(5/4)}.
+\end{equation}
+This uses $\tau\ge.06$, $p_b/\tau\le2-\tau\le1.94$, and
+$|\Im S|<4Q/H$.
+Take $d_*=.06$, $V=(5/4)/.06$, an integer $H_*$ below
+\eqref{sm:low-moment-field}, $X=\rho_0$ and $C_{\min}=a_L^2/4$.
+The five intervals with endpoints
+$A_0,.003,.01,.02,.04,\rho_0$ have reserves exceeding
+$3.68,5.43,5.44,3.01,2.31$.
+These twenty-three rows comprise 1807 nested complete contours;
+together with the two earlier single contours, there are 1809.
+
+Finally, in this small-$x$ region $\tau<.078$ since
+$y^2\ge.925^2-\rho_0^2>(1-.078)^2$.
+If $\tau\ge\rho_0$ then $x\le\tau$; if $.06\le\tau\le\rho_0$
+the seam used in Lemma~\ref{sm:first-D25} again gives $x<\tau$.
+The normalization $u=(z-i)/\tau$ therefore gives $T=1$,
+$0<\alpha=a/\tau\le X=x/\tau\le1$, $d_u>1$ and
+$Y=Q_u/h<9/4$. The only branch not covered by the preceding
+product rows lies in
+\[
+ .06\le\tau\le.078,\qquad 0<\alpha\le X\le1,\qquad
+ 5/4\le Y\le9/4.
+\]
+The bounds $D>139$ and \eqref{sm:middle-input} supply the hypotheses
+of Lemma~\ref{sm:T-moment-extension}. In normalized coordinates the
+field bound reads $h>[N\tau-C_F]/[2(1+\tau)]$, since $d_u>1$
+and $a\le\tau$. The lemma excludes this entire normalized range.
+
+All modulus and witness seams are closed. Each field lower bound
+is affine increasing in $N$, while every fixed count and energy
+lower bound strengthens along the degree ray. The only logarithmic
+degree budget, in the low range, was checked with its derivative.
+Thus every configuration in the proposition is covered.
+\end{proof}
+
+\subsection{The high modulus range}
+
+\begin{proposition}\label{sm:high}
+There is no strict hole with $A_0\le a\le1/10$, $|b|>.94$,
+outside the origin box $\max(x,1-y)\le\rho_0$.
+\end{proposition}
+\begin{proof}
+If $x<\rho_0$, the exact comparisons
+\[
+ .94^2>(.0433)^2+(1-\rho_0)^2,\qquad
+ .94^2-\rho_0^2>(1-.062)^2,\qquad .0433/.062>.69
+\]
+give $\rho_0<\tau<.062$ and $.69<x/\tau<1$.
+The normalization $u=(z-i)/\tau$ therefore lies entirely in
+Lemma~\ref{sm:T-highX-extension}, with $T=1$,
+$\rho_0\le\tau\le.062$, $.69\le X\le1$.
+We may henceforth assume $x\ge\rho_0$.
+
+Lemma~\ref{lt:direct-D70} gives $D>70$ geometrically.
+Proposition~\ref{lt:D70} then gives phase $K_0=21/4$ and the
+field \eqref{lt:field70}. Since $|b-a|>.84$, the adaptive shift
+is $\gamma=b-a/2$, and \eqref{sm:product} holds with
+$C=ax-3a^2/4>0$.
+Put $q_N=Q/N$. Cauchy--Schwarz and the radial identity give
+\begin{equation}\label{sm:phase-product}
+ 1<2x\sqrt{q_N}+p_bq_N+2K_0Q/(NH).
+\end{equation}
+
+\smallskip\noindent\emph{The first witness cap.}
+Suppose $a\ge a_0$ and $x\ge x_L>3a_0$. Concavity of
+$a\mapsto ax-3a^2/4$ on $[a_0,x]$ gives
+$C\ge a_0(x-3a_0/4)$: the other endpoint is $x^2/4$, which
+is larger when $x>3a_0$.
+Choose $L$ with $e^L>8/[a_0(x_L-3a_0/4)]$, and put
+$s=3a_0/4$, $k=2L/(N_0a_0)$.
+The product inequality gives $q_N<k/(x-s)$.
+The reciprocal half-plane gives $Q/H<2/x$.
+Thus \eqref{sm:phase-product} requires
+\begin{equation}\label{sm:initial-cap-function}
+ 1<2x\sqrt{\frac{k}{x-s}}+
+       (1-B_L^2)\frac{k}{x-s}+\frac{4K_0}{N_0x}
+       \qquad(r\ge B_L).
+\end{equation}
+This expression is convex as a function of $v=\sqrt{x-s}$:
+its terms are $2\sqrt k(v+s/v)$,
+$(1-B_L^2)k/v^2$, and $4K_0/[N_0(v^2+s)]$.
+The final term has nonnegative second derivative when $3v^2\ge s$.
+It suffices to check the two endpoints of the full interval in $x$.
+For
+\[
+ B_L=.94,\quad x_L=\rho_0,\quad x_U=1,\quad
+ a_0=.013,\quad L=1879/200,\quad K_0=21/4,
+\]
+both endpoint values are strictly below one. These are rational
+checks: the remainder after subtracting the last two terms is
+positive, and its square exceeds $4x^2k/(x-s)$.
+The logarithmic comparison uses a positive exponential sum.
+We conclude $a<.013$.
+
+The cap $a<.013$ gives $d>\rho_0-.0065=.054502$, so
+\eqref{lt:field70} gives $D>100$.
+Thus Proposition~\ref{mf:D100} and \eqref{lt:field100} apply.
+For $r\ge.946$,
+Lemma~\ref{lt:same-gap-field}, with $a_U=.013$, $x_0=\rho_0$,
+$K_0=21/4$ and $p_U=1-.946^2$, gives
+\[
+ D>321306321875/1995240393>160.
+\]
+Proposition~\ref{lt:medium139} therefore supplies phase four,
+field constant $C_F=2637/32$, and the smaller ratio branch $Y(D)$
+throughout that modulus range.
+
+\smallskip\noindent\emph{Eight successive Schur estimates.}
+For a known witness cap $a\le a_U$ and modulus floor $B_L$,
+Lemma~\ref{lt:same-gap-field} with phase four gives a whole-region
+lower bound for $D$. Choose $D_0$ strictly below that value, then
+choose $\kappa$ with
+\[
+ 2<\kappa<9/4,\qquad
+ (5/4)\kappa^2-(D_0-23/2)\kappa+2D_0<0.
+\]
+The smaller branch implies $Qd/H<\kappa$.
+Use the complete Schur profiles as in
+\eqref{sm:profile-gates}, replacing $148$ and $11067/5000$ by
+$D_0,\kappa$. Put $\nu_0f_0=0$. If
+\[
+ c=\frac{6250}{6251}\left\{
+ \frac7{22}\sum_j(1-t_j)^2(\nu_jf_j-\nu_{j-1}f_{j-1})
+ -\frac2{D_0}\right\}>0,
+\]
+then, with $J=E_{a_U}/[(1-q_{a_U})c]$, Lemma~\ref{lt:abel}
+gives $d<Ja$ and hence
+$x<(J+1/2)a$. The complete sequence is
+\begin{center}\small
+\begin{tabular}{rrrrrrr}
+\toprule
+$B_L$&prior $a_U$&$D_0$&$\kappa$&$M$&upper bound for $J+1/2$&rows\\\midrule
+$.946$&$.013$&$162$&$2.1928$&$75$&$74.260$&$42$\\
+$.955$&$.01108$&$198$&$2.1545$&$67$&$66.009$&$44$\\
+$.97$&$.00779$&$301$&$2.0985$&$57$&$56.441$&$49$\\
+$.98$&$.00572$&$442$&$2.0659$&$52$&$51.715$&$52$\\
+$.99$&$.00430$&$781$&$2.0367$&$49$&$48.244$&$54$\\
+$.995$&$.00296$&$1256$&$2.0226$&$47$&$46.493$&$56$\\
+$.997$&$.00216$&$1651$&$2.0172$&$46$&$45.798$&$57$\\
+$.998$&$.00173$&$1951$&$2.0145$&$46$&$45.515$&$57$\\\bottomrule
+\end{tabular}
+\end{center}
+All 411 triples $(j,m,W)$ are rational integer data in
+\cert{HIGH6251_INTEGER_DATA.json}, with $t=j/200$,
+$\nu=m/10000$. For each, the complete inverse, every side and
+corner, the amplitude homotopy, positive odd height, and positive
+Abel increment are verified by \eqref{sm:profile-gates}.
+Thus the conclusion of each row is $x<Ma$ on its whole domain.
+
+After each row we improve the witness cap, in the same order.
+Suppose $a\ge a_0$ and $x<Ma$, and put $x_0=Ma_0$,
+$\gamma_M=1/M-3/(4M^2)$. Concavity gives
+\begin{equation}\label{sm:joint-C}
+ C\ge
+ \begin{cases}
+ a_0(x-3a_0/4),&\rho_0\le x\le x_0,\\
+ \gamma_Mx^2,&x\ge x_0.
+ \end{cases}
+\end{equation}
+The two expressions agree at $x_0$. For the first branch use
+$k=2L/(N_0a_0)$, $s=3a_0/4$, and for the second use
+$k_q=2L/(N_0\gamma_M)$. The cap $a<a_U$ gives
+the phase error $8/[N_0(x-a_U/2)]$ in
+\eqref{sm:phase-product}. The first branch is convex in
+$\sqrt{x-s}$ when $3(x-s)>s-a_U/2$; the second branch requires
+\[
+ 1<2\sqrt{k_q}+(1-B_L^2)k_q/x^2+\frac8{N_0(x-a_U/2)},
+\]
+whose right side decreases with $x$.
+Hence positive squared endpoint checks at $x=\rho_0,x_0$, together
+with $e^L>8/[a_0(\rho_0-3a_0/4)]$, exclude $a\ge a_0$.
+The rows are
+\begin{center}\small
+\begin{tabular}{rrrr}
+\toprule
+$B_L$&$M$&new cap $a_0$&$L$\\\midrule
+$.946$&$75$&$.01108$&$9.528$\\
+$.955$&$67$&$.00779$&$9.834$\\
+$.97$&$57$&$.00572$&$10.115$\\
+$.98$&$52$&$.00430$&$10.382$\\
+$.99$&$49$&$.00296$&$10.738$\\
+$.995$&$47$&$.00216$&$11.043$\\
+$.997$&$46$&$.00173$&$11.26$\\
+$.998$&$46$&$.00146$&$11.426$\\\bottomrule
+\end{tabular}
+\end{center}
+The prior cap of each Schur row is exactly the conclusion of the
+preceding cap row, and its modulus domain is contained in the
+preceding one. Thus these estimates form a finite ordered chain.
+
+\smallskip\noindent\emph{Root counts in physical disks.}
+The closed initial domains are as follows. Each contains
+all $x$ from $\rho_0$ to the stated upper endpoint, and all
+$a\in[A_0,a_U]$ compatible with the configuration.
+\begin{center}\small
+\begin{tabular}{crrrr}
+\toprule
+modulus interval&$a_U$&$M$&upper $x$&closed leaves\\\midrule
+$[.94,.946]$&$.013$&--&$1$&1\\
+$[.946,.955]$&$.01108$&75&$.831$&1\\
+$[.955,.97]$&$.00779$&67&$.52193$&1\\
+$[.97,.98]$&$.00572$&57&$.32604$&1\\
+$[.98,.99]$&$.00430$&52&$.2236$&2\\
+$[.99,.995]$&$.00296$&49&$.14504$&3\\
+$[.995,.997]$&$.00216$&47&$.10152$&4\\
+$[.997,.998]$&$.00173$&46&$.07958$&4\\
+$[.998,.9985]$&$.00146$&46&$.06716$&3\\\bottomrule
+\end{tabular}
+\end{center}
+The data give eleven midpoint splits, each along the modulus or
+$x$ coordinate, with both closed children retained. This gives
+twenty closed leaves. The binary rule regenerates the whole cover,
+including the boundaries of all initial domains and their common seams.
+
+On a leaf $B_L\le r\le B_U$, $x_L\le x\le x_U$, put
+$d_*=x_L-a_U/2$, $V=1/d_*$ and $p_{\max}=1-B_L^2$.
+The available field bounds at the degree floor are
+\begin{align}
+ H_{\mathrm{hole}}&=\frac{6250-C_{\mathrm{field}}/d_*}{2(1+a_U)},\notag\\
+ H_{\mathrm{phase}}&=\frac{6250-2K_0/d_*}
+ {\max\{2x_L+p_{\max}/(x_L-a_U/2),
+          2x_U+p_{\max}/(x_U-a_U/2)\}}.
+ \label{sm:high-leaf-field}
+\end{align}
+The denominator in the second bound is the maximum of a convex
+function on the full interval. In the first initial domain use
+$K_0=21/4$, $C_{\mathrm{field}}=1899/20$; in all others use
+$K_0=4$, $C_{\mathrm{field}}=2637/32$.
+All numerators are positive. Each leaf declares a field mode and an
+integer $H_*$ strictly below the corresponding expression in
+\eqref{sm:high-leaf-field}.
+Its full physical radius $R$, $\nu=m/10000$ and integer $W$
+satisfy the inverse predicates with $d_*,V,H_*$ as above.
+Thus the actual cumulative count is greater than
+$\nu(7/22)H_*\widehat R-2$.
+
+For its factor $f<1$ the leaf verifies
+\eqref{lt:half-disk-gate} with $P=1-B_U^2$,
+$T=a_U/(2P)$, $U=R/P$ and $L=1+2Tx_U$.
+In the first initial domain take $C_{\min}=A_0(x_L-3A_0/4)$.
+In every other initial domain use both lower constraints on
+$a$:
+\[
+ C_{\min}=\max\{A_0(x_L-3A_0/4),\gamma_Mx_L^2\}.
+\]
+Every field in \eqref{sm:high-leaf-field} has the form $(N-c)/F$
+with $c\ge0$. Equation~\eqref{lt:energy-ray} therefore gives
+$Q>H_*^2/6250$ throughout the full degree ray. For a rational
+$\ell<-\log f$ the complete product lower budget is
+\begin{equation}\label{sm:high-budget}
+ \ell\{\nu(7/22)H_*\widehat R-2\}
+       +\frac{C_{\min}H_*^2}{12500}.
+\end{equation}
+Each leaf has a rational target $T_*$ with
+$e^{T_*}>8/C_{\min}$ and with
+\eqref{sm:high-budget} strictly greater than $T_*$.
+The logarithmic lower weight is checked by
+$\mathcal E_{24}(\ell)<1/f$, and the target by the positive
+exponential sum through degree one hundred. All twenty whole-leaf
+reserves exceed $.2558$. The factor estimate holds for every
+original zero in each physical disk, and all remaining product
+factors are at most one.
+
+\smallskip\noindent\emph{The unit-circle endpoint.}
+On $r\ge.9985$, the preceding chain gives $x<46a$ and
+$a<.00146$. Hence $C\ge\gamma_{46}x^2$.
+Take $L=11521/1000$; the exact positive exponential gate gives
+$e^L>8/(\gamma_{46}\rho_0^2)$.
+The product, phase and radial identities would require
+\[
+ 1<2\sqrt{k_q}+(1-.9985^2)k_q/x^2
+                 +\frac8{6250(x-.00146/2)},\qquad
+ k_q=\frac{2L}{6250\gamma_{46}}.
+\]
+The right side decreases for all $x\ge\rho_0$. At $x=\rho_0$
+it is less than $.990541<1$; equivalently the positive remainder
+after the two rational terms has square exceeding $4k_q$ by more
+than $.0158$. This excludes the whole endpoint range, including
+$p_b=0$ and $|b|=1$.
+
+The fixed input file contains all eight Schur profiles, the eight
+successive caps, the nine initial domains, all eleven exact splits,
+the twenty leaf witnesses and the endpoint parameters.
+\cert{check_high6251_exact.py} reconstructs all the displayed
+rational predicates and every inherited-domain equality.
+The first fields and the subsequent same-gap bounds increase with
+$N$; the Schur factor uses the smallest $N/(N+1)$; and the counts
+and field-energy budgets strengthen by \eqref{lt:energy-ray}.
+Thus the proof covers every $N\ge6250$.
+\end{proof}

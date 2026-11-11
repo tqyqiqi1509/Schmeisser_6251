@@ -1,0 +1,570 @@
+\section{Two supplementary scale intervals}\label{sec:small-extensions}
+
+We prove the two normalized source estimates used at the joins in
+Section~\ref{sec:small}. Throughout this section we use the strict-hole
+configuration of Lemma~\ref{pr:edge-reduction}, with an actual simple
+rightmost zero $b$. Assume $N=n-1\ge N_0=6250$, put $n_0=6251$,
+and write
+\[
+ F(u)=p(i+\rho u),\qquad \beta=X-i,\qquad
+ 0<\alpha=a/\rho\le X\le1.
+\]
+Thus $\rho=1-\Im b$ and $X=\Re b/\rho$. Use
+$S=F''(\beta)/F'(\beta)$, $h=|S|$, $Q=\sum_v|\beta-v|^{-2}$,
+$d=\min_v|\beta-v|$, $D=dh$, and $y_0=Q/h$, where $v$ runs over
+all zeros of $F'$, counted with multiplicity.
+The physical quantities $H_{\rm phys}=|p''(b)/p'(b)|$ and
+$d_{\rm phys}=\min_{p'(\xi)=0}|b-\xi|$ satisfy
+\[
+ h=\rho H_{\rm phys},\qquad d_{\rm phys}=\rho d.
+\]
+Every critical label $v=r-it$ satisfies
+\begin{equation}\label{sm:extension-domain}
+ r<\alpha/2,\qquad \rho|v|^2/2\le t<\rho|v-\alpha|^2/2.
+\end{equation}
+The inset is $I(u)=-\Im u-\rho|u|^2/2$. In particular,
+$I(\beta)=1-\rho(1+X^2)/2\ge1-\rho$.
+The finite polar quantities $W,C,E,\theta$ are those in
+\eqref{or:source-definitions}; their proof applies for every
+$0<\rho<1$ used below.
+
+\subsection{A closed-cell source criterion}
+
+Suppose
+\[
+ \rho\in[p,r],\quad y_0\in[l,u],\quad
+ X\in[X_-,X_+]\subseteq[0,1],\quad d>1,\quad
+ h\ge H,\quad |\Im S|<J.
+\]
+Here $0<p\le r<1$, $0\le l\le u$, and $H,J>0$.
+The radial identities \eqref{or:radial} and
+\eqref{or:inset-critical}, with $T=1$, give
+\begin{gather}
+ \frac{N\rho}{2}<\rho h+J+y_0h,\label{sm:extension-radial-lower}\\
+ (1-\rho/2)Q<\frac{N\rho}{2}+J.\label{sm:extension-radial-upper}
+\end{gather}
+For the second inequality the negative critical-inset term is retained:
+\[
+ E_c<\rho X\Re S-\rho X^2Q/2.
+\]
+Its substitution cancels the $X^2$ terms in $I(\beta)Q$.
+Consequently, putting
+\[
+ B_r=\frac{r/2+J/N_0}{1-r/2},
+\]
+one may take any positive rational $U$ satisfying at least one of
+\begin{equation}\label{sm:extension-U}
+ U\ge u,\qquad U^2\ge B_r,\qquad Ul\ge B_r\quad(l>0)
+\end{equation}
+as an upper bound for $h/n$. The first alternative follows from
+$h^2\le NQ$; the second uses the same inequality and
+\eqref{sm:extension-radial-upper}; the third uses
+$(h/n)y_0=Q/n<B_r$.
+
+Choose $\delta>0$ with $r^2(1+\delta)^2/2<1$ and test at
+$s=X+\delta$. Define
+\begin{equation}\label{sm:extension-kappa}
+ \kappa_\delta(X)=\frac{X^2}{2}
+ -\frac{X\max(0,1-X\delta-\delta^2)^2}
+           {4(1+\delta^2)(X/2+\delta)}.
+\end{equation}
+Assume the whole-cell inequalities
+\begin{equation}\label{sm:extension-A}
+ [r(1+\delta)/2]^2<\delta,\qquad
+ X-\kappa_\delta(X)y_0<\overline A
+\end{equation}
+with $\overline A>0$. The first places the inverse Cayley test
+strictly to the right of all original zeros, because
+$s/(1+(\rho s/2)^2)>X$ follows from
+$\delta>X(\rho s/2)^2$. The second and
+Lemma~\ref{or:critical-comparison} give
+$C_{\rm real}<\rho h\overline A$.
+Set
+\[
+ f=\frac1{1-r^2(1+\delta)^2/2},\quad
+ D_p=1+[r(1+\delta)/2]^2,\quad
+ B=2D_p(f\overline A U+1/n_0).
+\]
+If $0<B<1$, the finite polar inequality yields
+\begin{equation}\label{sm:extension-HB-upper}
+ \frac Eh\le\frac Wh<
+       \mathcal U:=\frac{r(f\overline A+1/H)}{1-B}.
+\end{equation}
+Both finite corrections $1/H$ and $1/n_0$ occur in this expression.
+
+For a lower bound for $E/h$, choose a rational radius
+$0<R<1$, a number $0<\nu<1$, and a positive integer $W_0$.
+Put
+\begin{gather}
+ \lambda=\frac{uR}{1-R},\qquad
+ e_R=u\left\{\sum_{k=2}^{16}\frac{R^k}{k}
+                    +\frac{R^{17}}{17(1-R)}\right\},\qquad
+ \widehat R=R-e_R,\label{sm:extension-inverse}\\
+ B_R=\frac{u}{(1-R)^2(1-\lambda)^3},\qquad
+ \epsilon=\frac{1001B_R}{1000H},\qquad
+ g=\frac{1001}{1000}\nu B_R\widehat R,\qquad
+ p_0=\frac1{1+\lambda},\quad a_0=\frac1{1-\lambda}.
+ \notag
+\end{gather}
+The complete logarithmic tail appears in $e_R$.
+For $W_0\in\{1,2,3,4,5,6,8,10\}$ use $e_0=1/d_{W_0}$, where
+\[
+\begin{array}{c|rrrrrrrr}
+ W_0&1&2&3&4&5&6&8&10\\ \hline
+ d_{W_0}&2&7&20&50&148&403&2900&22000 .
+\end{array}
+\]
+In each case $\sum_{k=0}^{69}W_0^k/k!>d_{W_0}$, so
+$e_0>e^{-W_0}$. Require
+\begin{gather}
+ 0<R<1,\quad 0<\lambda<1,\quad \widehat R>0,\quad
+ W_0^2<(1-\nu^2)(H\widehat R)^2,\label{sm:extension-gates-a}\\
+ \epsilon(1+e_0)+ge_0<1-a_0e_0,\qquad
+ \epsilon(1+e_0)+ge_0^2<p_0-e_0,\label{sm:extension-gates-b}\\
+ \epsilon+ge_0<p_0,\qquad
+ 0<p_0<1<a_0,\qquad \nu H\widehat R>22/7.
+ \label{sm:extension-gates-c}
+\end{gather}
+These are the entire-contour hypotheses
+\eqref{or:contour-gates}--\eqref{or:odd-gate}.
+The inverse-log and amplitude comparisons therefore give an
+actual original-root count
+$L_R>h\nu\widehat R/\pi-2$.
+The phase bound confines these roots to
+\begin{equation}\label{sm:extension-width}
+ |u-\beta|<R,\qquad
+ |\Re(u-\beta)|\le
+ \ell_R:=\min(R,W_0/H+J\nu\widehat R/H+e_R).
+\end{equation}
+This is a bound on the entire inverse rectangle.
+
+Use increasing radii $R_j$, round the slopes
+$\nu_j(7/22)\widehat R_j$ down and the widths up to the
+$10^{-12}$ mesh, and replace the widths by running maxima.
+Write the resulting slopes and widths as $s_j,\ell_j$.
+They are checked to satisfy
+$0<s_1<\cdots<s_k$, $R_1<\cdots<R_k<1$, and
+$0\le\ell_1\le\cdots\le\ell_k\le R_k$, with each
+$\ell_j\le R_j$.
+Rightmostness and $R_j<1$ give $|\Re u|\le1$ for the counted roots.
+Their weight in $E(s)$ is at least
+\begin{equation}\label{sm:extension-weight}
+ \omega_j=\max\left(0,\min_{t\in\{1-R_j,\,1+R_j\}}
+       \frac{t-r(1+t^2)/2}{(\delta+\ell_j)^2+t^2}\right).
+\end{equation}
+This controls the whole depth interval: the derivative numerator
+of the displayed quotient is
+$A-t^2+r(1-A)t$, $A=(\delta+\ell_j)^2>0$.
+It has one positive root, which is a maximum. If an endpoint
+lower bound is negative, the true inset is still nonnegative.
+Round $\omega_j$ down to the same mesh and put
+$w_j=\max_{m\ge j}\omega_m$.
+The nested regions make these nonincreasing weights valid.
+
+The actual source $\beta$ has weight at least
+$b_0=(1-r)/(1+\delta^2)$. Formula \eqref{or:Abel-source} gives
+\begin{equation}\label{sm:extension-Abel}
+ \frac Eh>
+ \mathcal L:=\sum_{j=1}^kw_j(s_j-s_{j-1})
+                   +\frac{\min(0,b_0-3w_1)}{H},
+ \qquad s_0=0.
+\end{equation}
+The source is removed exactly once from each cumulative count.
+The finite loss three is consequently retained. If the source
+compensation is positive, discarding it remains valid without
+an upper bound on $h$. In particular, the first count lower
+bound need not itself be positive.
+
+\begin{lemma}\label{sm:extension-cell}
+Under the preceding whole-cell hypotheses, a collection satisfying
+\eqref{sm:extension-gates-a}--\eqref{sm:extension-gates-c},
+the stated nesting and rounding conditions, and
+$\mathcal L>\mathcal U$, excludes the entire closed cell.
+\end{lemma}
+\begin{proof}
+Equations \eqref{sm:extension-HB-upper} and
+\eqref{sm:extension-Abel} are contradictory.
+\end{proof}
+
+Equation \eqref{sm:extension-A} has a polynomial verification.
+The dependence on $y_0$ is affine, so it suffices to check
+$y_0=l,u$. On the active interval
+$X<(1-\delta^2)/\delta$,
+\begin{equation}\label{sm:extension-kappa-active}
+ \kappa_\delta(X)=
+ \frac{X[X-(1-\delta)^2][X+(1+\delta)^2]}
+             {2(1+\delta^2)(X+2\delta)}.
+\end{equation}
+On the other interval it is $X^2/2$.
+Clear the positive denominators in
+$\overline A-X+\kappa_\delta(X)l$ and
+$\overline A-X+\kappa_\delta(X)u$ separately on those two
+closed pieces. The rational Bernstein rule in
+Section~\ref{sec:certificates}, with exact dyadic subdivisions,
+proves positivity. The two closed pieces include their common
+endpoint, and both $y_0$ endpoints are checked for either sign
+of $\kappa_\delta$.
+
+\subsection{The moment interval up to \texorpdfstring{$\rho=39/500$}{rho=39/500}}
+
+\begin{lemma}\label{sm:T-moment-extension}
+There is no strict-hole configuration in the normalized
+range
+\[
+ \frac3{50}\le\rho\le\frac{39}{500},\qquad
+ 0<\alpha\le X\le1,\qquad \frac54\le y_0\le\frac94
+\]
+satisfying
+\begin{equation}\label{sm:moment-extension-input}
+ D\ge139,\quad Qd/h<9/4,\quad |\Im S|<4y_0,\quad
+ H_{\rm phys}>
+ \frac{N-(2637/32)/d_{\rm phys}}{2(1+a)}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The source criterion requires $d>1$. The lower intersection of the two
+critical-boundary circles at $r=\alpha/2$ has depth
+\[
+ \eta=\frac{1-\sqrt{1-\rho^2\alpha^2/4}}{\rho}
+      <\frac{\rho\alpha^2}{4}.
+\]
+The closest-point comparison gives
+$d^2>(X-\alpha/2)^2+(1-\eta)^2$.
+To see why it controls the whole crescent, on the lower hole arc put
+$u=r-\alpha\le-\alpha/2$. The relevant scalar product is
+\[
+ (X-\alpha)u+(1/\rho-1)\sqrt{\rho^{-2}-u^2}.
+\]
+Its derivative is positive for $u\le0$. The largest allowed real
+coordinate therefore gives the nearest permitted arc point.
+The upper arc and the outward radial parts are farther away.
+Consequently
+\[
+ d^2>1+\frac{X^2}{4}-\frac{\rho\alpha^2}{2}
+ \ge1+(1/4-\rho/2)X^2>1,
+\]
+since $1/4-(39/500)/2>0$.
+
+Using $d>1$, $a=\rho\alpha\le\rho$, and $N\rho>2637/32$,
+the last hypothesis in \eqref{sm:moment-extension-input} yields
+\begin{equation}\label{sm:moment-extension-field}
+ h>\frac{N\rho-2637/32}{2(1+\rho)}.
+\end{equation}
+The bound $D\ge139$ is an input hypothesis; the table below gives
+lower bounds $h\ge H$, starting with $H=137$.
+
+Use the five scale intervals
+\[
+ [.06,.064],\ [.064,.068],\ [.068,.072],\
+ [.072,.075],\ [.075,.078]
+\]
+and the four moment intervals
+\[
+ Y_1=[5/4,3/2],\quad Y_2=[3/2,7/4],\quad
+ Y_3=[7/4,2],\quad Y_4=[2,9/4].
+\]
+Every pair is a closed cell. On the $j$th moment interval
+put $J=4u$ and use the following exact parameters:
+\begin{center}
+\begin{tabular}{c|rrrr}
+\toprule
+$j$&1&2&3&4\\\midrule
+$\delta$&$1/2$&$11/20$&$3/5$&$13/20$\\
+$10^6\overline A$&428583&358161&304796&262971\\
+$J$&6&7&8&9\\
+\bottomrule
+\end{tabular}
+\end{center}
+Take $X_-=0$, $X_+=1$ in every cell. The lower fields and upper
+ratios $U$ are:
+\begin{center}\small
+\begin{tabular}{c|r|rrrr}
+\toprule
+$[\rho_-,\rho_+]$&$H$&
+$10^{12}U_1$&$10^{12}U_2$&$10^{12}U_3$&$10^{12}U_4$\\
+\midrule
+$[.060,.064]$&137&27239669422&22809917356&19645808737&17272727273\\
+$[.064,.068]$&148&28952380953&24237405107&20869565218&18343685301\\
+$[.068,.072]$&159&30672199171&25670816045&22098399526&19419087137\\
+$[.072,.075]$&170&31966753247&26749783550&23023376624&20228571429\\
+$[.075,.078]$&179&33265348596&27832119321&23951241267&21040582727\\
+\bottomrule
+\end{tabular}
+\end{center}
+For each cell $[p,r]\times[l,u]$, its $H$ is at most one of
+\[
+ \frac{N_0p-2637/32}{2(1+r)},\qquad
+ \frac{N_0p/2-J}{r+u}.
+\]
+The first comparison uses \eqref{sm:moment-extension-field}
+and the second uses \eqref{sm:extension-radial-lower}.
+Thus $h\ge H$ in each cell.
+The displayed $U$ satisfy \eqref{sm:extension-U}.
+Every polynomial comparison in \eqref{sm:extension-A} is
+verified by \eqref{sm:extension-kappa-active}.
+
+The fixed contour lists have, in the order of this table,
+\[
+\begin{array}{rrrr}
+55&49&42&37\\
+56&50&44&39\\
+56&50&45&40\\
+58&50&45&40\\
+58&51&47&42
+\end{array}
+\]
+members, for a total of $954$.
+Their exact triples $(R,\nu,W_0)$ are the rows with family
+\textup{M} in
+\cert{small_extensions/small_extensions_contours.csv};
+the indices begin at zero, with the scale index preceding the
+moment index. They are also recorded in
+\cert{TMOMENT6251_PROPOSAL.json}.
+The exact checker \cert{certify_Tmoment6251_complete.py}
+reconstructs \eqref{sm:extension-inverse}--\eqref{sm:extension-Abel},
+including every complete contour and both polynomial pieces.
+Every cell satisfies
+\[
+ \mathcal L-\mathcal U>\frac{14}{10000}>0.
+\]
+Lemma~\ref{sm:extension-cell} excludes the twenty cells.
+
+The scale and moment intervals include all their common endpoints.
+For $N\ge N_0$, both lower fields increase, while $J/N$ and
+$1/n$ in the upper bounds decrease. All contour, polynomial,
+and source-weight bounds are fixed on their closed cells.
+The contradiction therefore holds on the entire degree ray.
+\end{proof}
+
+\subsection{The high-\texorpdfstring{$X$}{X} interval up to
+\texorpdfstring{$\rho=31/500$}{rho=31/500}}
+
+\begin{lemma}\label{sm:T-highX-extension}
+There is no strict-hole configuration with
+\[
+ \rho_L:=\frac{30501}{500000}\le\rho\le
+ \rho_U:=\frac{31}{500},\qquad
+ X_0:=\frac{69}{100}\le X\le1,\qquad
+ 0<\alpha\le X .
+\]
+\end{lemma}
+\begin{proof}
+The distance calculation preceding \eqref{or:gap-T} remains
+valid on this interval. The endpoint inequality
+\[
+ \frac2{125}-\rho_U\left(\frac14+\frac1{15625}\right)>0
+\]
+gives $\eta<\alpha^2/125$ on the whole interval.
+The nearest-point comparison above gives
+\[
+ d^2>(X-\alpha/2)^2+(1-\alpha^2/125)^2
+ \ge1+\frac{117}{500}X^2=:G(X).
+\]
+Write $G_0=G(X_0)$.
+Lemma~\ref{sm:normalized-D25} applies because
+$1/100<\rho_L\le\rho\le\rho_U<9/100$; it gives $D>25$.
+Proposition~\ref{mf:D25} therefore gives
+\[
+ y_0<3/d<3/\sqrt{G_0}<57/20.
+\]
+The unphased radial identity gives
+\[
+ h>\frac{N_0\rho_L}{2(1+57/20)}>49,\qquad
+ D^2>49^2G_0>51^2.
+\]
+In the matrix envelope \eqref{mf:coarse-envelope}, put
+$S/h=c+is$ with $c\ge0$.
+If $|s|\ge7/10$, then $c<18/25$ and its right side is at most
+\[
+ \frac{21/5}{51^2}
+ +\frac{(11/2)(18/25)}{51}
+ +\frac{1-(7/10)^2}{4}-\frac{(7/10)^2}{2}<0.
+\]
+Thus $|\Im S|<(7/10)h$ and $\mu=1/D<1/50$.
+
+\smallskip
+\noindent\emph{A joint source and moment estimate.}
+Take $\delta=3/5$ and set
+\[
+ b_0=\frac{1-\rho_U}{1+\delta^2},\quad
+ f=[1-\rho_U^2(1+\delta)^2/2]^{-1},\quad
+ D_p=1+[\rho_U(1+\delta)/2]^2.
+\]
+The source $\beta$ and the finite polar inequality give
+\begin{equation}\label{sm:highX-K}
+ \rho h A_\delta>K,\qquad
+ A_\delta=X-\kappa_\delta(X)y_0,\qquad
+ K=\min_{\rho\in\{\rho_L,\rho_U\}}
+ \frac{n_0\rho b_0/(n_0\rho+2D_pb_0)-\rho}{f}.
+\end{equation}
+The expression minimized is concave in $\rho$ and increases
+with $n$, as in \eqref{or:direct-K}. Exact evaluation gives
+\[
+ K=\frac{1793507148275409343}{2882630131640625000}
+       >\frac{31}{50}.
+\]
+Hence $A_\delta>0$.
+On the entire $X$ interval,
+\begin{equation}\label{sm:highX-kappa}
+ \kappa_\delta(X)>c_0X^2,\qquad c_0=12/25.
+\end{equation}
+The active endpoint $(1-\delta^2)/\delta=16/15$ is beyond one,
+so this is a single rational-polynomial comparison.
+
+Put $v=Xy_0$. Then $0<v<1/c_0$ and
+$A_\delta<X(1-c_0v)$.
+The phase bound in the radial identity gives
+$N\rho/2<hR$, where
+\[
+ R:=\beta_0+I_0y_0,\qquad
+ \beta_0=7/10+(3/10)\rho_U,\qquad
+ I_0=1-\rho_L(1+X_0^2)/2.
+\]
+Multiplying this estimate and \eqref{sm:highX-K} for the same
+configuration gives, for $q=Q/h^2=y_0/h$,
+\begin{equation}\label{sm:highX-joint}
+ q^2<\frac{2y_0^2A_\delta R}{NK}
+ \le\frac{2v^2(1-c_0v)
+            [\beta_0/X_0+I_0v/X_0^2]}{N_0K}.
+\end{equation}
+The second step uses the nonnegative factor $1-c_0v$ and
+the decrease of $1/X,1/X^2$ on $X\ge X_0$.
+The polynomial
+\begin{equation}\label{sm:highX-q-polynomial}
+ N_0K-800v^2(1-c_0v)
+             [\beta_0/X_0+I_0v/X_0^2]
+\end{equation}
+is positive throughout $[0,1/c_0]$.
+Clearing its positive denominator and using exact Bernstein
+subdivision proves this sign, together with
+\eqref{sm:highX-kappa}. Thus $q<1/20$.
+Proposition~\ref{lt:q05mu02} applies with $q<1/20$ and $\mu<1/50$.
+It gives two distinct original zeros, different
+from $\beta$, of the form $u_\pm=\beta+w_\pm/S$, with
+\begin{equation}\label{sm:highX-pair}
+ |w_\pm|<17/2,\qquad
+ |(w_++w_-)/2|<19/10,\qquad |\Im S|<7y_0.
+\end{equation}
+
+\smallskip
+\noindent\emph{The entire range $h\ge95$.}
+Suppose $h\ge95$. Then $D^2>95^2G_0>10000$.
+Proposition~\ref{mf:D100}, followed by the wide row of
+Proposition~\ref{lt:wideD100}, gives
+\[
+ Qd/h<9/4,\quad q<9/400,\quad \mu<1/100,\quad
+ |\Im S|<(23/5)y_0.
+\]
+In particular $y_0^2G_0<81/16$ and $y_0<427/200$.
+We apply Lemma~\ref{sm:extension-cell} on the ten moment
+intervals in the following table, taking the entire scale
+interval $[\rho_L,\rho_U]$ in each row and $X\in[X_0,1]$.
+Here $J=(23/5)u$, where $u$ is the upper moment endpoint.
+\begin{center}\small
+\begin{tabular}{c|rcrrr}
+\toprule
+$[l,u]$&$H$&$\delta$&$10^6\overline A$&$10^{12}U$&contours\\
+\midrule
+$[0,1/4]$&607&$1/200$&1000001&179392392668&149\\
+$[1/4,1/2]$&335&$1/5$&924589&129486068112&117\\
+$[1/2,3/4]$&230&$3/10$&803342&65122807018&95\\
+$[3/4,1]$&175&$7/20$&679683&43668386653&78\\
+$[1,5/4]$&140&$9/20$&528001&32941176471&64\\
+$[5/4,3/2]$&117&$1/2$&428583&26504850362&52\\
+$[3/2,7/4]$&100&$11/20$&355372&22213966289&44\\
+$[7/4,15/8]$&95&$3/5$&285411&19094795814&39\\
+$[15/8,2]$&95&$3/5$&256512&17872445821&37\\
+$[2,427/200]$&95&$3/5$&227612&16806687307&34\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each $H$ is either $95$ or at most
+$(N_0\rho_L/2-J)/(\rho_U+u)$. Thus $h\ge H$ follows from
+the hypothesis $h\ge95$ and the radial identity.
+The $U$ satisfy \eqref{sm:extension-U}.
+At both moment endpoints, the entire source polynomials
+are checked on $[X_0,1]$, using the exact active/inactive
+split in \eqref{sm:extension-kappa-active}.
+
+The $709$ exact triples are the family \textup{X} rows of
+\cert{small_extensions/small_extensions_contours.csv},
+with the cells in the printed order; they are also in
+\cert{T6251_HIGHX_PROPOSAL.json}.
+The checker \cert{certify_T6251_highX_complete.py}
+reconstructs all the predicates in
+Lemma~\ref{sm:extension-cell}. In every one of the ten cells,
+\[
+ \mathcal L-\mathcal U>\frac6{10000}>0.
+\]
+These ten cells exclude the entire range $h\ge95$.
+
+\smallskip
+\noindent\emph{The pair when $49<h<95$.}
+It remains to use the pair \eqref{sm:highX-pair}.
+For $\delta=3/5$,
+\[
+ y_0A_\delta<v-c_0v^2\le\frac1{4c_0}=\frac{25}{48}.
+\]
+The radial identity and $|\Im S|<7y_0$ give
+$\rho(N-2h)<2y_0(h+7)$.
+Since $A_\delta>0$ and $N-2h>0$,
+\[
+ \rho h A_\delta
+ <\frac{2(25/48)95\cdot102}{6250-190}.
+\]
+Let $B_{95}=2D_p(95f+1)/6251<1$.
+Here $A_\delta<X\le1$ by \eqref{sm:highX-kappa}, so this
+is a valid bound for the complete polar denominator.
+Lemma~\ref{or:HB} gives
+\begin{equation}\label{sm:highX-terminal-upper}
+ W<\frac{f\,2(25/48)95\cdot102/(6250-190)+\rho_U}{1-B_{95}}.
+\end{equation}
+
+Put $z_\pm=u_\pm-\beta$, $R=17/98$, and $m=19/490$.
+The pair satisfies
+$|z_\pm|<R$, $|(z_++z_-)/2|<m$, and $\Re z_\pm\le0$.
+Its insets lie in $[3/4,6/5]$: for the lower bound use
+\[
+ I(\beta+z)\ge(1-\rho_U)(1-R)-\rho_UR^2/2>3/4,
+\]
+and for the upper bound use $I(\beta+z)\le1+R<6/5$.
+On this whole interval,
+$\sqrt I\ge I/2+49/100$.
+Indeed both sides are nonnegative, and the difference
+$(I/2+49/100)^2-I$ is a convex quadratic negative at
+the two endpoints.
+The bound on the pair mean gives
+\begin{align*}
+ I_++I_-&>I_\Sigma:=2(1-\rho_U)(1-m)-\rho_UR^2,\\
+ I_\Sigma&=\frac{43251409}{24010000}>0,\\
+ |s-u_+|^2+|s-u_-|^2
+ &<D_\Sigma:=2(1+\delta^2)+4(7/6)m+2R^2,
+\end{align*}
+where $(7/6)^2>1+\delta^2$.
+Since $I_\Sigma/2+49/50>0$, Cauchy--Schwarz on these two terms,
+together with the separate source $\beta$, yields
+\begin{equation}\label{sm:highX-terminal-lower}
+ E>\frac{1-\rho_U}{1+\delta^2}
+                    +\frac{(I_\Sigma/2+49/50)^2}{D_\Sigma}.
+\end{equation}
+The exact lower bound in \eqref{sm:highX-terminal-lower}
+exceeds the upper bound in \eqref{sm:highX-terminal-upper} by
+\[
+ \frac{9014845822117732608757183663183337}
+      {97049415152918630536485588216000000}>\frac{92}{1000}.
+\]
+This contradicts $W\ge E$.
+
+The source bound, the polynomial
+\eqref{sm:highX-q-polynomial}, the geometric and phase
+bounds, and the two terminal bounds are rationally checked
+by \cert{certify_T6251_highX_bootstrap.py}; its code is also
+called by the complete ten-cell verifier.
+For $N\ge6250$, the initial fields and the source strengthen,
+while the finite polar and radial corrections decrease.
+On the terminal range $h<95$, the denominator satisfies
+$N-2h>N-190\ge6060$. All other
+domains and contours are fixed, and every scale and moment
+endpoint has been included. This proves the lemma on the
+entire stated degree ray.
+\end{proof}

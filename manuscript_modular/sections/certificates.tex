@@ -1,0 +1,191 @@
+\section{Finite certificates and reproducibility}\label{sec:certificates}
+
+The electronic appendix contains the fixed rational inputs, verification
+programs, a file index, and a manifest of SHA-256 hashes. The programs
+recompute the inequalities from these inputs by the methods below.
+
+\subsection{Elementary enclosures}
+
+All rational calculations use integer numerators and positive integer
+denominators. For a positive integer $m$, a square-root enclosure is
+obtained by taking the integer square root of $\lfloor m^2a/b\rfloor$
+for a rational $a/b\ge0$;
+division by $m$ gives the lower bound and addition of $1/m$ gives
+an upper bound unless the square is exact. Thus the directions of
+the rounded radical bounds are determined by integer inequalities.
+
+The enclosures $6283/2000<333/106<\pi<22/7$ follow from Machin's identity
+\[
+ \pi=16\arctan(1/5)-4\arctan(1/239).
+\]
+Indeed $\tan(4\arctan(1/5))=120/119$, and subtraction of
+$\arctan(1/239)$ gives tangent one with angle in $(0,\pi/2)$.
+If $A_m(x)=\sum_{k=0}^{m-1}(-1)^kx^{2k+1}/(2k+1)$, the
+alternating-series bounds give
+\[
+ 16A_6(1/5)-4A_3(1/239)<\pi
+ <16A_7(1/5)-4A_2(1/239).
+\]
+Both comparisons with the displayed rational endpoints are exact.
+Finer enclosures are obtained by retaining more terms.
+
+For $x\ge1$, first divide $x$ by a power of two to put it in $[1,2)$.
+With $t=(x-1)/(x+1)$ on this interval,
+\[
+ 2\sum_{j=0}^{m-1}\frac{t^{2j+1}}{2j+1}
+ \le\log x
+ \le2\sum_{j=0}^{m-1}\frac{t^{2j+1}}{2j+1}
+       +\frac{2t^{2m+1}}{(2m+1)(1-t^2)}.
+\]
+The same formula at $x=2$ encloses the range-reduction contribution.
+The formulas for $\log(1\pm r)$ in
+\eqref{mf:directed-log} retain their complete alternating or
+positive geometric remainder. For an integer $m\ge0$, put
+$E_m(x)=\sum_{j=0}^m x^j/j!$. If $0\le x<m+2$, then
+\begin{equation}\label{ce:exp}
+ E_m(x)\le e^x\le E_m(x)
+                +\frac{x^{m+1}}{(m+1)!(1-x/(m+2))}.
+\end{equation}
+Negative exponentials are bounded by reciprocals of positive
+enclosures. The seven rows in Proposition~\ref{ar:energy}, for
+example, use the lower logarithm bound with $48$ terms and
+$e^{-x}\le1/E_{160}(x)$. Their checker uses only rational arithmetic.
+
+The interval computations use directed real and complex balls.
+An asserted strict inequality means that the entire resulting
+enclosure has the required sign. Input floating-point test points are converted to
+their exact binary rationals before use.
+
+\subsection{Entire integrals}
+
+The only numerical integrations in the field certificates are of
+entire functions of the form $\exp(P(t))$, with $P$ a polynomial,
+over a finite real interval. The preceding analytic lemmas bound the
+finite-product errors separately from these model integrals.
+
+There is a direct series verification of each such integral. After
+an affine change of variable, write
+$P(t)=p_0+\sum_{j=1}^d p_jt^j$ on $[0,1]$ and
+$\exp(P(t)-p_0)=\sum_{k\ge0}a_kt^k$.
+The coefficients are determined by
+\[
+ a_0=1,\qquad
+ ka_k=\sum_{j=1}^{\min(d,k)}jp_ja_{k-j}.
+\]
+For any rational $R>1$, Cauchy's estimate gives
+$|a_k|\le M_RR^{-k}$, where
+$M_R=\exp(\sum_{j=1}^d|p_j|R^j)$.
+Consequently
+\[
+ \left|\int_0^1e^{P(t)}\,dt
+       -e^{p_0}\sum_{k=0}^{m}\frac{a_k}{k+1}\right|
+ \le |e^{p_0}|
+       \frac{M_RR^{-(m+1)}}{(m+2)(1-1/R)}.
+\]
+Subdividing the interval, or increasing $m$, gives arbitrarily
+small error bounds. Formula \eqref{ce:exp} encloses $M_R$.
+The field checkers also supply validated analytic quadrature
+using Arb/Acb; all integrands satisfy its entire-function
+hypothesis. The separate series implementations in the
+electronic appendix give the coefficient recurrence and the
+Cauchy remainder explicitly.
+
+For the Gaussian shells in Proposition~\ref{mf:affine}, the rational
+integration-by-parts and Mills bounds in its proof suffice.
+An additional verifier evaluates the Gaussian tails by the
+complementary error function with interval bounds.
+
+\subsection{Polynomial bounds on whole boxes}
+
+The companion centers are defined by finite recurrences, so their
+coefficient identities are checked by exact polynomial arithmetic.
+For the Gaussian center, the moments
+at $s=\pm2\pi i$ obey $I_0=0$ and
+$I_m=(1-mI_{m-1})/s$. This derives the center and residual
+coefficients exactly. The identity $e^s=1$ is used only at
+$s=\pm2\pi i$; the resulting polynomial bounds may then be
+verified on the larger real interval $6\le |s|\le44/7$.
+
+After rescaling each real variable to $[0,1]$, a polynomial of
+degree at most $d$ has the Bernstein representation
+\[
+ \sum_{j=0}^dc_jt^j
+ =\sum_{k=0}^d\left(\sum_{j=0}^k
+           \frac{\binom{k}{j}}{\binom{d}{j}}c_j\right)
+          \binom{d}{k}t^k(1-t)^{d-k}.
+\]
+The basis functions are nonnegative and sum to one. Therefore
+the extrema of the coefficient list bound the polynomial
+on the whole interval. Tensor products give the same result
+on a box. Exact dyadic subdivision and the de Casteljau
+recurrence preserve these bounds. Bounds on complex moduli
+are proved by applying this rule to the difference between
+a proposed squared bound and the squared modulus.
+The common coefficient-domain verifier checks all twenty
+Gaussian polynomial bounds by this method.
+
+Where a one-variable polynomial sign is sharper than its
+Bernstein enclosure, the programs use its exact Sturm chain.
+Polynomial division is over the rationals; signs at both
+endpoints are checked separately. The variation difference
+counts roots in the open interval. Combined with a sign at
+one point and the endpoint checks, this proves the desired
+sign on the whole closed interval.
+
+\subsection{Coverage and degree dependence}
+
+The rectangular covers in this paper use either a rational
+edge decomposition or a dyadic tree. In the former, checking
+every open slab between consecutive rational edges and every
+edge itself proves closed coverage; the horizontal intervals
+are merged in sorted order. In the latter, every deepest
+pair of leaves must be the two halves of the same coordinate
+at a common parent. Replacing such a pair by its parent
+must eventually produce the complete root box.
+
+All inequalities involving the degree are extended from
+$N_0=6250$ by the stated analytic monotonicities. One
+frequent step is worth making explicit. If
+$H>(N-c)/F$, with $F>0$ and $0\le c<N_0$, then
+$H/N>(1-c/N)/F$ increases as a lower bound with $N$.
+Together with $Q\ge H^2/N$ this gives, for every $N\ge N_0$,
+\[
+ Q>\frac{(N_0-c)^2}{N_0F^2}.
+\]
+This is the energy lower bound used in the product estimates.
+
+The principal finite covers have the following sizes.
+The count of contours includes complete boundaries, with
+the inverse-map and amplitude comparisons both checked.
+\begin{center}\small
+\begin{tabular}{lrr}
+\toprule
+Component&closed cells or rows&additional finite objects\\
+\midrule
+Affine field&$275+28$&$2750$ paired shells\\
+$D\ge25$ transition&$50614$&$186477$ point obstructions\\
+$D\ge30$ transition&$26397$&$82823$ point obstructions\\
+$D\ge100$ transition&$9745$&$8160$ point obstructions\\
+Origin base&$9$ path ranges&$55$ inverse contours\\
+Origin $T=1$ strip&$63$&$3831$ inverse contours\\
+Origin $X=1$ strip&$301$&$14891$ inverse contours\\
+Fine small-witness range&$1$&$41$ inverse contours\\
+Low and middle small-witness range&$23$&$1809$ inverse contours\\
+High small-witness range&$20$&$411+20$ contour constructions\\
+Moment extension&$20$&$954$ inverse contours\\
+High-$X$ extension&$10$&$709$ inverse contours\\
+Boundary and auxiliary strips&$8$&whole-strip inequalities\\
+Compact range&$13$&$2918+2$ inverse contours\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The file \cert{verification/INDEX.json} maps each mathematical
+component to its fixed data and executable checker. The entry
+point \cert{verification/run_all.py} runs the included
+verifications and writes new results to a separate results
+directory. The input hashes are checked before execution.
+The programs use Python's exact rational arithmetic, SymPy
+for exact polynomial arithmetic, and, where indicated,
+\cert{python-flint} for rigorous balls.
+The LaTeX source, all fixed inputs, and the verification code are included.

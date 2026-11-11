@@ -1,0 +1,32 @@
+{
+  "implicit_center_steps": [
+    {
+      "order": 1,
+      "uncorrected_residual": "s**2/2 - s",
+      "derived_correction": "-s**2/2 + s"
+    },
+    {
+      "order": 2,
+      "uncorrected_residual": "-s**3/2 + 2*s**2 - 3*s",
+      "derived_correction": "s**3/2 - 2*s**2 + 3*s"
+    },
+    {
+      "order": 3,
+      "uncorrected_residual": "5*s**4/8 - 23*s**3/6 + 21*s**2/2 - 15*s",
+      "derived_correction": "-5*s**4/8 + 23*s**3/6 - 21*s**2/2 + 15*s"
+    },
+    {
+      "order": 4,
+      "uncorrected_residual": "-7*s**5/8 + 22*s**4/3 - 88*s**3/3 + 72*s**2 - 105*s",
+      "derived_correction": "7*s**5/8 - 22*s**4/3 + 88*s**3/3 - 72*s**2 + 105*s"
+    }
+  ],
+  "submission_comparisons": {
+    "center": true,
+    "coefficients": true,
+    "path_exponent_coefficients": true
+  },
+  "all_match": true,
+  "Wolfram_checks": 25,
+  "elapsed_seconds": 0.3239567909913603
+}
